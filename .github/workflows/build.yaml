@@ -42,6 +42,11 @@ jobs:
           path: |
             extraResources
           key: ${{ runner.os }}-resources-${{ hashFiles('scripts/getExternalResources.mjs') }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+          cache: pip
+      - run: pip install ephemeral-port-reserve
       - run: yarn install --immutable
       - run: yarn build-dev
         env:
@@ -52,23 +57,6 @@ jobs:
         continue-on-error: true
       - run: yarn test:native
       - run: yarn test:wdio
-      - run: |
-          echo RENDERER_URL=$(curl -F "reqtype=fileupload" -F "fileToUpload=@renderer.png" https://catbox.moe/user/api.php) >> $GITHUB_ENV
-          echo REMOCON_CHROME_URL=$(curl -F "reqtype=fileupload" -F "fileToUpload=@remocon-chrome.png" https://catbox.moe/user/api.php) >> $GITHUB_ENV
-          echo REMOCON_SAFARI_URL=$(curl -F "reqtype=fileupload" -F "fileToUpload=@remocon-Safari.png" https://catbox.moe/user/api.php) >> $GITHUB_ENV
-        if: github.event_name == 'pull_request'
-      - uses: peter-evans/create-or-update-comment@v4
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            # WDIO Screenshots
-            ## Renderer (Electron)
-            ![renderer.png](${{ env.RENDERER_URL }})
-            ## Remocon (Chrome / Pixel 6)
-            ![remocon-chrome.png](${{ env.REMOCON_CHROME_URL }})
-            ## Remocon (Safari iPhone 15)
-            ![remocon-Safari.png](${{ env.REMOCON_SAFARI_URL }})
-        if: github.event_name == 'pull_request'
   build-macos-x86_64:
     runs-on: macos-latest
     steps:
@@ -91,6 +79,11 @@ jobs:
           path: |
             extraResources
           key: ${{ runner.os }}-resources-${{ hashFiles('scripts/getExternalResources.mjs') }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+          cache: pip
+      - run: pip install ephemeral-port-reserve
       - run: yarn install --immutable
       - run: yarn build-dev
         env:
@@ -100,6 +93,7 @@ jobs:
       - run: cargo install cargo-careful
         continue-on-error: true
       - run: yarn test:native
+      - run: yarn test:wdio
   build-windows-x86_64:
     runs-on: windows-latest
     steps:
@@ -128,6 +122,11 @@ jobs:
             buildResources
             extraResources
           key: ${{ runner.os }}-resources-${{ hashFiles('scripts/getExternalResources.mjs') }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+          cache: pip
+      - run: pip install ephemeral-port-reserve
       - run: yarn install --immutable
       - run: yarn build-dev
         env:
@@ -138,6 +137,7 @@ jobs:
       - run: cargo install cargo-careful
         continue-on-error: true
       - run: yarn test:native
+      - run: yarn test:wdio
   build-linux-x86_64:
     runs-on: ubuntu-latest
     steps:
@@ -166,6 +166,11 @@ jobs:
             buildResources
             extraResources
           key: ${{ runner.os }}-resources-${{ hashFiles('scripts/getExternalResources.mjs') }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+          cache: pip
+      - run: pip install ephemeral-port-reserve
       - run: sudo apt-get update && sudo apt-get install -y libasound2-dev
       - run: yarn install --immutable
       - run: yarn build-dev
@@ -176,3 +181,4 @@ jobs:
       - run: cargo install cargo-careful
         continue-on-error: true
       - run: yarn test:native
+      - run: yarn test:wdio

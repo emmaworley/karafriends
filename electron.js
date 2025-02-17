@@ -1,4 +1,4 @@
-#!/usr/bin/env yarn node
+#!/usr/bin/env -S yarn node
 const { spawnSync } = require("child_process");
 const { resolve } = require("path");
 
