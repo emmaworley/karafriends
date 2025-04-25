@@ -40,7 +40,7 @@
     "@types/youtube-player": "5.5.11",
     "bufferutil": "4.0.9",
     "classnames": "2.5.1",
-    "color-convert": "2.0.1",
+    "color-convert": "3.0.1",
     "compression": "1.7.5",
     "cors": "2.8.5",
     "cubic-spline": "3.0.3",
