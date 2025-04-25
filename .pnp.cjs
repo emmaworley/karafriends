@@ -92,7 +92,7 @@ const RAW_RUNTIME_STATE =
           ["cross-env", "npm:7.0.3"],\
           ["cubic-spline", "npm:3.0.3"],\
           ["dataloader", "npm:2.2.3"],\
-          ["electron", "npm:34.0.2"],\
+          ["electron", "npm:35.2.1"],\
           ["electron-is-dev", "npm:3.0.1"],\
           ["electron-packager", "npm:17.1.2"],\
           ["express", "npm:4.21.2"],\
@@ -6395,6 +6395,14 @@ const RAW_RUNTIME_STATE =
           ["undici-types", "npm:6.20.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:22.15.2", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-22.15.2-8c5ac561a4-e220715712.zip/node_modules/@types/node/",\
+        "packageDependencies": [\
+          ["@types/node", "npm:22.15.2"],\
+          ["undici-types", "npm:6.21.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@types/node-fetch", [\
@@ -10095,12 +10103,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["electron", [\
-      ["npm:34.0.2", {\
-        "packageLocation": "./.yarn/unplugged/electron-npm-34.0.2-6a55e84bc6/node_modules/electron/",\
+      ["npm:35.2.1", {\
+        "packageLocation": "./.yarn/unplugged/electron-npm-35.2.1-3967aad240/node_modules/electron/",\
         "packageDependencies": [\
-          ["electron", "npm:34.0.2"],\
+          ["electron", "npm:35.2.1"],\
           ["@electron/get", "npm:2.0.3"],\
-          ["@types/node", "npm:20.17.16"],\
+          ["@types/node", "npm:22.15.2"],\
           ["extract-zip", "npm:2.0.1"]\
         ],\
         "linkType": "HARD"\
@@ -14015,7 +14023,7 @@ const RAW_RUNTIME_STATE =
           ["cross-env", "npm:7.0.3"],\
           ["cubic-spline", "npm:3.0.3"],\
           ["dataloader", "npm:2.2.3"],\
-          ["electron", "npm:34.0.2"],\
+          ["electron", "npm:35.2.1"],\
           ["electron-is-dev", "npm:3.0.1"],\
           ["electron-packager", "npm:17.1.2"],\
           ["express", "npm:4.21.2"],\
@@ -19474,6 +19482,13 @@ const RAW_RUNTIME_STATE =
           ["undici-types", "npm:6.20.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:6.21.0", {\
+        "packageLocation": "./.yarn/cache/undici-types-npm-6.21.0-eb2b0ed56a-ec8f41aa43.zip/node_modules/undici-types/",\
+        "packageDependencies": [\
+          ["undici-types", "npm:6.21.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["unicode-canonical-property-names-ecmascript", [\
@@ -19885,7 +19900,7 @@ const RAW_RUNTIME_STATE =
           ["@wdio/logger", "npm:9.4.4"],\
           ["compare-versions", "npm:6.1.1"],\
           ["debug", "virtual:18316b804e39e10c446c63495ce5eaa5ce989a46612e0ee0ee02c6d34327f1b5350aa9b949cce807abb977452110218e0d6c765fde606fe792cfc6107391696c#npm:4.4.0"],\
-          ["electron", "npm:34.0.2"],\
+          ["electron", "npm:35.2.1"],\
           ["electron-to-chromium", "npm:1.5.90"],\
           ["fast-copy", "npm:3.0.2"],\
           ["read-package-up", "npm:11.0.0"],\
