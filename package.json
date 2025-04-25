@@ -41,7 +41,7 @@
     "bufferutil": "4.0.9",
     "classnames": "2.5.1",
     "color-convert": "2.0.1",
-    "compression": "1.7.5",
+    "compression": "1.8.0",
     "cors": "2.8.5",
     "cubic-spline": "3.0.3",
     "dataloader": "2.2.3",
