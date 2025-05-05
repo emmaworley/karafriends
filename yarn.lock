@@ -11296,7 +11296,7 @@ __metadata:
     react-router: "npm:7.1.3"
     react-swipeable: "npm:7.0.2"
     regenerator-runtime: "npm:0.14.1"
-    relay-compiler: "npm:18.2.0"
+    relay-compiler: "npm:19.0.0"
     relay-compiler-language-typescript: "npm:15.0.1"
     relay-config: "npm:12.0.1"
     relay-runtime: "npm:18.2.0"
@@ -14261,12 +14261,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"relay-compiler@npm:18.2.0":
-  version: 18.2.0
-  resolution: "relay-compiler@npm:18.2.0"
+"relay-compiler@npm:19.0.0":
+  version: 19.0.0
+  resolution: "relay-compiler@npm:19.0.0"
   bin:
     relay-compiler: cli.js
-  checksum: 10/a03f7c04176681905d1b640b18f5da3d38fdc7c5f92900b3a83b07f7af5aada69e58fe970c70c1a4949516ffafec22a308957e541652411d193489e97b561331
+  checksum: 10/a48a7e4d7245a402b6df4a427a33f2d2c46d7f692c497b03b0fcc540086ad3fd7823be3712f0b23a386649609000191dfa3f8697d35a52949d9976acde639a8b
   languageName: node
   linkType: hard
 
