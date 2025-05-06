@@ -11269,7 +11269,7 @@ __metadata:
     kuromoji: "npm:0.1.2"
     kuroshiro: "npm:1.2.0"
     kuroshiro-analyzer-kuromoji: "npm:1.1.0"
-    lint-staged: "npm:15.4.3"
+    lint-staged: "npm:15.5.2"
     lodash: "npm:4.17.21"
     materialize-css: "npm:1.0.0"
     multicast-dns: "npm:7.2.5"
@@ -11558,9 +11558,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:15.4.3":
-  version: 15.4.3
-  resolution: "lint-staged@npm:15.4.3"
+"lint-staged@npm:15.5.2":
+  version: 15.5.2
+  resolution: "lint-staged@npm:15.5.2"
   dependencies:
     chalk: "npm:^5.4.1"
     commander: "npm:^13.1.0"
@@ -11574,7 +11574,7 @@ __metadata:
     yaml: "npm:^2.7.0"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10/14a6a9cb9b5e8027b1347cb24e114839d618d343d5c724c26def7d45ca9b9a9b813b585531c68f5a3d13332407c2dba198987a73f0350df483d99a876ba69c60
+  checksum: 10/523c332d6cb6e34972a6530a7a2487307555e784df9466c82f2b8d17c8090a3db561a6362065ae6b63048c25fcb85c9e32057cd0bfb756bf7ab185bea1dbb89c
   languageName: node
   linkType: hard
 
