@@ -52,7 +52,7 @@ const RAW_RUNTIME_STATE =
           ["@types/babel__core", "npm:7.20.5"],\
           ["@types/color-convert", "npm:2.0.4"],\
           ["@types/compression", "npm:1.7.5"],\
-          ["@types/cors", "npm:2.8.17"],\
+          ["@types/cors", "npm:2.8.18"],\
           ["@types/express", "npm:5.0.0"],\
           ["@types/format-duration", "npm:3.0.0"],\
           ["@types/gl-vec2", "npm:1.3.5"],\
@@ -6107,10 +6107,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/cors", [\
-      ["npm:2.8.17", {\
-        "packageLocation": "./.yarn/cache/@types-cors-npm-2.8.17-2556d16051-469bd85e29.zip/node_modules/@types/cors/",\
+      ["npm:2.8.18", {\
+        "packageLocation": "./.yarn/cache/@types-cors-npm-2.8.18-349b3b7bcc-6e49b74134.zip/node_modules/@types/cors/",\
         "packageDependencies": [\
-          ["@types/cors", "npm:2.8.17"],\
+          ["@types/cors", "npm:2.8.18"],\
           ["@types/node", "npm:22.12.0"]\
         ],\
         "linkType": "HARD"\
@@ -13975,7 +13975,7 @@ const RAW_RUNTIME_STATE =
           ["@types/babel__core", "npm:7.20.5"],\
           ["@types/color-convert", "npm:2.0.4"],\
           ["@types/compression", "npm:1.7.5"],\
-          ["@types/cors", "npm:2.8.17"],\
+          ["@types/cors", "npm:2.8.18"],\
           ["@types/express", "npm:5.0.0"],\
           ["@types/format-duration", "npm:3.0.0"],\
           ["@types/gl-vec2", "npm:1.3.5"],\
