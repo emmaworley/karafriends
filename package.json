@@ -32,7 +32,7 @@
     "@graphql-tools/schema": "10.0.16",
     "@parcel/transformer-react-refresh-wrap": "2.13.3",
     "@sentry/browser": "8.52.1",
-    "@sentry/node": "7.120.3",
+    "@sentry/node": "9.17.0",
     "@types/react-fade-in": "2.0.2",
     "@types/react-swipeable": "5.2.0",
     "@types/user-agents": "1.0.4",
