@@ -87,14 +87,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/server@npm:4.11.2":
-  version: 4.11.2
-  resolution: "@apollo/server@npm:4.11.2"
+"@apollo/server@npm:4.12.1":
+  version: 4.12.1
+  resolution: "@apollo/server@npm:4.12.1"
   dependencies:
     "@apollo/cache-control-types": "npm:^1.0.3"
     "@apollo/server-gateway-interface": "npm:^1.1.1"
     "@apollo/usage-reporting-protobuf": "npm:^4.1.1"
-    "@apollo/utils.createhash": "npm:^2.0.0"
+    "@apollo/utils.createhash": "npm:^2.0.2"
     "@apollo/utils.fetcher": "npm:^2.0.0"
     "@apollo/utils.isnodelike": "npm:^2.0.0"
     "@apollo/utils.keyvaluecache": "npm:^2.1.0"
@@ -117,7 +117,7 @@ __metadata:
     whatwg-mimetype: "npm:^3.0.0"
   peerDependencies:
     graphql: ^16.6.0
-  checksum: 10/88137c67b7777a06e8cec7ad9923d71f7e537a2011d626503208c593cb6f99200834863f72ec4f59005f94081730a376a88b6362a33f5f26b0fb867549fd23e7
+  checksum: 10/674f796eadf554d4c250cc88ec1ad0c67ae53a0060e419555bd5093b69f803117d7204ad7ffb36c046f9b3e39aac6a18d4eef7fd60062567fcd3d82d2d178b9d
   languageName: node
   linkType: hard
 
@@ -130,7 +130,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/utils.createhash@npm:^2.0.0":
+"@apollo/utils.createhash@npm:^2.0.2":
   version: 2.0.2
   resolution: "@apollo/utils.createhash@npm:2.0.2"
   dependencies:
@@ -11190,7 +11190,7 @@ __metadata:
   dependencies:
     7zip-bin: "npm:5.1.1"
     "@apollo/datasource-rest": "npm:6.4.1"
-    "@apollo/server": "npm:4.11.2"
+    "@apollo/server": "npm:4.12.1"
     "@apollo/utils.fetcher": "npm:3.1.0"
     "@apollo/utils.keyvaluecache": "npm:3.1.0"
     "@babel/core": "npm:7.26.7"
