@@ -30,7 +30,7 @@
     "@apollo/utils.fetcher": "3.1.0",
     "@apollo/utils.keyvaluecache": "3.1.0",
     "@graphql-tools/schema": "10.0.16",
-    "@parcel/transformer-react-refresh-wrap": "2.13.3",
+    "@parcel/transformer-react-refresh-wrap": "2.15.1",
     "@sentry/browser": "8.52.1",
     "@sentry/node": "7.120.3",
     "@types/react-fade-in": "2.0.2",
