@@ -42,7 +42,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-glsl", "npm:2.13.3"],\
           ["@parcel/transformer-inline-string", "npm:2.13.3"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.13.3"],\
-          ["@parcel/transformer-sass", "npm:2.13.3"],\
+          ["@parcel/transformer-sass", "npm:2.15.2"],\
           ["@parcel/transformer-worklet", "npm:2.13.3"],\
           ["@sentry/browser", "npm:8.52.1"],\
           ["@sentry/node", "npm:7.120.3"],\
@@ -4350,6 +4350,14 @@ const RAW_RUNTIME_STATE =
           ["chalk", "npm:4.1.2"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/cache/@parcel-codeframe-npm-2.15.2-fa6c797bfb-c30f308c15.zip/node_modules/@parcel/codeframe/",\
+        "packageDependencies": [\
+          ["@parcel/codeframe", "npm:2.15.2"],\
+          ["chalk", "npm:4.1.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@parcel/compressor-raw", [\
@@ -4458,6 +4466,15 @@ const RAW_RUNTIME_STATE =
           ["nullthrows", "npm:1.1.1"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/cache/@parcel-diagnostic-npm-2.15.2-3219d64a22-ef98eb4311.zip/node_modules/@parcel/diagnostic/",\
+        "packageDependencies": [\
+          ["@parcel/diagnostic", "npm:2.15.2"],\
+          ["@mischnic/json-sourcemap", "npm:0.1.1"],\
+          ["nullthrows", "npm:1.1.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@parcel/events", [\
@@ -4467,6 +4484,13 @@ const RAW_RUNTIME_STATE =
           ["@parcel/events", "npm:2.13.3"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/cache/@parcel-events-npm-2.15.2-79af921610-fcf8d1ab0c.zip/node_modules/@parcel/events/",\
+        "packageDependencies": [\
+          ["@parcel/events", "npm:2.15.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@parcel/feature-flags", [\
@@ -4474,6 +4498,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@parcel-feature-flags-npm-2.13.3-b7311841d7-c7f282156a.zip/node_modules/@parcel/feature-flags/",\
         "packageDependencies": [\
           ["@parcel/feature-flags", "npm:2.13.3"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/cache/@parcel-feature-flags-npm-2.15.2-8538ab0064-237d807ac7.zip/node_modules/@parcel/feature-flags/",\
+        "packageDependencies": [\
+          ["@parcel/feature-flags", "npm:2.15.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4545,6 +4576,15 @@ const RAW_RUNTIME_STATE =
           ["@parcel/events", "npm:2.13.3"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/cache/@parcel-logger-npm-2.15.2-b31910cc5c-fdeeff72ab.zip/node_modules/@parcel/logger/",\
+        "packageDependencies": [\
+          ["@parcel/logger", "npm:2.15.2"],\
+          ["@parcel/diagnostic", "npm:2.15.2"],\
+          ["@parcel/events", "npm:2.15.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@parcel/markdown-ansi", [\
@@ -4552,6 +4592,14 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@parcel-markdown-ansi-npm-2.13.3-75ec860315-58229b4ccc.zip/node_modules/@parcel/markdown-ansi/",\
         "packageDependencies": [\
           ["@parcel/markdown-ansi", "npm:2.13.3"],\
+          ["chalk", "npm:4.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/cache/@parcel-markdown-ansi-npm-2.15.2-97d7d208fb-54a8084a5b.zip/node_modules/@parcel/markdown-ansi/",\
+        "packageDependencies": [\
+          ["@parcel/markdown-ansi", "npm:2.15.2"],\
           ["chalk", "npm:4.1.2"]\
         ],\
         "linkType": "HARD"\
@@ -4788,6 +4836,14 @@ const RAW_RUNTIME_STATE =
           ["@parcel/types", "npm:2.13.3"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/cache/@parcel-plugin-npm-2.15.2-48ae659faa-af353c2a22.zip/node_modules/@parcel/plugin/",\
+        "packageDependencies": [\
+          ["@parcel/plugin", "npm:2.15.2"],\
+          ["@parcel/types", "npm:2.15.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@parcel/profiler", [\
@@ -4798,6 +4854,17 @@ const RAW_RUNTIME_STATE =
           ["@parcel/diagnostic", "npm:2.13.3"],\
           ["@parcel/events", "npm:2.13.3"],\
           ["@parcel/types-internal", "npm:2.13.3"],\
+          ["chrome-trace-event", "npm:1.0.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/cache/@parcel-profiler-npm-2.15.2-8a2588cec8-ad9262e48d.zip/node_modules/@parcel/profiler/",\
+        "packageDependencies": [\
+          ["@parcel/profiler", "npm:2.15.2"],\
+          ["@parcel/diagnostic", "npm:2.15.2"],\
+          ["@parcel/events", "npm:2.15.2"],\
+          ["@parcel/types-internal", "npm:2.15.2"],\
           ["chrome-trace-event", "npm:1.0.4"]\
         ],\
         "linkType": "HARD"\
@@ -4906,6 +4973,106 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/unplugged/@parcel-rust-npm-2.13.3-a6eff8339b/node_modules/@parcel/rust/",\
         "packageDependencies": [\
           ["@parcel/rust", "npm:2.13.3"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/cache/@parcel-rust-npm-2.15.2-e1acfbce89-5892468304.zip/node_modules/@parcel/rust/",\
+        "packageDependencies": [\
+          ["@parcel/rust", "npm:2.15.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:f694f3681bb3205005f9a73a03cf971c122057cadafc74f8080876d3cc68c861400c07d88f571328ed11af7f34438b69883fc7ff79fd59d58b480cfa64d21dc6#npm:2.15.2", {\
+        "packageLocation": "./.yarn/__virtual__/@parcel-rust-virtual-bb62bea3b8/0/cache/@parcel-rust-npm-2.15.2-e1acfbce89-5892468304.zip/node_modules/@parcel/rust/",\
+        "packageDependencies": [\
+          ["@parcel/rust", "virtual:f694f3681bb3205005f9a73a03cf971c122057cadafc74f8080876d3cc68c861400c07d88f571328ed11af7f34438b69883fc7ff79fd59d58b480cfa64d21dc6#npm:2.15.2"],\
+          ["@parcel/rust-darwin-arm64", "npm:2.15.2"],\
+          ["@parcel/rust-darwin-x64", "npm:2.15.2"],\
+          ["@parcel/rust-linux-arm-gnueabihf", "npm:2.15.2"],\
+          ["@parcel/rust-linux-arm64-gnu", "npm:2.15.2"],\
+          ["@parcel/rust-linux-arm64-musl", "npm:2.15.2"],\
+          ["@parcel/rust-linux-x64-gnu", "npm:2.15.2"],\
+          ["@parcel/rust-linux-x64-musl", "npm:2.15.2"],\
+          ["@parcel/rust-win32-x64-msvc", "npm:2.15.2"],\
+          ["@types/napi-wasm", null],\
+          ["napi-wasm", null]\
+        ],\
+        "packagePeers": [\
+          "@types/napi-wasm",\
+          "napi-wasm"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@parcel/rust-darwin-arm64", [\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/unplugged/@parcel-rust-darwin-arm64-npm-2.15.2-30e11e2872/node_modules/@parcel/rust-darwin-arm64/",\
+        "packageDependencies": [\
+          ["@parcel/rust-darwin-arm64", "npm:2.15.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@parcel/rust-darwin-x64", [\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/unplugged/@parcel-rust-darwin-x64-npm-2.15.2-cab21081fb/node_modules/@parcel/rust-darwin-x64/",\
+        "packageDependencies": [\
+          ["@parcel/rust-darwin-x64", "npm:2.15.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@parcel/rust-linux-arm-gnueabihf", [\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/unplugged/@parcel-rust-linux-arm-gnueabihf-npm-2.15.2-1a49caa879/node_modules/@parcel/rust-linux-arm-gnueabihf/",\
+        "packageDependencies": [\
+          ["@parcel/rust-linux-arm-gnueabihf", "npm:2.15.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@parcel/rust-linux-arm64-gnu", [\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/unplugged/@parcel-rust-linux-arm64-gnu-npm-2.15.2-a0859420f5/node_modules/@parcel/rust-linux-arm64-gnu/",\
+        "packageDependencies": [\
+          ["@parcel/rust-linux-arm64-gnu", "npm:2.15.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@parcel/rust-linux-arm64-musl", [\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/unplugged/@parcel-rust-linux-arm64-musl-npm-2.15.2-5d682ab993/node_modules/@parcel/rust-linux-arm64-musl/",\
+        "packageDependencies": [\
+          ["@parcel/rust-linux-arm64-musl", "npm:2.15.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@parcel/rust-linux-x64-gnu", [\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/unplugged/@parcel-rust-linux-x64-gnu-npm-2.15.2-ca5ce63a10/node_modules/@parcel/rust-linux-x64-gnu/",\
+        "packageDependencies": [\
+          ["@parcel/rust-linux-x64-gnu", "npm:2.15.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@parcel/rust-linux-x64-musl", [\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/unplugged/@parcel-rust-linux-x64-musl-npm-2.15.2-ae180ba430/node_modules/@parcel/rust-linux-x64-musl/",\
+        "packageDependencies": [\
+          ["@parcel/rust-linux-x64-musl", "npm:2.15.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@parcel/rust-win32-x64-msvc", [\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/unplugged/@parcel-rust-win32-x64-msvc-npm-2.15.2-a2d2e4d706/node_modules/@parcel/rust-win32-x64-msvc/",\
+        "packageDependencies": [\
+          ["@parcel/rust-win32-x64-msvc", "npm:2.15.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5119,13 +5286,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@parcel/transformer-sass", [\
-      ["npm:2.13.3", {\
-        "packageLocation": "./.yarn/cache/@parcel-transformer-sass-npm-2.13.3-736b7be214-b57c76bacd.zip/node_modules/@parcel/transformer-sass/",\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/cache/@parcel-transformer-sass-npm-2.15.2-77acca27f7-9907d10407.zip/node_modules/@parcel/transformer-sass/",\
         "packageDependencies": [\
-          ["@parcel/transformer-sass", "npm:2.13.3"],\
-          ["@parcel/plugin", "npm:2.13.3"],\
+          ["@parcel/transformer-sass", "npm:2.15.2"],\
+          ["@parcel/plugin", "npm:2.15.2"],\
           ["@parcel/source-map", "npm:2.1.1"],\
-          ["sass", "npm:1.83.4"]\
+          ["sass", "npm:1.89.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5166,6 +5333,15 @@ const RAW_RUNTIME_STATE =
           ["@parcel/workers", "virtual:b4cc46a8a8f4d0f0835574c9ef860055c06819ac9c881128c6e19a3eedafee3afac571ecf0343a713347a68eae489e60d6895780e3e17ca24ffc543a1508f754#npm:2.13.3"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/cache/@parcel-types-npm-2.15.2-2d90c8884c-1e3e88d862.zip/node_modules/@parcel/types/",\
+        "packageDependencies": [\
+          ["@parcel/types", "npm:2.15.2"],\
+          ["@parcel/types-internal", "npm:2.15.2"],\
+          ["@parcel/workers", "virtual:2d90c8884ca235d4c4b5b3fbcbf99b5178b44a2bb34031c17462400ff090f823503cf7ed5f5304a26deb9196ee99c06b23daeb39a3d26ec316b8798ccac7eb28#npm:2.15.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@parcel/types-internal", [\
@@ -5175,6 +5351,17 @@ const RAW_RUNTIME_STATE =
           ["@parcel/types-internal", "npm:2.13.3"],\
           ["@parcel/diagnostic", "npm:2.13.3"],\
           ["@parcel/feature-flags", "npm:2.13.3"],\
+          ["@parcel/source-map", "npm:2.1.1"],\
+          ["utility-types", "npm:3.11.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/cache/@parcel-types-internal-npm-2.15.2-f553e72255-449061e5eb.zip/node_modules/@parcel/types-internal/",\
+        "packageDependencies": [\
+          ["@parcel/types-internal", "npm:2.15.2"],\
+          ["@parcel/diagnostic", "npm:2.15.2"],\
+          ["@parcel/feature-flags", "npm:2.15.2"],\
           ["@parcel/source-map", "npm:2.1.1"],\
           ["utility-types", "npm:3.11.0"]\
         ],\
@@ -5191,6 +5378,21 @@ const RAW_RUNTIME_STATE =
           ["@parcel/logger", "npm:2.13.3"],\
           ["@parcel/markdown-ansi", "npm:2.13.3"],\
           ["@parcel/rust", "npm:2.13.3"],\
+          ["@parcel/source-map", "npm:2.1.1"],\
+          ["chalk", "npm:4.1.2"],\
+          ["nullthrows", "npm:1.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/cache/@parcel-utils-npm-2.15.2-f694f3681b-ee41da6c76.zip/node_modules/@parcel/utils/",\
+        "packageDependencies": [\
+          ["@parcel/utils", "npm:2.15.2"],\
+          ["@parcel/codeframe", "npm:2.15.2"],\
+          ["@parcel/diagnostic", "npm:2.15.2"],\
+          ["@parcel/logger", "npm:2.15.2"],\
+          ["@parcel/markdown-ansi", "npm:2.15.2"],\
+          ["@parcel/rust", "virtual:f694f3681bb3205005f9a73a03cf971c122057cadafc74f8080876d3cc68c861400c07d88f571328ed11af7f34438b69883fc7ff79fd59d58b480cfa64d21dc6#npm:2.15.2"],\
           ["@parcel/source-map", "npm:2.1.1"],\
           ["chalk", "npm:4.1.2"],\
           ["nullthrows", "npm:1.1.1"]\
@@ -5350,6 +5552,13 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:2.15.2", {\
+        "packageLocation": "./.yarn/cache/@parcel-workers-npm-2.15.2-1719e755fe-5193c308a6.zip/node_modules/@parcel/workers/",\
+        "packageDependencies": [\
+          ["@parcel/workers", "npm:2.15.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["virtual:03fb55c30077b5718fe82efe7703fe16e0444cd88ecc5506d762990e045385cb45131158a947fa48b3351f33d82e1b917b40d4e45ed24fdebc0142e6d2026624#npm:2.13.3", {\
         "packageLocation": "./.yarn/__virtual__/@parcel-workers-virtual-beb83e29ad/0/cache/@parcel-workers-npm-2.13.3-b9b072daef-99d6b62335.zip/node_modules/@parcel/workers/",\
         "packageDependencies": [\
@@ -5360,6 +5569,25 @@ const RAW_RUNTIME_STATE =
           ["@parcel/profiler", "npm:2.13.3"],\
           ["@parcel/types-internal", "npm:2.13.3"],\
           ["@parcel/utils", "npm:2.13.3"],\
+          ["@types/parcel__core", null],\
+          ["nullthrows", "npm:1.1.1"]\
+        ],\
+        "packagePeers": [\
+          "@parcel/core",\
+          "@types/parcel__core"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:2d90c8884ca235d4c4b5b3fbcbf99b5178b44a2bb34031c17462400ff090f823503cf7ed5f5304a26deb9196ee99c06b23daeb39a3d26ec316b8798ccac7eb28#npm:2.15.2", {\
+        "packageLocation": "./.yarn/__virtual__/@parcel-workers-virtual-a6b65df3e5/0/cache/@parcel-workers-npm-2.15.2-1719e755fe-5193c308a6.zip/node_modules/@parcel/workers/",\
+        "packageDependencies": [\
+          ["@parcel/workers", "virtual:2d90c8884ca235d4c4b5b3fbcbf99b5178b44a2bb34031c17462400ff090f823503cf7ed5f5304a26deb9196ee99c06b23daeb39a3d26ec316b8798ccac7eb28#npm:2.15.2"],\
+          ["@parcel/core", null],\
+          ["@parcel/diagnostic", "npm:2.15.2"],\
+          ["@parcel/logger", "npm:2.15.2"],\
+          ["@parcel/profiler", "npm:2.15.2"],\
+          ["@parcel/types-internal", "npm:2.15.2"],\
+          ["@parcel/utils", "npm:2.15.2"],\
           ["@types/parcel__core", null],\
           ["nullthrows", "npm:1.1.1"]\
         ],\
@@ -13965,7 +14193,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-glsl", "npm:2.13.3"],\
           ["@parcel/transformer-inline-string", "npm:2.13.3"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.13.3"],\
-          ["@parcel/transformer-sass", "npm:2.13.3"],\
+          ["@parcel/transformer-sass", "npm:2.15.2"],\
           ["@parcel/transformer-worklet", "npm:2.13.3"],\
           ["@sentry/browser", "npm:8.52.1"],\
           ["@sentry/node", "npm:7.120.3"],\
@@ -17831,10 +18059,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["sass", [\
-      ["npm:1.83.4", {\
-        "packageLocation": "./.yarn/cache/sass-npm-1.83.4-a8514cedd9-9a7d1c6be1.zip/node_modules/sass/",\
+      ["npm:1.89.0", {\
+        "packageLocation": "./.yarn/cache/sass-npm-1.89.0-b4451ff496-e8a5ce1a01.zip/node_modules/sass/",\
         "packageDependencies": [\
-          ["sass", "npm:1.83.4"],\
+          ["sass", "npm:1.89.0"],\
           ["@parcel/watcher", "npm:2.5.1"],\
           ["chokidar", "npm:4.0.3"],\
           ["immutable", "npm:5.0.3"],\
