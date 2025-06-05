@@ -1551,7 +1551,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.26.7, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.14.0, @babel/runtime@npm:^7.25.0, @babel/runtime@npm:^7.4.3, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.4":
+"@babel/runtime@npm:7.27.6":
+  version: 7.27.6
+  resolution: "@babel/runtime@npm:7.27.6"
+  checksum: 10/cc957a12ba3781241b83d528eb69ddeb86ca5ac43179a825e83aa81263a6b3eb88c57bed8a937cdeacfc3192e07ec24c73acdfea4507d0c0428c8e23d6322bfe
+  languageName: node
+  linkType: hard
+
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.14.0, @babel/runtime@npm:^7.25.0, @babel/runtime@npm:^7.4.3, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.4":
   version: 7.26.7
   resolution: "@babel/runtime@npm:7.26.7"
   dependencies:
@@ -11196,7 +11203,7 @@ __metadata:
     "@babel/core": "npm:7.26.7"
     "@babel/preset-env": "npm:7.26.7"
     "@babel/preset-react": "npm:7.26.3"
-    "@babel/runtime": "npm:7.26.7"
+    "@babel/runtime": "npm:7.27.6"
     "@graphql-tools/schema": "npm:10.0.16"
     "@parcel/config-default": "npm:2.13.3"
     "@parcel/core": "npm:2.13.3"
