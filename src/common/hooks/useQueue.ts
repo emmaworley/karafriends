@@ -5,11 +5,12 @@ import environment from "../graphqlEnvironment";
 import { useQueueQueueQuery } from "./__generated__/useQueueQueueQuery.graphql";
 import { useQueueQueueSubscription } from "./__generated__/useQueueQueueSubscription.graphql";
 
-type ElementType<T extends ReadonlyArray<unknown>> = T extends ReadonlyArray<
-  infer ElementType // tslint:disable-line:no-shadowed-variable
->
-  ? ElementType
-  : never;
+type ElementType<T extends ReadonlyArray<unknown>> =
+  T extends ReadonlyArray<
+    infer ElementType // tslint:disable-line:no-shadowed-variable
+  >
+    ? ElementType
+    : never;
 
 const queueQuery = graphql`
   query useQueueQueueQuery {
@@ -79,7 +80,7 @@ function withETAs(currentSong: CurrentSongStateType, queue: QueueStateType) {
 
       return [results.concat([[cur, totalETA]]), totalETA + playtime];
     },
-    [[], currentSongPlaytime]
+    [[], currentSongPlaytime],
   );
 
   return result[0];
@@ -107,10 +108,11 @@ export default function useQueue() {
     const initialQuery = fetchQuery<useQueueQueueQuery>(
       environment,
       queueQuery,
-      {}
+      {},
     ).subscribe({
-      next: ({ currentSong, queue }: useQueueQueueQuery["response"]) =>
-        setQueueState(withETAs(currentSong, queue)),
+      next: ({ currentSong, queue }: useQueueQueueQuery["response"]) => {
+        setQueueState(withETAs(currentSong, queue));
+      },
     });
 
     const subscription = requestSubscription<useQueueQueueSubscription>(
@@ -123,12 +125,12 @@ export default function useQueue() {
             setQueueState(
               withETAs(
                 response.queueChanged.currentSong,
-                response.queueChanged.newQueue
-              )
+                response.queueChanged.newQueue,
+              ),
             );
           }
         },
-      }
+      },
     );
 
     return () => {

@@ -307,6 +307,7 @@ type YoutubeQueueItem implements QueueItemInterface {
   userIdentity: UserIdentity!
   hasAdhocLyrics: Boolean!
   hasCaptions: Boolean!
+  captionCode: String
   gainValue: Float!
 }
 
@@ -320,7 +321,7 @@ type NicoQueueItem implements QueueItemInterface {
 }
 
 union QueueItem =
-    DamQueueItem
+  | DamQueueItem
   | JoysoundQueueItem
   | YoutubeQueueItem
   | NicoQueueItem
