@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JsonSchemaMappingsProjectConfiguration">
+    <state>
+      <map>
+        <entry key="mergey">
+          <value>
+            <SchemaInfo>
+              <option name="generatedName" value="New Schema" />
+              <option name="name" value="mergey" />
+              <option name="relativePathToSchema" value="https://mergeymukherjee.prod.netflix.net:8443/api/v1/schema/mergey" />
+              <option name="schemaVersion" value="JSON Schema 7" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="pattern" value="true" />
+                    <option name="path" value=".netflix/mergey.yml" />
+                    <option name="mappingKind" value="Pattern" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="rocket">
+          <value>
+            <SchemaInfo>
+              <option name="generatedName" value="New Schema" />
+              <option name="name" value="rocket" />
+              <option name="relativePathToSchema" value="https://arcas.test.netflix.net/api/v1/schema/rocket-yml" />
+              <option name="schemaVersion" value="JSON Schema 7" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="pattern" value="true" />
+                    <option name="path" value="rocket.yml" />
+                    <option name="mappingKind" value="Pattern" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="spinnaker">
+          <value>
+            <SchemaInfo>
+              <option name="generatedName" value="New Schema" />
+              <option name="name" value="spinnaker" />
+              <option name="relativePathToSchema" value="https://api.spinnaker.mgmt.netflix.net/managed/delivery-configs/schema" />
+              <option name="schemaVersion" value="JSON Schema 7" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="pattern" value="true" />
+                    <option name="path" value=".netflix/spinnaker.yml" />
+                    <option name="mappingKind" value="Pattern" />
+                  </Item>
+                  <Item>
+                    <option name="pattern" value="true" />
+                    <option name="path" value=".netflix/spinnaker/*.yml" />
+                    <option name="mappingKind" value="Pattern" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+      </map>
+    </state>
+  </component>
+</project>

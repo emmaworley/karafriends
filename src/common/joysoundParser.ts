@@ -4,8 +4,13 @@ import invariant from "ts-invariant";
 import Kuroshiro from "kuroshiro";
 import KuromojiAnalyzer, { AnalyzerResult } from "kuroshiro-analyzer-kuromoji";
 
-import { RUBY_FONT_SIZE, RUBY_FONT_STROKE } from "../common/constants";
+import { RUBY_FONT_SIZE, RUBY_FONT_STROKE } from "./constants";
 import kanjiToReading from "./dictionary.json";
+import {
+  isKanaUnicodeChar,
+  isKanjiUnicodeChar,
+  isKatakanaUnicodeChar,
+} from "./stringUtil.js";
 
 type DictionaryKanji = keyof typeof kanjiToReading;
 
@@ -15,9 +20,30 @@ export interface KuroshiroSingleton {
   analyzerInitPromise: Promise<void>;
 }
 
-export interface JoysoundPaletteColor {
-  id: number;
-  rgb: number[];
+export enum LyricsScrollStyle {
+  ABSOLUTE,
+  RELATIVE,
+}
+
+export interface LyricsBlock {
+  xPos: number;
+  yPos: number;
+  preBorder: number[];
+  postBorder: number[];
+  lyricsLines: LyricsLine[];
+  scrollStyle: LyricsScrollStyle;
+  fadeinTime: number;
+  fadeoutTime: number;
+  fontSize: number;
+  fontStroke: number;
+}
+
+export interface LyricsLine {
+  line: number;
+  chars: JoysoundLyricsChar[];
+  furigana: JoysoundLyricsFurigana[];
+  romaji: JoysoundLyricsRomaji[];
+  scrollEvents: JoysoundScrollEventGeneric[];
 }
 
 export interface JoysoundMetadata {
@@ -28,47 +54,56 @@ export interface JoysoundMetadata {
   musicNameReading: string;
   artistNameReading: string;
   fadeoutTime: number;
+  captionCode: string;
 }
 
-interface JoysoundLyricsChar {
+export interface JoysoundLyricsChar {
   font: number;
   width: number;
-  charCode: number;
+  char: string;
+  preFillColor: number[];
+  postFillColor: number[];
   furiganaIndex: number;
 }
 
-interface JoysoundLyricsFurigana {
+export interface JoysoundLyricsFurigana {
   length: number;
   xPos: number;
-  chars: number[];
+  chars: string[];
+  preFillColor: number[];
+  postFillColor: number[];
 }
 
 interface JoysoundLyricsRomaji {
   phrase: string;
   xPos: number;
   sourceWidth: number;
+  preFillColor: number[];
+  postFillColor: number[];
 }
 
 interface JoysoundScrollEvent {
-  time: number;
+  startTime: number;
+}
+
+export interface JoysoundScrollEventAbsolute extends JoysoundScrollEvent {
   speed: number;
 }
 
-export interface JoysoundLyricsBlock {
+export interface JoysoundScrollEventRelative extends JoysoundScrollEvent {
+  endTime: number;
+  charStartIdx: number;
+  charEndIdx: number;
+}
+
+type JoysoundScrollEventGeneric =
+  | JoysoundScrollEventAbsolute
+  | JoysoundScrollEventRelative;
+
+interface JoysoundLyricsBlock {
   blockSize: number;
   flags: number;
-  xPos: number;
-  yPos: number;
-  preFill: JoysoundPaletteColor;
-  postFill: JoysoundPaletteColor;
-  preBorder: JoysoundPaletteColor;
-  postBorder: JoysoundPaletteColor;
-  chars: JoysoundLyricsChar[];
-  furigana: JoysoundLyricsFurigana[];
-  romaji: JoysoundLyricsRomaji[];
-  scrollEvents: JoysoundScrollEvent[];
-  fadeinTime: number;
-  fadeoutTime: number;
+  data: LyricsBlock;
 }
 
 interface JoysoundTimelineEvent {
@@ -76,10 +111,14 @@ interface JoysoundTimelineEvent {
   payload: number[];
 }
 
-export interface JoysoundTelopData {
-  metadata: JoysoundMetadata;
-  lyrics: JoysoundLyricsBlock[];
-  timeline: JoysoundTimelineEvent[];
+export interface LyricsMetadata {
+  captionCode: string;
+  fadeoutTime: number;
+}
+
+export interface LyricsData {
+  metadata: JoysoundMetadata | LyricsMetadata;
+  lyrics: LyricsBlock[];
 }
 
 const SUTEGANA = [
@@ -99,18 +138,19 @@ const SUTEGANA = [
 const sjisDecoder = new TextDecoder("sjis");
 const eucKrDecoder = new TextDecoder("euc-kr");
 
-export function decodeJoysoundText(
+const JOYSOUND_MAIN_FONT_SIZE = 44;
+const JOYSOUND_MAIN_FONT_STROKE = 4;
+
+function decodeJoysoundText(
   charCode: number,
   fontCode: number = 0,
-  flags: number = 0
+  flags: number = 0,
 ): string {
   switch (fontCode) {
     case 0:
       return decodeSJIS(charCode, flags);
-      break;
     case 1:
       return decodeEucKR(charCode);
-      break;
     default:
       return decodeSJIS(charCode, flags);
   }
@@ -144,22 +184,6 @@ function decodeEucKR(charCode: number): string {
   return eucKrDecoder.decode(bytes);
 }
 
-function isKatakanaUnicodeChar(unicodeChar: string) {
-  const charCode = unicodeChar.charCodeAt(0);
-
-  return charCode >= 0x30a0 && charCode <= 0x30ff;
-}
-
-function isKanaUnicodeChar(unicodeChar: string) {
-  const charCode = unicodeChar.charCodeAt(0);
-
-  return charCode >= 0x3040 && charCode <= 0x30ff;
-}
-
-function isKanjiUnicodeChar(unicodeChar: string) {
-  return Kuroshiro.Util.hasKanji(unicodeChar) || unicodeChar === "々";
-}
-
 function kanaReadingToRomaji(kanaReading: string) {
   if (["ッ", "っ"].includes(kanaReading.slice(-1))) {
     return Kuroshiro.Util.kanaToRomaji(kanaReading.slice(0, -1), "hepburn");
@@ -172,7 +196,7 @@ function kanaReadingToRomaji(kanaReading: string) {
 
 function kanjiPhraseToRomaji(
   kanjiPhrase: string,
-  hiraganaPhrase: string
+  hiraganaPhrase: string,
 ): string {
   if (kanjiToReading[kanjiPhrase as DictionaryKanji] !== undefined) {
     return kanaReadingToRomaji(kanjiToReading[kanjiPhrase as DictionaryKanji]);
@@ -182,20 +206,14 @@ function kanjiPhraseToRomaji(
 }
 
 function getRawLyrics(chars: JoysoundLyricsChar[]): string {
-  let lyrics = "";
-
-  for (const char of chars) {
-    const unicodeChar = decodeJoysoundText(char.charCode, char.font);
-
-    lyrics += unicodeChar;
-  }
-
-  return lyrics;
+  return chars.map((char) => char.char).join("");
 }
 
 function getMainRomajiBlocks(
   chars: JoysoundLyricsChar[],
-  tokenizedLyrics: AnalyzerResult[]
+  tokenizedLyrics: AnalyzerResult[],
+  preFillColor: number[],
+  postFillColor: number[],
 ): JoysoundLyricsRomaji[] {
   const mainRomajiBlocks = [];
 
@@ -208,11 +226,8 @@ function getMainRomajiBlocks(
   let tokenizedLyricsCharIndex = 0;
 
   for (const currGlyph of chars) {
-    const unicodeChar = decodeJoysoundText(currGlyph.charCode, currGlyph.font);
-    const prevUnicodeChar =
-      prevGlyph !== null
-        ? decodeJoysoundText(prevGlyph.charCode, currGlyph.font)
-        : null;
+    const unicodeChar = currGlyph.char;
+    const prevUnicodeChar = prevGlyph !== null ? prevGlyph.char : null;
 
     if (
       prevUnicodeChar !== null &&
@@ -229,6 +244,8 @@ function getMainRomajiBlocks(
         phrase: kanaReadingToRomaji(currPhrase),
         xPos: currXPos,
         sourceWidth: currPhraseWidth,
+        preFillColor,
+        postFillColor,
       });
 
       currXPos += currPhraseWidth;
@@ -243,7 +260,7 @@ function getMainRomajiBlocks(
       if (
         tokenizedLyrics[tokenizedLyricsIndex].pronunciation !== undefined &&
         !Kuroshiro.Util.hasKanji(
-          tokenizedLyrics[tokenizedLyricsIndex].surface_form
+          tokenizedLyrics[tokenizedLyricsIndex].surface_form,
         ) &&
         tokenizedLyrics[tokenizedLyricsIndex].pronunciation[
           tokenizedLyricsCharIndex
@@ -293,6 +310,8 @@ function getMainRomajiBlocks(
       phrase: kanaReadingToRomaji(currPhrase),
       xPos: currXPos,
       sourceWidth: currPhraseWidth,
+      preFillColor,
+      postFillColor,
     });
   }
 
@@ -300,15 +319,14 @@ function getMainRomajiBlocks(
 }
 
 function getFuriganaRomajiBlocks(
-  furigana: JoysoundLyricsFurigana[]
+  furigana: JoysoundLyricsFurigana[],
+  preFillColor: number[],
+  postFillColor: number[],
 ): JoysoundLyricsRomaji[] {
   const furiganaRomajiBlocks = [];
 
   for (const furiganaBlock of furigana) {
-    const furiganaPhrase = furiganaBlock.chars
-      .map((charCode) => decodeJoysoundText(charCode))
-      .join("");
-
+    const furiganaPhrase = furiganaBlock.chars.join("");
     const romajiPhrase = kanaReadingToRomaji(furiganaPhrase);
 
     furiganaRomajiBlocks.push({
@@ -316,6 +334,8 @@ function getFuriganaRomajiBlocks(
       xPos: furiganaBlock.xPos,
       sourceWidth:
         furiganaPhrase.length * (RUBY_FONT_SIZE + RUBY_FONT_STROKE * 2),
+      preFillColor,
+      postFillColor,
     });
   }
 
@@ -324,7 +344,9 @@ function getFuriganaRomajiBlocks(
 
 function getNonKanaRomajiBlocks(
   chars: JoysoundLyricsChar[],
-  tokenizedLyrics: AnalyzerResult[]
+  tokenizedLyrics: AnalyzerResult[],
+  preFillColor: number[],
+  postFillColor: number[],
 ): JoysoundLyricsRomaji[] {
   const fillerRomajiBlocks = [];
 
@@ -338,14 +360,14 @@ function getNonKanaRomajiBlocks(
   let tokenizedLyricsCharIndex = 0;
 
   for (const currGlyph of chars) {
-    const unicodeChar = decodeJoysoundText(currGlyph.charCode, currGlyph.font);
+    const unicodeChar = currGlyph.char;
 
     if (
       isKanjiUnicodeChar(unicodeChar) &&
       currGlyph.font === 0 &&
       (currPhrase.length > 0 || currGlyph.furiganaIndex < 0) &&
       !Kuroshiro.Util.hasKana(
-        tokenizedLyrics[tokenizedLyricsIndex].surface_form
+        tokenizedLyrics[tokenizedLyricsIndex].surface_form,
       )
     ) {
       // XXX: This is a mega hack
@@ -362,6 +384,8 @@ function getNonKanaRomajiBlocks(
           phrase: kanjiPhraseToRomaji(currPhrase, hiraganaPhrase),
           xPos: currXPos,
           sourceWidth: currPhraseWidth,
+          preFillColor,
+          postFillColor,
         });
 
         currXPos += currPhraseWidth;
@@ -388,6 +412,8 @@ function getNonKanaRomajiBlocks(
       phrase: kanjiPhraseToRomaji(currPhrase, hiraganaPhrase),
       xPos: currXPos,
       sourceWidth: currPhraseWidth,
+      preFillColor,
+      postFillColor,
     });
   }
 
@@ -396,7 +422,9 @@ function getNonKanaRomajiBlocks(
 
 function getFillerRomajiBlocks(
   chars: JoysoundLyricsChar[],
-  okuriganaLyrics: string
+  okuriganaLyrics: string,
+  preFillColor: number[],
+  postFillColor: number[],
 ): JoysoundLyricsRomaji[] {
   const fillerRomajiBlocks = [];
 
@@ -410,7 +438,7 @@ function getFillerRomajiBlocks(
 
   for (let i = 0; i < chars.length; i++) {
     const char = chars[i];
-    const unicodeChar = decodeJoysoundText(char.charCode, char.font);
+    const unicodeChar = char.char;
 
     if (
       !isKanjiUnicodeChar(unicodeChar) ||
@@ -422,6 +450,8 @@ function getFillerRomajiBlocks(
           phrase: Kuroshiro.Util.kanaToRomaji(hiraganaPhrase, "hepburn"),
           xPos: currXPos,
           sourceWidth: kanjiPhraseWidth,
+          preFillColor,
+          postFillColor,
         });
       }
 
@@ -488,6 +518,8 @@ function getFillerRomajiBlocks(
       phrase: Kuroshiro.Util.kanaToRomaji(hiraganaPhrase, "hepburn"),
       xPos: currXPos,
       sourceWidth: kanjiPhraseWidth,
+      preFillColor,
+      postFillColor,
     });
   }
 
@@ -496,7 +528,7 @@ function getFillerRomajiBlocks(
 
 function mapCharsToFurigana(
   chars: JoysoundLyricsChar[],
-  furiganaList: JoysoundLyricsFurigana[]
+  furiganaList: JoysoundLyricsFurigana[],
 ): void {
   let currXPos = 0;
 
@@ -504,7 +536,6 @@ function mapCharsToFurigana(
     // XXX: To map a character to furigana we assume the furigana must
     //      cover at least 8 pixels
     let bestIntersection = 8;
-    const unicodeChar = decodeJoysoundText(char.charCode, char.font);
 
     for (let i = 0; i < furiganaList.length; i++) {
       const furigana = furiganaList[i];
@@ -513,7 +544,7 @@ function mapCharsToFurigana(
         currXPos + char.width,
         furigana.xPos,
         furigana.xPos +
-          furigana.chars.length * (RUBY_FONT_SIZE + RUBY_FONT_STROKE * 2)
+          furigana.chars.length * (RUBY_FONT_SIZE + RUBY_FONT_STROKE * 2),
       );
 
       if (intersection > bestIntersection) {
@@ -528,7 +559,7 @@ function mapCharsToFurigana(
 
 function deleteOverwrittenFuriganaRomaji(
   chars: JoysoundLyricsChar[],
-  furiganaRomaji: JoysoundLyricsRomaji[]
+  furiganaRomaji: JoysoundLyricsRomaji[],
 ): void {
   for (let i = furiganaRomaji.length - 1; i >= 0; i--) {
     let isFuriganaOverwritten = true;
@@ -546,21 +577,75 @@ function deleteOverwrittenFuriganaRomaji(
   }
 }
 
+async function getRomajiBlocksForChars(
+  chars: JoysoundLyricsChar[],
+  furigana: JoysoundLyricsFurigana[],
+  kuroshiro: KuroshiroSingleton,
+  preFillColor: number[],
+  postFillColor: number[],
+): Promise<JoysoundLyricsRomaji[]> {
+  await kuroshiro.analyzerInitPromise;
+
+  const rawLyrics = getRawLyrics(chars);
+  const tokenizedLyrics = await kuroshiro.analyzer.parse(rawLyrics);
+  const okuriganaLyrics = await kuroshiro.kuroshiro.convert(rawLyrics, {
+    mode: "okurigana",
+    to: "hiragana",
+    delimiter_start: "¬",
+    delimiter_end: "¬",
+  });
+
+  const mainRomaji = getMainRomajiBlocks(
+    chars,
+    tokenizedLyrics,
+    preFillColor,
+    postFillColor,
+  );
+  const furiganaRomaji = getFuriganaRomajiBlocks(
+    furigana,
+    preFillColor,
+    postFillColor,
+  );
+  // XXX: For kanji without furigana and no kana (i.e. 空), we trust
+  //      dictionary.json and fallback to kuroshiro
+  const nonKanaRomaji = getNonKanaRomajiBlocks(
+    chars,
+    tokenizedLyrics,
+    preFillColor,
+    postFillColor,
+  );
+  // XXX: For kanji without furigana and kana (i.e. 下げる), we trust
+  //      kuroshiro's okurigana format
+  const fillerRomaji = getFillerRomajiBlocks(
+    chars,
+    okuriganaLyrics,
+    preFillColor,
+    postFillColor,
+  );
+
+  deleteOverwrittenFuriganaRomaji(chars, furiganaRomaji);
+
+  return mainRomaji
+    .concat(furiganaRomaji)
+    .concat(nonKanaRomaji)
+    .concat(fillerRomaji);
+}
+
 async function parseLyricsBlock(
   view: DataView,
   offset: number,
-  palette: JoysoundPaletteColor[],
-  kuroshiro: KuroshiroSingleton
+  palette: number[][],
+  kuroshiro: KuroshiroSingleton,
 ) {
   let currOffset = offset;
 
   const blockSize = view.getUint16(currOffset, true);
-
   const flags = view.getUint16(currOffset + 2, true);
+
   const xPos = view.getUint16(currOffset + 4, true);
   const yPos = view.getUint16(currOffset + 6, true);
-  const preFill = palette[view.getUint8(currOffset + 8)];
-  const postFill = palette[view.getUint8(currOffset + 9)];
+  const preFillColor = palette[view.getUint8(currOffset + 8)];
+  const postFillColor = palette[view.getUint8(currOffset + 9)];
   const preBorder = palette[view.getUint8(currOffset + 10)];
   const postBorder = palette[view.getUint8(currOffset + 11)];
 
@@ -577,7 +662,9 @@ async function parseLyricsBlock(
     chars.push({
       font: charFont,
       width: charWidth,
-      charCode,
+      char: decodeJoysoundText(charCode, charFont, flags),
+      preFillColor,
+      postFillColor,
       furiganaIndex: -1,
     });
 
@@ -602,7 +689,9 @@ async function parseLyricsBlock(
     furigana.push({
       length: furiganaLength,
       xPos: furiganaXPos,
-      chars: furiganaChars,
+      chars: furiganaChars.map((charCode) => decodeJoysoundText(charCode)),
+      preFillColor,
+      postFillColor,
     });
 
     currOffset += 4 + furiganaLength * 2;
@@ -610,48 +699,37 @@ async function parseLyricsBlock(
 
   mapCharsToFurigana(chars, furigana);
 
-  await kuroshiro.analyzerInitPromise;
+  const romaji = await getRomajiBlocksForChars(
+    chars,
+    furigana,
+    kuroshiro,
+    preFillColor,
+    postFillColor,
+  );
 
-  const rawLyrics = getRawLyrics(chars);
-  const tokenizedLyrics = await kuroshiro.analyzer.parse(rawLyrics);
-  const okuriganaLyrics = await kuroshiro.kuroshiro.convert(rawLyrics, {
-    mode: "okurigana",
-    to: "hiragana",
-    delimiter_start: "¬",
-    delimiter_end: "¬",
-  });
-
-  const mainRomaji = getMainRomajiBlocks(chars, tokenizedLyrics);
-  const furiganaRomaji = getFuriganaRomajiBlocks(furigana);
-  // XXX: For kanji without furigana and no kana (i.e. 空), we trust
-  //      dictionary.json and fallback to kuroshiro
-  const nonKanaRomaji = getNonKanaRomajiBlocks(chars, tokenizedLyrics);
-  // XXX: For kanji without furigana and kana (i.e. 下げる), we trust
-  //      kuroshiro's okurigana format
-  const fillerRomaji = getFillerRomajiBlocks(chars, okuriganaLyrics);
-
-  deleteOverwrittenFuriganaRomaji(chars, furiganaRomaji);
-
-  const romaji = mainRomaji
-    .concat(furiganaRomaji)
-    .concat(nonKanaRomaji)
-    .concat(fillerRomaji);
-
-  return {
-    blockSize,
-    flags,
-    xPos,
-    yPos,
-    preFill,
-    postFill,
-    preBorder,
-    postBorder,
+  const lyricsLine: LyricsLine = {
+    line: 0,
     chars,
     furigana,
     romaji,
     scrollEvents: [],
-    fadeinTime: -1,
-    fadeoutTime: -1,
+  };
+
+  return {
+    blockSize,
+    flags,
+    data: {
+      xPos,
+      yPos,
+      preBorder,
+      postBorder,
+      lyricsLines: [lyricsLine],
+      scrollStyle: LyricsScrollStyle.ABSOLUTE,
+      fadeinTime: -1,
+      fadeoutTime: -1,
+      fontSize: JOYSOUND_MAIN_FONT_SIZE,
+      fontStroke: JOYSOUND_MAIN_FONT_STROKE,
+    },
   };
 }
 
@@ -688,13 +766,13 @@ function readSJISString(view: DataView, offset: number, size: number): string {
 function parseJoy02Metadata(
   data: ArrayBuffer,
   offset: number,
-  size: number
+  size: number,
 ): JoysoundMetadata {
   const metadataView = new DataView(data, offset, size);
 
   const currOffset = 0;
 
-  const musicType = metadataView.getUint16(currOffset, true);
+  // const musicType = metadataView.getUint16(currOffset, true);
   const musicNameOffset = metadataView.getUint16(currOffset + 2, true);
   const artistNameOffset = metadataView.getUint16(currOffset + 4, true);
   const lyricistNameOffset = metadataView.getUint16(currOffset + 6, true);
@@ -702,37 +780,37 @@ function parseJoy02Metadata(
   const musicNameReadingOffset = metadataView.getUint16(currOffset + 10, true);
   const artistNameReadingOffset = metadataView.getUint16(currOffset + 12, true);
   const jasracCodeOffset = metadataView.getUint16(currOffset + 14, true);
-  const musicDuration = metadataView.getUint16(currOffset + 18, true);
+  // const musicDuration = metadataView.getUint16(currOffset + 18, true);
 
   const musicName = readSJISString(
     metadataView,
     musicNameOffset,
-    artistNameOffset - musicNameOffset
+    artistNameOffset - musicNameOffset,
   );
   const artistName = readSJISString(
     metadataView,
     artistNameOffset,
-    lyricistNameOffset - artistNameOffset
+    lyricistNameOffset - artistNameOffset,
   );
   const lyricistName = readSJISString(
     metadataView,
     lyricistNameOffset,
-    composerNameOffset - lyricistNameOffset
+    composerNameOffset - lyricistNameOffset,
   );
   const composerName = readSJISString(
     metadataView,
     composerNameOffset,
-    musicNameReadingOffset - composerNameOffset
+    musicNameReadingOffset - composerNameOffset,
   );
   const musicNameReading = readSJISString(
     metadataView,
     musicNameReadingOffset,
-    artistNameReadingOffset - musicNameReadingOffset
+    artistNameReadingOffset - musicNameReadingOffset,
   );
   const artistNameReading = readSJISString(
     metadataView,
     artistNameReadingOffset,
-    jasracCodeOffset - artistNameReadingOffset
+    jasracCodeOffset - artistNameReadingOffset,
   );
 
   return {
@@ -743,6 +821,7 @@ function parseJoy02Metadata(
     musicNameReading,
     artistNameReading,
     fadeoutTime: 0,
+    captionCode: "",
   };
 }
 
@@ -750,7 +829,7 @@ function intervalIntersection(
   aStart: number,
   aEnd: number,
   bStart: number,
-  bEnd: number
+  bEnd: number,
 ): number {
   if (bStart > aEnd || aStart > bEnd) {
     return -1;
@@ -766,40 +845,53 @@ async function parseJoy02LyricsData(
   data: ArrayBuffer,
   offset: number,
   size: number,
-  kuroshiro: KuroshiroSingleton
+  kuroshiro: KuroshiroSingleton,
+): Promise<JoysoundLyricsBlock[]> {
+  // Joysound palette is 15 colors, each color is 2 bytes
+  const palette = parseJoysoundPalette(data, offset, 30);
+
+  return parseLyricsBlocks(data, offset + 30, size - 30, kuroshiro, palette);
+}
+
+function parseJoysoundPalette(
+  data: ArrayBuffer,
+  offset: number,
+  size: number,
+): number[][] {
+  const paletteView = new DataView(data, offset, size);
+
+  return [...Array(15).keys()].map((i) => {
+    const rgbData = paletteView.getUint16(i * 2, true);
+
+    return [
+      Math.floor((((rgbData >> 10) & 31) / 31) * 255),
+      Math.floor((((rgbData >> 5) & 31) / 31) * 255),
+      Math.floor((((rgbData >> 0) & 31) / 31) * 255),
+    ];
+  });
+}
+
+async function parseLyricsBlocks(
+  data: ArrayBuffer,
+  offset: number,
+  size: number,
+  kuroshiro: KuroshiroSingleton,
+  palette: number[][],
 ): Promise<JoysoundLyricsBlock[]> {
   const lyricsView = new DataView(data, offset, size);
   const lyricsBlocks = [];
 
-  const palette = [];
-
   let currOffset = 0;
-
-  for (let i = 0; i < 15; i++) {
-    const rgbData = lyricsView.getUint16(currOffset, true);
-    const color = {
-      id: i,
-      rgb: [
-        Math.floor((((rgbData >> 10) & 31) / 31) * 255),
-        Math.floor((((rgbData >> 5) & 31) / 31) * 255),
-        Math.floor((((rgbData >> 0) & 31) / 31) * 255),
-      ],
-    };
-
-    palette.push(color);
-
-    currOffset += 2;
-  }
 
   while (currOffset < size) {
     const block = await parseLyricsBlock(
       lyricsView,
       currOffset,
       palette,
-      kuroshiro
+      kuroshiro,
     );
-    lyricsBlocks.push(block);
 
+    lyricsBlocks.push(block);
     currOffset += block.blockSize;
   }
 
@@ -836,7 +928,7 @@ function parseJoy02TimingData(data: ArrayBuffer, offset: number, size: number) {
 function processTimeline(
   timeline: JoysoundTimelineEvent[],
   metadata: JoysoundMetadata,
-  lyricsData: JoysoundLyricsBlock[]
+  lyricsData: JoysoundLyricsBlock[],
 ) {
   const activeLyricsBlocks = [];
 
@@ -858,8 +950,10 @@ function processTimeline(
       const scrollSpeed = currEvent.payload[1] * (eventCode <= 1 ? 10 : 1);
       const scrollLyricsBlock = lyricsData[scrollLyricsBlockIndex];
 
-      scrollLyricsBlock.scrollEvents.push({
-        time: currEvent.currTime,
+      const lyricsLine = scrollLyricsBlock.data.lyricsLines[0];
+
+      lyricsLine.scrollEvents.push({
+        startTime: currEvent.currTime,
         speed: scrollSpeed,
       });
     } else if (currEvent.payload[0] === 4) {
@@ -869,13 +963,13 @@ function processTimeline(
         const fadeoutIndex = activeLyricsBlocks.shift();
         invariant(fadeoutIndex !== undefined);
 
-        lyricsData[fadeoutIndex].fadeoutTime = currEvent.currTime;
+        lyricsData[fadeoutIndex].data.fadeoutTime = currEvent.currTime;
       }
     } else if (currEvent.payload[0] === 6) {
       for (let i = 0; i < currEvent.payload[1]; i++) {
         currLyricsBlockIndex += 1;
 
-        lyricsData[currLyricsBlockIndex].fadeinTime = currEvent.currTime;
+        lyricsData[currLyricsBlockIndex].data.fadeinTime = currEvent.currTime;
         activeLyricsBlocks.push(currLyricsBlockIndex);
       }
     }
@@ -884,39 +978,36 @@ function processTimeline(
 
 async function parseJoysoundData(
   data: ArrayBuffer,
-  kuroshiro: KuroshiroSingleton
-): Promise<JoysoundTelopData> {
-  const lyricsBlocks = [];
-
+  kuroshiro: KuroshiroSingleton,
+): Promise<LyricsData> {
   const view = new DataView(data, 6, 3 * 4);
 
-  const metadataOffset = view.getUint32(0 * 4, true);
-  const lyricsOffset = view.getUint32(1 * 4, true);
+  const metadataOffset = view.getUint32(0, true);
+  const lyricsOffset = view.getUint32(4, true);
   const timingOffset = view.getUint32(2 * 4, true);
 
   const metadata = parseJoy02Metadata(
     data,
     metadataOffset,
-    lyricsOffset - metadataOffset
+    lyricsOffset - metadataOffset,
   );
   const lyricsData = await parseJoy02LyricsData(
     data,
     lyricsOffset,
     timingOffset - lyricsOffset,
-    kuroshiro
+    kuroshiro,
   );
   const timeline = parseJoy02TimingData(
     data,
     timingOffset,
-    data.byteLength - timingOffset
+    data.byteLength - timingOffset,
   );
 
   processTimeline(timeline, metadata, lyricsData);
 
   return {
     metadata,
-    lyrics: lyricsData,
-    timeline,
+    lyrics: lyricsData.map((lyricsBlock) => lyricsBlock.data),
   };
 }
 

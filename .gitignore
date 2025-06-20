@@ -43,3 +43,6 @@ __generated__
 /extraResources/ffmpeg/**/*
 /extraResources/ytdlp/*
 /buildResources/asio/*
+
+# IntelliJ
+.idea/

@@ -2,9 +2,11 @@
   position: relative;
   background: black;
   width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
 }
 
 .karaVid {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  object-fit: fill;
 }

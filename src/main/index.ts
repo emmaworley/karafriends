@@ -192,7 +192,7 @@ app.on("login", (event, webContents, request, authInfo, callback) => {
   );
   if (karafriendsConfig.proxyEnable) {
     const { proxyHost, proxyPort, proxyUser, proxyPass } = karafriendsConfig;
-    console.log(`Time to login to ${proxyURL}:${proxyPort}`);
+    console.log(`Time to login to ${proxyHost}:${proxyPort}`);
     callback(proxyUser, proxyPass);
     event.preventDefault();
   } else {

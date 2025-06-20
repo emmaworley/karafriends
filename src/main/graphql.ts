@@ -27,7 +27,7 @@ import tunnel from "tunnel";
 
 // tslint:disable-next-line:no-submodule-imports no-implicit-dependencies
 import rawSchema from "inline-string:../common/schema.graphql";
-import karafriendsConfig, { KarafriendsConfig } from "../common/config";
+import karafriendsConfig from "../common/config";
 import {
   downloadDamVideo,
   downloadJoysoundData,
@@ -174,6 +174,7 @@ interface YoutubeQueueItem extends QueueItemInterface {
   readonly __typename: "YoutubeQueueItem";
   readonly hasAdhocLyrics: boolean;
   readonly hasCaptions: boolean;
+  readonly captionCode: string | null;
   readonly gainValue: number;
 }
 
@@ -321,6 +322,7 @@ function saveDb() {
   if (!fs.existsSync(TEMP_FOLDER)) {
     fs.mkdirSync(TEMP_FOLDER);
   }
+
   fs.writeFileSync(
     DB_PATH,
     JSON.stringify({
@@ -328,7 +330,10 @@ function saveDb() {
       pitchShiftSemis: 0,
       currentSong: null,
       currentSongAdhocLyrics: [],
-      songQueue: [db.currentSong, ...db.songQueue],
+      songQueue:
+        db.currentSong === null
+          ? db.songQueue
+          : [db.currentSong, ...db.songQueue],
       downloadQueue: [],
     }),
     "utf-8",
@@ -974,6 +979,7 @@ const resolvers = {
         ...args.input,
         hasAdhocLyrics: args.input.adhocSongLyrics ? true : false,
         hasCaptions: args.input.captionCode ? true : false,
+        captionCode: args.input.captionCode ? args.input.captionCode : null,
         gainValue: args.input.gainValue,
         __typename: "YoutubeQueueItem",
       };
@@ -1063,6 +1069,10 @@ const resolvers = {
       return true;
     },
     popSong: (_: any, args: {}): QueueItem | null => {
+      console.log("popSong mutation");
+      console.log(`currentSong: ${db.currentSong}`);
+      console.log(`songQueue: ${db.songQueue}`);
+
       const newSong = db.songQueue.shift() || null;
 
       db.currentSongAdhocLyrics = [];
