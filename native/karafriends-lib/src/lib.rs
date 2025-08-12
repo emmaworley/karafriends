@@ -490,7 +490,7 @@ impl InputDevice {
                                     &mut resampler_output[0]
                                         .iter_mut()
                                         .flat_map(|sample| {
-                                            std::iter::repeat(*sample).take(output_channels)
+                                            std::iter::repeat_n(*sample, output_channels)
                                         })
                                         .take(output_samples_produced),
                                 );
@@ -504,7 +504,7 @@ impl InputDevice {
                 let samples_written = output_tx.push_iter(
                     &mut output_samples
                         .iter_mut()
-                        .flat_map(|sample| std::iter::repeat(*sample).take(output_channels)),
+                        .flat_map(|sample| std::iter::repeat_n(*sample, output_channels)),
                 );
                 if samples_written < resampler_output[0].len() {
                     eprintln!("output fell behind (without sample rate conversion)!");
