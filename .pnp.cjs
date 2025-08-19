@@ -148,7 +148,7 @@ const RAW_RUNTIME_STATE =
           ["typescript", "patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"],\
           ["user-agents", "npm:1.1.435"],\
           ["utf-8-validate", "npm:6.0.5"],\
-          ["uuid", "npm:11.0.5"],\
+          ["uuid", "npm:11.1.0"],\
           ["wait-on", "npm:8.0.2"],\
           ["wanakana", "npm:5.3.1"],\
           ["wdio-electron-service", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.3.1"],\
@@ -14071,7 +14071,7 @@ const RAW_RUNTIME_STATE =
           ["typescript", "patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"],\
           ["user-agents", "npm:1.1.435"],\
           ["utf-8-validate", "npm:6.0.5"],\
-          ["uuid", "npm:11.0.5"],\
+          ["uuid", "npm:11.1.0"],\
           ["wait-on", "npm:8.0.2"],\
           ["wanakana", "npm:5.3.1"],\
           ["wdio-electron-service", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.3.1"],\
@@ -19736,10 +19736,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["uuid", [\
-      ["npm:11.0.5", {\
-        "packageLocation": "./.yarn/cache/uuid-npm-11.0.5-685b7c1023-0594ecdff3.zip/node_modules/uuid/",\
+      ["npm:11.1.0", {\
+        "packageLocation": "./.yarn/cache/uuid-npm-11.1.0-61d0d08928-d2da43b49b.zip/node_modules/uuid/",\
         "packageDependencies": [\
-          ["uuid", "npm:11.0.5"]\
+          ["uuid", "npm:11.1.0"]\
         ],\
         "linkType": "HARD"\
       }],\
