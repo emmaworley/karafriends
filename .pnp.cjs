@@ -81,7 +81,7 @@ const RAW_RUNTIME_STATE =
           ["@wdio/mocha-framework", "npm:9.7.2"],\
           ["@yarnpkg/pnpify", "npm:4.1.3"],\
           ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.2.1"],\
-          ["babel-plugin-relay", "npm:18.2.0"],\
+          ["babel-plugin-relay", "npm:20.1.1"],\
           ["bufferutil", "npm:4.0.9"],\
           ["cargo-cp-artifact", "npm:0.1.9"],\
           ["classnames", "npm:2.5.1"],\
@@ -7983,10 +7983,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["babel-plugin-relay", [\
-      ["npm:18.2.0", {\
-        "packageLocation": "./.yarn/cache/babel-plugin-relay-npm-18.2.0-10856b2808-9e248a18c5.zip/node_modules/babel-plugin-relay/",\
+      ["npm:20.1.1", {\
+        "packageLocation": "./.yarn/cache/babel-plugin-relay-npm-20.1.1-575fb1a3a2-365798837d.zip/node_modules/babel-plugin-relay/",\
         "packageDependencies": [\
-          ["babel-plugin-relay", "npm:18.2.0"],\
+          ["babel-plugin-relay", "npm:20.1.1"],\
           ["babel-plugin-macros", "npm:2.8.0"],\
           ["cosmiconfig", "npm:5.2.1"],\
           ["graphql", "npm:15.3.0"]\
@@ -14004,7 +14004,7 @@ const RAW_RUNTIME_STATE =
           ["@wdio/mocha-framework", "npm:9.7.2"],\
           ["@yarnpkg/pnpify", "npm:4.1.3"],\
           ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.2.1"],\
-          ["babel-plugin-relay", "npm:18.2.0"],\
+          ["babel-plugin-relay", "npm:20.1.1"],\
           ["bufferutil", "npm:4.0.9"],\
           ["cargo-cp-artifact", "npm:0.1.9"],\
           ["classnames", "npm:2.5.1"],\
