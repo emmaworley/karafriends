@@ -50,7 +50,7 @@
     "fft.js": "4.0.4",
     "format-duration": "3.0.2",
     "gl-vec2": "1.3.0",
-    "graphql": "16.10.0",
+    "graphql": "16.11.0",
     "graphql-subscriptions": "3.0.0",
     "graphql-ws": "5.16.0",
     "hls.js": "1.5.20",

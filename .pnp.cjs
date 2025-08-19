@@ -100,7 +100,7 @@ const RAW_RUNTIME_STATE =
           ["format-duration", "npm:3.0.2"],\
           ["gl-vec2", "npm:1.3.0"],\
           ["glob", "npm:11.0.1"],\
-          ["graphql", "npm:16.10.0"],\
+          ["graphql", "npm:16.11.0"],\
           ["graphql-subscriptions", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.0.0"],\
           ["graphql-ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.16.0"],\
           ["hls.js", "npm:1.5.20"],\
@@ -193,7 +193,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@apollo/cache-control-types", "virtual:60b3c771d15a6c25716f8b1492d18ba43576969db03ed2725bfe1764f392f1f200eb0500ef54fee3f3968f84c6a28128abdf892b91f83f726c97d3e788cee1e0#npm:1.0.3"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"]\
+          ["graphql", "npm:16.11.0"]\
         ],\
         "packagePeers": [\
           "@types/graphql",\
@@ -220,7 +220,7 @@ const RAW_RUNTIME_STATE =
           ["@apollo/utils.withrequired", "npm:3.0.0"],\
           ["@types/graphql", null],\
           ["@types/http-cache-semantics", "npm:4.0.4"],\
-          ["graphql", "npm:16.10.0"],\
+          ["graphql", "npm:16.11.0"],\
           ["http-cache-semantics", "npm:4.1.1"],\
           ["lodash.clonedeep", "npm:4.5.0"],\
           ["lodash.isplainobject", "npm:4.0.6"],\
@@ -284,7 +284,7 @@ const RAW_RUNTIME_STATE =
           ["async-retry", "npm:1.3.3"],\
           ["cors", "npm:2.8.5"],\
           ["express", "npm:4.21.2"],\
-          ["graphql", "npm:16.10.0"],\
+          ["graphql", "npm:16.11.0"],\
           ["loglevel", "npm:1.9.2"],\
           ["lru-cache", "npm:7.18.3"],\
           ["negotiator", "npm:0.6.4"],\
@@ -317,7 +317,7 @@ const RAW_RUNTIME_STATE =
           ["@apollo/utils.keyvaluecache", "npm:2.1.1"],\
           ["@apollo/utils.logger", "npm:2.0.1"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"]\
+          ["graphql", "npm:16.11.0"]\
         ],\
         "packagePeers": [\
           "@types/graphql",\
@@ -360,7 +360,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@apollo/utils.dropunuseddefinitions", "virtual:d794d8079410550f232e58af581a1ce26e75516480ded0bf0c114c9671673585149e3af9e47e635961993d325b24f3db1445992b8b79d18d8576165e98d02080#npm:2.0.1"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"]\
+          ["graphql", "npm:16.11.0"]\
         ],\
         "packagePeers": [\
           "@types/graphql",\
@@ -443,7 +443,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@apollo/utils.printwithreducedwhitespace", "virtual:d794d8079410550f232e58af581a1ce26e75516480ded0bf0c114c9671673585149e3af9e47e635961993d325b24f3db1445992b8b79d18d8576165e98d02080#npm:2.0.1"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"]\
+          ["graphql", "npm:16.11.0"]\
         ],\
         "packagePeers": [\
           "@types/graphql",\
@@ -465,7 +465,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@apollo/utils.removealiases", "virtual:d794d8079410550f232e58af581a1ce26e75516480ded0bf0c114c9671673585149e3af9e47e635961993d325b24f3db1445992b8b79d18d8576165e98d02080#npm:2.0.1"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"]\
+          ["graphql", "npm:16.11.0"]\
         ],\
         "packagePeers": [\
           "@types/graphql",\
@@ -487,7 +487,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@apollo/utils.sortast", "virtual:d794d8079410550f232e58af581a1ce26e75516480ded0bf0c114c9671673585149e3af9e47e635961993d325b24f3db1445992b8b79d18d8576165e98d02080#npm:2.0.1"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"],\
+          ["graphql", "npm:16.11.0"],\
           ["lodash.sortby", "npm:4.7.0"]\
         ],\
         "packagePeers": [\
@@ -510,7 +510,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@apollo/utils.stripsensitiveliterals", "virtual:d794d8079410550f232e58af581a1ce26e75516480ded0bf0c114c9671673585149e3af9e47e635961993d325b24f3db1445992b8b79d18d8576165e98d02080#npm:2.0.1"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"]\
+          ["graphql", "npm:16.11.0"]\
         ],\
         "packagePeers": [\
           "@types/graphql",\
@@ -538,7 +538,7 @@ const RAW_RUNTIME_STATE =
           ["@apollo/utils.sortast", "virtual:d794d8079410550f232e58af581a1ce26e75516480ded0bf0c114c9671673585149e3af9e47e635961993d325b24f3db1445992b8b79d18d8576165e98d02080#npm:2.0.1"],\
           ["@apollo/utils.stripsensitiveliterals", "virtual:d794d8079410550f232e58af581a1ce26e75516480ded0bf0c114c9671673585149e3af9e47e635961993d325b24f3db1445992b8b79d18d8576165e98d02080#npm:2.0.1"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"]\
+          ["graphql", "npm:16.11.0"]\
         ],\
         "packagePeers": [\
           "@types/graphql",\
@@ -3392,7 +3392,7 @@ const RAW_RUNTIME_STATE =
           ["@graphql-tools/merge", "virtual:4b6830912521c09ceebf378bd0d672f9c66f2e7b96c0deee8a88c06d33fea267101e83c2306c30733ffc170b1be110ed4988cf16bb598ebbacee641f68af029b#npm:8.4.2"],\
           ["@graphql-tools/utils", "virtual:4b6830912521c09ceebf378bd0d672f9c66f2e7b96c0deee8a88c06d33fea267101e83c2306c30733ffc170b1be110ed4988cf16bb598ebbacee641f68af029b#npm:9.2.1"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"],\
+          ["graphql", "npm:16.11.0"],\
           ["tslib", "npm:2.8.1"]\
         ],\
         "packagePeers": [\
@@ -3407,7 +3407,7 @@ const RAW_RUNTIME_STATE =
           ["@graphql-tools/merge", "virtual:b7ed25d024ca0fdbfb27edea679baebed8b406ee69b4563a681d1558a24561e49dec5680a4035ac4d2a9d54ba42963e2846d273ce1b5e5b56d0563c0b1c74237#npm:9.0.17"],\
           ["@graphql-tools/utils", "virtual:b7ed25d024ca0fdbfb27edea679baebed8b406ee69b4563a681d1558a24561e49dec5680a4035ac4d2a9d54ba42963e2846d273ce1b5e5b56d0563c0b1c74237#npm:10.7.2"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"],\
+          ["graphql", "npm:16.11.0"],\
           ["tslib", "npm:2.8.1"]\
         ],\
         "packagePeers": [\
@@ -3439,7 +3439,7 @@ const RAW_RUNTIME_STATE =
           ["@graphql-tools/merge", "virtual:b7ed25d024ca0fdbfb27edea679baebed8b406ee69b4563a681d1558a24561e49dec5680a4035ac4d2a9d54ba42963e2846d273ce1b5e5b56d0563c0b1c74237#npm:9.0.17"],\
           ["@graphql-tools/utils", "virtual:b7ed25d024ca0fdbfb27edea679baebed8b406ee69b4563a681d1558a24561e49dec5680a4035ac4d2a9d54ba42963e2846d273ce1b5e5b56d0563c0b1c74237#npm:10.7.2"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"],\
+          ["graphql", "npm:16.11.0"],\
           ["tslib", "npm:2.8.1"],\
           ["value-or-promise", "npm:1.0.12"]\
         ],\
@@ -3456,7 +3456,7 @@ const RAW_RUNTIME_STATE =
           ["@graphql-tools/merge", "virtual:4b6830912521c09ceebf378bd0d672f9c66f2e7b96c0deee8a88c06d33fea267101e83c2306c30733ffc170b1be110ed4988cf16bb598ebbacee641f68af029b#npm:8.4.2"],\
           ["@graphql-tools/utils", "virtual:4b6830912521c09ceebf378bd0d672f9c66f2e7b96c0deee8a88c06d33fea267101e83c2306c30733ffc170b1be110ed4988cf16bb598ebbacee641f68af029b#npm:9.2.1"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"],\
+          ["graphql", "npm:16.11.0"],\
           ["tslib", "npm:2.8.1"],\
           ["value-or-promise", "npm:1.0.12"]\
         ],\
@@ -3488,7 +3488,7 @@ const RAW_RUNTIME_STATE =
           ["@graphql-tools/utils", "virtual:4b6830912521c09ceebf378bd0d672f9c66f2e7b96c0deee8a88c06d33fea267101e83c2306c30733ffc170b1be110ed4988cf16bb598ebbacee641f68af029b#npm:9.2.1"],\
           ["@graphql-typed-document-node/core", "virtual:46c76f518feb96cec7bd8f759d41234a7fd5c77cb5bee800708b76869b19b67da059f04fae1df442714328ab3e3548cd73fa189cea9a2a6723b8a938dde7ca91#npm:3.2.0"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"],\
+          ["graphql", "npm:16.11.0"],\
           ["tslib", "npm:2.8.1"]\
         ],\
         "packagePeers": [\
@@ -3505,7 +3505,7 @@ const RAW_RUNTIME_STATE =
           ["@types/graphql", null],\
           ["cross-inspect", "npm:1.0.1"],\
           ["dset", "npm:3.1.4"],\
-          ["graphql", "npm:16.10.0"],\
+          ["graphql", "npm:16.11.0"],\
           ["tslib", "npm:2.8.1"]\
         ],\
         "packagePeers": [\
@@ -3528,7 +3528,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@graphql-typed-document-node/core", "virtual:46c76f518feb96cec7bd8f759d41234a7fd5c77cb5bee800708b76869b19b67da059f04fae1df442714328ab3e3548cd73fa189cea9a2a6723b8a938dde7ca91#npm:3.2.0"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"]\
+          ["graphql", "npm:16.11.0"]\
         ],\
         "packagePeers": [\
           "@types/graphql",\
@@ -11932,10 +11932,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:16.10.0", {\
-        "packageLocation": "./.yarn/cache/graphql-npm-16.10.0-bc1b088de1-d42cf81ddc.zip/node_modules/graphql/",\
+      ["npm:16.11.0", {\
+        "packageLocation": "./.yarn/cache/graphql-npm-16.11.0-836e6ade28-e3e1633d0b.zip/node_modules/graphql/",\
         "packageDependencies": [\
-          ["graphql", "npm:16.10.0"]\
+          ["graphql", "npm:16.11.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11953,7 +11953,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["graphql-subscriptions", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.0.0"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"]\
+          ["graphql", "npm:16.11.0"]\
         ],\
         "packagePeers": [\
           "@types/graphql",\
@@ -11975,7 +11975,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["graphql-ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.16.0"],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.10.0"]\
+          ["graphql", "npm:16.11.0"]\
         ],\
         "packagePeers": [\
           "@types/graphql",\
@@ -14023,7 +14023,7 @@ const RAW_RUNTIME_STATE =
           ["format-duration", "npm:3.0.2"],\
           ["gl-vec2", "npm:1.3.0"],\
           ["glob", "npm:11.0.1"],\
-          ["graphql", "npm:16.10.0"],\
+          ["graphql", "npm:16.11.0"],\
           ["graphql-subscriptions", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.0.0"],\
           ["graphql-ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.16.0"],\
           ["hls.js", "npm:1.5.20"],\
