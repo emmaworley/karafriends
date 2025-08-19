@@ -13,7 +13,7 @@ asio-sys = { version = "0.2.2", optional = true }
 cpal = { version = "0.15.3" }
 neon = { version = "1.0.0", default-features = false, features = ["napi-8"] }
 realfft = "3.4.0"
-ringbuf = "0.4.7"
+ringbuf = "0.4.8"
 rubato = "0.16.1"
 
 [dev-dependencies]
