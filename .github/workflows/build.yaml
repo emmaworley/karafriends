@@ -30,13 +30,6 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install ephemeral-port-reserve
-      - uses: mozilla-actions/sccache-action@v0.0.7
-      - name: Configure sccache
-        uses: actions/github-script@v7
-        with:
-          script: |
-            core.exportVariable('ACTIONS_CACHE_URL', process.env.ACTIONS_CACHE_URL || '');
-            core.exportVariable('ACTIONS_RUNTIME_TOKEN', process.env.ACTIONS_RUNTIME_TOKEN || '');
       - uses: MasterworksIO/action-local-cache@2.1.0
         with:
           path: |
@@ -47,7 +40,6 @@ jobs:
         env:
           CARGO_ARGS: --target aarch64-apple-darwin
           CARGO_INCREMENTAL: false
-          RUSTC_WRAPPER: sccache
       - run: cargo install cargo-careful
         continue-on-error: true
       - run: yarn test:native
@@ -85,7 +77,6 @@ jobs:
         with:
           node-version: 22
       - run: npm install -g yarn
-      - uses: mozilla-actions/sccache-action@v0.0.7
       - uses: MasterworksIO/action-local-cache@2.1.0
         with:
           path: |
@@ -96,7 +87,6 @@ jobs:
         env:
           CARGO_ARGS: --target x86_64-apple-darwin
           CARGO_INCREMENTAL: false
-          RUSTC_WRAPPER: sccache
       - run: cargo install cargo-careful
         continue-on-error: true
       - run: yarn test:native
@@ -115,13 +105,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - uses: mozilla-actions/sccache-action@v0.0.7
-      - name: Configure sccache
-        uses: actions/github-script@v7
-        with:
-          script: |
-            core.exportVariable('ACTIONS_CACHE_URL', process.env.ACTIONS_CACHE_URL || '');
-            core.exportVariable('ACTIONS_RUNTIME_TOKEN', process.env.ACTIONS_RUNTIME_TOKEN || '');
       - uses: actions/cache@v4
         with:
           path: |
@@ -133,8 +116,6 @@ jobs:
         env:
           CARGO_ARGS: --features asio
           CARGO_INCREMENTAL: false
-          RUSTC_WRAPPER: sccache.exe
-          SCCACHE_GHA_ENABLED: true
       - run: cargo install cargo-careful
         continue-on-error: true
       - run: yarn test:native
@@ -153,13 +134,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - uses: mozilla-actions/sccache-action@v0.0.7
-      - name: Configure sccache
-        uses: actions/github-script@v7
-        with:
-          script: |
-            core.exportVariable('ACTIONS_CACHE_URL', process.env.ACTIONS_CACHE_URL || '');
-            core.exportVariable('ACTIONS_RUNTIME_TOKEN', process.env.ACTIONS_RUNTIME_TOKEN || '');
       - uses: actions/cache@v4
         with:
           path: |
@@ -171,8 +145,6 @@ jobs:
       - run: yarn build-dev
         env:
           CARGO_INCREMENTAL: false
-          RUSTC_WRAPPER: sccache
-          SCCACHE_GHA_ENABLED: true
       - run: cargo install cargo-careful
         continue-on-error: true
       - run: yarn test:native
