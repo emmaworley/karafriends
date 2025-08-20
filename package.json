@@ -144,7 +144,7 @@
     "node-loader": "2.1.0",
     "parcel": "2.13.3",
     "path-browserify": "^1.0.0",
-    "prettier": "3.4.2",
+    "prettier": "3.6.2",
     "raw-loader": "4.0.2",
     "relay-compiler": "18.2.0",
     "relay-compiler-language-typescript": "15.0.1",
