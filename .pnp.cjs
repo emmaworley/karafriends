@@ -87,7 +87,7 @@ const RAW_RUNTIME_STATE =
           ["classnames", "npm:2.5.1"],\
           ["color-convert", "npm:3.1.0"],\
           ["compression", "npm:1.8.1"],\
-          ["concurrently", "npm:9.1.2"],\
+          ["concurrently", "npm:9.2.0"],\
           ["cors", "npm:2.8.5"],\
           ["cross-env", "npm:10.0.0"],\
           ["cubic-spline", "npm:3.0.3"],\
@@ -11481,10 +11481,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["concurrently", [\
-      ["npm:9.1.2", {\
-        "packageLocation": "./.yarn/cache/concurrently-npm-9.1.2-3c33290b4e-52f20653db.zip/node_modules/concurrently/",\
+      ["npm:9.2.0", {\
+        "packageLocation": "./.yarn/cache/concurrently-npm-9.2.0-bd0cbdf797-fdf5d3b583.zip/node_modules/concurrently/",\
         "packageDependencies": [\
-          ["concurrently", "npm:9.1.2"],\
+          ["concurrently", "npm:9.2.0"],\
           ["chalk", "npm:4.1.2"],\
           ["lodash", "npm:4.17.21"],\
           ["rxjs", "npm:7.8.1"],\
@@ -16585,7 +16585,7 @@ const RAW_RUNTIME_STATE =
           ["classnames", "npm:2.5.1"],\
           ["color-convert", "npm:3.1.0"],\
           ["compression", "npm:1.8.1"],\
-          ["concurrently", "npm:9.1.2"],\
+          ["concurrently", "npm:9.2.0"],\
           ["cors", "npm:2.8.5"],\
           ["cross-env", "npm:10.0.0"],\
           ["cubic-spline", "npm:3.0.3"],\
