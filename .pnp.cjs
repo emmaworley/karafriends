@@ -61,7 +61,7 @@ const RAW_RUNTIME_STATE =
           ["@types/lodash", "npm:4.17.20"],\
           ["@types/materialize-css", "npm:1.0.14"],\
           ["@types/node", "npm:24.3.0"],\
-          ["@types/node-fetch", "npm:2.6.12"],\
+          ["@types/node-fetch", "npm:2.6.13"],\
           ["@types/promise-retry", "npm:1.1.6"],\
           ["@types/qrcode", "npm:1.5.5"],\
           ["@types/react", "npm:19.0.8"],\
@@ -8554,6 +8554,15 @@ const RAW_RUNTIME_STATE =
           ["form-data", "npm:4.0.1"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:2.6.13", {\
+        "packageLocation": "./.yarn/cache/@types-node-fetch-npm-2.6.13-eb2c52495a-944d522147.zip/node_modules/@types/node-fetch/",\
+        "packageDependencies": [\
+          ["@types/node-fetch", "npm:2.6.13"],\
+          ["@types/node", "npm:22.12.0"],\
+          ["form-data", "npm:4.0.4"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@types/normalize-package-data", [\
@@ -16503,7 +16512,7 @@ const RAW_RUNTIME_STATE =
           ["@types/lodash", "npm:4.17.20"],\
           ["@types/materialize-css", "npm:1.0.14"],\
           ["@types/node", "npm:24.3.0"],\
-          ["@types/node-fetch", "npm:2.6.12"],\
+          ["@types/node-fetch", "npm:2.6.13"],\
           ["@types/promise-retry", "npm:1.1.6"],\
           ["@types/qrcode", "npm:1.5.5"],\
           ["@types/react", "npm:19.0.8"],\
