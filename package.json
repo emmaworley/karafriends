@@ -136,7 +136,7 @@
     "cargo-cp-artifact": "0.1.9",
     "concurrently": "9.1.2",
     "cross-env": "7.0.3",
-    "electron": "34.0.2",
+    "electron": "37.3.1",
     "electron-packager": "17.1.2",
     "glob": "11.0.1",
     "husky": "9.1.7",
