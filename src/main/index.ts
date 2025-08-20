@@ -21,7 +21,8 @@ process.on("unhandledRejection", handleError);
 
 import inspector from "inspector";
 
-inspector.open();
+// Start a debug server if we don't have one already. If we already have one, this would throw.
+if (inspector.url() === undefined) inspector.open();
 
 import path from "path";
 
