@@ -40,7 +40,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/config-default", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.13.3"],\
           ["@parcel/core", "npm:2.15.4"],\
           ["@parcel/transformer-glsl", "npm:2.13.3"],\
-          ["@parcel/transformer-inline-string", "npm:2.13.3"],\
+          ["@parcel/transformer-inline-string", "npm:2.15.4"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.13.3"],\
           ["@parcel/transformer-sass", "npm:2.13.3"],\
           ["@parcel/transformer-worklet", "npm:2.13.3"],\
@@ -6045,11 +6045,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@parcel/transformer-inline-string", [\
-      ["npm:2.13.3", {\
-        "packageLocation": "./.yarn/cache/@parcel-transformer-inline-string-npm-2.13.3-c2c6c2c36d-d47188e0d8.zip/node_modules/@parcel/transformer-inline-string/",\
+      ["npm:2.15.4", {\
+        "packageLocation": "./.yarn/cache/@parcel-transformer-inline-string-npm-2.15.4-5ab80e490e-b0d1368280.zip/node_modules/@parcel/transformer-inline-string/",\
         "packageDependencies": [\
-          ["@parcel/transformer-inline-string", "npm:2.13.3"],\
-          ["@parcel/plugin", "npm:2.13.3"]\
+          ["@parcel/transformer-inline-string", "npm:2.15.4"],\
+          ["@parcel/plugin", "npm:2.15.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15645,7 +15645,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/config-default", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.13.3"],\
           ["@parcel/core", "npm:2.15.4"],\
           ["@parcel/transformer-glsl", "npm:2.13.3"],\
-          ["@parcel/transformer-inline-string", "npm:2.13.3"],\
+          ["@parcel/transformer-inline-string", "npm:2.15.4"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.13.3"],\
           ["@parcel/transformer-sass", "npm:2.13.3"],\
           ["@parcel/transformer-worklet", "npm:2.13.3"],\

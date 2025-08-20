@@ -3992,12 +3992,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/transformer-inline-string@npm:2.13.3":
-  version: 2.13.3
-  resolution: "@parcel/transformer-inline-string@npm:2.13.3"
+"@parcel/transformer-inline-string@npm:2.15.4":
+  version: 2.15.4
+  resolution: "@parcel/transformer-inline-string@npm:2.15.4"
   dependencies:
-    "@parcel/plugin": "npm:2.13.3"
-  checksum: 10/d47188e0d89980db269f827796c9db2a987848baabc564aecdb94d2bcd7584a3c226523b83e7b6a8333262fe3926aeae4a829652acdb0fef6608c20c76894fb7
+    "@parcel/plugin": "npm:2.15.4"
+  checksum: 10/b0d136828033540597791018610f58281f6f24975b7a08647f5bf954558eb1826b4fc182871756cc42ae4de12ee7ba6eb0d4883af6a5bd4f66e0c3ff5eafc800
   languageName: node
   linkType: hard
 
@@ -12466,7 +12466,7 @@ __metadata:
     "@parcel/config-default": "npm:2.13.3"
     "@parcel/core": "npm:2.15.4"
     "@parcel/transformer-glsl": "npm:2.13.3"
-    "@parcel/transformer-inline-string": "npm:2.13.3"
+    "@parcel/transformer-inline-string": "npm:2.15.4"
     "@parcel/transformer-react-refresh-wrap": "npm:2.13.3"
     "@parcel/transformer-sass": "npm:2.13.3"
     "@parcel/transformer-worklet": "npm:2.13.3"
