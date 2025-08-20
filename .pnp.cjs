@@ -31,7 +31,7 @@ const RAW_RUNTIME_STATE =
           ["@apollo/datasource-rest", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.4.1"],\
           ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:4.11.2"],\
           ["@apollo/utils.fetcher", "npm:3.1.0"],\
-          ["@apollo/utils.keyvaluecache", "npm:3.1.0"],\
+          ["@apollo/utils.keyvaluecache", "npm:4.0.0"],\
           ["@babel/core", "npm:7.26.7"],\
           ["@babel/preset-env", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.26.7"],\
           ["@babel/preset-react", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.26.3"],\
@@ -410,6 +410,15 @@ const RAW_RUNTIME_STATE =
           ["@apollo/utils.keyvaluecache", "npm:3.1.0"],\
           ["@apollo/utils.logger", "npm:3.0.0"],\
           ["lru-cache", "npm:10.4.3"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:4.0.0", {\
+        "packageLocation": "./.yarn/cache/@apollo-utils.keyvaluecache-npm-4.0.0-aa35212169-e18d48d0de.zip/node_modules/@apollo/utils.keyvaluecache/",\
+        "packageDependencies": [\
+          ["@apollo/utils.keyvaluecache", "npm:4.0.0"],\
+          ["@apollo/utils.logger", "npm:3.0.0"],\
+          ["lru-cache", "npm:11.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -14437,7 +14446,7 @@ const RAW_RUNTIME_STATE =
           ["@apollo/datasource-rest", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.4.1"],\
           ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:4.11.2"],\
           ["@apollo/utils.fetcher", "npm:3.1.0"],\
-          ["@apollo/utils.keyvaluecache", "npm:3.1.0"],\
+          ["@apollo/utils.keyvaluecache", "npm:4.0.0"],\
           ["@babel/core", "npm:7.26.7"],\
           ["@babel/preset-env", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.26.7"],\
           ["@babel/preset-react", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.26.3"],\

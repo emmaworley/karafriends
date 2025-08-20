@@ -170,13 +170,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/utils.keyvaluecache@npm:3.1.0, @apollo/utils.keyvaluecache@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "@apollo/utils.keyvaluecache@npm:3.1.0"
+"@apollo/utils.keyvaluecache@npm:4.0.0":
+  version: 4.0.0
+  resolution: "@apollo/utils.keyvaluecache@npm:4.0.0"
   dependencies:
     "@apollo/utils.logger": "npm:^3.0.0"
-    lru-cache: "npm:^10.0.0"
-  checksum: 10/a0e1a84f76374480c4cdfdd16bca8ebe4e2b26f6152ef593b1e4ace40336803e17bed1f1723133d87d1408258d63f2cd528ce775859f2abace05af5ef13ffee8
+    lru-cache: "npm:^11.0.0"
+  checksum: 10/e18d48d0de490bec0ae1d0849409dcd9415ef8b64de963df9955f21bb0852f058149a1862c585abd9d4d64c0b75f2d532b7c504695605177dfa74463b135498b
   languageName: node
   linkType: hard
 
@@ -187,6 +187,16 @@ __metadata:
     "@apollo/utils.logger": "npm:^2.0.1"
     lru-cache: "npm:^7.14.1"
   checksum: 10/9a6bc7c4645415329a93e77861cb1a9874b2171b741a3a667c277c6339f2ba46fb40011982e7b0993b118af1cc02e59e58fcbe7033ca6216cefec01e7b8eeda6
+  languageName: node
+  linkType: hard
+
+"@apollo/utils.keyvaluecache@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@apollo/utils.keyvaluecache@npm:3.1.0"
+  dependencies:
+    "@apollo/utils.logger": "npm:^3.0.0"
+    lru-cache: "npm:^10.0.0"
+  checksum: 10/a0e1a84f76374480c4cdfdd16bca8ebe4e2b26f6152ef593b1e4ace40336803e17bed1f1723133d87d1408258d63f2cd528ce775859f2abace05af5ef13ffee8
   languageName: node
   linkType: hard
 
@@ -11675,7 +11685,7 @@ __metadata:
     "@apollo/datasource-rest": "npm:6.4.1"
     "@apollo/server": "npm:4.11.2"
     "@apollo/utils.fetcher": "npm:3.1.0"
-    "@apollo/utils.keyvaluecache": "npm:3.1.0"
+    "@apollo/utils.keyvaluecache": "npm:4.0.0"
     "@babel/core": "npm:7.26.7"
     "@babel/preset-env": "npm:7.26.7"
     "@babel/preset-react": "npm:7.26.3"

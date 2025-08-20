@@ -28,7 +28,7 @@
     "@apollo/datasource-rest": "6.4.1",
     "@apollo/server": "4.11.2",
     "@apollo/utils.fetcher": "3.1.0",
-    "@apollo/utils.keyvaluecache": "3.1.0",
+    "@apollo/utils.keyvaluecache": "4.0.0",
     "@graphql-tools/schema": "10.0.16",
     "@parcel/transformer-react-refresh-wrap": "2.13.3",
     "@sentry/browser": "10.5.0",
