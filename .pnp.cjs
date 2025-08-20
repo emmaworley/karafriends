@@ -39,7 +39,7 @@ const RAW_RUNTIME_STATE =
           ["@graphql-tools/schema", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.0.25"],\
           ["@parcel/config-default", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.13.3"],\
           ["@parcel/core", "npm:2.15.4"],\
-          ["@parcel/transformer-glsl", "npm:2.13.3"],\
+          ["@parcel/transformer-glsl", "npm:2.15.4"],\
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.15.4"],\
           ["@parcel/transformer-sass", "npm:2.13.3"],\
@@ -6668,11 +6668,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@parcel/transformer-glsl", [\
-      ["npm:2.13.3", {\
-        "packageLocation": "./.yarn/cache/@parcel-transformer-glsl-npm-2.13.3-5b642ee872-f066484f8f.zip/node_modules/@parcel/transformer-glsl/",\
+      ["npm:2.15.4", {\
+        "packageLocation": "./.yarn/cache/@parcel-transformer-glsl-npm-2.15.4-1319fbba55-977432ebaa.zip/node_modules/@parcel/transformer-glsl/",\
         "packageDependencies": [\
-          ["@parcel/transformer-glsl", "npm:2.13.3"],\
-          ["@parcel/plugin", "npm:2.13.3"],\
+          ["@parcel/transformer-glsl", "npm:2.15.4"],\
+          ["@parcel/plugin", "npm:2.15.4"],\
           ["glslify-bundle", "npm:5.1.1"],\
           ["glslify-deps", "npm:1.3.2"]\
         ],\
@@ -16471,7 +16471,7 @@ const RAW_RUNTIME_STATE =
           ["@graphql-tools/schema", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.0.25"],\
           ["@parcel/config-default", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.13.3"],\
           ["@parcel/core", "npm:2.15.4"],\
-          ["@parcel/transformer-glsl", "npm:2.13.3"],\
+          ["@parcel/transformer-glsl", "npm:2.15.4"],\
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.15.4"],\
           ["@parcel/transformer-sass", "npm:2.13.3"],\

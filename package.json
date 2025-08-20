@@ -98,7 +98,7 @@
     "@babel/runtime": "7.28.3",
     "@parcel/config-default": "2.13.3",
     "@parcel/core": "2.15.4",
-    "@parcel/transformer-glsl": "2.13.3",
+    "@parcel/transformer-glsl": "2.15.4",
     "@parcel/transformer-inline-string": "2.15.4",
     "@parcel/transformer-sass": "2.13.3",
     "@parcel/transformer-worklet": "2.13.3",

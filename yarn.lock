@@ -4504,14 +4504,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/transformer-glsl@npm:2.13.3":
-  version: 2.13.3
-  resolution: "@parcel/transformer-glsl@npm:2.13.3"
+"@parcel/transformer-glsl@npm:2.15.4":
+  version: 2.15.4
+  resolution: "@parcel/transformer-glsl@npm:2.15.4"
   dependencies:
-    "@parcel/plugin": "npm:2.13.3"
+    "@parcel/plugin": "npm:2.15.4"
     glslify-bundle: "npm:^5.1.1"
     glslify-deps: "npm:^1.3.2"
-  checksum: 10/f066484f8fd158bbaa5d8004581f03c4c93ff00b44a6ac24c58e4b951d235aa9c4a26a1ceb569f29cbce6169c1deef72ac439b70310d5a7daf696faff05836ec
+  checksum: 10/977432ebaab989b9bf01e2dee17f1bf6c54d874e221ed8b54d240ced9a9ae5b1dd22156826d98de12cbd6dff217a685a171c5b47533c15fcee7aea2863f87771
   languageName: node
   linkType: hard
 
@@ -13158,7 +13158,7 @@ __metadata:
     "@graphql-tools/schema": "npm:10.0.25"
     "@parcel/config-default": "npm:2.13.3"
     "@parcel/core": "npm:2.15.4"
-    "@parcel/transformer-glsl": "npm:2.13.3"
+    "@parcel/transformer-glsl": "npm:2.15.4"
     "@parcel/transformer-inline-string": "npm:2.15.4"
     "@parcel/transformer-react-refresh-wrap": "npm:2.15.4"
     "@parcel/transformer-sass": "npm:2.13.3"
