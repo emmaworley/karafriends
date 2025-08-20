@@ -89,7 +89,7 @@ const RAW_RUNTIME_STATE =
           ["compression", "npm:1.8.1"],\
           ["concurrently", "npm:9.1.2"],\
           ["cors", "npm:2.8.5"],\
-          ["cross-env", "npm:7.0.3"],\
+          ["cross-env", "npm:10.0.0"],\
           ["cubic-spline", "npm:3.0.3"],\
           ["dataloader", "npm:2.2.3"],\
           ["electron", "npm:37.3.1"],\
@@ -3371,6 +3371,15 @@ const RAW_RUNTIME_STATE =
           ["fs-extra", "npm:11.3.0"],\
           ["minimist", "npm:1.2.8"],\
           ["postject", "npm:1.0.0-alpha.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@epic-web/invariant", [\
+      ["npm:1.0.0", {\
+        "packageLocation": "./.yarn/cache/@epic-web-invariant-npm-1.0.0-a4ac7c9c5e-28b36a7447.zip/node_modules/@epic-web/invariant/",\
+        "packageDependencies": [\
+          ["@epic-web/invariant", "npm:1.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11654,10 +11663,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["cross-env", [\
-      ["npm:7.0.3", {\
-        "packageLocation": "./.yarn/cache/cross-env-npm-7.0.3-96d81820f4-e99911f0d3.zip/node_modules/cross-env/",\
+      ["npm:10.0.0", {\
+        "packageLocation": "./.yarn/cache/cross-env-npm-10.0.0-e9b756cae3-1585ccc7c8.zip/node_modules/cross-env/",\
         "packageDependencies": [\
-          ["cross-env", "npm:7.0.3"],\
+          ["cross-env", "npm:10.0.0"],\
+          ["@epic-web/invariant", "npm:1.0.0"],\
           ["cross-spawn", "npm:7.0.6"]\
         ],\
         "linkType": "HARD"\
@@ -16521,7 +16531,7 @@ const RAW_RUNTIME_STATE =
           ["compression", "npm:1.8.1"],\
           ["concurrently", "npm:9.1.2"],\
           ["cors", "npm:2.8.5"],\
-          ["cross-env", "npm:7.0.3"],\
+          ["cross-env", "npm:10.0.0"],\
           ["cubic-spline", "npm:3.0.3"],\
           ["dataloader", "npm:2.2.3"],\
           ["electron", "npm:37.3.1"],\
