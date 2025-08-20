@@ -78,7 +78,7 @@ const RAW_RUNTIME_STATE =
           ["@types/youtube-player", "npm:5.5.11"],\
           ["@wdio/cli", "npm:9.7.2"],\
           ["@wdio/local-runner", "npm:9.7.2"],\
-          ["@wdio/mocha-framework", "npm:9.7.2"],\
+          ["@wdio/mocha-framework", "npm:9.19.1"],\
           ["@yarnpkg/pnpify", "npm:4.1.5"],\
           ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.2.1"],\
           ["babel-plugin-relay", "npm:20.1.1"],\
@@ -8511,15 +8511,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@wdio/mocha-framework", [\
-      ["npm:9.7.2", {\
-        "packageLocation": "./.yarn/cache/@wdio-mocha-framework-npm-9.7.2-09d2f2a0ee-309fbcedce.zip/node_modules/@wdio/mocha-framework/",\
+      ["npm:9.19.1", {\
+        "packageLocation": "./.yarn/cache/@wdio-mocha-framework-npm-9.19.1-e451f846b8-c57b72822e.zip/node_modules/@wdio/mocha-framework/",\
         "packageDependencies": [\
-          ["@wdio/mocha-framework", "npm:9.7.2"],\
+          ["@wdio/mocha-framework", "npm:9.19.1"],\
           ["@types/mocha", "npm:10.0.10"],\
           ["@types/node", "npm:20.17.16"],\
-          ["@wdio/logger", "npm:9.4.4"],\
-          ["@wdio/types", "npm:9.6.3"],\
-          ["@wdio/utils", "npm:9.7.2"],\
+          ["@wdio/logger", "npm:9.18.0"],\
+          ["@wdio/types", "npm:9.19.1"],\
+          ["@wdio/utils", "npm:9.19.1"],\
           ["mocha", "npm:10.8.2"]\
         ],\
         "linkType": "HARD"\
@@ -15846,7 +15846,7 @@ const RAW_RUNTIME_STATE =
           ["@types/youtube-player", "npm:5.5.11"],\
           ["@wdio/cli", "npm:9.7.2"],\
           ["@wdio/local-runner", "npm:9.7.2"],\
-          ["@wdio/mocha-framework", "npm:9.7.2"],\
+          ["@wdio/mocha-framework", "npm:9.19.1"],\
           ["@yarnpkg/pnpify", "npm:4.1.5"],\
           ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.2.1"],\
           ["babel-plugin-relay", "npm:20.1.1"],\

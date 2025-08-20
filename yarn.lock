@@ -6155,17 +6155,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/mocha-framework@npm:9.7.2":
-  version: 9.7.2
-  resolution: "@wdio/mocha-framework@npm:9.7.2"
+"@wdio/mocha-framework@npm:9.19.1":
+  version: 9.19.1
+  resolution: "@wdio/mocha-framework@npm:9.19.1"
   dependencies:
     "@types/mocha": "npm:^10.0.6"
     "@types/node": "npm:^20.11.28"
-    "@wdio/logger": "npm:9.4.4"
-    "@wdio/types": "npm:9.6.3"
-    "@wdio/utils": "npm:9.7.2"
+    "@wdio/logger": "npm:9.18.0"
+    "@wdio/types": "npm:9.19.1"
+    "@wdio/utils": "npm:9.19.1"
     mocha: "npm:^10.3.0"
-  checksum: 10/309fbcedcee30f697f92a204948e437a7f823261293d2b128f4268437c7d7a9a27db8d568812da872c57ef357fd0f32f13035dadb70d9250d75eceede764ef1d
+  checksum: 10/c57b72822ee6a47f11855238f0aa9c63c9c2a22e51b311cec6417387d5b9db46ba221e9b27df8c7854979661d56a5d7856ffd0b7215952c56d25905413ac197e
   languageName: node
   linkType: hard
 
@@ -12675,7 +12675,7 @@ __metadata:
     "@types/youtube-player": "npm:5.5.11"
     "@wdio/cli": "npm:9.7.2"
     "@wdio/local-runner": "npm:9.7.2"
-    "@wdio/mocha-framework": "npm:9.7.2"
+    "@wdio/mocha-framework": "npm:9.19.1"
     "@yarnpkg/pnpify": "npm:4.1.5"
     babel-loader: "npm:9.2.1"
     babel-plugin-relay: "npm:20.1.1"
