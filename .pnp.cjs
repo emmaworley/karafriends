@@ -42,7 +42,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-glsl", "npm:2.13.3"],\
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.15.4"],\
-          ["@parcel/transformer-sass", "npm:2.13.3"],\
+          ["@parcel/transformer-sass", "npm:2.15.4"],\
           ["@parcel/transformer-worklet", "npm:2.13.3"],\
           ["@sentry/browser", "npm:10.5.0"],\
           ["@sentry/node", "npm:10.5.0"],\
@@ -7026,13 +7026,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@parcel/transformer-sass", [\
-      ["npm:2.13.3", {\
-        "packageLocation": "./.yarn/cache/@parcel-transformer-sass-npm-2.13.3-736b7be214-b57c76bacd.zip/node_modules/@parcel/transformer-sass/",\
+      ["npm:2.15.4", {\
+        "packageLocation": "./.yarn/cache/@parcel-transformer-sass-npm-2.15.4-0802df7c1f-b57f4a3821.zip/node_modules/@parcel/transformer-sass/",\
         "packageDependencies": [\
-          ["@parcel/transformer-sass", "npm:2.13.3"],\
-          ["@parcel/plugin", "npm:2.13.3"],\
+          ["@parcel/transformer-sass", "npm:2.15.4"],\
+          ["@parcel/plugin", "npm:2.15.4"],\
           ["@parcel/source-map", "npm:2.1.1"],\
-          ["sass", "npm:1.83.4"]\
+          ["sass", "npm:1.90.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16550,7 +16550,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-glsl", "npm:2.13.3"],\
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.15.4"],\
-          ["@parcel/transformer-sass", "npm:2.13.3"],\
+          ["@parcel/transformer-sass", "npm:2.15.4"],\
           ["@parcel/transformer-worklet", "npm:2.13.3"],\
           ["@sentry/browser", "npm:10.5.0"],\
           ["@sentry/node", "npm:10.5.0"],\
@@ -20652,10 +20652,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["sass", [\
-      ["npm:1.83.4", {\
-        "packageLocation": "./.yarn/cache/sass-npm-1.83.4-a8514cedd9-9a7d1c6be1.zip/node_modules/sass/",\
+      ["npm:1.90.0", {\
+        "packageLocation": "./.yarn/cache/sass-npm-1.90.0-50f57f9a39-409236ad97.zip/node_modules/sass/",\
         "packageDependencies": [\
-          ["sass", "npm:1.83.4"],\
+          ["sass", "npm:1.90.0"],\
           ["@parcel/watcher", "npm:2.5.1"],\
           ["chokidar", "npm:4.0.3"],\
           ["immutable", "npm:5.0.3"],\
