@@ -6050,7 +6050,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-fetch@npm:2.6.12, @types/node-fetch@npm:^2.6.1":
+"@types/node-fetch@npm:2.6.13":
+  version: 2.6.13
+  resolution: "@types/node-fetch@npm:2.6.13"
+  dependencies:
+    "@types/node": "npm:*"
+    form-data: "npm:^4.0.4"
+  checksum: 10/944d52214791ebba482ca1393a4f0d62b0dbac5f7343ff42c128b75d5356d8bcefd4df77771b55c1acd19d118e16e9bd5d2792819c51bc13402d1c87c0975435
+  languageName: node
+  linkType: hard
+
+"@types/node-fetch@npm:^2.6.1":
   version: 2.6.12
   resolution: "@types/node-fetch@npm:2.6.12"
   dependencies:
@@ -13180,7 +13190,7 @@ __metadata:
     "@types/lodash": "npm:4.17.20"
     "@types/materialize-css": "npm:1.0.14"
     "@types/node": "npm:24.3.0"
-    "@types/node-fetch": "npm:2.6.12"
+    "@types/node-fetch": "npm:2.6.13"
     "@types/promise-retry": "npm:1.1.6"
     "@types/qrcode": "npm:1.5.5"
     "@types/react": "npm:19.0.8"

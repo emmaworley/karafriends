@@ -117,7 +117,7 @@
     "@types/lodash": "4.17.20",
     "@types/materialize-css": "1.0.14",
     "@types/node": "24.3.0",
-    "@types/node-fetch": "2.6.12",
+    "@types/node-fetch": "2.6.13",
     "@types/promise-retry": "1.1.6",
     "@types/qrcode": "1.5.5",
     "@types/react": "19.0.8",
