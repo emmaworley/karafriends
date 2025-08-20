@@ -41,7 +41,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/core", "npm:2.15.4"],\
           ["@parcel/transformer-glsl", "npm:2.13.3"],\
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
-          ["@parcel/transformer-react-refresh-wrap", "npm:2.13.3"],\
+          ["@parcel/transformer-react-refresh-wrap", "npm:2.15.4"],\
           ["@parcel/transformer-sass", "npm:2.13.3"],\
           ["@parcel/transformer-worklet", "npm:2.13.3"],\
           ["@sentry/browser", "npm:10.5.0"],\
@@ -16277,7 +16277,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/core", "npm:2.15.4"],\
           ["@parcel/transformer-glsl", "npm:2.13.3"],\
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
-          ["@parcel/transformer-react-refresh-wrap", "npm:2.13.3"],\
+          ["@parcel/transformer-react-refresh-wrap", "npm:2.15.4"],\
           ["@parcel/transformer-sass", "npm:2.13.3"],\
           ["@parcel/transformer-worklet", "npm:2.13.3"],\
           ["@sentry/browser", "npm:10.5.0"],\
