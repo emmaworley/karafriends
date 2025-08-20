@@ -20,7 +20,7 @@ import { makeExecutableSchema } from "@graphql-tools/schema";
 import isDev from "electron-is-dev";
 import express, { Application } from "express";
 import { PubSub } from "graphql-subscriptions";
-import { useServer } from "graphql-ws/lib/use/ws"; // tslint:disable-line:no-submodule-imports
+import { useServer } from "graphql-ws/use/ws"; // tslint:disable-line:no-submodule-imports
 import { Nicovideo } from "niconico";
 import nodeFetch from "node-fetch";
 import tunnel from "tunnel";

@@ -103,7 +103,7 @@ const RAW_RUNTIME_STATE =
           ["glob", "npm:11.0.3"],\
           ["graphql", "npm:16.11.0"],\
           ["graphql-subscriptions", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.0.0"],\
-          ["graphql-ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.16.0"],\
+          ["graphql-ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.0.6"],\
           ["hls.js", "npm:1.6.10"],\
           ["husky", "npm:9.1.7"],\
           ["kuromoji", "npm:0.1.2"],\
@@ -399,7 +399,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@apollo/utils.keyvaluecache", "npm:4.0.0"],\
           ["@apollo/utils.logger", "npm:3.0.0"],\
-          ["lru-cache", "npm:11.0.2"]\
+          ["lru-cache", "npm:11.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -13762,23 +13762,39 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["graphql-ws", [\
-      ["npm:5.16.0", {\
-        "packageLocation": "./.yarn/cache/graphql-ws-npm-5.16.0-98146e34fe-e56d903920.zip/node_modules/graphql-ws/",\
+      ["npm:6.0.6", {\
+        "packageLocation": "./.yarn/cache/graphql-ws-npm-6.0.6-683db11316-81d334800a.zip/node_modules/graphql-ws/",\
         "packageDependencies": [\
-          ["graphql-ws", "npm:5.16.0"]\
+          ["graphql-ws", "npm:6.0.6"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.16.0", {\
-        "packageLocation": "./.yarn/__virtual__/graphql-ws-virtual-d80b06514d/0/cache/graphql-ws-npm-5.16.0-98146e34fe-e56d903920.zip/node_modules/graphql-ws/",\
+      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.0.6", {\
+        "packageLocation": "./.yarn/__virtual__/graphql-ws-virtual-05796c60a7/0/cache/graphql-ws-npm-6.0.6-683db11316-81d334800a.zip/node_modules/graphql-ws/",\
         "packageDependencies": [\
-          ["graphql-ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.16.0"],\
+          ["graphql-ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.0.6"],\
+          ["@fastify/websocket", null],\
+          ["@types/crossws", null],\
+          ["@types/fastify__websocket", null],\
           ["@types/graphql", null],\
-          ["graphql", "npm:16.11.0"]\
+          ["@types/uWebSockets.js", null],\
+          ["@types/ws", "npm:8.18.1"],\
+          ["crossws", null],\
+          ["graphql", "npm:16.11.0"],\
+          ["uWebSockets.js", null],\
+          ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.18.3"]\
         ],\
         "packagePeers": [\
+          "@fastify/websocket",\
+          "@types/crossws",\
+          "@types/fastify__websocket",\
           "@types/graphql",\
-          "graphql"\
+          "@types/uWebSockets.js",\
+          "@types/ws",\
+          "crossws",\
+          "graphql",\
+          "uWebSockets.js",\
+          "ws"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15860,7 +15876,7 @@ const RAW_RUNTIME_STATE =
           ["glob", "npm:11.0.3"],\
           ["graphql", "npm:16.11.0"],\
           ["graphql-subscriptions", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.0.0"],\
-          ["graphql-ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.16.0"],\
+          ["graphql-ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.0.6"],\
           ["hls.js", "npm:1.6.10"],\
           ["husky", "npm:9.1.7"],\
           ["kuromoji", "npm:0.1.2"],\
@@ -16514,13 +16530,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/lru-cache-npm-10.4.3-30c10b861a-e6e9026736.zip/node_modules/lru-cache/",\
         "packageDependencies": [\
           ["lru-cache", "npm:10.4.3"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:11.0.2", {\
-        "packageLocation": "./.yarn/cache/lru-cache-npm-11.0.2-72e1eedbe6-25fcb66e9d.zip/node_modules/lru-cache/",\
-        "packageDependencies": [\
-          ["lru-cache", "npm:11.0.2"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -18081,7 +18090,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/path-scurry-npm-2.0.0-5a556e8161-285ae0c2d6.zip/node_modules/path-scurry/",\
         "packageDependencies": [\
           ["path-scurry", "npm:2.0.0"],\
-          ["lru-cache", "npm:11.0.2"],\
+          ["lru-cache", "npm:11.1.0"],\
           ["minipass", "npm:7.1.2"]\
         ],\
         "linkType": "HARD"\
