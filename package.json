@@ -102,7 +102,7 @@
     "@parcel/transformer-inline-string": "2.15.4",
     "@parcel/transformer-sass": "2.13.3",
     "@parcel/transformer-worklet": "2.13.3",
-    "@testing-library/dom": "10.4.0",
+    "@testing-library/dom": "10.4.1",
     "@testing-library/webdriverio": "3.2.1",
     "@types/audioworklet": "0.0.82",
     "@types/babel__core": "7",

@@ -46,7 +46,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-worklet", "npm:2.13.3"],\
           ["@sentry/browser", "npm:10.5.0"],\
           ["@sentry/node", "npm:10.5.0"],\
-          ["@testing-library/dom", "npm:10.4.0"],\
+          ["@testing-library/dom", "npm:10.4.1"],\
           ["@testing-library/webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.2.1"],\
           ["@types/audioworklet", "npm:0.0.82"],\
           ["@types/babel__core", "npm:7.20.5"],\
@@ -8026,17 +8026,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@testing-library/dom", [\
-      ["npm:10.4.0", {\
-        "packageLocation": "./.yarn/cache/@testing-library-dom-npm-10.4.0-a0d2ca848e-05825ee9a1.zip/node_modules/@testing-library/dom/",\
+      ["npm:10.4.1", {\
+        "packageLocation": "./.yarn/cache/@testing-library-dom-npm-10.4.1-928d6cd2a7-7f93e09ea0.zip/node_modules/@testing-library/dom/",\
         "packageDependencies": [\
-          ["@testing-library/dom", "npm:10.4.0"],\
+          ["@testing-library/dom", "npm:10.4.1"],\
           ["@babel/code-frame", "npm:7.26.2"],\
           ["@babel/runtime", "npm:7.26.7"],\
           ["@types/aria-query", "npm:5.0.4"],\
           ["aria-query", "npm:5.3.0"],\
-          ["chalk", "npm:4.1.2"],\
           ["dom-accessibility-api", "npm:0.5.16"],\
           ["lz-string", "npm:1.5.0"],\
+          ["picocolors", "npm:1.1.1"],\
           ["pretty-format", "npm:27.5.1"]\
         ],\
         "linkType": "HARD"\
@@ -16478,7 +16478,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-worklet", "npm:2.13.3"],\
           ["@sentry/browser", "npm:10.5.0"],\
           ["@sentry/node", "npm:10.5.0"],\
-          ["@testing-library/dom", "npm:10.4.0"],\
+          ["@testing-library/dom", "npm:10.4.1"],\
           ["@testing-library/webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.2.1"],\
           ["@types/audioworklet", "npm:0.0.82"],\
           ["@types/babel__core", "npm:7.20.5"],\
