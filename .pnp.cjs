@@ -399,7 +399,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@apollo/utils.keyvaluecache", "npm:4.0.0"],\
           ["@apollo/utils.logger", "npm:3.0.0"],\
-          ["lru-cache", "npm:11.0.2"]\
+          ["lru-cache", "npm:11.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16533,13 +16533,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:11.0.2", {\
-        "packageLocation": "./.yarn/cache/lru-cache-npm-11.0.2-72e1eedbe6-25fcb66e9d.zip/node_modules/lru-cache/",\
-        "packageDependencies": [\
-          ["lru-cache", "npm:11.0.2"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:11.1.0", {\
         "packageLocation": "./.yarn/cache/lru-cache-npm-11.1.0-3de771fc22-5011011675.zip/node_modules/lru-cache/",\
         "packageDependencies": [\
@@ -18097,7 +18090,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/path-scurry-npm-2.0.0-5a556e8161-285ae0c2d6.zip/node_modules/path-scurry/",\
         "packageDependencies": [\
           ["path-scurry", "npm:2.0.0"],\
-          ["lru-cache", "npm:11.0.2"],\
+          ["lru-cache", "npm:11.1.0"],\
           ["minipass", "npm:7.1.2"]\
         ],\
         "linkType": "HARD"\
