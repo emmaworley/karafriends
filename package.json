@@ -26,9 +26,10 @@
   },
   "dependencies": {
     "@apollo/datasource-rest": "6.4.1",
-    "@apollo/server": "4.11.2",
+    "@apollo/server": "5.0.0",
     "@apollo/utils.fetcher": "3.1.0",
     "@apollo/utils.keyvaluecache": "4.0.0",
+    "@as-integrations/express5": "1.1.2",
     "@graphql-tools/schema": "10.0.25",
     "@parcel/transformer-react-refresh-wrap": "2.15.4",
     "@sentry/browser": "10.5.0",
