@@ -11792,7 +11792,7 @@ __metadata:
     relay-compiler: "npm:18.2.0"
     relay-compiler-language-typescript: "npm:15.0.1"
     relay-config: "npm:12.0.1"
-    relay-runtime: "npm:18.2.0"
+    relay-runtime: "npm:20.1.1"
     supports-color: "npm:10.0.0"
     ts-invariant: "npm:0.10.3"
     ts-loader: "npm:9.5.2"
@@ -14772,6 +14772,17 @@ __metadata:
     fbjs: "npm:^3.0.2"
     invariant: "npm:^2.2.4"
   checksum: 10/cfa7d4af0a13526c89c39f6b392647d33ce38435a9d5de95ca89e8ccf01612e682bca5defb1767f7ffc8896811e2acb90e2c73e577498efa37a7b050f31dcf64
+  languageName: node
+  linkType: hard
+
+"relay-runtime@npm:20.1.1":
+  version: 20.1.1
+  resolution: "relay-runtime@npm:20.1.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.25.0"
+    fbjs: "npm:^3.0.2"
+    invariant: "npm:^2.2.4"
+  checksum: 10/ee2d043397d2fb6e5e2cc48930145707a86f80f9c8470153ceae08609806353178f02767f3f0709058d753e0c7bedd3b7d8c149bd2bd7edab64deb2d1bcffbfb
   languageName: node
   linkType: hard
 
