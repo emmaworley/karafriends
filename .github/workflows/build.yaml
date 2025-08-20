@@ -11,7 +11,7 @@ jobs:
   build-macos-aarch64:
     runs-on: [self-hosted, karafriends-integration]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: Homebrew/actions/setup-homebrew@master
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
@@ -64,7 +64,7 @@ jobs:
   build-macos-x86_64:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: nightly
@@ -93,7 +93,7 @@ jobs:
   build-windows-x86_64:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: nightly
@@ -122,7 +122,7 @@ jobs:
   build-linux-x86_64:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: nightly
