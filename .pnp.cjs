@@ -135,7 +135,7 @@ const RAW_RUNTIME_STATE =
           ["react-router", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.8.1"],\
           ["react-swipeable", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.0.2"],\
           ["regenerator-runtime", "npm:0.14.1"],\
-          ["relay-compiler", "npm:18.2.0"],\
+          ["relay-compiler", "npm:20.1.1"],\
           ["relay-compiler-language-typescript", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:15.0.1"],\
           ["relay-config", "npm:12.0.1"],\
           ["relay-runtime", "npm:20.1.1"],\
@@ -14670,7 +14670,7 @@ const RAW_RUNTIME_STATE =
           ["react-router", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.8.1"],\
           ["react-swipeable", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.0.2"],\
           ["regenerator-runtime", "npm:0.14.1"],\
-          ["relay-compiler", "npm:18.2.0"],\
+          ["relay-compiler", "npm:20.1.1"],\
           ["relay-compiler-language-typescript", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:15.0.1"],\
           ["relay-config", "npm:12.0.1"],\
           ["relay-runtime", "npm:20.1.1"],\
@@ -18031,10 +18031,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["relay-compiler", [\
-      ["npm:18.2.0", {\
-        "packageLocation": "./.yarn/unplugged/relay-compiler-npm-18.2.0-7cca1980a6/node_modules/relay-compiler/",\
+      ["npm:20.1.1", {\
+        "packageLocation": "./.yarn/unplugged/relay-compiler-npm-20.1.1-eddb09d75a/node_modules/relay-compiler/",\
         "packageDependencies": [\
-          ["relay-compiler", "npm:18.2.0"]\
+          ["relay-compiler", "npm:20.1.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18056,7 +18056,7 @@ const RAW_RUNTIME_STATE =
           ["@types/relay-runtime", "npm:18.2.5"],\
           ["@types/typescript", null],\
           ["invariant", "npm:2.2.4"],\
-          ["relay-compiler", "npm:18.2.0"],\
+          ["relay-compiler", "npm:20.1.1"],\
           ["relay-runtime", "npm:20.1.1"],\
           ["typescript", "patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"]\
         ],\
