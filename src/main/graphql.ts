@@ -328,7 +328,7 @@ function saveDb() {
       pitchShiftSemis: 0,
       currentSong: null,
       currentSongAdhocLyrics: [],
-      songQueue: [db.currentSong, ...db.songQueue],
+      songQueue: [...(db.currentSong ? [db.currentSong] : []), ...db.songQueue],
       downloadQueue: [],
     }),
     "utf-8",
@@ -336,7 +336,7 @@ function saveDb() {
 }
 
 function loadDb(): NotARealDb {
-  return {
+  const dbWithDefaults = {
     currentSong: null,
     currentSongAdhocLyrics: [],
     idToAdhocLyrics: {},
@@ -348,6 +348,11 @@ function loadDb(): NotARealDb {
     ...(fs.existsSync(DB_PATH) &&
       JSON.parse(fs.readFileSync(DB_PATH, "utf-8"))),
   };
+  // Older versions of karafriends might have saved a null currentSong into the queue, let's filter it out
+  dbWithDefaults.songQueue = dbWithDefaults.songQueue.filter(
+    (song: QueueItem | null) => song,
+  );
+  return dbWithDefaults;
 }
 
 const pubsub = new PubSub();

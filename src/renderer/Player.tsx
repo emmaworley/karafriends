@@ -103,7 +103,7 @@ function Player(props: {
           if (!videoRef.current) return;
           if (trackRef?.current) {
             trackRef.current.default = false;
-            trackRef.current.src = "";
+            trackRef.current.removeAttribute("src");
           }
 
           setPitchShiftSemis(0);
