@@ -43,7 +43,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.15.4"],\
           ["@parcel/transformer-sass", "npm:2.13.3"],\
-          ["@parcel/transformer-worklet", "npm:2.13.3"],\
+          ["@parcel/transformer-worklet", "npm:2.15.4"],\
           ["@sentry/browser", "npm:10.5.0"],\
           ["@sentry/node", "npm:10.5.0"],\
           ["@testing-library/dom", "npm:10.4.1"],\
@@ -7065,11 +7065,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@parcel/transformer-worklet", [\
-      ["npm:2.13.3", {\
-        "packageLocation": "./.yarn/cache/@parcel-transformer-worklet-npm-2.13.3-5ceed6afde-9ba7ca4a11.zip/node_modules/@parcel/transformer-worklet/",\
+      ["npm:2.15.4", {\
+        "packageLocation": "./.yarn/cache/@parcel-transformer-worklet-npm-2.15.4-1606e85167-f33219de89.zip/node_modules/@parcel/transformer-worklet/",\
         "packageDependencies": [\
-          ["@parcel/transformer-worklet", "npm:2.13.3"],\
-          ["@parcel/plugin", "npm:2.13.3"]\
+          ["@parcel/transformer-worklet", "npm:2.15.4"],\
+          ["@parcel/plugin", "npm:2.15.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16551,7 +16551,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.15.4"],\
           ["@parcel/transformer-sass", "npm:2.13.3"],\
-          ["@parcel/transformer-worklet", "npm:2.13.3"],\
+          ["@parcel/transformer-worklet", "npm:2.15.4"],\
           ["@sentry/browser", "npm:10.5.0"],\
           ["@sentry/node", "npm:10.5.0"],\
           ["@testing-library/dom", "npm:10.4.1"],\
