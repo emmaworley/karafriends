@@ -11,6 +11,9 @@ export const config = {
   capabilities: [
     {
       browserName: "electron",
+      "wdio:chromedriverOptions": {
+        enableChromeLogs: true,
+      },
       "wdio:electronServiceOptions": {
         appBinaryPath: resolve(repoRoot, "electron.js"),
         appArgs: [
@@ -21,6 +24,7 @@ export const config = {
   ],
   connectionRetryTimeout: 5 * 60 * 1000,
   framework: "mocha",
+  logLevel: "warn",
   mochaOpts: {
     timeout: 5 * 60 * 1000,
   },

@@ -36,6 +36,7 @@ export const config = {
   ],
   connectionRetryTimeout: 10 * 60 * 1000,
   framework: "mocha",
+  logLevel: "warn",
   mochaOpts: {
     timeout: 10 * 60 * 1000,
   },
