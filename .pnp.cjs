@@ -32,6 +32,7 @@ const RAW_RUNTIME_STATE =
           ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.0.0"],\
           ["@apollo/utils.fetcher", "npm:3.1.0"],\
           ["@apollo/utils.keyvaluecache", "npm:4.0.0"],\
+          ["@as-integrations/express5", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:1.1.2"],\
           ["@babel/core", "npm:7.28.3"],\
           ["@babel/preset-env", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.28.3"],\
           ["@babel/preset-react", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.27.1"],\
@@ -544,6 +545,32 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@arcanis/slice-ansi", "npm:1.1.1"],\
           ["grapheme-splitter", "npm:1.0.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@as-integrations/express5", [\
+      ["npm:1.1.2", {\
+        "packageLocation": "./.yarn/cache/@as-integrations-express5-npm-1.1.2-8a80c0275d-6a414d5233.zip/node_modules/@as-integrations/express5/",\
+        "packageDependencies": [\
+          ["@as-integrations/express5", "npm:1.1.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:1.1.2", {\
+        "packageLocation": "./.yarn/__virtual__/@as-integrations-express5-virtual-e4277a93fc/0/cache/@as-integrations-express5-npm-1.1.2-8a80c0275d-6a414d5233.zip/node_modules/@as-integrations/express5/",\
+        "packageDependencies": [\
+          ["@as-integrations/express5", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:1.1.2"],\
+          ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.0.0"],\
+          ["@types/apollo__server", null],\
+          ["@types/express", "npm:5.0.3"],\
+          ["express", "npm:5.1.0"]\
+        ],\
+        "packagePeers": [\
+          "@apollo/server",\
+          "@types/apollo__server",\
+          "@types/express",\
+          "express"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15762,6 +15789,7 @@ const RAW_RUNTIME_STATE =
           ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.0.0"],\
           ["@apollo/utils.fetcher", "npm:3.1.0"],\
           ["@apollo/utils.keyvaluecache", "npm:4.0.0"],\
+          ["@as-integrations/express5", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:1.1.2"],\
           ["@babel/core", "npm:7.28.3"],\
           ["@babel/preset-env", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.28.3"],\
           ["@babel/preset-react", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.27.1"],\

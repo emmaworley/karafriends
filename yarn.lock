@@ -256,6 +256,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@as-integrations/express5@npm:1.1.2":
+  version: 1.1.2
+  resolution: "@as-integrations/express5@npm:1.1.2"
+  peerDependencies:
+    "@apollo/server": ^4.0.0 || ^5.0.0
+    express: ^5.0.0
+  checksum: 10/6a414d523306d6f614f20b106cf8dec8d8f282c7bc6e47a2661186554a4275983ce5fea9a29e50eda4600fe3a22564534bffcdee134c3057adbe8096bf5a78eb
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.4, @babel/code-frame@npm:^7.12.13, @babel/code-frame@npm:^7.21.4, @babel/code-frame@npm:^7.22.13, @babel/code-frame@npm:^7.27.1":
   version: 7.27.1
   resolution: "@babel/code-frame@npm:7.27.1"
@@ -12453,6 +12463,7 @@ __metadata:
     "@apollo/server": "npm:5.0.0"
     "@apollo/utils.fetcher": "npm:3.1.0"
     "@apollo/utils.keyvaluecache": "npm:4.0.0"
+    "@as-integrations/express5": "npm:1.1.2"
     "@babel/core": "npm:7.28.3"
     "@babel/preset-env": "npm:7.28.3"
     "@babel/preset-react": "npm:7.27.1"

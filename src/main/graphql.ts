@@ -4,8 +4,6 @@ import path from "path";
 import { WebSocketServer } from "ws";
 
 import { ApolloServer } from "@apollo/server"; // tslint:disable-line:no-submodule-imports
-// tslint:disable-next-line:no-submodule-imports
-import { expressMiddleware } from "@apollo/server/express4";
 import {
   ApolloServerPluginCacheControlDisabled,
   ApolloServerPluginInlineTraceDisabled,
@@ -16,6 +14,8 @@ import {
 // tslint:disable-next-line:no-submodule-imports
 import { ApolloServerPluginDrainHttpServer } from "@apollo/server/plugin/drainHttpServer";
 import { type FetcherRequestInit } from "@apollo/utils.fetcher";
+// tslint:disable-next-line:no-submodule-imports
+import { expressMiddleware } from "@as-integrations/express5";
 import { makeExecutableSchema } from "@graphql-tools/schema";
 import isDev from "electron-is-dev";
 import express, { Application } from "express";
