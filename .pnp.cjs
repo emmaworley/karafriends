@@ -67,7 +67,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.0.8"],\
           ["@types/react-dom", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:19.0.3"],\
           ["@types/react-fade-in", "npm:2.0.2"],\
-          ["@types/react-relay", "npm:18.2.0"],\
+          ["@types/react-relay", "npm:18.2.1"],\
           ["@types/react-swipeable", "npm:5.2.0"],\
           ["@types/relay-runtime", "npm:18.2.5"],\
           ["@types/tunnel", "npm:0.0.7"],\
@@ -8685,10 +8685,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/react-relay", [\
-      ["npm:18.2.0", {\
-        "packageLocation": "./.yarn/cache/@types-react-relay-npm-18.2.0-de58b30ee7-fb56422743.zip/node_modules/@types/react-relay/",\
+      ["npm:18.2.1", {\
+        "packageLocation": "./.yarn/cache/@types-react-relay-npm-18.2.1-48f8ed7ef5-9f9f5311eb.zip/node_modules/@types/react-relay/",\
         "packageDependencies": [\
-          ["@types/react-relay", "npm:18.2.0"],\
+          ["@types/react-relay", "npm:18.2.1"],\
           ["@types/react", "npm:19.0.8"],\
           ["@types/relay-runtime", "npm:18.2.5"]\
         ],\
@@ -16499,7 +16499,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.0.8"],\
           ["@types/react-dom", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:19.0.3"],\
           ["@types/react-fade-in", "npm:2.0.2"],\
-          ["@types/react-relay", "npm:18.2.0"],\
+          ["@types/react-relay", "npm:18.2.1"],\
           ["@types/react-swipeable", "npm:5.2.0"],\
           ["@types/relay-runtime", "npm:18.2.5"],\
           ["@types/tunnel", "npm:0.0.7"],\
@@ -20105,7 +20105,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/relay-compiler-language-typescript-virtual-39ba23747b/0/cache/relay-compiler-language-typescript-npm-15.0.1-d804388cf2-4041ca8f14.zip/node_modules/relay-compiler-language-typescript/",\
         "packageDependencies": [\
           ["relay-compiler-language-typescript", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:15.0.1"],\
-          ["@types/react-relay", "npm:18.2.0"],\
+          ["@types/react-relay", "npm:18.2.1"],\
           ["@types/relay-compiler", null],\
           ["@types/relay-runtime", "npm:18.2.5"],\
           ["@types/typescript", null],\
