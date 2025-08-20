@@ -5044,12 +5044,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:19.0.3":
-  version: 19.0.3
-  resolution: "@types/react-dom@npm:19.0.3"
+"@types/react-dom@npm:19.1.7":
+  version: 19.1.7
+  resolution: "@types/react-dom@npm:19.1.7"
   peerDependencies:
     "@types/react": ^19.0.0
-  checksum: 10/815907f7adaa078acbf1d1ae7b6bf69cebe86bd301b8b9744e392bc0f16feb31bfb9fe0bfa2681d7d86678c83d52dedba5ed9bc7776736d4050cdd426b8b2d2b
+  checksum: 10/a99465e5a17d40725dedb3708357f8998c57caab768cee0992b4bb7822ce7ed2ec697a5f426cb98d3397b020756a6e4b0986dc5f6f4254e13b3536afb38538e6
   languageName: node
   linkType: hard
 
@@ -11843,7 +11843,7 @@ __metadata:
     "@types/promise-retry": "npm:1.1.6"
     "@types/qrcode": "npm:1.5.5"
     "@types/react": "npm:19.0.8"
-    "@types/react-dom": "npm:19.0.3"
+    "@types/react-dom": "npm:19.1.7"
     "@types/react-fade-in": "npm:2.0.2"
     "@types/react-relay": "npm:18.2.0"
     "@types/react-swipeable": "npm:5.2.0"
@@ -11905,7 +11905,7 @@ __metadata:
     qrcode: "npm:1.5.4"
     raw-loader: "npm:4.0.2"
     react: "npm:19.0.0"
-    react-dom: "npm:19.0.0"
+    react-dom: "npm:19.1.1"
     react-fade-in: "npm:2.0.1"
     react-icons: "npm:5.5.0"
     react-mobile-picker-scroll: "npm:0.2.14"
@@ -14537,14 +14537,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:19.0.0":
-  version: 19.0.0
-  resolution: "react-dom@npm:19.0.0"
+"react-dom@npm:19.1.1":
+  version: 19.1.1
+  resolution: "react-dom@npm:19.1.1"
   dependencies:
-    scheduler: "npm:^0.25.0"
+    scheduler: "npm:^0.26.0"
   peerDependencies:
-    react: ^19.0.0
-  checksum: 10/aa64a2f1991042f516260e8b0eca0ae777b6c8f1aa2b5ae096e80bbb6ac9b005aef2bca697969841d34f7e1819556263476bdfea36c35092e8d9aefde3de2d9a
+    react: ^19.1.1
+  checksum: 10/9005415d2175b1f1eb4a544ad04afb29691bb7b6dd43bbdaa09932146b310b73bd4552bc772ad78fa481f409eada1560cf887606c83c1a53a922c1e30f1b3a34
   languageName: node
   linkType: hard
 
@@ -15386,10 +15386,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.25.0":
-  version: 0.25.0
-  resolution: "scheduler@npm:0.25.0"
-  checksum: 10/e661e38503ab29a153429a99203fefa764f28b35c079719eb5efdd2c1c1086522f6653d8ffce388209682c23891a6d1d32fa6badf53c35fb5b9cd0c55ace42de
+"scheduler@npm:^0.26.0":
+  version: 0.26.0
+  resolution: "scheduler@npm:0.26.0"
+  checksum: 10/1ecf2e5d7de1a7a132796834afe14a2d589ba7e437615bd8c06f3e0786a3ac3434655e67aac8755d9b14e05754c177e49c064261de2673aaa3c926bc98caa002
   languageName: node
   linkType: hard
 
