@@ -41,7 +41,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/core", "npm:2.15.4"],\
           ["@parcel/transformer-glsl", "npm:2.13.3"],\
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
-          ["@parcel/transformer-react-refresh-wrap", "npm:2.13.3"],\
+          ["@parcel/transformer-react-refresh-wrap", "npm:2.15.4"],\
           ["@parcel/transformer-sass", "npm:2.13.3"],\
           ["@parcel/transformer-worklet", "npm:2.13.3"],\
           ["@sentry/browser", "npm:10.5.0"],\
@@ -5402,6 +5402,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@parcel/error-overlay", [\
+      ["npm:2.15.4", {\
+        "packageLocation": "./.yarn/cache/@parcel-error-overlay-npm-2.15.4-cc50ef4515-d3b4aef037.zip/node_modules/@parcel/error-overlay/",\
+        "packageDependencies": [\
+          ["@parcel/error-overlay", "npm:2.15.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@parcel/events", [\
       ["npm:2.13.3", {\
         "packageLocation": "./.yarn/cache/@parcel-events-npm-2.13.3-146f983142-ef24722ae3.zip/node_modules/@parcel/events/",\
@@ -6303,6 +6312,17 @@ const RAW_RUNTIME_STATE =
           ["@parcel/plugin", "npm:2.13.3"],\
           ["@parcel/utils", "npm:2.13.3"],\
           ["react-refresh", "npm:0.14.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.15.4", {\
+        "packageLocation": "./.yarn/cache/@parcel-transformer-react-refresh-wrap-npm-2.15.4-dd17ba6a03-e7fedc97ba.zip/node_modules/@parcel/transformer-react-refresh-wrap/",\
+        "packageDependencies": [\
+          ["@parcel/transformer-react-refresh-wrap", "npm:2.15.4"],\
+          ["@parcel/error-overlay", "npm:2.15.4"],\
+          ["@parcel/plugin", "npm:2.15.4"],\
+          ["@parcel/utils", "npm:2.15.4"],\
+          ["react-refresh", "npm:0.16.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15743,7 +15763,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/core", "npm:2.15.4"],\
           ["@parcel/transformer-glsl", "npm:2.13.3"],\
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
-          ["@parcel/transformer-react-refresh-wrap", "npm:2.13.3"],\
+          ["@parcel/transformer-react-refresh-wrap", "npm:2.15.4"],\
           ["@parcel/transformer-sass", "npm:2.13.3"],\
           ["@parcel/transformer-worklet", "npm:2.13.3"],\
           ["@sentry/browser", "npm:10.5.0"],\
@@ -18901,6 +18921,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/react-refresh-npm-0.14.2-95df341b4d-512abf9727.zip/node_modules/react-refresh/",\
         "packageDependencies": [\
           ["react-refresh", "npm:0.14.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:0.16.0", {\
+        "packageLocation": "./.yarn/cache/react-refresh-npm-0.16.0-b640d0f460-725019d21c.zip/node_modules/react-refresh/",\
+        "packageDependencies": [\
+          ["react-refresh", "npm:0.16.0"]\
         ],\
         "linkType": "HARD"\
       }]\

@@ -3499,6 +3499,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@parcel/error-overlay@npm:2.15.4":
+  version: 2.15.4
+  resolution: "@parcel/error-overlay@npm:2.15.4"
+  checksum: 10/d3b4aef037c859cfa7b158b0a214ce73339e1094e94a4b4c6894a13a0d106666f83f2d3ad8bdb7456311883cc4175e974275d5a0bd1070c8e2527e935712fa83
+  languageName: node
+  linkType: hard
+
 "@parcel/events@npm:2.13.3":
   version: 2.13.3
   resolution: "@parcel/events@npm:2.13.3"
@@ -4241,6 +4248,18 @@ __metadata:
     "@parcel/utils": "npm:2.13.3"
     react-refresh: "npm:>=0.9 <=0.14"
   checksum: 10/c833c16f70be628e049f3ba79e45a2c1a9b118b3934982cab8fb1f8ac8c7acefded8f488ed3e371bfda6648132bacc9e1cc0ac5aae1385ec8b50d0347e965aae
+  languageName: node
+  linkType: hard
+
+"@parcel/transformer-react-refresh-wrap@npm:2.15.4":
+  version: 2.15.4
+  resolution: "@parcel/transformer-react-refresh-wrap@npm:2.15.4"
+  dependencies:
+    "@parcel/error-overlay": "npm:2.15.4"
+    "@parcel/plugin": "npm:2.15.4"
+    "@parcel/utils": "npm:2.15.4"
+    react-refresh: "npm:^0.16.0"
+  checksum: 10/e7fedc97ba47f45f14b58c6bfbe467d56bd1dac8a084a4fa4e48e0cdf23b6bd188f1e3787cd6077aa477f6df568a572a1cf098ae341ff5413e324a22b6cf8346
   languageName: node
   linkType: hard
 
@@ -12594,7 +12613,7 @@ __metadata:
     "@parcel/core": "npm:2.15.4"
     "@parcel/transformer-glsl": "npm:2.13.3"
     "@parcel/transformer-inline-string": "npm:2.15.4"
-    "@parcel/transformer-react-refresh-wrap": "npm:2.13.3"
+    "@parcel/transformer-react-refresh-wrap": "npm:2.15.4"
     "@parcel/transformer-sass": "npm:2.13.3"
     "@parcel/transformer-worklet": "npm:2.13.3"
     "@sentry/browser": "npm:10.5.0"
@@ -15429,6 +15448,13 @@ __metadata:
   version: 0.14.2
   resolution: "react-refresh@npm:0.14.2"
   checksum: 10/512abf97271ab8623486061be04b608c39d932e3709f9af1720b41573415fa4993d0009fa5138b6705b60a98f4102f744d4e26c952b14f41a0e455521c6be4cc
+  languageName: node
+  linkType: hard
+
+"react-refresh@npm:^0.16.0":
+  version: 0.16.0
+  resolution: "react-refresh@npm:0.16.0"
+  checksum: 10/725019d21cede4cea57c20b85fa3a7fe5b0969c99d62ac37dc7b2d3505ea9a33f14f003034ed214d41bacf74c48ab174464c236e5815dff31e23f519c21d8752
   languageName: node
   linkType: hard
 
