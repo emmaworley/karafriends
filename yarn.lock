@@ -663,17 +663,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helpers@npm:^7.26.7":
-  version: 7.26.7
-  resolution: "@babel/helpers@npm:7.26.7"
-  dependencies:
-    "@babel/template": "npm:^7.25.9"
-    "@babel/types": "npm:^7.26.7"
-  checksum: 10/97593a0c9b3c5e2e7cf824e549b5f6fa6dc739593ad93d5bb36d06883d8124beac63ee2154c9a514dbee68a169d5683ab463e0ac6713ad92fb4854cea35ed4d4
-  languageName: node
-  linkType: hard
-
-"@babel/helpers@npm:^7.28.3":
+"@babel/helpers@npm:^7.26.7, @babel/helpers@npm:^7.28.3":
   version: 7.28.3
   resolution: "@babel/helpers@npm:7.28.3"
   dependencies:
@@ -7795,12 +7785,12 @@ __metadata:
   linkType: hard
 
 "brace-expansion@npm:^1.1.7":
-  version: 1.1.11
-  resolution: "brace-expansion@npm:1.1.11"
+  version: 1.1.12
+  resolution: "brace-expansion@npm:1.1.12"
   dependencies:
     balanced-match: "npm:^1.0.0"
     concat-map: "npm:0.0.1"
-  checksum: 10/faf34a7bb0c3fcf4b59c7808bc5d2a96a40988addf2e7e09dfbb67a2251800e0d14cd2bfc1aa79174f2f5095c54ff27f46fb1289fe2d77dac755b5eb3434cc07
+  checksum: 10/12cb6d6310629e3048cadb003e1aca4d8c9bb5c67c3c321bafdd7e7a50155de081f78ea3e0ed92ecc75a9015e784f301efc8132383132f4f7904ad1ac529c562
   languageName: node
   linkType: hard
 
@@ -10615,28 +10605,19 @@ __metadata:
   linkType: hard
 
 "form-data@npm:^3.0.0":
-  version: 3.0.2
-  resolution: "form-data@npm:3.0.2"
+  version: 3.0.4
+  resolution: "form-data@npm:3.0.4"
   dependencies:
     asynckit: "npm:^0.4.0"
     combined-stream: "npm:^1.0.8"
-    mime-types: "npm:^2.1.12"
-  checksum: 10/b8d71d7149de5881c6c8ac75c03ac2e809b1b729399320cc41f59a63043fa34b95dfef5259212d6d902abb4916af48a7ca60ad5c035806ba8e3c7843dbaf3057
+    es-set-tostringtag: "npm:^2.1.0"
+    hasown: "npm:^2.0.2"
+    mime-types: "npm:^2.1.35"
+  checksum: 10/68e4598e55cb193ef80304bff4d7513bf81ed4116d57b29c6c9a4c28c6f7ce57d46ddd60ba1a80aadf26703a722551e660bca2acaf9212d8b6e1f2e180d9e668
   languageName: node
   linkType: hard
 
-"form-data@npm:^4.0.0":
-  version: 4.0.1
-  resolution: "form-data@npm:4.0.1"
-  dependencies:
-    asynckit: "npm:^0.4.0"
-    combined-stream: "npm:^1.0.8"
-    mime-types: "npm:^2.1.12"
-  checksum: 10/6adb1cff557328bc6eb8a68da205f9ae44ab0e88d4d9237aaf91eed591ffc64f77411efb9016af7d87f23d0a038c45a788aa1c6634e51175c4efa36c2bc53774
-  languageName: node
-  linkType: hard
-
-"form-data@npm:^4.0.4":
+"form-data@npm:^4.0.0, form-data@npm:^4.0.4":
   version: 4.0.4
   resolution: "form-data@npm:4.0.4"
   dependencies:
@@ -14180,7 +14161,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mime-types@npm:^2.1.12, mime-types@npm:~2.1.24, mime-types@npm:~2.1.34":
+"mime-types@npm:^2.1.12, mime-types@npm:^2.1.35, mime-types@npm:~2.1.24, mime-types@npm:~2.1.34":
   version: 2.1.35
   resolution: "mime-types@npm:2.1.35"
   dependencies:
@@ -17863,8 +17844,8 @@ __metadata:
   linkType: hard
 
 "tar-fs@npm:^3.0.6":
-  version: 3.0.8
-  resolution: "tar-fs@npm:3.0.8"
+  version: 3.1.0
+  resolution: "tar-fs@npm:3.1.0"
   dependencies:
     bare-fs: "npm:^4.0.1"
     bare-path: "npm:^3.0.0"
@@ -17875,7 +17856,7 @@ __metadata:
       optional: true
     bare-path:
       optional: true
-  checksum: 10/fdcd1c66dc5e2cad5544ffe7eab9a470b419290b22300c344688df51bf06127963da07a1e3ae23cae80851cd9f60149e80b38e56485dd7a14aea701241ac2f81
+  checksum: 10/272054aa93adf66f3febac1ab666c2e1ae80fb7d9b7483efa9e9216aca6f7900dfecb9ef04e83f179251f95a965f960d760c42ebbb1e04580a182da997af98da
   languageName: node
   linkType: hard
 
@@ -18425,14 +18406,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:^6.19.5, undici@npm:^6.20.1":
-  version: 6.21.1
-  resolution: "undici@npm:6.21.1"
-  checksum: 10/eeccc07e9073ae8e755fdc0dc8cdfaa426c01ec6f815425c3ecedba2e5394cea4993962c040dd168951714a82f0d001a13018c3ae3ad4534f0fa97afe425c08d
-  languageName: node
-  linkType: hard
-
-"undici@npm:^6.21.3":
+"undici@npm:^6.19.5, undici@npm:^6.20.1, undici@npm:^6.21.3":
   version: 6.21.3
   resolution: "undici@npm:6.21.3"
   checksum: 10/b6b8f4a90e294c11fabbb174b471a310840695ed0154a44b81e9bb4a08867ed738c8a7eac4eb46c7902d502fbccf03fa2cf2e5f18d9a2218d82e4294e3f74a2b
