@@ -1,2 +1,5 @@
 [env]
 CPAL_ASIO_DIR = { value = "buildResources/asio/asiosdk_2.3.3_2019-06-14", relative = true }
+
+[target.'cfg(all(windows, target_env = "msvc"))']
+rustflags = ["-C", "target-feature=+crt-static"]
