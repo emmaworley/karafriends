@@ -83,7 +83,7 @@ function createWindow() {
       nodeIntegration: false,
       nodeIntegrationInSubFrames: false,
       nodeIntegrationInWorker: false,
-      preload: new URL(preloadUrl).pathname,
+      preload: fileURLToPath(preloadUrl),
       sandbox: false,
       webSecurity: true,
     },
