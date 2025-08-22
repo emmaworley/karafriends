@@ -489,10 +489,10 @@ impl InputDevice {
                                 let samples_written = output_tx.push_iter(
                                     &mut resampler_output[0]
                                         .iter_mut()
+                                        .take(output_samples_produced)
                                         .flat_map(|sample| {
                                             std::iter::repeat_n(*sample, output_channels)
-                                        })
-                                        .take(output_samples_produced),
+                                        }),
                                 );
                                 if samples_written < output_samples_produced {
                                     eprintln!("output fell behind (with sample rate conversion)!");
@@ -688,7 +688,7 @@ mod tests {
 
     #[test]
     fn test_input_callback_upsampling() -> Result<()> {
-        let input_sample_rate = 48000;
+        let input_sample_rate = 44100;
         let output_sample_rate = 96000;
 
         let (pitch_tx, mut pitch_rx) =
@@ -739,7 +739,7 @@ mod tests {
     #[test]
     fn test_input_callback_downsampling() -> Result<()> {
         let input_sample_rate = 96000;
-        let output_sample_rate = 48000;
+        let output_sample_rate = 44100;
 
         let (pitch_tx, mut pitch_rx) =
             ringbuf::HeapRb::new((input_sample_rate as usize).div_ceil(40)).split();
