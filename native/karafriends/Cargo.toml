@@ -16,7 +16,4 @@ neon = { version = "1.0.0", default-features = false, features = ["napi-8"] }
 [target.'cfg(windows)'.dependencies]
 win32console = "0.1.5"
 
-[target.'cfg(windows)'.build-dependencies]
-static_vcruntime = "2"
-
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
