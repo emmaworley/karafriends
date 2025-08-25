@@ -197,6 +197,9 @@
       "context": "browser"
     }
   },
+  "@parcel/bundler-default": {
+    "minBundles": 100
+  },
   "relay": {
     "src": "src",
     "schema": "src/common/schema.graphql",
