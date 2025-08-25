@@ -164,7 +164,7 @@ const RAW_RUNTIME_STATE =
           ["uuid", "npm:11.1.0"],\
           ["wait-on", "npm:8.0.4"],\
           ["wanakana", "npm:5.3.1"],\
-          ["wdio-electron-service", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.0.0"],\
+          ["wdio-electron-service", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.1.0"],\
           ["webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.19.1"],\
           ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.18.3"],\
           ["yaml", "npm:2.8.1"],\
@@ -7965,11 +7965,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@wdio/cdp-bridge", [\
-      ["npm:9.0.0", {\
-        "packageLocation": "./.yarn/cache/@wdio-cdp-bridge-npm-9.0.0-ce3927928a-452ee27b1d.zip/node_modules/@wdio/cdp-bridge/",\
+      ["npm:9.1.0", {\
+        "packageLocation": "./.yarn/cache/@wdio-cdp-bridge-npm-9.1.0-c88e0d4cda-eca152eb93.zip/node_modules/@wdio/cdp-bridge/",\
         "packageDependencies": [\
-          ["@wdio/cdp-bridge", "npm:9.0.0"],\
-          ["@wdio/electron-utils", "npm:9.0.0"],\
+          ["@wdio/cdp-bridge", "npm:9.1.0"],\
+          ["@wdio/electron-utils", "npm:9.1.0"],\
           ["wait-port", "npm:1.1.0"],\
           ["ws", "virtual:e6dd8f8825bb4e6af163724b6b025f5c0532b7669845d442d76aa5da2db8e0a3744ee0f32c9476ac9ee7ceff62b9fb873918cf7d2529671d61c8555e1b322b5b#npm:8.18.3"]\
         ],\
@@ -8033,20 +8033,20 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@wdio/electron-types", [\
-      ["npm:9.0.0", {\
-        "packageLocation": "./.yarn/cache/@wdio-electron-types-npm-9.0.0-7591651cca-2349e86bf3.zip/node_modules/@wdio/electron-types/",\
+      ["npm:9.1.0", {\
+        "packageLocation": "./.yarn/cache/@wdio-electron-types-npm-9.1.0-e3551a7a0f-abdc538335.zip/node_modules/@wdio/electron-types/",\
         "packageDependencies": [\
-          ["@wdio/electron-types", "npm:9.0.0"],\
+          ["@wdio/electron-types", "npm:9.1.0"],\
           ["@vitest/spy", "npm:3.2.4"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@wdio/electron-utils", [\
-      ["npm:9.0.0", {\
-        "packageLocation": "./.yarn/cache/@wdio-electron-utils-npm-9.0.0-738d02bbc0-9845b024b4.zip/node_modules/@wdio/electron-utils/",\
+      ["npm:9.1.0", {\
+        "packageLocation": "./.yarn/cache/@wdio-electron-utils-npm-9.1.0-593205413e-f0f59a76f2.zip/node_modules/@wdio/electron-utils/",\
         "packageDependencies": [\
-          ["@wdio/electron-utils", "npm:9.0.0"],\
+          ["@wdio/electron-utils", "npm:9.1.0"],\
           ["@electron/packager", "npm:18.4.2"],\
           ["@wdio/logger", "npm:9.18.0"],\
           ["debug", "virtual:7786c501c79aa105de26d543c50999bc3ffc28c31c1a6f2d58b7186cb22c72362e89eca24786c0d5c6c0538a0bef1031c054fdc988813e6f7e1df708f2aee1cd#npm:4.4.1"],\
@@ -15187,7 +15187,7 @@ const RAW_RUNTIME_STATE =
           ["uuid", "npm:11.1.0"],\
           ["wait-on", "npm:8.0.4"],\
           ["wanakana", "npm:5.3.1"],\
-          ["wdio-electron-service", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.0.0"],\
+          ["wdio-electron-service", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.1.0"],\
           ["webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.19.1"],\
           ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.18.3"],\
           ["yaml", "npm:2.8.1"],\
@@ -20998,24 +20998,24 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["wdio-electron-service", [\
-      ["npm:9.0.0", {\
-        "packageLocation": "./.yarn/cache/wdio-electron-service-npm-9.0.0-043a169335-faefd3da84.zip/node_modules/wdio-electron-service/",\
+      ["npm:9.1.0", {\
+        "packageLocation": "./.yarn/cache/wdio-electron-service-npm-9.1.0-1ed73ae0ef-68604d8700.zip/node_modules/wdio-electron-service/",\
         "packageDependencies": [\
-          ["wdio-electron-service", "npm:9.0.0"]\
+          ["wdio-electron-service", "npm:9.1.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/wdio-electron-service-virtual-0ddf932b17/0/cache/wdio-electron-service-npm-9.0.0-043a169335-faefd3da84.zip/node_modules/wdio-electron-service/",\
+      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/wdio-electron-service-virtual-289b30cff1/0/cache/wdio-electron-service-npm-9.1.0-1ed73ae0ef-68604d8700.zip/node_modules/wdio-electron-service/",\
         "packageDependencies": [\
-          ["wdio-electron-service", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.0.0"],\
+          ["wdio-electron-service", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.1.0"],\
           ["@babel/parser", "npm:7.28.3"],\
           ["@types/electron", null],\
           ["@types/webdriverio", null],\
           ["@vitest/spy", "npm:3.2.4"],\
-          ["@wdio/cdp-bridge", "npm:9.0.0"],\
-          ["@wdio/electron-types", "npm:9.0.0"],\
-          ["@wdio/electron-utils", "npm:9.0.0"],\
+          ["@wdio/cdp-bridge", "npm:9.1.0"],\
+          ["@wdio/electron-types", "npm:9.1.0"],\
+          ["@wdio/electron-utils", "npm:9.1.0"],\
           ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.17.0"],\
           ["@wdio/logger", "npm:9.18.0"],\
           ["compare-versions", "npm:6.1.1"],\
