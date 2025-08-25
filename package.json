@@ -146,7 +146,7 @@
     "babel-loader": "10.0.0",
     "babel-plugin-relay": "20.1.1",
     "cargo-cp-artifact": "0.1.9",
-    "concurrently": "9.2.0",
+    "concurrently": "9.2.1",
     "cross-env": "10.0.0",
     "electron": "37.3.1",
     "electron-packager": "17.1.2",
