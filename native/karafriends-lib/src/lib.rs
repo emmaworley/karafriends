@@ -427,11 +427,11 @@ impl InputDevice {
         let output_sample_rate = output_config.sample_rate.0;
 
         let mut reverbs = [
-            reverb_module::ReverbModule::new(input_sample_rate, 0.04960, 0.750)?,
-            reverb_module::ReverbModule::new(input_sample_rate, 0.03465, 0.720)?,
-            reverb_module::ReverbModule::new(input_sample_rate, 0.02418, 0.691)?,
-            reverb_module::ReverbModule::new(input_sample_rate, 0.01785, 0.649)?,
-            reverb_module::ReverbModule::new(input_sample_rate, 0.01098, 0.662)?,
+            reverb_module::ReverbModule::new(input_sample_rate, 0.09920, 0.750)?,
+            reverb_module::ReverbModule::new(input_sample_rate, 0.06930, 0.720)?,
+            reverb_module::ReverbModule::new(input_sample_rate, 0.04836, 0.691)?,
+            reverb_module::ReverbModule::new(input_sample_rate, 0.03570, 0.649)?,
+            reverb_module::ReverbModule::new(input_sample_rate, 0.02196, 0.662)?,
         ];
 
         let resampler_chunk_size = match input_config.buffer_size {
