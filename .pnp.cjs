@@ -115,7 +115,7 @@ const RAW_RUNTIME_STATE =
           ["graphql", "npm:16.11.0"],\
           ["graphql-subscriptions", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.0.0"],\
           ["graphql-ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.0.6"],\
-          ["hls.js", "npm:1.6.10"],\
+          ["hls.js", "npm:1.6.11"],\
           ["husky", "npm:9.1.7"],\
           ["kuromoji", "npm:0.1.2"],\
           ["kuroshiro", "npm:1.2.0"],\
@@ -13194,6 +13194,13 @@ const RAW_RUNTIME_STATE =
           ["hls.js", "npm:1.6.10"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:1.6.11", {\
+        "packageLocation": "./.yarn/cache/hls.js-npm-1.6.11-ff5a0e546e-a7fb6407bd.zip/node_modules/hls.js/",\
+        "packageDependencies": [\
+          ["hls.js", "npm:1.6.11"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["hosted-git-info", [\
@@ -15095,7 +15102,7 @@ const RAW_RUNTIME_STATE =
           ["graphql", "npm:16.11.0"],\
           ["graphql-subscriptions", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.0.0"],\
           ["graphql-ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.0.6"],\
-          ["hls.js", "npm:1.6.10"],\
+          ["hls.js", "npm:1.6.11"],\
           ["husky", "npm:9.1.7"],\
           ["kuromoji", "npm:0.1.2"],\
           ["kuroshiro", "npm:1.2.0"],\
