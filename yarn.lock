@@ -5475,14 +5475,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/cdp-bridge@npm:9.1.0":
-  version: 9.1.0
-  resolution: "@wdio/cdp-bridge@npm:9.1.0"
+"@wdio/cdp-bridge@npm:9.1.1":
+  version: 9.1.1
+  resolution: "@wdio/cdp-bridge@npm:9.1.1"
   dependencies:
-    "@wdio/electron-utils": "npm:9.1.0"
+    "@wdio/electron-utils": "npm:9.1.1"
     wait-port: "npm:^1.1.0"
     ws: "npm:^8.18.3"
-  checksum: 10/eca152eb939f3e3646400771071f9d3830fea0ee23d28ec7171f040dba3dac3d14ae0937a148ce7ea4c34263c78b6778fafa6038ecd29f303400aa88573cd33f
+  checksum: 10/533f96b4dff777ce27660c6aed53e1f2ac36ff312f92142c9f75130f98a557787f803b9df04b47cff5ae24459d982cbcd1e72e3a195d69a9e8e93899eed568a6
   languageName: node
   linkType: hard
 
@@ -5530,6 +5530,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@wdio/config@npm:9.19.2":
+  version: 9.19.2
+  resolution: "@wdio/config@npm:9.19.2"
+  dependencies:
+    "@wdio/logger": "npm:9.18.0"
+    "@wdio/types": "npm:9.19.2"
+    "@wdio/utils": "npm:9.19.2"
+    deepmerge-ts: "npm:^7.0.3"
+    glob: "npm:^10.2.2"
+    import-meta-resolve: "npm:^4.0.0"
+  checksum: 10/5177a75d7989b12a694f504a4347af7c21e8148fc291500e3bfebe41d368ad14e02d3d268709bd8f245865e72ea9a0bbaf8bdf9847f62eceb755db2140f23186
+  languageName: node
+  linkType: hard
+
 "@wdio/dot-reporter@npm:9.19.1":
   version: 9.19.1
   resolution: "@wdio/dot-reporter@npm:9.19.1"
@@ -5541,18 +5555,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/electron-types@npm:9.1.0":
-  version: 9.1.0
-  resolution: "@wdio/electron-types@npm:9.1.0"
+"@wdio/electron-types@npm:9.1.1":
+  version: 9.1.1
+  resolution: "@wdio/electron-types@npm:9.1.1"
   dependencies:
     "@vitest/spy": "npm:^3.2.4"
-  checksum: 10/abdc5383354bc4cb4e9cde0a7f50d703a5a7a9a1c763702dc2c7e3d7727dd45c989ec5693080ffea4cbb0c789e690846d3421401b2c86f47a68b3405e19a7e06
+  checksum: 10/33c09f17e0f6504549754bdf460936c973d17111b5568ca2ac4864f29a1ee6de830cfe146e793a1b9101f9d7625596177b4b58fee7207dece1b77bc5d6da79e3
   languageName: node
   linkType: hard
 
-"@wdio/electron-utils@npm:9.1.0":
-  version: 9.1.0
-  resolution: "@wdio/electron-utils@npm:9.1.0"
+"@wdio/electron-utils@npm:9.1.1":
+  version: 9.1.1
+  resolution: "@wdio/electron-utils@npm:9.1.1"
   dependencies:
     "@electron/packager": "npm:^18.4.2"
     "@wdio/logger": "npm:^9.18.0"
@@ -5562,9 +5576,9 @@ __metadata:
     json5: "npm:^2.2.3"
     read-package-up: "npm:^11.0.0"
     smol-toml: "npm:^1.4.2"
-    tsx: "npm:^4.20.4"
+    tsx: "npm:^4.20.5"
     yaml: "npm:^2.8.1"
-  checksum: 10/f0f59a76f24903c48d14b9a0d6bd3d5ab52e1eaf84b48cdd99da5aacc17d8dcced7f85b32b6bbfa3b043cf241a8d61fd7ecde7ae94499aa97e4633b46f884511
+  checksum: 10/621a12241544187a4717d27ec593392c6df314e1dc0f544e21ff2c37544607c12f74b32b27ce5eb94cab5e5df194f4a8cea57de4071335993525e1ce7eeea5bc
   languageName: node
   linkType: hard
 
@@ -5692,6 +5706,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@wdio/types@npm:9.19.2":
+  version: 9.19.2
+  resolution: "@wdio/types@npm:9.19.2"
+  dependencies:
+    "@types/node": "npm:^20.1.0"
+  checksum: 10/140884f7cae99fa82fdbb5da470247bebb4b4b7b36d89d67022fa329ced891e3e6b02d80b9e19019cab0fb34dca8af866fb6c99d5180aa2bb01a868fbe8faebf
+  languageName: node
+  linkType: hard
+
 "@wdio/utils@npm:9.19.1":
   version: 9.19.1
   resolution: "@wdio/utils@npm:9.19.1"
@@ -5711,6 +5734,28 @@ __metadata:
     split2: "npm:^4.2.0"
     wait-port: "npm:^1.1.0"
   checksum: 10/0217f7f33d11483920763894912bda405d9fd0d85a6c21e32f0029b90cdfe1894926de9a31b3663be6fc183455c0e58c07398f74d21fb8c8acfa054bd630d3d7
+  languageName: node
+  linkType: hard
+
+"@wdio/utils@npm:9.19.2":
+  version: 9.19.2
+  resolution: "@wdio/utils@npm:9.19.2"
+  dependencies:
+    "@puppeteer/browsers": "npm:^2.2.0"
+    "@wdio/logger": "npm:9.18.0"
+    "@wdio/types": "npm:9.19.2"
+    decamelize: "npm:^6.0.0"
+    deepmerge-ts: "npm:^7.0.3"
+    edgedriver: "npm:^6.1.2"
+    geckodriver: "npm:^5.0.0"
+    get-port: "npm:^7.0.0"
+    import-meta-resolve: "npm:^4.0.0"
+    locate-app: "npm:^2.2.24"
+    mitt: "npm:^3.0.1"
+    safaridriver: "npm:^1.0.0"
+    split2: "npm:^4.2.0"
+    wait-port: "npm:^1.1.0"
+  checksum: 10/d8557267897808231f1ac2217988d578fdb3ff2dcb446cf1d78e125cce3404bfe1202fbb042adb6a181b56e84c765541c6673cb1834a5dc37fae45cb23fdf83d
   languageName: node
   linkType: hard
 
@@ -8279,10 +8324,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.5.204, electron-to-chromium@npm:^1.5.207":
+"electron-to-chromium@npm:^1.5.204":
   version: 1.5.207
   resolution: "electron-to-chromium@npm:1.5.207"
   checksum: 10/ed195241d55a9a0d0134dc71693588242c09845327d54c91db38f34516b076f7a2f52059e24500cde9a424b51500d8f119ce56a6f4f2766b7202eae9bb74ca45
+  languageName: node
+  linkType: hard
+
+"electron-to-chromium@npm:^1.5.208":
+  version: 1.5.209
+  resolution: "electron-to-chromium@npm:1.5.209"
+  checksum: 10/9262eb7bef0de7c237c83d0862eabc04243080f7c18222abbceda61d0965da5d05a27c1dcad9746ba4e1d26115cb81bd0b90b9762e61a87db1227584151ce388
   languageName: node
   linkType: hard
 
@@ -11821,7 +11873,7 @@ __metadata:
     uuid: "npm:11.1.0"
     wait-on: "npm:8.0.4"
     wanakana: "npm:5.3.1"
-    wdio-electron-service: "npm:9.1.0"
+    wdio-electron-service: "npm:9.1.1"
     webdriverio: "npm:9.19.1"
     ws: "npm:8.18.3"
     yaml: "npm:2.8.1"
@@ -16481,7 +16533,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsx@npm:^4.20.4, tsx@npm:^4.7.2":
+"tsx@npm:^4.20.5":
+  version: 4.20.5
+  resolution: "tsx@npm:4.20.5"
+  dependencies:
+    esbuild: "npm:~0.25.0"
+    fsevents: "npm:~2.3.3"
+    get-tsconfig: "npm:^4.7.5"
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    tsx: dist/cli.mjs
+  checksum: 10/161420678027c43d07b60b7b6b512cc67ff86ae3cca0641a19b0d3e742c5e262bca57034c4bff6d9346f9269e9ada24b6030e1d2bc890df5e1a9754865d3c08a
+  languageName: node
+  linkType: hard
+
+"tsx@npm:^4.7.2":
   version: 4.20.4
   resolution: "tsx@npm:4.20.4"
   dependencies:
@@ -17001,27 +17069,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wdio-electron-service@npm:9.1.0":
-  version: 9.1.0
-  resolution: "wdio-electron-service@npm:9.1.0"
+"wdio-electron-service@npm:9.1.1":
+  version: 9.1.1
+  resolution: "wdio-electron-service@npm:9.1.1"
   dependencies:
     "@babel/parser": "npm:^7.28.3"
     "@vitest/spy": "npm:^3.2.4"
-    "@wdio/cdp-bridge": "npm:9.1.0"
-    "@wdio/electron-types": "npm:9.1.0"
-    "@wdio/electron-utils": "npm:9.1.0"
+    "@wdio/cdp-bridge": "npm:9.1.1"
+    "@wdio/electron-types": "npm:9.1.1"
+    "@wdio/electron-utils": "npm:9.1.1"
     "@wdio/globals": "npm:^9.17.0"
     "@wdio/logger": "npm:^9.18.0"
     compare-versions: "npm:^6.1.1"
     debug: "npm:^4.4.1"
-    electron-to-chromium: "npm:^1.5.207"
+    electron-to-chromium: "npm:^1.5.208"
     fast-copy: "npm:^3.0.2"
     get-port: "npm:^7.1.0"
     puppeteer-core: "npm:^22.15.0"
     read-package-up: "npm:^11.0.0"
     recast: "npm:^0.23.9"
     tinyspy: "npm:^4.0.3"
-    webdriverio: "npm:^9.19.1"
+    webdriverio: "npm:^9.19.2"
   peerDependencies:
     electron: "*"
     webdriverio: ">9.0.0"
@@ -17030,7 +17098,7 @@ __metadata:
       optional: true
     webdriverio:
       optional: false
-  checksum: 10/68604d87009a058d67ba1212d970345af9c32e505563603dbaaf8008f6a71e3b624f1bfa6795c1c88acb4eb14642b8bd6dafbaf767069737bf458f52169bb67e
+  checksum: 10/5ac791c54e2e806dec61b0dd73c9b6ea82d45ff8b2a2838383df0e7160119ea044643a6d231b74fa4fc2bea1831aec41b50ccea4eeea90f011e55c2637eee175
   languageName: node
   linkType: hard
 
@@ -17067,7 +17135,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webdriverio@npm:9.19.1, webdriverio@npm:^9.19.1":
+"webdriver@npm:9.19.2":
+  version: 9.19.2
+  resolution: "webdriver@npm:9.19.2"
+  dependencies:
+    "@types/node": "npm:^20.1.0"
+    "@types/ws": "npm:^8.5.3"
+    "@wdio/config": "npm:9.19.2"
+    "@wdio/logger": "npm:9.18.0"
+    "@wdio/protocols": "npm:9.16.2"
+    "@wdio/types": "npm:9.19.2"
+    "@wdio/utils": "npm:9.19.2"
+    deepmerge-ts: "npm:^7.0.3"
+    https-proxy-agent: "npm:^7.0.6"
+    undici: "npm:^6.21.3"
+    ws: "npm:^8.8.0"
+  checksum: 10/73b8119e24b7aa2bf6c02dd7e3a13f0f48f958ed2dfe2001df7edc52e4be298e58ea453c3d137db5e984e46d52898fd25e474bb82ed35ea82acfb2c98d1f31aa
+  languageName: node
+  linkType: hard
+
+"webdriverio@npm:9.19.1":
   version: 9.19.1
   resolution: "webdriverio@npm:9.19.1"
   dependencies:
@@ -17102,6 +17189,44 @@ __metadata:
     puppeteer-core:
       optional: true
   checksum: 10/ab100eea6e4f5eb86d33e0771ac776f18e4406de0685d82309acb9813a3e0ee710244b669744a690f7471cb8af377bae8d7014b132359a667642d932d2bad58b
+  languageName: node
+  linkType: hard
+
+"webdriverio@npm:^9.19.2":
+  version: 9.19.2
+  resolution: "webdriverio@npm:9.19.2"
+  dependencies:
+    "@types/node": "npm:^20.11.30"
+    "@types/sinonjs__fake-timers": "npm:^8.1.5"
+    "@wdio/config": "npm:9.19.2"
+    "@wdio/logger": "npm:9.18.0"
+    "@wdio/protocols": "npm:9.16.2"
+    "@wdio/repl": "npm:9.16.2"
+    "@wdio/types": "npm:9.19.2"
+    "@wdio/utils": "npm:9.19.2"
+    archiver: "npm:^7.0.1"
+    aria-query: "npm:^5.3.0"
+    cheerio: "npm:^1.0.0-rc.12"
+    css-shorthand-properties: "npm:^1.1.1"
+    css-value: "npm:^0.0.1"
+    grapheme-splitter: "npm:^1.0.4"
+    htmlfy: "npm:^0.8.1"
+    is-plain-obj: "npm:^4.1.0"
+    jszip: "npm:^3.10.1"
+    lodash.clonedeep: "npm:^4.5.0"
+    lodash.zip: "npm:^4.2.0"
+    query-selector-shadow-dom: "npm:^1.0.1"
+    resq: "npm:^1.11.0"
+    rgb2hex: "npm:0.2.5"
+    serialize-error: "npm:^12.0.0"
+    urlpattern-polyfill: "npm:^10.0.0"
+    webdriver: "npm:9.19.2"
+  peerDependencies:
+    puppeteer-core: ">=22.x || <=24.x"
+  peerDependenciesMeta:
+    puppeteer-core:
+      optional: true
+  checksum: 10/69780f051167fd7e6351aeab6169e91448d2b0d41a61036b6e16081f0895d3c190becc7a70d215b5627a2813ef9e15668415f9a1acc7dfbfc504bc8c269bf700
   languageName: node
   linkType: hard
 
