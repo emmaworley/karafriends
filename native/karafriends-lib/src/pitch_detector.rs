@@ -2,10 +2,11 @@ use std::sync::Arc;
 
 use realfft::{ComplexToReal, RealFftPlanner, RealToComplex};
 
+// TODO: keep FFT vecs on struct and reuse
 pub struct PitchDetector {
     sample_rate: f32,
     fft: Arc<dyn RealToComplex<f32>>,
-    rfft: Arc<dyn ComplexToReal<f32>>,
+    ifft: Arc<dyn ComplexToReal<f32>>,
 }
 
 impl PitchDetector {
@@ -13,7 +14,7 @@ impl PitchDetector {
         PitchDetector {
             sample_rate,
             fft: RealFftPlanner::<f32>::new().plan_fft_forward(sample_count),
-            rfft: RealFftPlanner::<f32>::new().plan_fft_inverse(sample_count),
+            ifft: RealFftPlanner::<f32>::new().plan_fft_inverse(sample_count),
         }
     }
 
@@ -52,8 +53,8 @@ impl PitchDetector {
             .map(|(k, s)| k * s)
             .collect::<Vec<_>>();
 
-        let mut rt_of_tau = self.rfft.make_output_vec();
-        self.rfft
+        let mut rt_of_tau = self.ifft.make_output_vec();
+        self.ifft
             .process(&mut complex_product, &mut rt_of_tau)
             .unwrap();
 

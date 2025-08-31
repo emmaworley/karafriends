@@ -1,5 +1,6 @@
 #![allow(non_snake_case)]
 
+mod convolution_reverb;
 mod pitch_detector;
 mod reverb_module;
 
@@ -426,18 +427,21 @@ impl InputDevice {
         let input_sample_rate = input_config.sample_rate.0;
         let output_sample_rate = output_config.sample_rate.0;
 
-        let mut reverbs = [
-            reverb_module::ReverbModule::new(input_sample_rate, 0.09920, 0.750)?,
-            reverb_module::ReverbModule::new(input_sample_rate, 0.06930, 0.720)?,
-            reverb_module::ReverbModule::new(input_sample_rate, 0.04836, 0.691)?,
-            reverb_module::ReverbModule::new(input_sample_rate, 0.03570, 0.649)?,
-            reverb_module::ReverbModule::new(input_sample_rate, 0.02196, 0.662)?,
-        ];
-
         let resampler_chunk_size = match input_config.buffer_size {
             cpal::BufferSize::Fixed(count) => count as usize,
             cpal::BufferSize::Default => (input_sample_rate / output_sample_rate) as usize,
         };
+
+        let mut reverb = convolution_reverb::ConvolutionReverb::new(
+            &(&*convolution_reverb::IR
+                .lock()
+                .map_err(|e| format!("failed to unlock IR data: {}", e))?)
+                [..4096 - resampler_chunk_size + 1],
+            44100,
+            input_sample_rate,
+            resampler_chunk_size,
+        )?;
+
         let mut resampler = rubato::SincFixedIn::<f32>::new(
             output_sample_rate as f64 / input_sample_rate as f64,
             1.0,
@@ -464,19 +468,18 @@ impl InputDevice {
 
             pitch_tx.push_slice(&mono_samples);
 
-            let mut reverb_samples: Vec<_> = mono_samples.iter().map(|s| s * 0.2).collect();
-            for reverb in &mut reverbs {
-                reverb_samples = reverb.process(reverb_samples.as_slice());
-            }
+            let reverb_samples = reverb.process(&mono_samples).unwrap();
 
-            let mut output_samples: Vec<_> = mono_samples
-                .iter()
-                .zip_longest(reverb_samples.iter())
-                .map(|s| match s {
-                    EitherOrBoth::Both(a, b) => a + b,
-                    EitherOrBoth::Left(s) | EitherOrBoth::Right(s) => *s,
-                })
-                .collect();
+            let mut output_samples = reverb_samples;
+            // let mut output_samples: Vec<_> = mono_samples
+            //     .iter()
+            //     .zip_longest(reverb_samples.iter())
+            //     .map(|s| match s {
+            //         EitherOrBoth::Both(a, b) => a + b * 0.2,
+            //         EitherOrBoth::Left(s) => *s,
+            //         EitherOrBoth::Right(_) => 0.0,
+            //     })
+            //     .collect();
 
             if input_sample_rate != output_sample_rate {
                 output_samples
