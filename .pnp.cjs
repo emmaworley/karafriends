@@ -99,7 +99,7 @@ const RAW_RUNTIME_STATE =
           ["classnames", "npm:2.5.1"],\
           ["color-convert", "npm:3.1.0"],\
           ["compression", "npm:1.8.1"],\
-          ["concurrently", "npm:9.2.0"],\
+          ["concurrently", "npm:9.2.1"],\
           ["cors", "npm:2.8.5"],\
           ["cross-env", "npm:10.0.0"],\
           ["cubic-spline", "npm:3.0.3"],\
@@ -10365,14 +10365,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["concurrently", [\
-      ["npm:9.2.0", {\
-        "packageLocation": "./.yarn/cache/concurrently-npm-9.2.0-bd0cbdf797-fdf5d3b583.zip/node_modules/concurrently/",\
+      ["npm:9.2.1", {\
+        "packageLocation": "./.yarn/cache/concurrently-npm-9.2.1-695cfd169a-2a6b1acbcd.zip/node_modules/concurrently/",\
         "packageDependencies": [\
-          ["concurrently", "npm:9.2.0"],\
+          ["concurrently", "npm:9.2.1"],\
           ["chalk", "npm:4.1.2"],\
-          ["lodash", "npm:4.17.21"],\
           ["rxjs", "npm:7.8.2"],\
-          ["shell-quote", "npm:1.8.2"],\
+          ["shell-quote", "npm:1.8.3"],\
           ["supports-color", "npm:8.1.1"],\
           ["tree-kill", "npm:1.2.2"],\
           ["yargs", "npm:17.7.2"]\
@@ -15137,7 +15136,7 @@ const RAW_RUNTIME_STATE =
           ["classnames", "npm:2.5.1"],\
           ["color-convert", "npm:3.1.0"],\
           ["compression", "npm:1.8.1"],\
-          ["concurrently", "npm:9.2.0"],\
+          ["concurrently", "npm:9.2.1"],\
           ["cors", "npm:2.8.5"],\
           ["cross-env", "npm:10.0.0"],\
           ["cubic-spline", "npm:3.0.3"],\
@@ -19281,10 +19280,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["shell-quote", [\
-      ["npm:1.8.2", {\
-        "packageLocation": "./.yarn/cache/shell-quote-npm-1.8.2-6153748703-3ae4804fd8.zip/node_modules/shell-quote/",\
+      ["npm:1.8.3", {\
+        "packageLocation": "./.yarn/cache/shell-quote-npm-1.8.3-b29f851134-5473e35463.zip/node_modules/shell-quote/",\
         "packageDependencies": [\
-          ["shell-quote", "npm:1.8.2"]\
+          ["shell-quote", "npm:1.8.3"]\
         ],\
         "linkType": "HARD"\
       }]\
