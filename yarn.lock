@@ -11913,7 +11913,7 @@ __metadata:
     wait-on: "npm:8.0.4"
     wanakana: "npm:5.3.1"
     wdio-electron-service: "npm:9.1.2"
-    webdriverio: "npm:9.19.1"
+    webdriverio: "npm:9.19.2"
     ws: "npm:8.18.3"
     yaml: "npm:2.8.1"
     youtube-player: "npm:5.6.0"
