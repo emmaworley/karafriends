@@ -132,7 +132,7 @@
     "@types/promise-retry": "1.1.6",
     "@types/qrcode": "1.5.5",
     "@types/react": "19.1.12",
-    "@types/react-dom": "19.1.7",
+    "@types/react-dom": "19.1.9",
     "@types/react-relay": "18.2.1",
     "@types/relay-runtime": "19.0.2",
     "@types/tunnel": "^0",
