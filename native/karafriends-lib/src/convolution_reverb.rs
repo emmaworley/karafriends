@@ -125,7 +125,7 @@ mod tests {
         unit[0] = 1.0;
 
         // use big chunks to avoid overhead, fine as long as chunk size << ir size
-        let chunk_size = 29;
+        let chunk_size = 22050;
 
         let mut cr = ConvolutionReverb::new(ir, 44100, 44100, chunk_size)?;
 
