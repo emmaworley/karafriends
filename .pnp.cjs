@@ -120,7 +120,7 @@ const RAW_RUNTIME_STATE =
           ["kuromoji", "npm:0.1.2"],\
           ["kuroshiro", "npm:1.2.0"],\
           ["kuroshiro-analyzer-kuromoji", "npm:1.1.0"],\
-          ["lint-staged", "npm:16.1.5"],\
+          ["lint-staged", "npm:16.1.6"],\
           ["lodash", "npm:4.17.21"],\
           ["materialize-css", "npm:1.0.0"],\
           ["multicast-dns", "npm:7.2.5"],\
@@ -15090,7 +15090,7 @@ const RAW_RUNTIME_STATE =
           ["kuromoji", "npm:0.1.2"],\
           ["kuroshiro", "npm:1.2.0"],\
           ["kuroshiro-analyzer-kuromoji", "npm:1.1.0"],\
-          ["lint-staged", "npm:16.1.5"],\
+          ["lint-staged", "npm:16.1.6"],\
           ["lodash", "npm:4.17.21"],\
           ["materialize-css", "npm:1.0.0"],\
           ["multicast-dns", "npm:7.2.5"],\
@@ -15384,15 +15384,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lint-staged", [\
-      ["npm:16.1.5", {\
-        "packageLocation": "./.yarn/cache/lint-staged-npm-16.1.5-8b8b80d7ec-02b284f89d.zip/node_modules/lint-staged/",\
+      ["npm:16.1.6", {\
+        "packageLocation": "./.yarn/cache/lint-staged-npm-16.1.6-91d0ce9f1d-922b4392ae.zip/node_modules/lint-staged/",\
         "packageDependencies": [\
-          ["lint-staged", "npm:16.1.5"],\
+          ["lint-staged", "npm:16.1.6"],\
           ["chalk", "npm:5.6.0"],\
           ["commander", "npm:14.0.0"],\
           ["debug", "virtual:7786c501c79aa105de26d543c50999bc3ffc28c31c1a6f2d58b7186cb22c72362e89eca24786c0d5c6c0538a0bef1031c054fdc988813e6f7e1df708f2aee1cd#npm:4.4.1"],\
           ["lilconfig", "npm:3.1.3"],\
-          ["listr2", "npm:9.0.1"],\
+          ["listr2", "npm:9.0.3"],\
           ["micromatch", "npm:4.0.8"],\
           ["nano-spawn", "npm:1.0.2"],\
           ["pidtree", "npm:0.6.0"],\
@@ -15403,10 +15403,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["listr2", [\
-      ["npm:9.0.1", {\
-        "packageLocation": "./.yarn/cache/listr2-npm-9.0.1-6f1beb3bb9-ac5f98317f.zip/node_modules/listr2/",\
+      ["npm:9.0.3", {\
+        "packageLocation": "./.yarn/cache/listr2-npm-9.0.3-70117e4a48-8cb7cd1cec.zip/node_modules/listr2/",\
         "packageDependencies": [\
-          ["listr2", "npm:9.0.1"],\
+          ["listr2", "npm:9.0.3"],\
           ["cli-truncate", "npm:4.0.0"],\
           ["colorette", "npm:2.0.20"],\
           ["eventemitter3", "npm:5.0.1"],\
