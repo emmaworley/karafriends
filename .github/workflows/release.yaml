@@ -13,7 +13,7 @@ jobs:
         with:
           toolchain: stable
           target: aarch64-apple-darwin
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
       - name: Setup code signing cert
@@ -55,7 +55,7 @@ jobs:
         with:
           toolchain: stable
           target: x86_64-apple-darwin
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
       - name: Setup code signing cert
@@ -97,7 +97,7 @@ jobs:
         with:
           toolchain: stable
           target: x86_64-pc-windows-msvc
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
       - run: yarn install --immutable
@@ -116,7 +116,7 @@ jobs:
         with:
           toolchain: stable
           target: x86_64-unknown-linux-gnu
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
       - run: sudo apt-get update && sudo apt-get install -y libasound2-dev
