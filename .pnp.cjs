@@ -71,7 +71,7 @@ const RAW_RUNTIME_STATE =
           ["@types/kuromoji", "npm:0.1.3"],\
           ["@types/lodash", "npm:4.17.20"],\
           ["@types/materialize-css", "npm:1.0.14"],\
-          ["@types/node", "npm:24.3.0"],\
+          ["@types/node", "npm:24.3.1"],\
           ["@types/node-fetch", "npm:2.6.13"],\
           ["@types/promise-retry", "npm:1.1.6"],\
           ["@types/qrcode", "npm:1.5.5"],\
@@ -7523,6 +7523,14 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-node-npm-24.3.0-ebc21e5665-1331c2d0e9.zip/node_modules/@types/node/",\
         "packageDependencies": [\
           ["@types/node", "npm:24.3.0"],\
+          ["undici-types", "npm:7.10.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:24.3.1", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-24.3.1-b558101365-b9a52ed8f2.zip/node_modules/@types/node/",\
+        "packageDependencies": [\
+          ["@types/node", "npm:24.3.1"],\
           ["undici-types", "npm:7.10.0"]\
         ],\
         "linkType": "HARD"\
@@ -15041,7 +15049,7 @@ const RAW_RUNTIME_STATE =
           ["@types/kuromoji", "npm:0.1.3"],\
           ["@types/lodash", "npm:4.17.20"],\
           ["@types/materialize-css", "npm:1.0.14"],\
-          ["@types/node", "npm:24.3.0"],\
+          ["@types/node", "npm:24.3.1"],\
           ["@types/node-fetch", "npm:2.6.13"],\
           ["@types/promise-retry", "npm:1.1.6"],\
           ["@types/qrcode", "npm:1.5.5"],\
