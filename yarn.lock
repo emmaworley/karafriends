@@ -11900,7 +11900,7 @@ __metadata:
     typescript: "npm:5.9.2"
     user-agents: "npm:1.1.653"
     utf-8-validate: "npm:6.0.5"
-    uuid: "npm:11.1.0"
+    uuid: "npm:12.0.0"
     wait-on: "npm:8.0.4"
     wanakana: "npm:5.3.1"
     wdio-electron-service: "npm:9.1.2"
@@ -16975,7 +16975,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uuid@npm:11.1.0, uuid@npm:^11.1.0":
+"uuid@npm:12.0.0":
+  version: 12.0.0
+  resolution: "uuid@npm:12.0.0"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 10/18079c61ec2ca899d8df034ed543dc4844ec14d3bddc3099149d4c076a28c76dfc7434bcc5fafae8799f894da6acaa055bd7e97eedb6cba2840994f02849b801
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^11.1.0":
   version: 11.1.0
   resolution: "uuid@npm:11.1.0"
   bin:
