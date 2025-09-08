@@ -36,7 +36,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.28.4"],\
           ["@babel/preset-env", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.28.3"],\
           ["@babel/preset-react", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.27.1"],\
-          ["@babel/runtime", "npm:7.28.3"],\
+          ["@babel/runtime", "npm:7.28.4"],\
           ["@graphql-tools/schema", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.0.25"],\
           ["@parcel/config-default", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
           ["@parcel/core", "npm:2.15.4"],\
@@ -3048,6 +3048,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.28.3-216c877217-f2415e4dbf.zip/node_modules/@babel/runtime/",\
         "packageDependencies": [\
           ["@babel/runtime", "npm:7.28.3"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:7.28.4", {\
+        "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.28.4-31bc1b0001-6c9a704523.zip/node_modules/@babel/runtime/",\
+        "packageDependencies": [\
+          ["@babel/runtime", "npm:7.28.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15117,7 +15124,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.28.4"],\
           ["@babel/preset-env", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.28.3"],\
           ["@babel/preset-react", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.27.1"],\
-          ["@babel/runtime", "npm:7.28.3"],\
+          ["@babel/runtime", "npm:7.28.4"],\
           ["@graphql-tools/schema", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.0.25"],\
           ["@parcel/config-default", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
           ["@parcel/core", "npm:2.15.4"],\
