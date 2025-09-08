@@ -1558,7 +1558,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.28.3, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.14.0, @babel/runtime@npm:^7.25.0, @babel/runtime@npm:^7.4.3, @babel/runtime@npm:^7.7.2":
+"@babel/runtime@npm:7.28.4":
+  version: 7.28.4
+  resolution: "@babel/runtime@npm:7.28.4"
+  checksum: 10/6c9a70452322ea80b3c9b2a412bcf60771819213a67576c8cec41e88a95bb7bf01fc983754cda35dc19603eef52df22203ccbf7777b9d6316932f9fb77c25163
+  languageName: node
+  linkType: hard
+
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.14.0, @babel/runtime@npm:^7.25.0, @babel/runtime@npm:^7.4.3, @babel/runtime@npm:^7.7.2":
   version: 7.28.3
   resolution: "@babel/runtime@npm:7.28.3"
   checksum: 10/f2415e4dbface7496f6fc561d640b44be203071fb0dfb63fbe338c7d2d2047419cb054ef13d1ebb8fc11e35d2b55aa3045def4b985e8b82aea5d7e58e1133e52
@@ -11689,7 +11696,7 @@ __metadata:
     "@babel/core": "npm:7.28.3"
     "@babel/preset-env": "npm:7.28.3"
     "@babel/preset-react": "npm:7.27.1"
-    "@babel/runtime": "npm:7.28.3"
+    "@babel/runtime": "npm:7.28.4"
     "@graphql-tools/schema": "npm:10.0.25"
     "@parcel/config-default": "npm:2.15.4"
     "@parcel/core": "npm:^2.15.4"
