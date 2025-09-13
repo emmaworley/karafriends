@@ -80,7 +80,7 @@
     "react-swipeable": "7.0.2",
     "regenerator-runtime": "0.14.1",
     "relay-runtime": "20.1.1",
-    "supports-color": "10.2.0",
+    "supports-color": "10.2.2",
     "ts-invariant": "0.10.3",
     "tunnel": "0.0.6",
     "user-agents": "1.1.659",
