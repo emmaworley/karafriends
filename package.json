@@ -103,7 +103,7 @@
     "@parcel/transformer-babel": "2.16.0",
     "@parcel/transformer-css": "2.15.4",
     "@parcel/transformer-glsl": "2.15.4",
-    "@parcel/transformer-html": "2.15.4",
+    "@parcel/transformer-html": "2.16.0",
     "@parcel/transformer-image": "2.15.4",
     "@parcel/transformer-inline-string": "2.15.4",
     "@parcel/transformer-js": "2.15.4",

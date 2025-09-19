@@ -4162,6 +4162,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@parcel/transformer-html@npm:2.16.0":
+  version: 2.16.0
+  resolution: "@parcel/transformer-html@npm:2.16.0"
+  dependencies:
+    "@parcel/diagnostic": "npm:2.16.0"
+    "@parcel/plugin": "npm:2.16.0"
+    "@parcel/rust": "npm:2.16.0"
+  checksum: 10/2a0cfaccce85302824b96db308dd2406d23cee98058d22be7ed792f48ea1e494591339e8de46a8af2701d68b88fe43cf66001869805441468d6eba2ab7ef3619
+  languageName: node
+  linkType: hard
+
 "@parcel/transformer-image@npm:2.15.4":
   version: 2.15.4
   resolution: "@parcel/transformer-image@npm:2.15.4"
@@ -12091,7 +12102,7 @@ __metadata:
     "@parcel/transformer-babel": "npm:2.16.0"
     "@parcel/transformer-css": "npm:2.15.4"
     "@parcel/transformer-glsl": "npm:2.15.4"
-    "@parcel/transformer-html": "npm:2.15.4"
+    "@parcel/transformer-html": "npm:2.16.0"
     "@parcel/transformer-image": "npm:2.15.4"
     "@parcel/transformer-inline-string": "npm:2.15.4"
     "@parcel/transformer-js": "npm:2.15.4"
