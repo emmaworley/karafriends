@@ -4109,6 +4109,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@parcel/transformer-babel@npm:2.16.0":
+  version: 2.16.0
+  resolution: "@parcel/transformer-babel@npm:2.16.0"
+  dependencies:
+    "@parcel/diagnostic": "npm:2.16.0"
+    "@parcel/plugin": "npm:2.16.0"
+    "@parcel/source-map": "npm:^2.1.1"
+    "@parcel/utils": "npm:2.16.0"
+    browserslist: "npm:^4.24.5"
+    json5: "npm:^2.2.3"
+    nullthrows: "npm:^1.1.1"
+    semver: "npm:^7.7.1"
+  checksum: 10/b48501781be0d44e284e5f446f8a7c889dce2941044ea3bf781d8f81313af831c7db6e53f4764cdaa5107ff77b182870e554133a784f6b927647a520617f9814
+  languageName: node
+  linkType: hard
+
 "@parcel/transformer-css@npm:2.15.4":
   version: 2.15.4
   resolution: "@parcel/transformer-css@npm:2.15.4"
@@ -12056,7 +12072,7 @@ __metadata:
     "@parcel/config-default": "npm:2.15.4"
     "@parcel/core": "npm:^2.15.4"
     "@parcel/resolver-default": "npm:2.15.4"
-    "@parcel/transformer-babel": "npm:2.15.4"
+    "@parcel/transformer-babel": "npm:2.16.0"
     "@parcel/transformer-css": "npm:2.15.4"
     "@parcel/transformer-glsl": "npm:2.15.4"
     "@parcel/transformer-html": "npm:2.15.4"

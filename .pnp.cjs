@@ -41,7 +41,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/config-default", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
           ["@parcel/core", "npm:2.15.4"],\
           ["@parcel/resolver-default", "npm:2.15.4"],\
-          ["@parcel/transformer-babel", "npm:2.15.4"],\
+          ["@parcel/transformer-babel", "npm:2.16.0"],\
           ["@parcel/transformer-css", "npm:2.15.4"],\
           ["@parcel/transformer-glsl", "npm:2.15.4"],\
           ["@parcel/transformer-html", "npm:2.15.4"],\
@@ -6286,6 +6286,21 @@ const RAW_RUNTIME_STATE =
           ["@parcel/plugin", "npm:2.15.4"],\
           ["@parcel/source-map", "npm:2.1.1"],\
           ["@parcel/utils", "npm:2.15.4"],\
+          ["browserslist", "npm:4.25.3"],\
+          ["json5", "npm:2.2.3"],\
+          ["nullthrows", "npm:1.1.1"],\
+          ["semver", "npm:7.7.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.16.0", {\
+        "packageLocation": "./.yarn/cache/@parcel-transformer-babel-npm-2.16.0-e41dc888b5-b48501781b.zip/node_modules/@parcel/transformer-babel/",\
+        "packageDependencies": [\
+          ["@parcel/transformer-babel", "npm:2.16.0"],\
+          ["@parcel/diagnostic", "npm:2.16.0"],\
+          ["@parcel/plugin", "npm:2.16.0"],\
+          ["@parcel/source-map", "npm:2.1.1"],\
+          ["@parcel/utils", "npm:2.16.0"],\
           ["browserslist", "npm:4.25.3"],\
           ["json5", "npm:2.2.3"],\
           ["nullthrows", "npm:1.1.1"],\
@@ -15401,7 +15416,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/config-default", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
           ["@parcel/core", "npm:2.15.4"],\
           ["@parcel/resolver-default", "npm:2.15.4"],\
-          ["@parcel/transformer-babel", "npm:2.15.4"],\
+          ["@parcel/transformer-babel", "npm:2.16.0"],\
           ["@parcel/transformer-css", "npm:2.15.4"],\
           ["@parcel/transformer-glsl", "npm:2.15.4"],\
           ["@parcel/transformer-html", "npm:2.15.4"],\
