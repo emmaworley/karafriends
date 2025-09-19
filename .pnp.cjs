@@ -52,7 +52,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-postcss", "npm:2.16.0"],\
           ["@parcel/transformer-posthtml", "npm:2.15.4"],\
           ["@parcel/transformer-raw", "npm:2.16.0"],\
-          ["@parcel/transformer-react-refresh-wrap", "npm:2.15.4"],\
+          ["@parcel/transformer-react-refresh-wrap", "npm:2.16.0"],\
           ["@parcel/transformer-sass", "npm:2.15.4"],\
           ["@parcel/transformer-worklet", "npm:2.15.4"],\
           ["@sentry/browser", "npm:10.11.0"],\
@@ -5590,6 +5590,13 @@ const RAW_RUNTIME_STATE =
           ["@parcel/error-overlay", "npm:2.15.4"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:2.16.0", {\
+        "packageLocation": "./.yarn/cache/@parcel-error-overlay-npm-2.16.0-e506d0ff89-4fa0f7cd04.zip/node_modules/@parcel/error-overlay/",\
+        "packageDependencies": [\
+          ["@parcel/error-overlay", "npm:2.16.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@parcel/events", [\
@@ -6518,6 +6525,17 @@ const RAW_RUNTIME_STATE =
           ["@parcel/error-overlay", "npm:2.15.4"],\
           ["@parcel/plugin", "npm:2.15.4"],\
           ["@parcel/utils", "npm:2.15.4"],\
+          ["react-refresh", "npm:0.16.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.16.0", {\
+        "packageLocation": "./.yarn/cache/@parcel-transformer-react-refresh-wrap-npm-2.16.0-4e85c16aa6-2eddc40cde.zip/node_modules/@parcel/transformer-react-refresh-wrap/",\
+        "packageDependencies": [\
+          ["@parcel/transformer-react-refresh-wrap", "npm:2.16.0"],\
+          ["@parcel/error-overlay", "npm:2.16.0"],\
+          ["@parcel/plugin", "npm:2.16.0"],\
+          ["@parcel/utils", "npm:2.16.0"],\
           ["react-refresh", "npm:0.16.0"]\
         ],\
         "linkType": "HARD"\
@@ -15545,7 +15563,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-postcss", "npm:2.16.0"],\
           ["@parcel/transformer-posthtml", "npm:2.15.4"],\
           ["@parcel/transformer-raw", "npm:2.16.0"],\
-          ["@parcel/transformer-react-refresh-wrap", "npm:2.15.4"],\
+          ["@parcel/transformer-react-refresh-wrap", "npm:2.16.0"],\
           ["@parcel/transformer-sass", "npm:2.15.4"],\
           ["@parcel/transformer-worklet", "npm:2.15.4"],\
           ["@sentry/browser", "npm:10.11.0"],\

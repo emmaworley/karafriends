@@ -3487,6 +3487,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@parcel/error-overlay@npm:2.16.0":
+  version: 2.16.0
+  resolution: "@parcel/error-overlay@npm:2.16.0"
+  checksum: 10/4fa0f7cd04765e8583e8a08182ee40fc6f4768bf2d0e4c5601eee60e18f47c0f9a23db3137ab89d55bc54a91d0728678623da28ec3d6f085d0fbb93587010163
+  languageName: node
+  linkType: hard
+
 "@parcel/events@npm:2.15.4":
   version: 2.15.4
   resolution: "@parcel/events@npm:2.15.4"
@@ -4305,6 +4312,18 @@ __metadata:
     "@parcel/utils": "npm:2.15.4"
     react-refresh: "npm:^0.16.0"
   checksum: 10/e7fedc97ba47f45f14b58c6bfbe467d56bd1dac8a084a4fa4e48e0cdf23b6bd188f1e3787cd6077aa477f6df568a572a1cf098ae341ff5413e324a22b6cf8346
+  languageName: node
+  linkType: hard
+
+"@parcel/transformer-react-refresh-wrap@npm:2.16.0":
+  version: 2.16.0
+  resolution: "@parcel/transformer-react-refresh-wrap@npm:2.16.0"
+  dependencies:
+    "@parcel/error-overlay": "npm:2.16.0"
+    "@parcel/plugin": "npm:2.16.0"
+    "@parcel/utils": "npm:2.16.0"
+    react-refresh: "npm:^0.16.0"
+  checksum: 10/2eddc40cde81c5f649df6065a77f018eb3b468df0995895c186bc0e0d00fdf77ca68db245d85b9682038e252b7de9d4820df3915aaba96232fad49dfbaee8a4a
   languageName: node
   linkType: hard
 
@@ -12190,7 +12209,7 @@ __metadata:
     "@parcel/transformer-postcss": "npm:2.16.0"
     "@parcel/transformer-posthtml": "npm:2.15.4"
     "@parcel/transformer-raw": "npm:2.16.0"
-    "@parcel/transformer-react-refresh-wrap": "npm:2.15.4"
+    "@parcel/transformer-react-refresh-wrap": "npm:2.16.0"
     "@parcel/transformer-sass": "npm:2.15.4"
     "@parcel/transformer-worklet": "npm:2.15.4"
     "@sentry/browser": "npm:10.11.0"
