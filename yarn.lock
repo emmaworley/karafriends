@@ -4383,14 +4383,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/transformer-sass@npm:2.15.4":
-  version: 2.15.4
-  resolution: "@parcel/transformer-sass@npm:2.15.4"
+"@parcel/transformer-sass@npm:2.16.0":
+  version: 2.16.0
+  resolution: "@parcel/transformer-sass@npm:2.16.0"
   dependencies:
-    "@parcel/plugin": "npm:2.15.4"
+    "@parcel/plugin": "npm:2.16.0"
     "@parcel/source-map": "npm:^2.1.1"
     sass: "npm:^1.88.0"
-  checksum: 10/b57f4a3821a0472767f7020a4cbaf2b4136fa2aa8c054a28876ab2a04cd965381d1078950a6fe814fe445ddb7d85015427bd73a37f6e3e6fe1b366c35db1f0dc
+  checksum: 10/15b36f354a3e0b0eed0c2c1f153da0fbf27fc08c321a903be35fb2f0b4b153f098cc9c981ee86ba57423de35211ceb01db3386fa15534d4b42394119698115c6
   languageName: node
   linkType: hard
 
@@ -12266,7 +12266,7 @@ __metadata:
     "@parcel/transformer-posthtml": "npm:2.15.4"
     "@parcel/transformer-raw": "npm:2.16.0"
     "@parcel/transformer-react-refresh-wrap": "npm:2.16.0"
-    "@parcel/transformer-sass": "npm:2.15.4"
+    "@parcel/transformer-sass": "npm:2.16.0"
     "@parcel/transformer-worklet": "npm:2.15.4"
     "@sentry/browser": "npm:10.11.0"
     "@sentry/node": "npm:10.11.0"

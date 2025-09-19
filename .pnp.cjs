@@ -53,7 +53,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-posthtml", "npm:2.15.4"],\
           ["@parcel/transformer-raw", "npm:2.16.0"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.16.0"],\
-          ["@parcel/transformer-sass", "npm:2.15.4"],\
+          ["@parcel/transformer-sass", "npm:2.16.0"],\
           ["@parcel/transformer-worklet", "npm:2.15.4"],\
           ["@sentry/browser", "npm:10.11.0"],\
           ["@sentry/node", "npm:10.11.0"],\
@@ -6605,11 +6605,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@parcel/transformer-sass", [\
-      ["npm:2.15.4", {\
-        "packageLocation": "./.yarn/cache/@parcel-transformer-sass-npm-2.15.4-0802df7c1f-b57f4a3821.zip/node_modules/@parcel/transformer-sass/",\
+      ["npm:2.16.0", {\
+        "packageLocation": "./.yarn/cache/@parcel-transformer-sass-npm-2.16.0-7e440b98b2-15b36f354a.zip/node_modules/@parcel/transformer-sass/",\
         "packageDependencies": [\
-          ["@parcel/transformer-sass", "npm:2.15.4"],\
-          ["@parcel/plugin", "npm:2.15.4"],\
+          ["@parcel/transformer-sass", "npm:2.16.0"],\
+          ["@parcel/plugin", "npm:2.16.0"],\
           ["@parcel/source-map", "npm:2.1.1"],\
           ["sass", "npm:1.90.0"]\
         ],\
@@ -15627,7 +15627,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-posthtml", "npm:2.15.4"],\
           ["@parcel/transformer-raw", "npm:2.16.0"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.16.0"],\
-          ["@parcel/transformer-sass", "npm:2.15.4"],\
+          ["@parcel/transformer-sass", "npm:2.16.0"],\
           ["@parcel/transformer-worklet", "npm:2.15.4"],\
           ["@sentry/browser", "npm:10.11.0"],\
           ["@sentry/node", "npm:10.11.0"],\
