@@ -7841,12 +7841,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-convert@npm:3.1.0":
-  version: 3.1.0
-  resolution: "color-convert@npm:3.1.0"
+"color-convert@npm:3.1.2":
+  version: 3.1.2
+  resolution: "color-convert@npm:3.1.2"
   dependencies:
     color-name: "npm:^2.0.0"
-  checksum: 10/1a6a9ab4f18cb25adb1802d7feeef9143dd0676dda8951837d7f1147493cbcf85b68aef275211822ae5f7f5a2650ed09ff46b74ed12f7f4f44fd4e45efd280ad
+  checksum: 10/6731d4d4e1427b0df6aa5655a7e97f52962c35070295347f1899857dfaa77477f72bdf4369422d6c345888595bb33d31620387b73d88ffc0b7cf1e496b54fc58
   languageName: node
   linkType: hard
 
@@ -12363,7 +12363,7 @@ __metadata:
     bufferutil: "npm:4.0.9"
     cargo-cp-artifact: "npm:0.1.9"
     classnames: "npm:2.5.1"
-    color-convert: "npm:3.1.0"
+    color-convert: "npm:3.1.2"
     compression: "npm:1.8.1"
     concurrently: "npm:9.2.1"
     cors: "npm:2.8.5"
