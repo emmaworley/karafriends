@@ -42,7 +42,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/core", "npm:2.15.4"],\
           ["@parcel/resolver-default", "npm:2.16.0"],\
           ["@parcel/transformer-babel", "npm:2.16.0"],\
-          ["@parcel/transformer-css", "npm:2.15.4"],\
+          ["@parcel/transformer-css", "npm:2.16.0"],\
           ["@parcel/transformer-glsl", "npm:2.15.4"],\
           ["@parcel/transformer-html", "npm:2.16.0"],\
           ["@parcel/transformer-image", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
@@ -6367,6 +6367,20 @@ const RAW_RUNTIME_STATE =
           ["@parcel/plugin", "npm:2.15.4"],\
           ["@parcel/source-map", "npm:2.1.1"],\
           ["@parcel/utils", "npm:2.15.4"],\
+          ["browserslist", "npm:4.25.3"],\
+          ["lightningcss", "npm:1.30.1"],\
+          ["nullthrows", "npm:1.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.16.0", {\
+        "packageLocation": "./.yarn/cache/@parcel-transformer-css-npm-2.16.0-e8e67152d6-6697423fa2.zip/node_modules/@parcel/transformer-css/",\
+        "packageDependencies": [\
+          ["@parcel/transformer-css", "npm:2.16.0"],\
+          ["@parcel/diagnostic", "npm:2.16.0"],\
+          ["@parcel/plugin", "npm:2.16.0"],\
+          ["@parcel/source-map", "npm:2.1.1"],\
+          ["@parcel/utils", "npm:2.16.0"],\
           ["browserslist", "npm:4.25.3"],\
           ["lightningcss", "npm:1.30.1"],\
           ["nullthrows", "npm:1.1.1"]\
@@ -15584,7 +15598,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/core", "npm:2.15.4"],\
           ["@parcel/resolver-default", "npm:2.16.0"],\
           ["@parcel/transformer-babel", "npm:2.16.0"],\
-          ["@parcel/transformer-css", "npm:2.15.4"],\
+          ["@parcel/transformer-css", "npm:2.16.0"],\
           ["@parcel/transformer-glsl", "npm:2.15.4"],\
           ["@parcel/transformer-html", "npm:2.16.0"],\
           ["@parcel/transformer-image", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
