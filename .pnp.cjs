@@ -50,7 +50,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-js", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
           ["@parcel/transformer-json", "npm:2.16.0"],\
           ["@parcel/transformer-postcss", "npm:2.16.0"],\
-          ["@parcel/transformer-posthtml", "npm:2.15.4"],\
+          ["@parcel/transformer-posthtml", "npm:2.16.0"],\
           ["@parcel/transformer-raw", "npm:2.16.0"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.16.0"],\
           ["@parcel/transformer-sass", "npm:2.15.4"],\
@@ -6588,6 +6588,15 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-posthtml", "npm:2.15.4"],\
           ["@parcel/plugin", "npm:2.15.4"],\
           ["@parcel/utils", "npm:2.15.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.16.0", {\
+        "packageLocation": "./.yarn/cache/@parcel-transformer-posthtml-npm-2.16.0-af8ef0f64b-42a6bc584a.zip/node_modules/@parcel/transformer-posthtml/",\
+        "packageDependencies": [\
+          ["@parcel/transformer-posthtml", "npm:2.16.0"],\
+          ["@parcel/plugin", "npm:2.16.0"],\
+          ["@parcel/utils", "npm:2.16.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15678,7 +15687,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-js", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
           ["@parcel/transformer-json", "npm:2.16.0"],\
           ["@parcel/transformer-postcss", "npm:2.16.0"],\
-          ["@parcel/transformer-posthtml", "npm:2.15.4"],\
+          ["@parcel/transformer-posthtml", "npm:2.16.0"],\
           ["@parcel/transformer-raw", "npm:2.16.0"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.16.0"],\
           ["@parcel/transformer-sass", "npm:2.15.4"],\
