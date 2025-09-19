@@ -100,7 +100,7 @@
     "@parcel/config-default": "2.15.4",
     "@parcel/core": "^2.15.4",
     "@parcel/resolver-default": "2.15.4",
-    "@parcel/transformer-babel": "2.15.4",
+    "@parcel/transformer-babel": "2.16.0",
     "@parcel/transformer-css": "2.15.4",
     "@parcel/transformer-glsl": "2.15.4",
     "@parcel/transformer-html": "2.15.4",
