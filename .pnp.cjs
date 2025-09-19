@@ -43,7 +43,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/resolver-default", "npm:2.16.0"],\
           ["@parcel/transformer-babel", "npm:2.16.0"],\
           ["@parcel/transformer-css", "npm:2.16.0"],\
-          ["@parcel/transformer-glsl", "npm:2.15.4"],\
+          ["@parcel/transformer-glsl", "npm:2.16.0"],\
           ["@parcel/transformer-html", "npm:2.16.0"],\
           ["@parcel/transformer-image", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
@@ -6396,11 +6396,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@parcel/transformer-glsl", [\
-      ["npm:2.15.4", {\
-        "packageLocation": "./.yarn/cache/@parcel-transformer-glsl-npm-2.15.4-1319fbba55-977432ebaa.zip/node_modules/@parcel/transformer-glsl/",\
+      ["npm:2.16.0", {\
+        "packageLocation": "./.yarn/cache/@parcel-transformer-glsl-npm-2.16.0-5df27e549c-6291801e82.zip/node_modules/@parcel/transformer-glsl/",\
         "packageDependencies": [\
-          ["@parcel/transformer-glsl", "npm:2.15.4"],\
-          ["@parcel/plugin", "npm:2.15.4"],\
+          ["@parcel/transformer-glsl", "npm:2.16.0"],\
+          ["@parcel/plugin", "npm:2.16.0"],\
           ["glslify-bundle", "npm:5.1.1"],\
           ["glslify-deps", "npm:1.3.2"]\
         ],\
@@ -15617,7 +15617,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/resolver-default", "npm:2.16.0"],\
           ["@parcel/transformer-babel", "npm:2.16.0"],\
           ["@parcel/transformer-css", "npm:2.16.0"],\
-          ["@parcel/transformer-glsl", "npm:2.15.4"],\
+          ["@parcel/transformer-glsl", "npm:2.16.0"],\
           ["@parcel/transformer-html", "npm:2.16.0"],\
           ["@parcel/transformer-image", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
