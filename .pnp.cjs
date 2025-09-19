@@ -48,7 +48,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-image", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
           ["@parcel/transformer-js", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
-          ["@parcel/transformer-json", "npm:2.15.4"],\
+          ["@parcel/transformer-json", "npm:2.16.0"],\
           ["@parcel/transformer-postcss", "npm:2.16.0"],\
           ["@parcel/transformer-posthtml", "npm:2.15.4"],\
           ["@parcel/transformer-raw", "npm:2.16.0"],\
@@ -6504,6 +6504,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@parcel/transformer-json", "npm:2.15.4"],\
           ["@parcel/plugin", "npm:2.15.4"],\
+          ["json5", "npm:2.2.3"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.16.0", {\
+        "packageLocation": "./.yarn/cache/@parcel-transformer-json-npm-2.16.0-44e1f94f2f-f5228852ef.zip/node_modules/@parcel/transformer-json/",\
+        "packageDependencies": [\
+          ["@parcel/transformer-json", "npm:2.16.0"],\
+          ["@parcel/plugin", "npm:2.16.0"],\
           ["json5", "npm:2.2.3"]\
         ],\
         "linkType": "HARD"\
@@ -15622,7 +15631,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-image", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
           ["@parcel/transformer-js", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
-          ["@parcel/transformer-json", "npm:2.15.4"],\
+          ["@parcel/transformer-json", "npm:2.16.0"],\
           ["@parcel/transformer-postcss", "npm:2.16.0"],\
           ["@parcel/transformer-posthtml", "npm:2.15.4"],\
           ["@parcel/transformer-raw", "npm:2.16.0"],\
