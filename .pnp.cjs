@@ -49,7 +49,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
           ["@parcel/transformer-js", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
           ["@parcel/transformer-json", "npm:2.15.4"],\
-          ["@parcel/transformer-postcss", "npm:2.15.4"],\
+          ["@parcel/transformer-postcss", "npm:2.16.0"],\
           ["@parcel/transformer-posthtml", "npm:2.15.4"],\
           ["@parcel/transformer-raw", "npm:2.16.0"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.15.4"],\
@@ -6448,6 +6448,21 @@ const RAW_RUNTIME_STATE =
           ["@parcel/plugin", "npm:2.15.4"],\
           ["@parcel/rust", "virtual:6150dff7aa138dd2804d0314251a520fd2736d0293ab6468524248ba02d234ce1400a63493bde7cebb95074dd7e6daa78b02d2aba5439f1a00ed146262215087#npm:2.15.4"],\
           ["@parcel/utils", "npm:2.15.4"],\
+          ["clone", "npm:2.1.2"],\
+          ["nullthrows", "npm:1.1.1"],\
+          ["postcss-value-parser", "npm:4.2.0"],\
+          ["semver", "npm:7.7.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.16.0", {\
+        "packageLocation": "./.yarn/cache/@parcel-transformer-postcss-npm-2.16.0-0e7892c575-a2a36bacaa.zip/node_modules/@parcel/transformer-postcss/",\
+        "packageDependencies": [\
+          ["@parcel/transformer-postcss", "npm:2.16.0"],\
+          ["@parcel/diagnostic", "npm:2.16.0"],\
+          ["@parcel/plugin", "npm:2.16.0"],\
+          ["@parcel/rust", "virtual:e2bb402e06b3f88bc36c7c4f8271a54f45b33fb1ef490d8f873dcf6ef5cf78b7527db6b51e2cfa326253f5790ffdf86f2130ffde25cb387062559a33c9c9d333#npm:2.16.0"],\
+          ["@parcel/utils", "npm:2.16.0"],\
           ["clone", "npm:2.1.2"],\
           ["nullthrows", "npm:1.1.1"],\
           ["postcss-value-parser", "npm:4.2.0"],\
@@ -15424,7 +15439,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-inline-string", "npm:2.15.4"],\
           ["@parcel/transformer-js", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.15.4"],\
           ["@parcel/transformer-json", "npm:2.15.4"],\
-          ["@parcel/transformer-postcss", "npm:2.15.4"],\
+          ["@parcel/transformer-postcss", "npm:2.16.0"],\
           ["@parcel/transformer-posthtml", "npm:2.15.4"],\
           ["@parcel/transformer-raw", "npm:2.16.0"],\
           ["@parcel/transformer-react-refresh-wrap", "npm:2.15.4"],\
