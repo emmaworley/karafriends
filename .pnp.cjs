@@ -162,7 +162,7 @@ const RAW_RUNTIME_STATE =
           ["user-agents", "npm:1.1.659"],\
           ["utf-8-validate", "npm:6.0.5"],\
           ["uuid", "npm:13.0.0"],\
-          ["wait-on", "npm:9.0.0"],\
+          ["wait-on", "npm:9.0.1"],\
           ["wanakana", "npm:5.3.1"],\
           ["wdio-electron-service", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.1.2"],\
           ["webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.19.2"],\
@@ -15827,7 +15827,7 @@ const RAW_RUNTIME_STATE =
           ["user-agents", "npm:1.1.659"],\
           ["utf-8-validate", "npm:6.0.5"],\
           ["uuid", "npm:13.0.0"],\
-          ["wait-on", "npm:9.0.0"],\
+          ["wait-on", "npm:9.0.1"],\
           ["wanakana", "npm:5.3.1"],\
           ["wdio-electron-service", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.1.2"],\
           ["webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.19.2"],\
@@ -21598,10 +21598,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["wait-on", [\
-      ["npm:9.0.0", {\
-        "packageLocation": "./.yarn/cache/wait-on-npm-9.0.0-80312715dc-bbdaceb284.zip/node_modules/wait-on/",\
+      ["npm:9.0.1", {\
+        "packageLocation": "./.yarn/cache/wait-on-npm-9.0.1-b53caa6d1f-0a29ce4d7c.zip/node_modules/wait-on/",\
         "packageDependencies": [\
-          ["wait-on", "npm:9.0.0"],\
+          ["wait-on", "npm:9.0.1"],\
           ["axios", "npm:1.12.2"],\
           ["joi", "npm:18.0.1"],\
           ["lodash", "npm:4.17.21"],\
