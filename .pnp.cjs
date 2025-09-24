@@ -7170,7 +7170,7 @@ const RAW_RUNTIME_STATE =
           ["progress", "npm:2.0.3"],\
           ["proxy-agent", "npm:6.5.0"],\
           ["semver", "npm:7.7.2"],\
-          ["tar-fs", "npm:3.1.0"],\
+          ["tar-fs", "npm:3.1.1"],\
           ["yargs", "npm:17.7.2"]\
         ],\
         "linkType": "HARD"\
@@ -7184,7 +7184,7 @@ const RAW_RUNTIME_STATE =
           ["progress", "npm:2.0.3"],\
           ["proxy-agent", "npm:6.5.0"],\
           ["semver", "npm:7.7.2"],\
-          ["tar-fs", "npm:3.1.0"],\
+          ["tar-fs", "npm:3.1.1"],\
           ["yargs", "npm:17.7.2"]\
         ],\
         "linkType": "HARD"\
@@ -7198,7 +7198,7 @@ const RAW_RUNTIME_STATE =
           ["progress", "npm:2.0.3"],\
           ["proxy-agent", "npm:6.5.0"],\
           ["semver", "npm:7.7.2"],\
-          ["tar-fs", "npm:3.1.0"],\
+          ["tar-fs", "npm:3.1.1"],\
           ["unbzip2-stream", "npm:1.4.3"],\
           ["yargs", "npm:17.7.2"]\
         ],\
@@ -13192,7 +13192,7 @@ const RAW_RUNTIME_STATE =
           ["http-proxy-agent", "npm:7.0.2"],\
           ["https-proxy-agent", "npm:7.0.6"],\
           ["node-fetch", "npm:3.3.2"],\
-          ["tar-fs", "npm:3.1.0"],\
+          ["tar-fs", "npm:3.1.1"],\
           ["which", "npm:5.0.0"]\
         ],\
         "linkType": "HARD"\
@@ -20646,10 +20646,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["tar-fs", [\
-      ["npm:3.1.0", {\
-        "packageLocation": "./.yarn/cache/tar-fs-npm-3.1.0-e568911671-272054aa93.zip/node_modules/tar-fs/",\
+      ["npm:3.1.1", {\
+        "packageLocation": "./.yarn/cache/tar-fs-npm-3.1.1-2a32a81dd7-f7f7540b56.zip/node_modules/tar-fs/",\
         "packageDependencies": [\
-          ["tar-fs", "npm:3.1.0"],\
+          ["tar-fs", "npm:3.1.1"],\
           ["bare-fs", "npm:4.0.1"],\
           ["bare-path", "npm:3.0.0"],\
           ["pump", "npm:3.0.2"],\
