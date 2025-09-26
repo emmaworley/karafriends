@@ -17,10 +17,12 @@ jobs:
         with:
           toolchain: nightly
           target: aarch64-apple-darwin
+          components: clippy, rustfmt
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: stable
           target: aarch64-apple-darwin
+          components: clippy, rustfmt
       - uses: actions/setup-node@v5
         with:
           node-version: 22
@@ -69,10 +71,12 @@ jobs:
         with:
           toolchain: nightly
           target: x86_64-apple-darwin
+          components: clippy, rustfmt
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: stable
           target: x86_64-apple-darwin
+          components: clippy, rustfmt
       - uses: actions/setup-node@v5
         with:
           node-version: 22
@@ -98,10 +102,12 @@ jobs:
         with:
           toolchain: nightly
           target: x86_64-pc-windows-msvc
+          components: clippy, rustfmt
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: stable
           target: x86_64-pc-windows-msvc
+          components: clippy, rustfmt
       - uses: actions/setup-node@v5
         with:
           node-version: 22
@@ -127,10 +133,12 @@ jobs:
         with:
           toolchain: nightly
           target: x86_64-unknown-linux-gnu
+          components: clippy, rustfmt
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: stable
           target: x86_64-unknown-linux-gnu
+          components: clippy, rustfmt
       - uses: actions/setup-node@v5
         with:
           node-version: 22
