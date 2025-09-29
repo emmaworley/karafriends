@@ -90,7 +90,7 @@ const RAW_RUNTIME_STATE =
           ["@wdio/cli", "npm:9.19.2"],\
           ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.17.0"],\
           ["@wdio/local-runner", "npm:9.20.0"],\
-          ["@wdio/mocha-framework", "npm:9.19.2"],\
+          ["@wdio/mocha-framework", "npm:9.20.0"],\
           ["@yarnpkg/pnpify", "npm:4.1.6"],\
           ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.0.0"],\
           ["babel-plugin-relay", "npm:20.1.1"],\
@@ -8755,15 +8755,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@wdio/mocha-framework", [\
-      ["npm:9.19.2", {\
-        "packageLocation": "./.yarn/cache/@wdio-mocha-framework-npm-9.19.2-0c235cb52b-c64e29f9cd.zip/node_modules/@wdio/mocha-framework/",\
+      ["npm:9.20.0", {\
+        "packageLocation": "./.yarn/cache/@wdio-mocha-framework-npm-9.20.0-67380890f1-6fbdf0441e.zip/node_modules/@wdio/mocha-framework/",\
         "packageDependencies": [\
-          ["@wdio/mocha-framework", "npm:9.19.2"],\
+          ["@wdio/mocha-framework", "npm:9.20.0"],\
           ["@types/mocha", "npm:10.0.10"],\
           ["@types/node", "npm:20.17.16"],\
           ["@wdio/logger", "npm:9.18.0"],\
-          ["@wdio/types", "npm:9.19.2"],\
-          ["@wdio/utils", "npm:9.19.2"],\
+          ["@wdio/types", "npm:9.20.0"],\
+          ["@wdio/utils", "npm:9.20.0"],\
           ["mocha", "npm:10.8.2"]\
         ],\
         "linkType": "HARD"\
@@ -15807,7 +15807,7 @@ const RAW_RUNTIME_STATE =
           ["@wdio/cli", "npm:9.19.2"],\
           ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.17.0"],\
           ["@wdio/local-runner", "npm:9.20.0"],\
-          ["@wdio/mocha-framework", "npm:9.19.2"],\
+          ["@wdio/mocha-framework", "npm:9.20.0"],\
           ["@yarnpkg/pnpify", "npm:4.1.6"],\
           ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.0.0"],\
           ["babel-plugin-relay", "npm:20.1.1"],\
