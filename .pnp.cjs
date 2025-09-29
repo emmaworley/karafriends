@@ -120,7 +120,7 @@ const RAW_RUNTIME_STATE =
           ["kuromoji", "npm:0.1.2"],\
           ["kuroshiro", "npm:1.2.0"],\
           ["kuroshiro-analyzer-kuromoji", "npm:1.1.0"],\
-          ["lint-staged", "npm:16.2.0"],\
+          ["lint-staged", "npm:16.2.3"],\
           ["lodash", "npm:4.17.21"],\
           ["materialize-css", "npm:1.0.0"],\
           ["multicast-dns", "npm:7.2.5"],\
@@ -15837,7 +15837,7 @@ const RAW_RUNTIME_STATE =
           ["kuromoji", "npm:0.1.2"],\
           ["kuroshiro", "npm:1.2.0"],\
           ["kuroshiro-analyzer-kuromoji", "npm:1.1.0"],\
-          ["lint-staged", "npm:16.2.0"],\
+          ["lint-staged", "npm:16.2.3"],\
           ["lodash", "npm:4.17.21"],\
           ["materialize-css", "npm:1.0.0"],\
           ["multicast-dns", "npm:7.2.5"],\
@@ -16122,10 +16122,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lint-staged", [\
-      ["npm:16.2.0", {\
-        "packageLocation": "./.yarn/cache/lint-staged-npm-16.2.0-51347c0faf-809a42e21f.zip/node_modules/lint-staged/",\
+      ["npm:16.2.3", {\
+        "packageLocation": "./.yarn/cache/lint-staged-npm-16.2.3-d2e7d68634-7c83cb478a.zip/node_modules/lint-staged/",\
         "packageDependencies": [\
-          ["lint-staged", "npm:16.2.0"],\
+          ["lint-staged", "npm:16.2.3"],\
           ["commander", "npm:14.0.1"],\
           ["listr2", "npm:9.0.4"],\
           ["micromatch", "npm:4.0.8"],\
