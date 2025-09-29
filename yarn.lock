@@ -6019,17 +6019,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/cli@npm:9.19.2":
-  version: 9.19.2
-  resolution: "@wdio/cli@npm:9.19.2"
+"@wdio/cli@npm:9.20.0":
+  version: 9.20.0
+  resolution: "@wdio/cli@npm:9.20.0"
   dependencies:
     "@vitest/snapshot": "npm:^2.1.1"
-    "@wdio/config": "npm:9.19.2"
+    "@wdio/config": "npm:9.20.0"
     "@wdio/globals": "npm:9.17.0"
     "@wdio/logger": "npm:9.18.0"
     "@wdio/protocols": "npm:9.16.2"
-    "@wdio/types": "npm:9.19.2"
-    "@wdio/utils": "npm:9.19.2"
+    "@wdio/types": "npm:9.20.0"
+    "@wdio/utils": "npm:9.20.0"
     async-exit-hook: "npm:^2.0.1"
     chalk: "npm:^5.4.1"
     chokidar: "npm:^4.0.0"
@@ -6041,11 +6041,11 @@ __metadata:
     lodash.union: "npm:^4.6.0"
     read-pkg-up: "npm:^10.0.0"
     tsx: "npm:^4.7.2"
-    webdriverio: "npm:9.19.2"
+    webdriverio: "npm:9.20.0"
     yargs: "npm:^17.7.2"
   bin:
     wdio: ./bin/wdio.js
-  checksum: 10/bceb8ac2b42aa23212cf8601bcf316a99781e0a290661461b2d43b5143fdc2be366a5defd5f91f68c9c8d641a582d827ee813779182437439e7c84a072c4c6d7
+  checksum: 10/5f2e9748401f3f10f92cad93a77d397b2ada2ba50268f1092e29081ab36b7fe0e1557d0079d147354d98698735309be77a8bcf06fc40286de12d49c92d1f55ed
   languageName: node
   linkType: hard
 
@@ -12415,7 +12415,7 @@ __metadata:
     "@types/wicg-mediasession": "npm:1.1.8"
     "@types/ws": "npm:^8"
     "@types/youtube-player": "npm:5.5.11"
-    "@wdio/cli": "npm:9.19.2"
+    "@wdio/cli": "npm:9.20.0"
     "@wdio/globals": "npm:9.17.0"
     "@wdio/local-runner": "npm:9.20.0"
     "@wdio/mocha-framework": "npm:9.19.2"
