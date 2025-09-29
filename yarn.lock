@@ -12473,7 +12473,7 @@ __metadata:
     react-icons: "npm:5.5.0"
     react-mobile-picker-scroll: "npm:0.2.14"
     react-relay: "npm:20.1.1"
-    react-router: "npm:7.9.2"
+    react-router: "npm:7.9.3"
     react-swipeable: "npm:7.0.2"
     regenerator-runtime: "npm:0.14.1"
     relay-compiler: "npm:20.1.1"
@@ -15129,9 +15129,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router@npm:7.9.2":
-  version: 7.9.2
-  resolution: "react-router@npm:7.9.2"
+"react-router@npm:7.9.3":
+  version: 7.9.3
+  resolution: "react-router@npm:7.9.3"
   dependencies:
     cookie: "npm:^1.0.1"
     set-cookie-parser: "npm:^2.6.0"
@@ -15141,7 +15141,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 10/57ab6beafef6bb6374ef81a4db0262bd687affa5c3336acf211d4d52890ee3ab815183f3fddbf3ef8a4d04dec76cf4941e30d1adacfdbc3fefc6795ff6bf81b5
+  checksum: 10/62066f09214c5b026b0d400af946aa0b16ef5be7f5120a4400e1b1fc487249220c2d735d9f6a2afa505a136bc8ef4cd7657b1ff8126871068cbf7ec773febce3
   languageName: node
   linkType: hard
 
