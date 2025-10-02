@@ -8668,10 +8668,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devtools-protocol@npm:0.0.1495869":
-  version: 0.0.1495869
-  resolution: "devtools-protocol@npm:0.0.1495869"
-  checksum: 10/2ba87b6d99c1c76ed8f4e11a8004fe389e23152847b120a59810d380418b02ee5272fbcf4270fbdb4c5b5ef49361321dad1940a5bd6044c1b31b02de9d3400c2
+"devtools-protocol@npm:0.0.1508733":
+  version: 0.0.1508733
+  resolution: "devtools-protocol@npm:0.0.1508733"
+  checksum: 10/c3e9de0cc015843be72f6ca1c6137e449a982f434fa0fc99868a74d80d464441961faab57aad743da8b2ee4309bcaf167dbd3ccd4ec656352ef2c62abf667c7b
   languageName: node
   linkType: hard
 
@@ -12464,7 +12464,7 @@ __metadata:
     prettier: "npm:3.6.2"
     process: "npm:0.11.10"
     promise-retry: "npm:2.0.1"
-    puppeteer-core: "npm:24.22.3"
+    puppeteer-core: "npm:24.23.0"
     qrcode: "npm:1.5.4"
     raw-loader: "npm:4.0.2"
     react: "npm:19.1.1"
@@ -14918,18 +14918,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer-core@npm:24.22.3":
-  version: 24.22.3
-  resolution: "puppeteer-core@npm:24.22.3"
+"puppeteer-core@npm:24.23.0":
+  version: 24.23.0
+  resolution: "puppeteer-core@npm:24.23.0"
   dependencies:
     "@puppeteer/browsers": "npm:2.10.10"
     chromium-bidi: "npm:9.1.0"
     debug: "npm:^4.4.3"
-    devtools-protocol: "npm:0.0.1495869"
+    devtools-protocol: "npm:0.0.1508733"
     typed-query-selector: "npm:^2.12.0"
-    webdriver-bidi-protocol: "npm:0.2.11"
+    webdriver-bidi-protocol: "npm:0.3.6"
     ws: "npm:^8.18.3"
-  checksum: 10/17b7a152d5289fcc950d11f1c9d0557a84519fd5da2af56915d93b39c92849e6135f5a70ceab8d6b3237395dd891d0c7e68bc43e76b2a19ac11e97f818ce1a10
+  checksum: 10/0d7c271f2b0f434027f1124d13c20b1d63b17f2d56be19ae538e7d5c870e5cdf49ed7cc030ed474ba873d477957daf3ee5f31832e8f925f46c6ff79e61217412
   languageName: node
   linkType: hard
 
@@ -17726,10 +17726,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webdriver-bidi-protocol@npm:0.2.11":
-  version: 0.2.11
-  resolution: "webdriver-bidi-protocol@npm:0.2.11"
-  checksum: 10/aa62ef13579900c24502326725a8e1284e6ccae0dca26ab6009f65a6efea2ea4b9dee21dfb3de004f4dfd0b7d73c83e9137a842519c98b97a02b843dbc537c35
+"webdriver-bidi-protocol@npm:0.3.6":
+  version: 0.3.6
+  resolution: "webdriver-bidi-protocol@npm:0.3.6"
+  checksum: 10/053617b860563927c2a66105cd165087bb70ef3bb9d51646948a3bb1e38fe044ac2ad91b1c249305e5cc87b3934179e40f3dfd9819aa257e14e835a55e3de1d5
   languageName: node
   linkType: hard
 
