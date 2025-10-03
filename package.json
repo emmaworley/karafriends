@@ -134,7 +134,7 @@
     "@types/react": "19.1.15",
     "@types/react-dom": "19.1.9",
     "@types/react-relay": "18.2.1",
-    "@types/relay-runtime": "19.0.2",
+    "@types/relay-runtime": "19.0.3",
     "@types/tunnel": "^0",
     "@types/uuid": "^11",
     "@types/ws": "^8",
