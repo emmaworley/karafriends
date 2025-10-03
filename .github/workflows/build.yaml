@@ -51,7 +51,7 @@ jobs:
           echo REMOCON_CHROME_URL=$(curl -F "reqtype=fileupload" -F "fileToUpload=@remocon-chrome.png" https://catbox.moe/user/api.php) >> $GITHUB_ENV
           echo REMOCON_SAFARI_URL=$(curl -F "reqtype=fileupload" -F "fileToUpload=@remocon-Safari.png" https://catbox.moe/user/api.php) >> $GITHUB_ENV
         if: github.event_name == 'pull_request'
-      - uses: peter-evans/create-or-update-comment@v4
+      - uses: peter-evans/create-or-update-comment@v5
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
