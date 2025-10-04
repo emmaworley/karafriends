@@ -4396,6 +4396,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@parcel/transformer-js@npm:2.16.0":
+  version: 2.16.0
+  resolution: "@parcel/transformer-js@npm:2.16.0"
+  dependencies:
+    "@parcel/diagnostic": "npm:2.16.0"
+    "@parcel/plugin": "npm:2.16.0"
+    "@parcel/rust": "npm:2.16.0"
+    "@parcel/source-map": "npm:^2.1.1"
+    "@parcel/utils": "npm:2.16.0"
+    "@parcel/workers": "npm:2.16.0"
+    "@swc/helpers": "npm:^0.5.0"
+    browserslist: "npm:^4.24.5"
+    nullthrows: "npm:^1.1.1"
+    regenerator-runtime: "npm:^0.14.1"
+    semver: "npm:^7.7.1"
+  peerDependencies:
+    "@parcel/core": ^2.16.0
+  checksum: 10/5825738f811035506b86a5b3d6d8f9461552aa9edf6300e8d84840b4736f9465ee5f81f4db163afa06897ee22aad4b0a05528b44e38fb5329fbcc045dce2a2a7
+  languageName: node
+  linkType: hard
+
 "@parcel/transformer-json@npm:2.15.4":
   version: 2.15.4
   resolution: "@parcel/transformer-json@npm:2.15.4"
@@ -12458,7 +12479,7 @@ __metadata:
     "@parcel/transformer-html": "npm:2.16.0"
     "@parcel/transformer-image": "npm:2.16.0"
     "@parcel/transformer-inline-string": "npm:2.15.4"
-    "@parcel/transformer-js": "npm:2.15.4"
+    "@parcel/transformer-js": "npm:2.16.0"
     "@parcel/transformer-json": "npm:2.16.0"
     "@parcel/transformer-postcss": "npm:2.16.0"
     "@parcel/transformer-posthtml": "npm:2.16.0"
