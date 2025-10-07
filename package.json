@@ -115,7 +115,7 @@
     "@parcel/transformer-worklet": "2.15.4",
     "@testing-library/dom": "10.4.1",
     "@testing-library/webdriverio": "3.2.1",
-    "@types/audioworklet": "0.0.86",
+    "@types/audioworklet": "0.0.87",
     "@types/babel__core": "7",
     "@types/color-convert": "2.0.4",
     "@types/compression": "1.8.1",
