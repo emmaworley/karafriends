@@ -4366,12 +4366,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/transformer-inline-string@npm:2.15.4":
-  version: 2.15.4
-  resolution: "@parcel/transformer-inline-string@npm:2.15.4"
+"@parcel/transformer-inline-string@npm:2.16.0":
+  version: 2.16.0
+  resolution: "@parcel/transformer-inline-string@npm:2.16.0"
   dependencies:
-    "@parcel/plugin": "npm:2.15.4"
-  checksum: 10/b0d136828033540597791018610f58281f6f24975b7a08647f5bf954558eb1826b4fc182871756cc42ae4de12ee7ba6eb0d4883af6a5bd4f66e0c3ff5eafc800
+    "@parcel/plugin": "npm:2.16.0"
+  checksum: 10/6d6f95e6ae0c710fd7aa67b6e4e5fd036474207f6790eef2ee4d88ae0bdd5b0801c59d027946a470c2a2f2a15daadbc38bc5a37460ca3b4ae5f6a98fdf036634
   languageName: node
   linkType: hard
 
@@ -12478,7 +12478,7 @@ __metadata:
     "@parcel/transformer-glsl": "npm:2.15.4"
     "@parcel/transformer-html": "npm:2.16.0"
     "@parcel/transformer-image": "npm:2.16.0"
-    "@parcel/transformer-inline-string": "npm:2.15.4"
+    "@parcel/transformer-inline-string": "npm:2.16.0"
     "@parcel/transformer-js": "npm:2.16.0"
     "@parcel/transformer-json": "npm:2.16.0"
     "@parcel/transformer-postcss": "npm:2.16.0"

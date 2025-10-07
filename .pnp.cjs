@@ -46,7 +46,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-glsl", "npm:2.15.4"],\
           ["@parcel/transformer-html", "npm:2.16.0"],\
           ["@parcel/transformer-image", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.16.0"],\
-          ["@parcel/transformer-inline-string", "npm:2.15.4"],\
+          ["@parcel/transformer-inline-string", "npm:2.16.0"],\
           ["@parcel/transformer-js", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.16.0"],\
           ["@parcel/transformer-json", "npm:2.16.0"],\
           ["@parcel/transformer-postcss", "npm:2.16.0"],\
@@ -6571,11 +6571,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@parcel/transformer-inline-string", [\
-      ["npm:2.15.4", {\
-        "packageLocation": "./.yarn/cache/@parcel-transformer-inline-string-npm-2.15.4-5ab80e490e-b0d1368280.zip/node_modules/@parcel/transformer-inline-string/",\
+      ["npm:2.16.0", {\
+        "packageLocation": "./.yarn/cache/@parcel-transformer-inline-string-npm-2.16.0-2bc1f34f2b-6d6f95e6ae.zip/node_modules/@parcel/transformer-inline-string/",\
         "packageDependencies": [\
-          ["@parcel/transformer-inline-string", "npm:2.15.4"],\
-          ["@parcel/plugin", "npm:2.15.4"]\
+          ["@parcel/transformer-inline-string", "npm:2.16.0"],\
+          ["@parcel/plugin", "npm:2.16.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15816,7 +15816,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-glsl", "npm:2.15.4"],\
           ["@parcel/transformer-html", "npm:2.16.0"],\
           ["@parcel/transformer-image", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.16.0"],\
-          ["@parcel/transformer-inline-string", "npm:2.15.4"],\
+          ["@parcel/transformer-inline-string", "npm:2.16.0"],\
           ["@parcel/transformer-js", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.16.0"],\
           ["@parcel/transformer-json", "npm:2.16.0"],\
           ["@parcel/transformer-postcss", "npm:2.16.0"],\
