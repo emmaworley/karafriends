@@ -4358,7 +4358,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@puppeteer/browsers@npm:2.10.11":
+"@puppeteer/browsers@npm:2.10.11, @puppeteer/browsers@npm:^2.2.0":
   version: 2.10.11
   resolution: "@puppeteer/browsers@npm:2.10.11"
   dependencies:
@@ -4390,23 +4390,6 @@ __metadata:
   bin:
     browsers: lib/cjs/main-cli.js
   checksum: 10/0a7c791fc05800305e9d52329eb02381b989fe68bfaa55ba901f090490f3fc7ee6df46df34c4f43d8cd1fe7a727bad02a218d2c9daa251a8db01f06f3347ba02
-  languageName: node
-  linkType: hard
-
-"@puppeteer/browsers@npm:^2.2.0":
-  version: 2.10.10
-  resolution: "@puppeteer/browsers@npm:2.10.10"
-  dependencies:
-    debug: "npm:^4.4.3"
-    extract-zip: "npm:^2.0.1"
-    progress: "npm:^2.0.3"
-    proxy-agent: "npm:^6.5.0"
-    semver: "npm:^7.7.2"
-    tar-fs: "npm:^3.1.0"
-    yargs: "npm:^17.7.2"
-  bin:
-    browsers: lib/cjs/main-cli.js
-  checksum: 10/6e9763a567252faf88ba3a699d76b9651cc4355be7602feb6dd21eab1c826cc7616e22f50d584a5727a1cab420ee0c2f232da22704fe25903f7a41c96470a227
   languageName: node
   linkType: hard
 
@@ -5128,16 +5111,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
-  version: 24.7.0
-  resolution: "@types/node@npm:24.7.0"
-  dependencies:
-    undici-types: "npm:~7.14.0"
-  checksum: 10/db0b77e9b132906cdf0350661df660c970e924093ccaa781472d61bc5c448f3d15514b15f55b4df6827254a041aad2418339fe00d45ef10687557ffc0f026d47
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:24.7.1":
+"@types/node@npm:*, @types/node@npm:24.7.1":
   version: 24.7.1
   resolution: "@types/node@npm:24.7.1"
   dependencies:
@@ -16156,7 +16130,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tar-fs@npm:^3.0.6, tar-fs@npm:^3.1.0, tar-fs@npm:^3.1.1":
+"tar-fs@npm:^3.0.6, tar-fs@npm:^3.1.1":
   version: 3.1.1
   resolution: "tar-fs@npm:3.1.1"
   dependencies:
