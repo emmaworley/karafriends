@@ -5264,12 +5264,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:19.1.15":
+"@types/react@npm:*":
   version: 19.1.15
   resolution: "@types/react@npm:19.1.15"
   dependencies:
     csstype: "npm:^3.0.2"
   checksum: 10/9acff968d35e02152a817a11f8572cbcc985d9ea93616898b34e75ab193af20f9ab46274217abd12cd1ff4e4150081143b13ba20e0bb503efd64fe6601cb8bd8
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:19.2.2":
+  version: 19.2.2
+  resolution: "@types/react@npm:19.2.2"
+  dependencies:
+    csstype: "npm:^3.0.2"
+  checksum: 10/d6adf8fd4bb23a7e04da5700d96b15dc0f59653727a9c6e940c151d7232fa1dbbab98417d5ac830dcfb6cba3f206efbd4cd83647e6f9a688d7363a90e607f6bf
   languageName: node
   linkType: hard
 
@@ -11767,7 +11776,7 @@ __metadata:
     "@types/node-fetch": "npm:2.6.13"
     "@types/promise-retry": "npm:1.1.6"
     "@types/qrcode": "npm:1.5.5"
-    "@types/react": "npm:19.1.15"
+    "@types/react": "npm:19.2.2"
     "@types/react-dom": "npm:19.1.9"
     "@types/react-fade-in": "npm:2.0.2"
     "@types/react-relay": "npm:18.2.1"
@@ -11831,7 +11840,7 @@ __metadata:
     puppeteer-core: "npm:24.23.0"
     qrcode: "npm:1.5.4"
     raw-loader: "npm:4.0.2"
-    react: "npm:19.1.1"
+    react: "npm:19.2.0"
     react-dom: "npm:19.1.1"
     react-fade-in: "npm:2.0.1"
     react-icons: "npm:5.5.0"
@@ -14518,10 +14527,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:19.1.1":
-  version: 19.1.1
-  resolution: "react@npm:19.1.1"
-  checksum: 10/9801530fdc939e1a7a499422e930515b2400809cb39c2872984e99f832d233f61659a693871183dac3155c2f9b2c9dcf4440a56bd18983277ae92860e38c3a61
+"react@npm:19.2.0":
+  version: 19.2.0
+  resolution: "react@npm:19.2.0"
+  checksum: 10/e13bcdb8e994c3cfa922743cb75ca8deb60531bf02f584d2d8dab940a8132ce8a2e6ef16f8ed7f372b4072e7a7eeff589b2812dabbedfa73e6e46201dac8a9d0
   languageName: node
   linkType: hard
 
