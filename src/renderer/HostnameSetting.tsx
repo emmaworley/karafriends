@@ -5,9 +5,10 @@ import { HOSTNAME } from "../common/constants";
 import "./global";
 
 export default function HostnameSetting(props: {
+  hostname: string;
   onChange: (name: string) => void;
 }) {
-  const [currentValue, setCurrentValue] = useState("offkai.karafriends.party");
+  const [currentValue, setCurrentValue] = useState(props.hostname);
 
   useEffect(() => {
     M.AutoInit();

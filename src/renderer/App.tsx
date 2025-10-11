@@ -65,13 +65,13 @@ function App(props: {
         ...acc,
         [cur[0]]: cur[1],
       }),
-      {}
+      {},
     );
 
     const savedMics = savedMicInfo
       .filter(
         ({ name, channel }: SavedMic) =>
-          name in channelCounts && channel < channelCounts[name]
+          name in channelCounts && channel < channelCounts[name],
       )
       .map(({ name, channel }: SavedMic) => new InputDevice(name, channel));
 
@@ -94,8 +94,8 @@ function App(props: {
             });
         },
       }),
-      [songAddedSubscription]
-    )
+      [songAddedSubscription],
+    ),
   );
 
   const onChangeMic = (index: number, newMic: InputDevice) => {
@@ -117,11 +117,7 @@ function App(props: {
           sidebarVisible ? "s11" : "s12"
         } valign-wrapper`}
       >
-        <Player
-          mics={mics}
-          kuroshiro={props.kuroshiro}
-          audio={props.audio}
-        />
+        <Player mics={mics} kuroshiro={props.kuroshiro} audio={props.audio} />
         <Effects />
       </div>
       {sidebarVisible && (
@@ -129,7 +125,7 @@ function App(props: {
           <QRCode hostname={hostname} />
           <nav className="center-align">Settings</nav>
           <div className="section center-align">
-            <HostnameSetting onChange={setHostname} />
+            <HostnameSetting hostname={hostname} onChange={setHostname} />
             {mics.map((mic, i) => (
               <MicrophoneSetting
                 key={mic.deviceId}
