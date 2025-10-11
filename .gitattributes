@@ -1,0 +1,3 @@
+.pnp.cjs linguist-generated
+.yarn/cache/** linguist-generated
+yarn.lock linguist-generated
