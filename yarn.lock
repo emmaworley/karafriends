@@ -5266,12 +5266,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:19.1.15":
+"@types/react@npm:*":
   version: 19.1.15
   resolution: "@types/react@npm:19.1.15"
   dependencies:
     csstype: "npm:^3.0.2"
   checksum: 10/9acff968d35e02152a817a11f8572cbcc985d9ea93616898b34e75ab193af20f9ab46274217abd12cd1ff4e4150081143b13ba20e0bb503efd64fe6601cb8bd8
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:19.2.2":
+  version: 19.2.2
+  resolution: "@types/react@npm:19.2.2"
+  dependencies:
+    csstype: "npm:^3.0.2"
+  checksum: 10/d6adf8fd4bb23a7e04da5700d96b15dc0f59653727a9c6e940c151d7232fa1dbbab98417d5ac830dcfb6cba3f206efbd4cd83647e6f9a688d7363a90e607f6bf
   languageName: node
   linkType: hard
 
@@ -11769,7 +11778,7 @@ __metadata:
     "@types/node-fetch": "npm:2.6.13"
     "@types/promise-retry": "npm:1.1.6"
     "@types/qrcode": "npm:1.5.5"
-    "@types/react": "npm:19.1.15"
+    "@types/react": "npm:19.2.2"
     "@types/react-dom": "npm:19.2.1"
     "@types/react-fade-in": "npm:2.0.2"
     "@types/react-relay": "npm:18.2.1"
