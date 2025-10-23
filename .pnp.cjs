@@ -120,7 +120,7 @@ const RAW_RUNTIME_STATE =
           ["kuromoji", "npm:0.1.2"],\
           ["kuroshiro", "npm:1.2.0"],\
           ["kuroshiro-analyzer-kuromoji", "npm:1.1.0"],\
-          ["lint-staged", "npm:16.2.4"],\
+          ["lint-staged", "npm:16.2.6"],\
           ["lodash", "npm:4.17.21"],\
           ["materialize-css", "npm:1.0.0"],\
           ["multicast-dns", "npm:7.2.5"],\
@@ -15165,7 +15165,7 @@ const RAW_RUNTIME_STATE =
           ["kuromoji", "npm:0.1.2"],\
           ["kuroshiro", "npm:1.2.0"],\
           ["kuroshiro-analyzer-kuromoji", "npm:1.1.0"],\
-          ["lint-staged", "npm:16.2.4"],\
+          ["lint-staged", "npm:16.2.6"],\
           ["lodash", "npm:4.17.21"],\
           ["materialize-css", "npm:1.0.0"],\
           ["multicast-dns", "npm:7.2.5"],\
@@ -15450,12 +15450,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lint-staged", [\
-      ["npm:16.2.4", {\
-        "packageLocation": "./.yarn/cache/lint-staged-npm-16.2.4-9199f5ada5-e4ce8e6b07.zip/node_modules/lint-staged/",\
+      ["npm:16.2.6", {\
+        "packageLocation": "./.yarn/cache/lint-staged-npm-16.2.6-0ee184c358-c419f13471.zip/node_modules/lint-staged/",\
         "packageDependencies": [\
-          ["lint-staged", "npm:16.2.4"],\
+          ["lint-staged", "npm:16.2.6"],\
           ["commander", "npm:14.0.1"],\
-          ["listr2", "npm:9.0.4"],\
+          ["listr2", "npm:9.0.5"],\
           ["micromatch", "npm:4.0.8"],\
           ["nano-spawn", "npm:2.0.0"],\
           ["pidtree", "npm:0.6.0"],\
@@ -15466,10 +15466,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["listr2", [\
-      ["npm:9.0.4", {\
-        "packageLocation": "./.yarn/cache/listr2-npm-9.0.4-fc5d287291-8d8665d2ef.zip/node_modules/listr2/",\
+      ["npm:9.0.5", {\
+        "packageLocation": "./.yarn/cache/listr2-npm-9.0.5-8443b39154-b78ffd6044.zip/node_modules/listr2/",\
         "packageDependencies": [\
-          ["listr2", "npm:9.0.4"],\
+          ["listr2", "npm:9.0.5"],\
           ["cli-truncate", "npm:5.1.0"],\
           ["colorette", "npm:2.0.20"],\
           ["eventemitter3", "npm:5.0.1"],\
