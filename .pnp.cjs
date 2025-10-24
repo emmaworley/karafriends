@@ -64,7 +64,7 @@ const RAW_RUNTIME_STATE =
           ["@types/color-convert", "npm:2.0.4"],\
           ["@types/compression", "npm:1.8.1"],\
           ["@types/cors", "npm:2.8.19"],\
-          ["@types/express", "npm:5.0.3"],\
+          ["@types/express", "npm:5.0.4"],\
           ["@types/format-duration", "npm:3.0.0"],\
           ["@types/gl-vec2", "npm:1.3.5"],\
           ["@types/hls.js", "npm:1.0.0"],\
@@ -585,7 +585,7 @@ const RAW_RUNTIME_STATE =
           ["@as-integrations/express5", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:1.1.2"],\
           ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.0.0"],\
           ["@types/apollo__server", null],\
-          ["@types/express", "npm:5.0.3"],\
+          ["@types/express", "npm:5.0.4"],\
           ["express", "npm:5.1.0"]\
         ],\
         "packagePeers": [\
@@ -7347,6 +7347,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-express-npm-5.0.3-78da63908b-bb6f10c14c.zip/node_modules/@types/express/",\
         "packageDependencies": [\
           ["@types/express", "npm:5.0.3"],\
+          ["@types/body-parser", "npm:1.19.5"],\
+          ["@types/express-serve-static-core", "npm:5.0.6"],\
+          ["@types/serve-static", "npm:1.15.7"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:5.0.4", {\
+        "packageLocation": "./.yarn/cache/@types-express-npm-5.0.4-605c48ca42-0a07540b82.zip/node_modules/@types/express/",\
+        "packageDependencies": [\
+          ["@types/express", "npm:5.0.4"],\
           ["@types/body-parser", "npm:1.19.5"],\
           ["@types/express-serve-static-core", "npm:5.0.6"],\
           ["@types/serve-static", "npm:1.15.7"]\
@@ -15109,7 +15119,7 @@ const RAW_RUNTIME_STATE =
           ["@types/color-convert", "npm:2.0.4"],\
           ["@types/compression", "npm:1.8.1"],\
           ["@types/cors", "npm:2.8.19"],\
-          ["@types/express", "npm:5.0.3"],\
+          ["@types/express", "npm:5.0.4"],\
           ["@types/format-duration", "npm:3.0.0"],\
           ["@types/gl-vec2", "npm:1.3.5"],\
           ["@types/hls.js", "npm:1.0.0"],\
