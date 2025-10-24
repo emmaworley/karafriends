@@ -94,7 +94,7 @@
   "devDependencies": {
     "7zip-bin": "5.1.1",
     "@babel/core": "7.28.4",
-    "@babel/preset-env": "7.28.3",
+    "@babel/preset-env": "7.28.5",
     "@babel/preset-react": "7.27.1",
     "@babel/runtime": "7.28.4",
     "@parcel/config-default": "2.16.0",
