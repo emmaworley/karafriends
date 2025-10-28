@@ -64,7 +64,7 @@ const RAW_RUNTIME_STATE =
           ["@types/color-convert", "npm:2.0.4"],\
           ["@types/compression", "npm:1.8.1"],\
           ["@types/cors", "npm:2.8.19"],\
-          ["@types/express", "npm:5.0.3"],\
+          ["@types/express", "npm:5.0.5"],\
           ["@types/format-duration", "npm:3.0.0"],\
           ["@types/gl-vec2", "npm:1.3.5"],\
           ["@types/hls.js", "npm:1.0.0"],\
@@ -585,7 +585,7 @@ const RAW_RUNTIME_STATE =
           ["@as-integrations/express5", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:1.1.2"],\
           ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.0.0"],\
           ["@types/apollo__server", null],\
-          ["@types/express", "npm:5.0.3"],\
+          ["@types/express", "npm:5.0.5"],\
           ["express", "npm:5.1.0"]\
         ],\
         "packagePeers": [\
@@ -7352,6 +7352,16 @@ const RAW_RUNTIME_STATE =
           ["@types/serve-static", "npm:1.15.7"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:5.0.5", {\
+        "packageLocation": "./.yarn/cache/@types-express-npm-5.0.5-450717ee89-9e72410286.zip/node_modules/@types/express/",\
+        "packageDependencies": [\
+          ["@types/express", "npm:5.0.5"],\
+          ["@types/body-parser", "npm:1.19.5"],\
+          ["@types/express-serve-static-core", "npm:5.0.6"],\
+          ["@types/serve-static", "npm:1.15.10"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@types/express-serve-static-core", [\
@@ -7803,9 +7813,28 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:24.7.1"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:0.17.6", {\
+        "packageLocation": "./.yarn/cache/@types-send-npm-0.17.6-fe650e1f5c-4948ab32ab.zip/node_modules/@types/send/",\
+        "packageDependencies": [\
+          ["@types/send", "npm:0.17.6"],\
+          ["@types/mime", "npm:1.3.5"],\
+          ["@types/node", "npm:24.7.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@types/serve-static", [\
+      ["npm:1.15.10", {\
+        "packageLocation": "./.yarn/cache/@types-serve-static-npm-1.15.10-7bd7926ff3-d9be724875.zip/node_modules/@types/serve-static/",\
+        "packageDependencies": [\
+          ["@types/serve-static", "npm:1.15.10"],\
+          ["@types/http-errors", "npm:2.0.4"],\
+          ["@types/node", "npm:24.7.1"],\
+          ["@types/send", "npm:0.17.6"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:1.15.7", {\
         "packageLocation": "./.yarn/cache/@types-serve-static-npm-1.15.7-d4eef0bd1a-c5a7171d56.zip/node_modules/@types/serve-static/",\
         "packageDependencies": [\
@@ -15109,7 +15138,7 @@ const RAW_RUNTIME_STATE =
           ["@types/color-convert", "npm:2.0.4"],\
           ["@types/compression", "npm:1.8.1"],\
           ["@types/cors", "npm:2.8.19"],\
-          ["@types/express", "npm:5.0.3"],\
+          ["@types/express", "npm:5.0.5"],\
           ["@types/format-duration", "npm:3.0.0"],\
           ["@types/gl-vec2", "npm:1.3.5"],\
           ["@types/hls.js", "npm:1.0.0"],\
