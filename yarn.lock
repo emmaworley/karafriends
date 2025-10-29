@@ -95,9 +95,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/server@npm:5.0.0":
-  version: 5.0.0
-  resolution: "@apollo/server@npm:5.0.0"
+"@apollo/server@npm:5.1.0":
+  version: 5.1.0
+  resolution: "@apollo/server@npm:5.1.0"
   dependencies:
     "@apollo/cache-control-types": "npm:^1.0.3"
     "@apollo/server-gateway-interface": "npm:^2.0.0"
@@ -121,7 +121,7 @@ __metadata:
     whatwg-mimetype: "npm:^4.0.0"
   peerDependencies:
     graphql: ^16.11.0
-  checksum: 10/bacc986ff9e76a22465fb290b3c568a1464818d2f6a9a233142db79b0e8927297ce24264ffceb9bc5f437225f13d1ed814c061479430bc31fa3a3da2d169f218
+  checksum: 10/23ce7b0b397f0a4484bef8fcc64d4f6608e94af5173718e698f2b5aba646467c05e258d773484533036c0a6b59bea0a967ae406b80e6ca9e29a1d554e1c62b77
   languageName: node
   linkType: hard
 
@@ -11749,7 +11749,7 @@ __metadata:
   dependencies:
     7zip-bin: "npm:5.1.1"
     "@apollo/datasource-rest": "npm:6.4.1"
-    "@apollo/server": "npm:5.0.0"
+    "@apollo/server": "npm:5.1.0"
     "@apollo/utils.fetcher": "npm:3.1.0"
     "@apollo/utils.keyvaluecache": "npm:4.0.0"
     "@as-integrations/express5": "npm:1.1.2"
