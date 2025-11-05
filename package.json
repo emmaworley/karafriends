@@ -110,7 +110,7 @@
     "@parcel/transformer-json": "2.16.0",
     "@parcel/transformer-postcss": "2.16.0",
     "@parcel/transformer-posthtml": "2.16.0",
-    "@parcel/transformer-raw": "2.16.0",
+    "@parcel/transformer-raw": "2.16.1",
     "@parcel/transformer-sass": "2.16.0",
     "@parcel/transformer-worklet": "2.16.0",
     "@testing-library/dom": "10.4.1",
