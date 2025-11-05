@@ -104,7 +104,7 @@
     "@parcel/transformer-css": "2.16.0",
     "@parcel/transformer-glsl": "2.16.0",
     "@parcel/transformer-html": "2.16.0",
-    "@parcel/transformer-image": "2.16.0",
+    "@parcel/transformer-image": "2.16.1",
     "@parcel/transformer-inline-string": "2.16.0",
     "@parcel/transformer-js": "2.16.0",
     "@parcel/transformer-json": "2.16.0",
