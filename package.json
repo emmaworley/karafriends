@@ -31,7 +31,7 @@
     "@apollo/utils.keyvaluecache": "4.0.0",
     "@as-integrations/express5": "1.1.2",
     "@graphql-tools/schema": "10.0.25",
-    "@parcel/transformer-react-refresh-wrap": "2.16.0",
+    "@parcel/transformer-react-refresh-wrap": "2.16.1",
     "@sentry/browser": "10.19.0",
     "@sentry/node": "10.19.0",
     "@types/react-fade-in": "2.0.2",
