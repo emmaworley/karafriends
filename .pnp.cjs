@@ -55,7 +55,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-react-refresh-wrap", "npm:2.16.0"],\
           ["@parcel/transformer-sass", "npm:2.16.0"],\
           ["@parcel/transformer-worklet", "npm:2.16.0"],\
-          ["@sentry/browser", "npm:10.19.0"],\
+          ["@sentry/browser", "npm:10.25.0"],\
           ["@sentry/node", "npm:10.19.0"],\
           ["@testing-library/dom", "npm:10.4.1"],\
           ["@testing-library/webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.2.1"],\
@@ -6696,57 +6696,57 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@sentry-internal/browser-utils", [\
-      ["npm:10.19.0", {\
-        "packageLocation": "./.yarn/cache/@sentry-internal-browser-utils-npm-10.19.0-cd081f448c-cf2926ef90.zip/node_modules/@sentry-internal/browser-utils/",\
+      ["npm:10.25.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-internal-browser-utils-npm-10.25.0-29b0977220-3dc164ce78.zip/node_modules/@sentry-internal/browser-utils/",\
         "packageDependencies": [\
-          ["@sentry-internal/browser-utils", "npm:10.19.0"],\
-          ["@sentry/core", "npm:10.19.0"]\
+          ["@sentry-internal/browser-utils", "npm:10.25.0"],\
+          ["@sentry/core", "npm:10.25.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@sentry-internal/feedback", [\
-      ["npm:10.19.0", {\
-        "packageLocation": "./.yarn/cache/@sentry-internal-feedback-npm-10.19.0-41d88e6117-0e5860651b.zip/node_modules/@sentry-internal/feedback/",\
+      ["npm:10.25.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-internal-feedback-npm-10.25.0-ee7ad1bdd7-aff3c0bb48.zip/node_modules/@sentry-internal/feedback/",\
         "packageDependencies": [\
-          ["@sentry-internal/feedback", "npm:10.19.0"],\
-          ["@sentry/core", "npm:10.19.0"]\
+          ["@sentry-internal/feedback", "npm:10.25.0"],\
+          ["@sentry/core", "npm:10.25.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@sentry-internal/replay", [\
-      ["npm:10.19.0", {\
-        "packageLocation": "./.yarn/cache/@sentry-internal-replay-npm-10.19.0-d48b66a426-9d64ccddc2.zip/node_modules/@sentry-internal/replay/",\
+      ["npm:10.25.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-internal-replay-npm-10.25.0-3e7bac5dd8-4b84f0c311.zip/node_modules/@sentry-internal/replay/",\
         "packageDependencies": [\
-          ["@sentry-internal/replay", "npm:10.19.0"],\
-          ["@sentry-internal/browser-utils", "npm:10.19.0"],\
-          ["@sentry/core", "npm:10.19.0"]\
+          ["@sentry-internal/replay", "npm:10.25.0"],\
+          ["@sentry-internal/browser-utils", "npm:10.25.0"],\
+          ["@sentry/core", "npm:10.25.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@sentry-internal/replay-canvas", [\
-      ["npm:10.19.0", {\
-        "packageLocation": "./.yarn/cache/@sentry-internal-replay-canvas-npm-10.19.0-3ebc666955-2993d0eb2f.zip/node_modules/@sentry-internal/replay-canvas/",\
+      ["npm:10.25.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-internal-replay-canvas-npm-10.25.0-92268b1ba3-983658514e.zip/node_modules/@sentry-internal/replay-canvas/",\
         "packageDependencies": [\
-          ["@sentry-internal/replay-canvas", "npm:10.19.0"],\
-          ["@sentry-internal/replay", "npm:10.19.0"],\
-          ["@sentry/core", "npm:10.19.0"]\
+          ["@sentry-internal/replay-canvas", "npm:10.25.0"],\
+          ["@sentry-internal/replay", "npm:10.25.0"],\
+          ["@sentry/core", "npm:10.25.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@sentry/browser", [\
-      ["npm:10.19.0", {\
-        "packageLocation": "./.yarn/cache/@sentry-browser-npm-10.19.0-144b4ac27d-c7133c57b3.zip/node_modules/@sentry/browser/",\
+      ["npm:10.25.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-browser-npm-10.25.0-4b96d1e0f7-2177077fef.zip/node_modules/@sentry/browser/",\
         "packageDependencies": [\
-          ["@sentry/browser", "npm:10.19.0"],\
-          ["@sentry-internal/browser-utils", "npm:10.19.0"],\
-          ["@sentry-internal/feedback", "npm:10.19.0"],\
-          ["@sentry-internal/replay", "npm:10.19.0"],\
-          ["@sentry-internal/replay-canvas", "npm:10.19.0"],\
-          ["@sentry/core", "npm:10.19.0"]\
+          ["@sentry/browser", "npm:10.25.0"],\
+          ["@sentry-internal/browser-utils", "npm:10.25.0"],\
+          ["@sentry-internal/feedback", "npm:10.25.0"],\
+          ["@sentry-internal/replay", "npm:10.25.0"],\
+          ["@sentry-internal/replay-canvas", "npm:10.25.0"],\
+          ["@sentry/core", "npm:10.25.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6756,6 +6756,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@sentry-core-npm-10.19.0-b2de0c259c-4556a07fee.zip/node_modules/@sentry/core/",\
         "packageDependencies": [\
           ["@sentry/core", "npm:10.19.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:10.25.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-core-npm-10.25.0-2660b3c536-3344707441.zip/node_modules/@sentry/core/",\
+        "packageDependencies": [\
+          ["@sentry/core", "npm:10.25.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15100,7 +15107,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-react-refresh-wrap", "npm:2.16.0"],\
           ["@parcel/transformer-sass", "npm:2.16.0"],\
           ["@parcel/transformer-worklet", "npm:2.16.0"],\
-          ["@sentry/browser", "npm:10.19.0"],\
+          ["@sentry/browser", "npm:10.25.0"],\
           ["@sentry/node", "npm:10.19.0"],\
           ["@testing-library/dom", "npm:10.4.1"],\
           ["@testing-library/webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.2.1"],\
