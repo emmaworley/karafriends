@@ -2005,7 +2005,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-tools/schema@npm:10.0.25, @graphql-tools/schema@npm:^10.0.0":
+"@graphql-tools/merge@npm:^9.1.5":
+  version: 9.1.5
+  resolution: "@graphql-tools/merge@npm:9.1.5"
+  dependencies:
+    "@graphql-tools/utils": "npm:^10.10.3"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: 10/c38cc4f66169627bd78be681d7a4a5112dafff69f85d729e47ad9786a5a5229e810a30380028619a4a36c285924fc8559dbe985c2f50f348622ec2266cdc91f7
+  languageName: node
+  linkType: hard
+
+"@graphql-tools/schema@npm:10.0.29":
+  version: 10.0.29
+  resolution: "@graphql-tools/schema@npm:10.0.29"
+  dependencies:
+    "@graphql-tools/merge": "npm:^9.1.5"
+    "@graphql-tools/utils": "npm:^10.10.3"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: 10/80362e80ea1c01e06368e98226ae2d37c1e2cb3fd0bf85bbf9a59bfa1e8dd8a5964a484b6ecaf7b0775bbceccbbff6f0c67afc08de03e0fce92bdd726efb68af
+  languageName: node
+  linkType: hard
+
+"@graphql-tools/schema@npm:^10.0.0":
   version: 10.0.25
   resolution: "@graphql-tools/schema@npm:10.0.25"
   dependencies:
@@ -2015,6 +2040,20 @@ __metadata:
   peerDependencies:
     graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
   checksum: 10/44f37905d180fc40fbafeaf2972bbabb0287c21987450a997bc0afef82fc8b61621de7695f929ec756426a315cd1dfffe8d1342b1ea14408320488b911744d0e
+  languageName: node
+  linkType: hard
+
+"@graphql-tools/utils@npm:^10.10.3":
+  version: 10.10.3
+  resolution: "@graphql-tools/utils@npm:10.10.3"
+  dependencies:
+    "@graphql-typed-document-node/core": "npm:^3.1.1"
+    "@whatwg-node/promise-helpers": "npm:^1.0.0"
+    cross-inspect: "npm:1.0.1"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: 10/27cad171e360161bd8c25dada060eac2c882a237ed0a1fecf03ace3e79d54d223ffd71f467ba8509153d3ed3b04203483f3e592acf07d89408254e0bc3342e55
   languageName: node
   linkType: hard
 
@@ -11757,7 +11796,7 @@ __metadata:
     "@babel/preset-env": "npm:7.28.3"
     "@babel/preset-react": "npm:7.27.1"
     "@babel/runtime": "npm:7.28.4"
-    "@graphql-tools/schema": "npm:10.0.25"
+    "@graphql-tools/schema": "npm:10.0.29"
     "@parcel/config-default": "npm:2.16.0"
     "@parcel/core": "npm:2.16.0"
     "@parcel/resolver-default": "npm:2.16.0"
