@@ -5674,17 +5674,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/mocha-framework@npm:9.20.0":
-  version: 9.20.0
-  resolution: "@wdio/mocha-framework@npm:9.20.0"
+"@wdio/mocha-framework@npm:9.20.1":
+  version: 9.20.1
+  resolution: "@wdio/mocha-framework@npm:9.20.1"
   dependencies:
     "@types/mocha": "npm:^10.0.6"
     "@types/node": "npm:^20.11.28"
     "@wdio/logger": "npm:9.18.0"
     "@wdio/types": "npm:9.20.0"
-    "@wdio/utils": "npm:9.20.0"
+    "@wdio/utils": "npm:9.20.1"
     mocha: "npm:^10.3.0"
-  checksum: 10/6fbdf0441e2bf1366c231123ce76acbccd5a016699a88ef40f5b1815681f63c8163d7a5cfbf5a9eec1fd3f292d52b8225060f650e07bb5a8544b7d6281847922
+  checksum: 10/51fc63bc007ae7ea32acc0f30f010e95db56f11bfec81cdc8681d82a3f29c820f16ed853c6f7a02466d03070079608423174b46e56ed82fc18a829b55d479a67
   languageName: node
   linkType: hard
 
@@ -5771,6 +5771,28 @@ __metadata:
     split2: "npm:^4.2.0"
     wait-port: "npm:^1.1.0"
   checksum: 10/c1ea1875c6a9dbc187cd85b2071799d575b8ca6e0d2ac63b7efe735cadad9acec70440a44df6efb64a664196fa91f1936ff2e8fdea82676b58a715892ca4d9c7
+  languageName: node
+  linkType: hard
+
+"@wdio/utils@npm:9.20.1":
+  version: 9.20.1
+  resolution: "@wdio/utils@npm:9.20.1"
+  dependencies:
+    "@puppeteer/browsers": "npm:^2.2.0"
+    "@wdio/logger": "npm:9.18.0"
+    "@wdio/types": "npm:9.20.0"
+    decamelize: "npm:^6.0.0"
+    deepmerge-ts: "npm:^7.0.3"
+    edgedriver: "npm:^6.1.2"
+    geckodriver: "npm:^5.0.0"
+    get-port: "npm:^7.0.0"
+    import-meta-resolve: "npm:^4.0.0"
+    locate-app: "npm:^2.2.24"
+    mitt: "npm:^3.0.1"
+    safaridriver: "npm:^1.0.0"
+    split2: "npm:^4.2.0"
+    wait-port: "npm:^1.1.0"
+  checksum: 10/2cbf1f5bbc6663b08f0205339b4219ed2de17594db600034396c5ea0a98faa58d5e547e2fc9dc3e0aa0b48a1d6baec32c61e24943bd309b80cc6d519ca2d1597
   languageName: node
   linkType: hard
 
@@ -11810,7 +11832,7 @@ __metadata:
     "@wdio/cli": "npm:9.20.0"
     "@wdio/globals": "npm:9.17.0"
     "@wdio/local-runner": "npm:9.20.0"
-    "@wdio/mocha-framework": "npm:9.20.0"
+    "@wdio/mocha-framework": "npm:9.20.1"
     "@yarnpkg/pnpify": "npm:4.1.6"
     babel-loader: "npm:10.0.0"
     babel-plugin-relay: "npm:20.1.1"

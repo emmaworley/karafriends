@@ -90,7 +90,7 @@ const RAW_RUNTIME_STATE =
           ["@wdio/cli", "npm:9.20.0"],\
           ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.17.0"],\
           ["@wdio/local-runner", "npm:9.20.0"],\
-          ["@wdio/mocha-framework", "npm:9.20.0"],\
+          ["@wdio/mocha-framework", "npm:9.20.1"],\
           ["@yarnpkg/pnpify", "npm:4.1.6"],\
           ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.0.0"],\
           ["babel-plugin-relay", "npm:20.1.1"],\
@@ -8217,15 +8217,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@wdio/mocha-framework", [\
-      ["npm:9.20.0", {\
-        "packageLocation": "./.yarn/cache/@wdio-mocha-framework-npm-9.20.0-67380890f1-6fbdf0441e.zip/node_modules/@wdio/mocha-framework/",\
+      ["npm:9.20.1", {\
+        "packageLocation": "./.yarn/cache/@wdio-mocha-framework-npm-9.20.1-bdcb84858c-51fc63bc00.zip/node_modules/@wdio/mocha-framework/",\
         "packageDependencies": [\
-          ["@wdio/mocha-framework", "npm:9.20.0"],\
+          ["@wdio/mocha-framework", "npm:9.20.1"],\
           ["@types/mocha", "npm:10.0.10"],\
           ["@types/node", "npm:20.17.16"],\
           ["@wdio/logger", "npm:9.18.0"],\
           ["@wdio/types", "npm:9.20.0"],\
-          ["@wdio/utils", "npm:9.20.0"],\
+          ["@wdio/utils", "npm:9.20.1"],\
           ["mocha", "npm:10.8.2"]\
         ],\
         "linkType": "HARD"\
@@ -8313,6 +8313,27 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@wdio-utils-npm-9.20.0-c51cd6218d-c1ea1875c6.zip/node_modules/@wdio/utils/",\
         "packageDependencies": [\
           ["@wdio/utils", "npm:9.20.0"],\
+          ["@puppeteer/browsers", "npm:2.10.11"],\
+          ["@wdio/logger", "npm:9.18.0"],\
+          ["@wdio/types", "npm:9.20.0"],\
+          ["decamelize", "npm:6.0.0"],\
+          ["deepmerge-ts", "npm:7.1.4"],\
+          ["edgedriver", "npm:6.1.2"],\
+          ["geckodriver", "npm:5.0.0"],\
+          ["get-port", "npm:7.1.0"],\
+          ["import-meta-resolve", "npm:4.1.0"],\
+          ["locate-app", "npm:2.5.0"],\
+          ["mitt", "npm:3.0.1"],\
+          ["safaridriver", "npm:1.0.0"],\
+          ["split2", "npm:4.2.0"],\
+          ["wait-port", "npm:1.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:9.20.1", {\
+        "packageLocation": "./.yarn/cache/@wdio-utils-npm-9.20.1-d727296d2e-2cbf1f5bbc.zip/node_modules/@wdio/utils/",\
+        "packageDependencies": [\
+          ["@wdio/utils", "npm:9.20.1"],\
           ["@puppeteer/browsers", "npm:2.10.11"],\
           ["@wdio/logger", "npm:9.18.0"],\
           ["@wdio/types", "npm:9.20.0"],\
@@ -15135,7 +15156,7 @@ const RAW_RUNTIME_STATE =
           ["@wdio/cli", "npm:9.20.0"],\
           ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.17.0"],\
           ["@wdio/local-runner", "npm:9.20.0"],\
-          ["@wdio/mocha-framework", "npm:9.20.0"],\
+          ["@wdio/mocha-framework", "npm:9.20.1"],\
           ["@yarnpkg/pnpify", "npm:4.1.6"],\
           ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.0.0"],\
           ["babel-plugin-relay", "npm:20.1.1"],\
