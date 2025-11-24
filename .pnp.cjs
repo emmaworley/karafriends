@@ -29,7 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["7zip-bin", "npm:5.1.1"],\
           ["@apollo/datasource-rest", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.4.1"],\
-          ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.0.0"],\
+          ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.2.0"],\
           ["@apollo/utils.fetcher", "npm:3.1.0"],\
           ["@apollo/utils.keyvaluecache", "npm:4.0.0"],\
           ["@as-integrations/express5", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:1.1.2"],\
@@ -211,10 +211,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:2b50c706cde2c118e84af1dde049a73d4543a7496986cc72a1de7ff38b432dcb1cbd1f3baf6cdbde4fb31e2916d60852854ab96079b433a51bce4cbf1ee4b56a#npm:1.0.3", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-cache-control-types-virtual-938334e474/0/cache/@apollo-cache-control-types-npm-1.0.3-2a44d8278e-a588e52bfa.zip/node_modules/@apollo/cache-control-types/",\
+      ["virtual:cf6734522703b9fc34e888df27ff1bb48154cdd7b055893c91c5f5e75835e6531e39d1ad06761f448f8ced0243f1a388349613a93a2af2093d1a43fa0ccfd8c8#npm:1.0.3", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-cache-control-types-virtual-1fe0f61390/0/cache/@apollo-cache-control-types-npm-1.0.3-2a44d8278e-a588e52bfa.zip/node_modules/@apollo/cache-control-types/",\
         "packageDependencies": [\
-          ["@apollo/cache-control-types", "virtual:2b50c706cde2c118e84af1dde049a73d4543a7496986cc72a1de7ff38b432dcb1cbd1f3baf6cdbde4fb31e2916d60852854ab96079b433a51bce4cbf1ee4b56a#npm:1.0.3"],\
+          ["@apollo/cache-control-types", "virtual:cf6734522703b9fc34e888df27ff1bb48154cdd7b055893c91c5f5e75835e6531e39d1ad06761f448f8ced0243f1a388349613a93a2af2093d1a43fa0ccfd8c8#npm:1.0.3"],\
           ["@types/graphql", null],\
           ["graphql", "npm:16.11.0"]\
         ],\
@@ -278,26 +278,26 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@apollo/server", [\
-      ["npm:5.0.0", {\
-        "packageLocation": "./.yarn/cache/@apollo-server-npm-5.0.0-dd6f502554-bacc986ff9.zip/node_modules/@apollo/server/",\
+      ["npm:5.2.0", {\
+        "packageLocation": "./.yarn/cache/@apollo-server-npm-5.2.0-7f75aa52c5-dfbdbeecd7.zip/node_modules/@apollo/server/",\
         "packageDependencies": [\
-          ["@apollo/server", "npm:5.0.0"]\
+          ["@apollo/server", "npm:5.2.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-server-virtual-2b50c706cd/0/cache/@apollo-server-npm-5.0.0-dd6f502554-bacc986ff9.zip/node_modules/@apollo/server/",\
+      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.2.0", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-server-virtual-cf67345227/0/cache/@apollo-server-npm-5.2.0-7f75aa52c5-dfbdbeecd7.zip/node_modules/@apollo/server/",\
         "packageDependencies": [\
-          ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.0.0"],\
-          ["@apollo/cache-control-types", "virtual:2b50c706cde2c118e84af1dde049a73d4543a7496986cc72a1de7ff38b432dcb1cbd1f3baf6cdbde4fb31e2916d60852854ab96079b433a51bce4cbf1ee4b56a#npm:1.0.3"],\
-          ["@apollo/server-gateway-interface", "virtual:2b50c706cde2c118e84af1dde049a73d4543a7496986cc72a1de7ff38b432dcb1cbd1f3baf6cdbde4fb31e2916d60852854ab96079b433a51bce4cbf1ee4b56a#npm:2.0.0"],\
+          ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.2.0"],\
+          ["@apollo/cache-control-types", "virtual:cf6734522703b9fc34e888df27ff1bb48154cdd7b055893c91c5f5e75835e6531e39d1ad06761f448f8ced0243f1a388349613a93a2af2093d1a43fa0ccfd8c8#npm:1.0.3"],\
+          ["@apollo/server-gateway-interface", "virtual:cf6734522703b9fc34e888df27ff1bb48154cdd7b055893c91c5f5e75835e6531e39d1ad06761f448f8ced0243f1a388349613a93a2af2093d1a43fa0ccfd8c8#npm:2.0.0"],\
           ["@apollo/usage-reporting-protobuf", "npm:4.1.1"],\
           ["@apollo/utils.createhash", "npm:3.0.1"],\
           ["@apollo/utils.fetcher", "npm:3.1.0"],\
           ["@apollo/utils.isnodelike", "npm:3.0.0"],\
           ["@apollo/utils.keyvaluecache", "npm:4.0.0"],\
           ["@apollo/utils.logger", "npm:3.0.0"],\
-          ["@apollo/utils.usagereporting", "virtual:2b50c706cde2c118e84af1dde049a73d4543a7496986cc72a1de7ff38b432dcb1cbd1f3baf6cdbde4fb31e2916d60852854ab96079b433a51bce4cbf1ee4b56a#npm:2.1.0"],\
+          ["@apollo/utils.usagereporting", "virtual:cf6734522703b9fc34e888df27ff1bb48154cdd7b055893c91c5f5e75835e6531e39d1ad06761f448f8ced0243f1a388349613a93a2af2093d1a43fa0ccfd8c8#npm:2.1.0"],\
           ["@apollo/utils.withrequired", "npm:3.0.0"],\
           ["@graphql-tools/schema", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.0.25"],\
           ["@types/graphql", null],\
@@ -327,10 +327,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:2b50c706cde2c118e84af1dde049a73d4543a7496986cc72a1de7ff38b432dcb1cbd1f3baf6cdbde4fb31e2916d60852854ab96079b433a51bce4cbf1ee4b56a#npm:2.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-server-gateway-interface-virtual-ad65c3f6ad/0/cache/@apollo-server-gateway-interface-npm-2.0.0-158bd89fb5-2186a2926a.zip/node_modules/@apollo/server-gateway-interface/",\
+      ["virtual:cf6734522703b9fc34e888df27ff1bb48154cdd7b055893c91c5f5e75835e6531e39d1ad06761f448f8ced0243f1a388349613a93a2af2093d1a43fa0ccfd8c8#npm:2.0.0", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-server-gateway-interface-virtual-3ea8cb15cf/0/cache/@apollo-server-gateway-interface-npm-2.0.0-158bd89fb5-2186a2926a.zip/node_modules/@apollo/server-gateway-interface/",\
         "packageDependencies": [\
-          ["@apollo/server-gateway-interface", "virtual:2b50c706cde2c118e84af1dde049a73d4543a7496986cc72a1de7ff38b432dcb1cbd1f3baf6cdbde4fb31e2916d60852854ab96079b433a51bce4cbf1ee4b56a#npm:2.0.0"],\
+          ["@apollo/server-gateway-interface", "virtual:cf6734522703b9fc34e888df27ff1bb48154cdd7b055893c91c5f5e75835e6531e39d1ad06761f448f8ced0243f1a388349613a93a2af2093d1a43fa0ccfd8c8#npm:2.0.0"],\
           ["@apollo/usage-reporting-protobuf", "npm:4.1.1"],\
           ["@apollo/utils.fetcher", "npm:3.1.0"],\
           ["@apollo/utils.keyvaluecache", "npm:4.0.0"],\
@@ -374,10 +374,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:e55bb97aa07d0b0a06409427530b2537b005783d9338d315d9da604e3246a823f5d721fe35676798d6615744cabb50c61809a4a62172bc676ac42a54a02f1563#npm:2.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-utils.dropunuseddefinitions-virtual-7f19fa561a/0/cache/@apollo-utils.dropunuseddefinitions-npm-2.0.1-df9dff59af-c12166f255.zip/node_modules/@apollo/utils.dropunuseddefinitions/",\
+      ["virtual:f6113f0775610d710c17f4c278f73d938f0031f470b94dd2fc0881b16a59236ea81488a16c156335a97ff5b23bb40a52076db44755bb5dbd676e43476145e9d0#npm:2.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-utils.dropunuseddefinitions-virtual-fffeebc8e9/0/cache/@apollo-utils.dropunuseddefinitions-npm-2.0.1-df9dff59af-c12166f255.zip/node_modules/@apollo/utils.dropunuseddefinitions/",\
         "packageDependencies": [\
-          ["@apollo/utils.dropunuseddefinitions", "virtual:e55bb97aa07d0b0a06409427530b2537b005783d9338d315d9da604e3246a823f5d721fe35676798d6615744cabb50c61809a4a62172bc676ac42a54a02f1563#npm:2.0.1"],\
+          ["@apollo/utils.dropunuseddefinitions", "virtual:f6113f0775610d710c17f4c278f73d938f0031f470b94dd2fc0881b16a59236ea81488a16c156335a97ff5b23bb40a52076db44755bb5dbd676e43476145e9d0#npm:2.0.1"],\
           ["@types/graphql", null],\
           ["graphql", "npm:16.11.0"]\
         ],\
@@ -443,10 +443,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:e55bb97aa07d0b0a06409427530b2537b005783d9338d315d9da604e3246a823f5d721fe35676798d6615744cabb50c61809a4a62172bc676ac42a54a02f1563#npm:2.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-utils.printwithreducedwhitespace-virtual-df8558d790/0/cache/@apollo-utils.printwithreducedwhitespace-npm-2.0.1-7bced48ce5-16cd191e66.zip/node_modules/@apollo/utils.printwithreducedwhitespace/",\
+      ["virtual:f6113f0775610d710c17f4c278f73d938f0031f470b94dd2fc0881b16a59236ea81488a16c156335a97ff5b23bb40a52076db44755bb5dbd676e43476145e9d0#npm:2.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-utils.printwithreducedwhitespace-virtual-17a98d2fd8/0/cache/@apollo-utils.printwithreducedwhitespace-npm-2.0.1-7bced48ce5-16cd191e66.zip/node_modules/@apollo/utils.printwithreducedwhitespace/",\
         "packageDependencies": [\
-          ["@apollo/utils.printwithreducedwhitespace", "virtual:e55bb97aa07d0b0a06409427530b2537b005783d9338d315d9da604e3246a823f5d721fe35676798d6615744cabb50c61809a4a62172bc676ac42a54a02f1563#npm:2.0.1"],\
+          ["@apollo/utils.printwithreducedwhitespace", "virtual:f6113f0775610d710c17f4c278f73d938f0031f470b94dd2fc0881b16a59236ea81488a16c156335a97ff5b23bb40a52076db44755bb5dbd676e43476145e9d0#npm:2.0.1"],\
           ["@types/graphql", null],\
           ["graphql", "npm:16.11.0"]\
         ],\
@@ -465,10 +465,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:e55bb97aa07d0b0a06409427530b2537b005783d9338d315d9da604e3246a823f5d721fe35676798d6615744cabb50c61809a4a62172bc676ac42a54a02f1563#npm:2.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-utils.removealiases-virtual-91a293a7ac/0/cache/@apollo-utils.removealiases-npm-2.0.1-3400c22b9b-2f3f925b23.zip/node_modules/@apollo/utils.removealiases/",\
+      ["virtual:f6113f0775610d710c17f4c278f73d938f0031f470b94dd2fc0881b16a59236ea81488a16c156335a97ff5b23bb40a52076db44755bb5dbd676e43476145e9d0#npm:2.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-utils.removealiases-virtual-3effe91702/0/cache/@apollo-utils.removealiases-npm-2.0.1-3400c22b9b-2f3f925b23.zip/node_modules/@apollo/utils.removealiases/",\
         "packageDependencies": [\
-          ["@apollo/utils.removealiases", "virtual:e55bb97aa07d0b0a06409427530b2537b005783d9338d315d9da604e3246a823f5d721fe35676798d6615744cabb50c61809a4a62172bc676ac42a54a02f1563#npm:2.0.1"],\
+          ["@apollo/utils.removealiases", "virtual:f6113f0775610d710c17f4c278f73d938f0031f470b94dd2fc0881b16a59236ea81488a16c156335a97ff5b23bb40a52076db44755bb5dbd676e43476145e9d0#npm:2.0.1"],\
           ["@types/graphql", null],\
           ["graphql", "npm:16.11.0"]\
         ],\
@@ -487,10 +487,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:e55bb97aa07d0b0a06409427530b2537b005783d9338d315d9da604e3246a823f5d721fe35676798d6615744cabb50c61809a4a62172bc676ac42a54a02f1563#npm:2.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-utils.sortast-virtual-6335083b47/0/cache/@apollo-utils.sortast-npm-2.0.1-50ae35efaf-b71245558e.zip/node_modules/@apollo/utils.sortast/",\
+      ["virtual:f6113f0775610d710c17f4c278f73d938f0031f470b94dd2fc0881b16a59236ea81488a16c156335a97ff5b23bb40a52076db44755bb5dbd676e43476145e9d0#npm:2.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-utils.sortast-virtual-7df9a51d9e/0/cache/@apollo-utils.sortast-npm-2.0.1-50ae35efaf-b71245558e.zip/node_modules/@apollo/utils.sortast/",\
         "packageDependencies": [\
-          ["@apollo/utils.sortast", "virtual:e55bb97aa07d0b0a06409427530b2537b005783d9338d315d9da604e3246a823f5d721fe35676798d6615744cabb50c61809a4a62172bc676ac42a54a02f1563#npm:2.0.1"],\
+          ["@apollo/utils.sortast", "virtual:f6113f0775610d710c17f4c278f73d938f0031f470b94dd2fc0881b16a59236ea81488a16c156335a97ff5b23bb40a52076db44755bb5dbd676e43476145e9d0#npm:2.0.1"],\
           ["@types/graphql", null],\
           ["graphql", "npm:16.11.0"],\
           ["lodash.sortby", "npm:4.7.0"]\
@@ -510,10 +510,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:e55bb97aa07d0b0a06409427530b2537b005783d9338d315d9da604e3246a823f5d721fe35676798d6615744cabb50c61809a4a62172bc676ac42a54a02f1563#npm:2.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-utils.stripsensitiveliterals-virtual-f9d9a12e67/0/cache/@apollo-utils.stripsensitiveliterals-npm-2.0.1-6ee81b6b8c-a3f74af062.zip/node_modules/@apollo/utils.stripsensitiveliterals/",\
+      ["virtual:f6113f0775610d710c17f4c278f73d938f0031f470b94dd2fc0881b16a59236ea81488a16c156335a97ff5b23bb40a52076db44755bb5dbd676e43476145e9d0#npm:2.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-utils.stripsensitiveliterals-virtual-35c9066da1/0/cache/@apollo-utils.stripsensitiveliterals-npm-2.0.1-6ee81b6b8c-a3f74af062.zip/node_modules/@apollo/utils.stripsensitiveliterals/",\
         "packageDependencies": [\
-          ["@apollo/utils.stripsensitiveliterals", "virtual:e55bb97aa07d0b0a06409427530b2537b005783d9338d315d9da604e3246a823f5d721fe35676798d6615744cabb50c61809a4a62172bc676ac42a54a02f1563#npm:2.0.1"],\
+          ["@apollo/utils.stripsensitiveliterals", "virtual:f6113f0775610d710c17f4c278f73d938f0031f470b94dd2fc0881b16a59236ea81488a16c156335a97ff5b23bb40a52076db44755bb5dbd676e43476145e9d0#npm:2.0.1"],\
           ["@types/graphql", null],\
           ["graphql", "npm:16.11.0"]\
         ],\
@@ -532,16 +532,16 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:2b50c706cde2c118e84af1dde049a73d4543a7496986cc72a1de7ff38b432dcb1cbd1f3baf6cdbde4fb31e2916d60852854ab96079b433a51bce4cbf1ee4b56a#npm:2.1.0", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-utils.usagereporting-virtual-e55bb97aa0/0/cache/@apollo-utils.usagereporting-npm-2.1.0-df6b791c39-8af4b23000.zip/node_modules/@apollo/utils.usagereporting/",\
+      ["virtual:cf6734522703b9fc34e888df27ff1bb48154cdd7b055893c91c5f5e75835e6531e39d1ad06761f448f8ced0243f1a388349613a93a2af2093d1a43fa0ccfd8c8#npm:2.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-utils.usagereporting-virtual-f6113f0775/0/cache/@apollo-utils.usagereporting-npm-2.1.0-df6b791c39-8af4b23000.zip/node_modules/@apollo/utils.usagereporting/",\
         "packageDependencies": [\
-          ["@apollo/utils.usagereporting", "virtual:2b50c706cde2c118e84af1dde049a73d4543a7496986cc72a1de7ff38b432dcb1cbd1f3baf6cdbde4fb31e2916d60852854ab96079b433a51bce4cbf1ee4b56a#npm:2.1.0"],\
+          ["@apollo/utils.usagereporting", "virtual:cf6734522703b9fc34e888df27ff1bb48154cdd7b055893c91c5f5e75835e6531e39d1ad06761f448f8ced0243f1a388349613a93a2af2093d1a43fa0ccfd8c8#npm:2.1.0"],\
           ["@apollo/usage-reporting-protobuf", "npm:4.1.1"],\
-          ["@apollo/utils.dropunuseddefinitions", "virtual:e55bb97aa07d0b0a06409427530b2537b005783d9338d315d9da604e3246a823f5d721fe35676798d6615744cabb50c61809a4a62172bc676ac42a54a02f1563#npm:2.0.1"],\
-          ["@apollo/utils.printwithreducedwhitespace", "virtual:e55bb97aa07d0b0a06409427530b2537b005783d9338d315d9da604e3246a823f5d721fe35676798d6615744cabb50c61809a4a62172bc676ac42a54a02f1563#npm:2.0.1"],\
-          ["@apollo/utils.removealiases", "virtual:e55bb97aa07d0b0a06409427530b2537b005783d9338d315d9da604e3246a823f5d721fe35676798d6615744cabb50c61809a4a62172bc676ac42a54a02f1563#npm:2.0.1"],\
-          ["@apollo/utils.sortast", "virtual:e55bb97aa07d0b0a06409427530b2537b005783d9338d315d9da604e3246a823f5d721fe35676798d6615744cabb50c61809a4a62172bc676ac42a54a02f1563#npm:2.0.1"],\
-          ["@apollo/utils.stripsensitiveliterals", "virtual:e55bb97aa07d0b0a06409427530b2537b005783d9338d315d9da604e3246a823f5d721fe35676798d6615744cabb50c61809a4a62172bc676ac42a54a02f1563#npm:2.0.1"],\
+          ["@apollo/utils.dropunuseddefinitions", "virtual:f6113f0775610d710c17f4c278f73d938f0031f470b94dd2fc0881b16a59236ea81488a16c156335a97ff5b23bb40a52076db44755bb5dbd676e43476145e9d0#npm:2.0.1"],\
+          ["@apollo/utils.printwithreducedwhitespace", "virtual:f6113f0775610d710c17f4c278f73d938f0031f470b94dd2fc0881b16a59236ea81488a16c156335a97ff5b23bb40a52076db44755bb5dbd676e43476145e9d0#npm:2.0.1"],\
+          ["@apollo/utils.removealiases", "virtual:f6113f0775610d710c17f4c278f73d938f0031f470b94dd2fc0881b16a59236ea81488a16c156335a97ff5b23bb40a52076db44755bb5dbd676e43476145e9d0#npm:2.0.1"],\
+          ["@apollo/utils.sortast", "virtual:f6113f0775610d710c17f4c278f73d938f0031f470b94dd2fc0881b16a59236ea81488a16c156335a97ff5b23bb40a52076db44755bb5dbd676e43476145e9d0#npm:2.0.1"],\
+          ["@apollo/utils.stripsensitiveliterals", "virtual:f6113f0775610d710c17f4c278f73d938f0031f470b94dd2fc0881b16a59236ea81488a16c156335a97ff5b23bb40a52076db44755bb5dbd676e43476145e9d0#npm:2.0.1"],\
           ["@types/graphql", null],\
           ["graphql", "npm:16.11.0"]\
         ],\
@@ -583,7 +583,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@as-integrations-express5-virtual-e4277a93fc/0/cache/@as-integrations-express5-npm-1.1.2-8a80c0275d-6a414d5233.zip/node_modules/@as-integrations/express5/",\
         "packageDependencies": [\
           ["@as-integrations/express5", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:1.1.2"],\
-          ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.0.0"],\
+          ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.2.0"],\
           ["@types/apollo__server", null],\
           ["@types/express", "npm:5.0.3"],\
           ["express", "npm:5.1.0"]\
@@ -15074,7 +15074,7 @@ const RAW_RUNTIME_STATE =
           ["karafriends", "workspace:."],\
           ["7zip-bin", "npm:5.1.1"],\
           ["@apollo/datasource-rest", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.4.1"],\
-          ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.0.0"],\
+          ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.2.0"],\
           ["@apollo/utils.fetcher", "npm:3.1.0"],\
           ["@apollo/utils.keyvaluecache", "npm:4.0.0"],\
           ["@as-integrations/express5", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:1.1.2"],\
