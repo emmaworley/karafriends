@@ -168,7 +168,7 @@
     "typescript": "5.9.3",
     "wait-on": "9.0.1",
     "wdio-electron-service": "9.1.2",
-    "webdriverio": "9.20.0"
+    "webdriverio": "9.22.0"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown",
