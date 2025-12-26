@@ -14,7 +14,7 @@ cpal = { version = "0.16.0" }
 itertools = "0.14.0"
 neon = { version = "1.0.0", default-features = false, features = ["napi-8"] }
 realfft = "3.5.0"
-ringbuf = "0.4.8"
+ringbuf = "0.4.9"
 rubato = "0.16.2"
 
 [dev-dependencies]
