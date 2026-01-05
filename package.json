@@ -141,7 +141,7 @@
     "@wdio/cli": "9.20.0",
     "@wdio/globals": "9.17.0",
     "@wdio/local-runner": "9.20.0",
-    "@wdio/mocha-framework": "9.20.0",
+    "@wdio/mocha-framework": "9.23.0",
     "@yarnpkg/pnpify": "4.1.6",
     "babel-loader": "10.0.0",
     "babel-plugin-relay": "20.1.1",
