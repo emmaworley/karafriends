@@ -5674,17 +5674,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/mocha-framework@npm:9.20.0":
-  version: 9.20.0
-  resolution: "@wdio/mocha-framework@npm:9.20.0"
+"@wdio/mocha-framework@npm:9.23.2":
+  version: 9.23.2
+  resolution: "@wdio/mocha-framework@npm:9.23.2"
   dependencies:
     "@types/mocha": "npm:^10.0.6"
     "@types/node": "npm:^20.11.28"
     "@wdio/logger": "npm:9.18.0"
-    "@wdio/types": "npm:9.20.0"
-    "@wdio/utils": "npm:9.20.0"
+    "@wdio/types": "npm:9.23.2"
+    "@wdio/utils": "npm:9.23.2"
     mocha: "npm:^10.3.0"
-  checksum: 10/6fbdf0441e2bf1366c231123ce76acbccd5a016699a88ef40f5b1815681f63c8163d7a5cfbf5a9eec1fd3f292d52b8225060f650e07bb5a8544b7d6281847922
+  checksum: 10/6d0678867c2acc98efbbc08c86b00190e14f2f25fc033656dd7163f1e3cb46559a8aa0d19f156689c7b4bc122f8ef2dd8cb8ba096a607c119b02794daa7a584d
   languageName: node
   linkType: hard
 
@@ -5752,6 +5752,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@wdio/types@npm:9.23.2":
+  version: 9.23.2
+  resolution: "@wdio/types@npm:9.23.2"
+  dependencies:
+    "@types/node": "npm:^20.1.0"
+  checksum: 10/e66d42d0370f0ed84f9ce9e378397293683764204dd13ffbdba9e5e61ba439949181a3b3d46e8667ce459fc9a0bafad6e6f3afbf709e9cde4028114370c2e6d3
+  languageName: node
+  linkType: hard
+
 "@wdio/utils@npm:9.20.0":
   version: 9.20.0
   resolution: "@wdio/utils@npm:9.20.0"
@@ -5771,6 +5780,28 @@ __metadata:
     split2: "npm:^4.2.0"
     wait-port: "npm:^1.1.0"
   checksum: 10/c1ea1875c6a9dbc187cd85b2071799d575b8ca6e0d2ac63b7efe735cadad9acec70440a44df6efb64a664196fa91f1936ff2e8fdea82676b58a715892ca4d9c7
+  languageName: node
+  linkType: hard
+
+"@wdio/utils@npm:9.23.2":
+  version: 9.23.2
+  resolution: "@wdio/utils@npm:9.23.2"
+  dependencies:
+    "@puppeteer/browsers": "npm:^2.2.0"
+    "@wdio/logger": "npm:9.18.0"
+    "@wdio/types": "npm:9.23.2"
+    decamelize: "npm:^6.0.0"
+    deepmerge-ts: "npm:^7.0.3"
+    edgedriver: "npm:^6.1.2"
+    geckodriver: "npm:^6.1.0"
+    get-port: "npm:^7.0.0"
+    import-meta-resolve: "npm:^4.0.0"
+    locate-app: "npm:^2.2.24"
+    mitt: "npm:^3.0.1"
+    safaridriver: "npm:^1.0.0"
+    split2: "npm:^4.2.0"
+    wait-port: "npm:^1.1.0"
+  checksum: 10/c7f5ac341d9139552c5f9c6e61e560b5c63426d920a03c4787e03419c62a77d853a66ade82fcf78d3d0af3824cbfe5702d43cc9c1d6c4b863b0b3c1e610a5412
   languageName: node
   linkType: hard
 
@@ -5923,6 +5954,13 @@ __metadata:
   version: 2.7.54
   resolution: "@zip.js/zip.js@npm:2.7.54"
   checksum: 10/36ecc72b2a25480c215070e48917663360b38ecbb88b3d1879807876ca2a77f777a805de3286b28e7e648ea713693eac1fcec57c1b8e806bd397f2b29737c594
+  languageName: node
+  linkType: hard
+
+"@zip.js/zip.js@npm:^2.8.11":
+  version: 2.8.15
+  resolution: "@zip.js/zip.js@npm:2.8.15"
+  checksum: 10/b6356b1f148a3aa4b0df7032c4bc32b43fd976848e2480bf2e7a3b38f8fa66d1fdbca4aa8f0c999ccd700f83642c9df663a65f70130c0d68b24f79a9d86c3b69
   languageName: node
   linkType: hard
 
@@ -7878,6 +7916,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"decamelize@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "decamelize@npm:6.0.1"
+  checksum: 10/978c41d0f20f9d8c8826c7ae49ac5afff8a2b2f2760bd42dc28ecbd3815d896eb9589466ee80d0c93fc7c2d0bef9e61de4e6c36ae458dafef472520c052d3181
+  languageName: node
+  linkType: hard
+
 "decimal.js@npm:^10.2.1":
   version: 10.5.0
   resolution: "decimal.js@npm:10.5.0"
@@ -9496,6 +9541,22 @@ __metadata:
   bin:
     geckodriver: bin/geckodriver.js
   checksum: 10/d8e4364e4c2b9b666ca48dadc5030f4171d368a4e0e512fe1ad8a20ece5b49969c4d2ce899003fd9a5360baf5f9a45713b4a79e27f6e78c84aeb77067b2e5900
+  languageName: node
+  linkType: hard
+
+"geckodriver@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "geckodriver@npm:6.1.0"
+  dependencies:
+    "@wdio/logger": "npm:^9.18.0"
+    "@zip.js/zip.js": "npm:^2.8.11"
+    decamelize: "npm:^6.0.1"
+    http-proxy-agent: "npm:^7.0.2"
+    https-proxy-agent: "npm:^7.0.6"
+    modern-tar: "npm:^0.7.2"
+  bin:
+    geckodriver: bin/geckodriver.js
+  checksum: 10/0f6647f139b040bce8c3d5b7e03779c6725aa17ff5ba7c04ec30bd1dece0c5ea21069d566374ef90dded1eeef3ca3f0879b225b9a1e4758d917926f161289a60
   languageName: node
   linkType: hard
 
@@ -11810,7 +11871,7 @@ __metadata:
     "@wdio/cli": "npm:9.20.0"
     "@wdio/globals": "npm:9.17.0"
     "@wdio/local-runner": "npm:9.20.0"
-    "@wdio/mocha-framework": "npm:9.20.0"
+    "@wdio/mocha-framework": "npm:9.23.2"
     "@yarnpkg/pnpify": "npm:4.1.6"
     babel-loader: "npm:10.0.0"
     babel-plugin-relay: "npm:20.1.1"
@@ -12888,6 +12949,13 @@ __metadata:
     _mocha: bin/_mocha
     mocha: bin/mocha.js
   checksum: 10/903bbffcb195ef9d36b27db54e3462c5486de1397289e0953735b3530397a139336c452bcf5188c663496c660d2285bbb6c7213290d36d536ad647b6145cb917
+  languageName: node
+  linkType: hard
+
+"modern-tar@npm:^0.7.2":
+  version: 0.7.3
+  resolution: "modern-tar@npm:0.7.3"
+  checksum: 10/d76a0f67c50d255e2ddd82d6db5bb882bf124b4e8af5ebd4d5b74bf612fc5fdfb27c00d8ecb4552a722ba310609f28f42eb0b9c52474a30e5608a668096b0af6
   languageName: node
   linkType: hard
 
