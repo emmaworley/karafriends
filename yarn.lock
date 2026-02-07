@@ -6866,13 +6866,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bufferutil@npm:4.0.9":
-  version: 4.0.9
-  resolution: "bufferutil@npm:4.0.9"
+"bufferutil@npm:4.1.0":
+  version: 4.1.0
+  resolution: "bufferutil@npm:4.1.0"
   dependencies:
     node-gyp: "npm:latest"
     node-gyp-build: "npm:^4.3.0"
-  checksum: 10/335bb716d4b3bf0cee9b65d309cc40c7f858b32c6a685088a54c45bdd6e229a7a1b8a1dde464d758d913d3dcc064beb46c58cfb1093b98618aa3d78dbea753d6
+  checksum: 10/f944f2e66a8cd2eeecc83e29b857382a0666132a7bbf83690df9ff39cb842c5a438da91a7d9c6a22cdc794bf0b6cfbfdf3a689e9c330a8e844b2b7a64c25f3bc
   languageName: node
   linkType: hard
 
@@ -11915,7 +11915,7 @@ __metadata:
     "@yarnpkg/pnpify": "npm:4.1.6"
     babel-loader: "npm:10.0.0"
     babel-plugin-relay: "npm:20.1.1"
-    bufferutil: "npm:4.0.9"
+    bufferutil: "npm:4.1.0"
     cargo-cp-artifact: "npm:0.1.9"
     classnames: "npm:2.5.1"
     color-convert: "npm:3.1.2"
