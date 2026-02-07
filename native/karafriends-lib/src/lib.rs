@@ -87,11 +87,10 @@ impl InputDevice {
             .ok_or("No supported input configs")?;
         let input_config = supported_config_to_config(best_supported_input_config);
         let _input_channels = input_config.channels as usize;
-        let input_sample_rate = input_config.sample_rate.0;
 
         println!(
             "Created input device {} with config {:#?}, sample format {:#?}",
-            input_device.name()?,
+            input_device.id()?,
             input_config,
             best_supported_input_config.sample_format(),
         );
@@ -114,28 +113,27 @@ impl InputDevice {
             output_config.sample_rate = input_config.sample_rate;
         }
         let output_channels = output_config.channels as usize;
-        let output_sample_rate = output_config.sample_rate.0;
 
         println!(
             "Created output device {} with config {:#?}, sample format {:#?}",
-            output_device.name().unwrap(),
+            output_device.id().unwrap(),
             output_config,
             best_supported_output_config.sample_format(),
         );
 
-        let pitch_sample_count = input_sample_rate.div_ceil(40) as usize;
+        let pitch_sample_count = input_config.sample_rate.div_ceil(40) as usize;
         let (pitch_tx, pitch_rx) = ringbuf::HeapRb::new(pitch_sample_count).split();
 
         // TODO: rationalize how to pick this size
         // it really needs to be large enough for the input bufer provided by the OS, which can be quite large on windows (upper bound??)
         let (output_tx, output_rx) = ringbuf::HeapRb::new(
-            (2048.0 * output_channels as f32 * output_sample_rate as f32 / input_sample_rate as f32)
-                as usize,
+            (2048.0 * output_channels as f32 * output_config.sample_rate as f32
+                / input_config.sample_rate as f32) as usize,
         )
         .split();
 
         let pitch_detector =
-            pitch_detector::PitchDetector::new(input_sample_rate as f32, pitch_sample_count);
+            pitch_detector::PitchDetector::new(input_config.sample_rate as f32, pitch_sample_count);
 
         let error_callback = |e| panic!("{}", e);
 
@@ -421,25 +419,28 @@ impl InputDevice {
     where
         f32: cpal::FromSample<Sample>,
     {
+        let input_config = input_config.clone();
+        let output_config = output_config.clone();
+
         let input_channels = input_config.channels as usize;
         let output_channels = output_config.channels as usize;
-        let input_sample_rate = input_config.sample_rate.0;
-        let output_sample_rate = output_config.sample_rate.0;
 
         let mut reverbs = [
-            reverb_module::ReverbModule::new(input_sample_rate, 0.09920, 0.750)?,
-            reverb_module::ReverbModule::new(input_sample_rate, 0.06930, 0.720)?,
-            reverb_module::ReverbModule::new(input_sample_rate, 0.04836, 0.691)?,
-            reverb_module::ReverbModule::new(input_sample_rate, 0.03570, 0.649)?,
-            reverb_module::ReverbModule::new(input_sample_rate, 0.02196, 0.662)?,
+            reverb_module::ReverbModule::new(input_config.sample_rate, 0.09920, 0.750)?,
+            reverb_module::ReverbModule::new(input_config.sample_rate, 0.06930, 0.720)?,
+            reverb_module::ReverbModule::new(input_config.sample_rate, 0.04836, 0.691)?,
+            reverb_module::ReverbModule::new(input_config.sample_rate, 0.03570, 0.649)?,
+            reverb_module::ReverbModule::new(input_config.sample_rate, 0.02196, 0.662)?,
         ];
 
         let resampler_chunk_size = match input_config.buffer_size {
             cpal::BufferSize::Fixed(count) => count as usize,
-            cpal::BufferSize::Default => (input_sample_rate / output_sample_rate) as usize,
+            cpal::BufferSize::Default => {
+                (input_config.sample_rate / output_config.sample_rate) as usize
+            }
         };
         let mut resampler = rubato::SincFixedIn::<f32>::new(
-            output_sample_rate as f64 / input_sample_rate as f64,
+            output_config.sample_rate as f64 / input_config.sample_rate as f64,
             1.0,
             rubato::SincInterpolationParameters {
                 sinc_len: 256,
@@ -478,7 +479,7 @@ impl InputDevice {
                 })
                 .collect();
 
-            if input_sample_rate != output_sample_rate {
+            if input_config.sample_rate != output_config.sample_rate {
                 output_samples
                     .chunks(resampler_chunk_size)
                     .for_each(|chunk| {
@@ -616,7 +617,7 @@ fn _input_devices() -> Result<impl Iterator<Item = (cpal::Device, DeviceType)>> 
 fn _device_name(device: &cpal::Device, device_type: &DeviceType) -> String {
     format!(
         "{} ({})",
-        device.name().unwrap(),
+        device.id().unwrap(),
         match device_type {
             #[cfg(feature = "asio")]
             DeviceType::Asio => "ASIO",
@@ -634,31 +635,33 @@ mod tests {
     #[test]
     #[ignore] // TODO: handle reverb
     fn test_input_callback_outputs() -> Result<()> {
-        let input_sample_rate = 44100;
+        let input_config = cpal::StreamConfig {
+            channels: 1,
+            sample_rate: 44100,
+            buffer_size: cpal::BufferSize::Fixed(256),
+        };
+        let output_config = cpal::StreamConfig {
+            channels: 1,
+            sample_rate: 44100,
+            buffer_size: cpal::BufferSize::Fixed(256),
+        };
 
         let (pitch_tx, mut pitch_rx) =
-            ringbuf::HeapRb::new((input_sample_rate as usize).div_ceil(40)).split();
+            ringbuf::HeapRb::new((input_config.sample_rate as usize).div_ceil(40)).split();
         let (output_tx, mut output_rx) = ringbuf::HeapRb::new(2048).split();
 
         let mut input_callback = InputDevice::input_data_callback::<f32>(
-            &cpal::StreamConfig {
-                channels: 1,
-                sample_rate: cpal::SampleRate(input_sample_rate),
-                buffer_size: cpal::BufferSize::Fixed(256),
-            },
-            &cpal::StreamConfig {
-                channels: 1,
-                sample_rate: cpal::SampleRate(input_sample_rate),
-                buffer_size: cpal::BufferSize::Fixed(256),
-            },
+            &input_config,
+            &output_config,
             0,
             pitch_tx,
             output_tx,
         )?;
 
-        let latency_sample_count = (input_sample_rate as f32 * /*ECHO_DELAY_SECS*/ 0.0) as usize;
+        let latency_sample_count =
+            (input_config.sample_rate as f32 * /*ECHO_DELAY_SECS*/ 0.0) as usize;
 
-        let input_samples = wf!(f32, input_sample_rate as f32, sine!(185.0))
+        let input_samples = wf!(f32, input_config.sample_rate as f32, sine!(185.0))
             .iter()
             .take(latency_sample_count)
             .collect::<Vec<_>>();
@@ -689,41 +692,41 @@ mod tests {
 
     #[test]
     fn test_input_callback_upsampling() -> Result<()> {
-        let input_sample_rate = 44100;
-        let output_sample_rate = 96000;
+        let input_config = cpal::StreamConfig {
+            channels: 1,
+            sample_rate: 44100,
+            buffer_size: cpal::BufferSize::Fixed(256),
+        };
+        let output_config = cpal::StreamConfig {
+            channels: 1,
+            sample_rate: 96000,
+            buffer_size: cpal::BufferSize::Fixed(256),
+        };
 
         let (pitch_tx, mut pitch_rx) =
-            ringbuf::HeapRb::new((input_sample_rate as usize).div_ceil(40)).split();
+            ringbuf::HeapRb::new((input_config.sample_rate as usize).div_ceil(40)).split();
         let (output_tx, mut output_rx) = ringbuf::HeapRb::new(
-            (2048.0 * output_sample_rate as f32 / input_sample_rate as f32) as usize,
+            (2048.0 * output_config.sample_rate as f32 / input_config.sample_rate as f32) as usize,
         )
         .split();
 
         let mut input_callback = InputDevice::input_data_callback::<f32>(
-            &cpal::StreamConfig {
-                channels: 1,
-                sample_rate: cpal::SampleRate(input_sample_rate),
-                buffer_size: cpal::BufferSize::Fixed(256),
-            },
-            &cpal::StreamConfig {
-                channels: 1,
-                sample_rate: cpal::SampleRate(output_sample_rate),
-                buffer_size: cpal::BufferSize::Fixed(256),
-            },
+            &input_config,
+            &output_config,
             0,
             pitch_tx,
             output_tx,
         )?;
 
-        let input_samples = wf!(f32, input_sample_rate as f32, sine!(185.0))
+        let input_samples = wf!(f32, input_config.sample_rate as f32, sine!(185.0))
             .iter()
             .take(2048)
             .collect::<Vec<_>>();
         input_callback(&input_samples);
 
         // Resampling doesn't preserve phase very well, so use the pitch detector to validate output
-        let pitch_sample_count = output_sample_rate.div_ceil(40) as usize;
-        let pd = PitchDetector::new(output_sample_rate as f32, pitch_sample_count);
+        let pitch_sample_count = output_config.sample_rate.div_ceil(40) as usize;
+        let pd = PitchDetector::new(output_config.sample_rate as f32, pitch_sample_count);
 
         let mut output_samples = vec![0.0; pitch_sample_count];
         output_rx.pop_slice(&mut output_samples);
@@ -739,41 +742,41 @@ mod tests {
 
     #[test]
     fn test_input_callback_downsampling() -> Result<()> {
-        let input_sample_rate = 96000;
-        let output_sample_rate = 44100;
+        let input_config = cpal::StreamConfig {
+            channels: 1,
+            sample_rate: 96000,
+            buffer_size: cpal::BufferSize::Fixed(256),
+        };
+        let output_config = cpal::StreamConfig {
+            channels: 1,
+            sample_rate: 44100,
+            buffer_size: cpal::BufferSize::Fixed(256),
+        };
 
         let (pitch_tx, mut pitch_rx) =
-            ringbuf::HeapRb::new((input_sample_rate as usize).div_ceil(40)).split();
+            ringbuf::HeapRb::new((input_config.sample_rate as usize).div_ceil(40)).split();
         let (output_tx, mut output_rx) = ringbuf::HeapRb::new(
-            (2048.0 * output_sample_rate as f32 / input_sample_rate as f32) as usize,
+            (2048.0 * output_config.sample_rate as f32 / input_config.sample_rate as f32) as usize,
         )
         .split();
 
         let mut input_callback = InputDevice::input_data_callback::<f32>(
-            &cpal::StreamConfig {
-                channels: 1,
-                sample_rate: cpal::SampleRate(input_sample_rate),
-                buffer_size: cpal::BufferSize::Fixed(256),
-            },
-            &cpal::StreamConfig {
-                channels: 1,
-                sample_rate: cpal::SampleRate(output_sample_rate),
-                buffer_size: cpal::BufferSize::Fixed(256),
-            },
+            &input_config,
+            &output_config,
             0,
             pitch_tx,
             output_tx,
         )?;
 
-        let input_samples = wf!(f32, input_sample_rate as f32, sine!(185.0))
+        let input_samples = wf!(f32, input_config.sample_rate as f32, sine!(185.0))
             .iter()
             .take(2048)
             .collect::<Vec<_>>();
         input_callback(&input_samples);
 
         // Resampling doesn't preserve phase very well, so use the pitch detector to validate output
-        let pitch_sample_count = output_sample_rate.div_ceil(40) as usize;
-        let pd = PitchDetector::new(output_sample_rate as f32, pitch_sample_count);
+        let pitch_sample_count = output_config.sample_rate.div_ceil(40) as usize;
+        let pd = PitchDetector::new(output_config.sample_rate as f32, pitch_sample_count);
 
         let mut output_samples = vec![0.0; pitch_sample_count];
         output_rx.pop_slice(&mut output_samples);
