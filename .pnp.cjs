@@ -100,7 +100,7 @@ const RAW_RUNTIME_STATE =
           ["color-convert", "npm:3.1.2"],\
           ["compression", "npm:1.8.1"],\
           ["concurrently", "npm:9.2.1"],\
-          ["cors", "npm:2.8.5"],\
+          ["cors", "npm:2.8.6"],\
           ["cross-env", "npm:10.1.0"],\
           ["cubic-spline", "npm:3.0.3"],\
           ["dataloader", "npm:2.2.3"],\
@@ -10550,6 +10550,15 @@ const RAW_RUNTIME_STATE =
           ["vary", "npm:1.1.2"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:2.8.6", {\
+        "packageLocation": "./.yarn/cache/cors-npm-2.8.6-378df681b0-aa7174305b.zip/node_modules/cors/",\
+        "packageDependencies": [\
+          ["cors", "npm:2.8.6"],\
+          ["object-assign", "npm:4.1.1"],\
+          ["vary", "npm:1.1.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["cosmiconfig", [\
@@ -15240,7 +15249,7 @@ const RAW_RUNTIME_STATE =
           ["color-convert", "npm:3.1.2"],\
           ["compression", "npm:1.8.1"],\
           ["concurrently", "npm:9.2.1"],\
-          ["cors", "npm:2.8.5"],\
+          ["cors", "npm:2.8.6"],\
           ["cross-env", "npm:10.1.0"],\
           ["cubic-spline", "npm:3.0.3"],\
           ["dataloader", "npm:2.2.3"],\
