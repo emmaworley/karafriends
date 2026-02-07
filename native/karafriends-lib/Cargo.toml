@@ -9,7 +9,7 @@ name = "karafriends_lib"
 crate-type = ["lib"]
 
 [dependencies]
-asio-sys = { version = "0.2.2", optional = true }
+asio-sys = { version = "0.2.5", optional = true }
 cpal = { version = "0.16.0" }
 itertools = "0.14.0"
 neon = { version = "1.0.0", default-features = false, features = ["napi-8"] }
