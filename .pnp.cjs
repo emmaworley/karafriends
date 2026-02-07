@@ -71,7 +71,7 @@ const RAW_RUNTIME_STATE =
           ["@types/kuromoji", "npm:0.1.3"],\
           ["@types/lodash", "npm:4.17.20"],\
           ["@types/materialize-css", "npm:1.0.14"],\
-          ["@types/node", "npm:24.7.2"],\
+          ["@types/node", "npm:25.2.1"],\
           ["@types/node-fetch", "npm:2.6.13"],\
           ["@types/promise-retry", "npm:1.1.6"],\
           ["@types/qrcode", "npm:1.5.5"],\
@@ -7564,6 +7564,14 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/node", "npm:24.7.2"],\
           ["undici-types", "npm:7.14.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:25.2.1", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-25.2.1-a138d77c79-aab73de56d.zip/node_modules/@types/node/",\
+        "packageDependencies": [\
+          ["@types/node", "npm:25.2.1"],\
+          ["undici-types", "npm:7.16.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15174,7 +15182,7 @@ const RAW_RUNTIME_STATE =
           ["@types/kuromoji", "npm:0.1.3"],\
           ["@types/lodash", "npm:4.17.20"],\
           ["@types/materialize-css", "npm:1.0.14"],\
-          ["@types/node", "npm:24.7.2"],\
+          ["@types/node", "npm:25.2.1"],\
           ["@types/node-fetch", "npm:2.6.13"],\
           ["@types/promise-retry", "npm:1.1.6"],\
           ["@types/qrcode", "npm:1.5.5"],\
@@ -20708,6 +20716,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/undici-types-npm-7.14.0-d9eb643e6a-0f8709b214.zip/node_modules/undici-types/",\
         "packageDependencies": [\
           ["undici-types", "npm:7.14.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:7.16.0", {\
+        "packageLocation": "./.yarn/cache/undici-types-npm-7.16.0-0e23b08124-db43439f69.zip/node_modules/undici-types/",\
+        "packageDependencies": [\
+          ["undici-types", "npm:7.16.0"]\
         ],\
         "linkType": "HARD"\
       }]\
