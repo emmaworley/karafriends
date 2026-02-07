@@ -13,7 +13,7 @@
     "build-dev": "concurrently \"yarn get-external-resources && yarn build-native-dev\" \"yarn build-relay-dev\" && yarn build-parcel-dev",
     "build-prod": "concurrently \"yarn get-external-resources && yarn build-native-prod\" \"yarn build-relay-prod\" && yarn build-parcel-prod",
     "run-dev": "cross-env NODE_ENV=development yarn _run-dev",
-    "_run-dev": "yarn build-dev && concurrently --success !command-0 --kill-others \"parcel serve --target remocon --target renderer --dist-dir build/dev --port 3000\" \"wait-on http://127.0.0.1:3000/ && ./electron.js build/dev/main_/index.js\"",
+    "_run-dev": "yarn build-dev && concurrently --success !command-0 --kill-others \"parcel serve --target remocon --target renderer --dist-dir build/dev --port 3000\" \"wait-on http://127.0.0.1:3000/ && node electron.js build/dev/main_/index.js\"",
     "package-prod": "node ./packager.js",
     "get-external-resources": "node scripts/getExternalResources.mjs",
     "test:native": "cargo clippy --manifest-path native/Cargo.toml && cargo +nightly careful test --manifest-path native/Cargo.toml",
