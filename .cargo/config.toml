@@ -1,2 +1,2 @@
 [env]
-CPAL_ASIO_DIR = { value = "buildResources/asio/asiosdk_2.3.3_2019-06-14", relative = true }
+CPAL_ASIO_DIR = { value = "buildResources/asio/asiosdk", relative = true }
