@@ -9,7 +9,6 @@ name = "karafriends_lib"
 crate-type = ["lib"]
 
 [dependencies]
-asio-sys = { version = "0.2.2", optional = true }
 cpal = { version = "0.17.1" }
 itertools = "0.14.0"
 neon = { version = "1.0.0", default-features = false, features = ["napi-8"] }
@@ -21,6 +20,6 @@ rubato = "0.16.2"
 wavegen = "0.4.1"
 
 [features]
-asio = ["asio-sys", "cpal/asio"]
+asio = ["cpal/asio"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
