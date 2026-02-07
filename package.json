@@ -39,7 +39,7 @@
     "@types/user-agents": "1.0.4",
     "@types/wicg-mediasession": "1.1.8",
     "@types/youtube-player": "5.5.11",
-    "bufferutil": "4.0.9",
+    "bufferutil": "4.1.0",
     "classnames": "2.5.1",
     "color-convert": "3.1.2",
     "compression": "1.8.1",
