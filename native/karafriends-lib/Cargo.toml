@@ -10,7 +10,7 @@ crate-type = ["lib"]
 
 [dependencies]
 asio-sys = { version = "0.2.2", optional = true }
-cpal = { version = "0.16.0" }
+cpal = { version = "0.17.1" }
 itertools = "0.14.0"
 neon = { version = "1.0.0", default-features = false, features = ["napi-8"] }
 realfft = "3.5.0"
