@@ -1,5 +1,6 @@
 import { DataSourceConfig, RESTDataSource } from "@apollo/datasource-rest";
 import type { KeyValueCache } from "@apollo/utils.keyvaluecache";
+import promiseRetry from "promise-retry";
 import invariant from "ts-invariant";
 
 const COOKIE_IDS: string[] = ["AWSALB", "AWSALBCORS", "JSESSIONID"];
@@ -166,11 +167,13 @@ export class JoysoundAPI extends RESTDataSource {
   }
 
   async getMovieUrls(id: string) {
-    const creds = await this.credsProvider();
+    return promiseRetry((retryFn, retryCount: number) => {
+      console.log(`contentsInfo for songId: ${id}, retry no. ${retryCount}`);
 
-    return this.post<JoysoundMovieList>("/player/contentsInfo", {
-      songNumber: id,
-      serviceType: "003000761",
+      return this.post<JoysoundMovieList>("/player/contentsInfo", {
+        songNumber: id,
+        serviceType: "003000761",
+      }).catch(retryFn);
     });
   }
 
@@ -240,11 +243,13 @@ export class JoysoundAPI extends RESTDataSource {
   }
 
   async getSongRawData(id: string) {
-    const creds = await this.credsProvider();
+    return promiseRetry((retryFn, retryCount: number) => {
+      console.log(`getFME for songId: ${id}, retry no. ${retryCount}`);
 
-    return this.post<JoysoundSongRawData>("/player/getFME", {
-      songNumber: id,
-      serviceType: "003000761",
+      return this.post<JoysoundSongRawData>("/player/getFME", {
+        songNumber: id,
+        serviceType: "003000761",
+      }).catch(retryFn);
     });
   }
 
