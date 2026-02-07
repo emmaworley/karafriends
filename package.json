@@ -154,7 +154,7 @@
     "husky": "9.1.7",
     "lint-staged": "16.2.4",
     "node-loader": "2.1.0",
-    "parcel": "2.16.0",
+    "parcel": "2.16.4",
     "path-browserify": "^1.0.0",
     "prettier": "3.6.2",
     "puppeteer-core": "24.25.0",
