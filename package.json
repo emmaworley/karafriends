@@ -111,7 +111,7 @@
     "@parcel/transformer-postcss": "2.16.0",
     "@parcel/transformer-posthtml": "2.16.0",
     "@parcel/transformer-raw": "2.16.0",
-    "@parcel/transformer-sass": "2.16.0",
+    "@parcel/transformer-sass": "2.16.4",
     "@parcel/transformer-worklet": "2.16.0",
     "@testing-library/dom": "10.4.1",
     "@testing-library/webdriverio": "3.2.1",
