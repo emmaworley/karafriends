@@ -167,7 +167,7 @@
     "tslint-config-prettier": "1.18.0",
     "typescript": "5.9.3",
     "wait-on": "9.0.1",
-    "wdio-electron-service": "9.1.2",
+    "wdio-electron-service": "9.2.1",
     "webdriverio": "9.20.0"
   },
   "lint-staged": {
