@@ -12782,7 +12782,7 @@ __metadata:
     tunnel: "npm:0.0.6"
     typescript: "npm:5.9.3"
     user-agents: "npm:1.1.669"
-    utf-8-validate: "npm:6.0.5"
+    utf-8-validate: "npm:6.0.6"
     uuid: "npm:13.0.0"
     wait-on: "npm:9.0.1"
     wanakana: "npm:5.3.1"
@@ -17959,13 +17959,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"utf-8-validate@npm:6.0.5":
-  version: 6.0.5
-  resolution: "utf-8-validate@npm:6.0.5"
+"utf-8-validate@npm:6.0.6":
+  version: 6.0.6
+  resolution: "utf-8-validate@npm:6.0.6"
   dependencies:
     node-gyp: "npm:latest"
     node-gyp-build: "npm:^4.3.0"
-  checksum: 10/8c96d342064d3f03d7acf616fe727e484825f4f5f7a455059122787306b2df1a4e23c2d27f16bf7ba21293f4ce6ab3e683b893fe7b4c74ac9d43b871c10001a0
+  checksum: 10/c1fa53fe5f0e3b7bf990a8ee41d890b10218b087a4ad401519a1a6353a427172fedc29c9af36b81080ea27b311802ae37b0e857b82aaa976238904398870f465
   languageName: node
   linkType: hard
 
