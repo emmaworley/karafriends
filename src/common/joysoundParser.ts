@@ -102,7 +102,7 @@ const eucKrDecoder = new TextDecoder("euc-kr");
 export function decodeJoysoundText(
   charCode: number,
   fontCode: number = 0,
-  flags: number = 0
+  flags: number = 0,
 ): string {
   switch (fontCode) {
     case 0:
@@ -172,7 +172,7 @@ function kanaReadingToRomaji(kanaReading: string) {
 
 function kanjiPhraseToRomaji(
   kanjiPhrase: string,
-  hiraganaPhrase: string
+  hiraganaPhrase: string,
 ): string {
   if (kanjiToReading[kanjiPhrase as DictionaryKanji] !== undefined) {
     return kanaReadingToRomaji(kanjiToReading[kanjiPhrase as DictionaryKanji]);
@@ -195,7 +195,7 @@ function getRawLyrics(chars: JoysoundLyricsChar[]): string {
 
 function getMainRomajiBlocks(
   chars: JoysoundLyricsChar[],
-  tokenizedLyrics: AnalyzerResult[]
+  tokenizedLyrics: AnalyzerResult[],
 ): JoysoundLyricsRomaji[] {
   const mainRomajiBlocks = [];
 
@@ -241,9 +241,9 @@ function getMainRomajiBlocks(
       currXPos += currGlyph.width;
     } else {
       if (
-        tokenizedLyrics[tokenizedLyricsIndex].pronunciation !== undefined &&
+        tokenizedLyrics[tokenizedLyricsIndex].pronunciation &&
         !Kuroshiro.Util.hasKanji(
-          tokenizedLyrics[tokenizedLyricsIndex].surface_form
+          tokenizedLyrics[tokenizedLyricsIndex].surface_form,
         ) &&
         tokenizedLyrics[tokenizedLyricsIndex].pronunciation[
           tokenizedLyricsCharIndex
@@ -261,6 +261,7 @@ function getMainRomajiBlocks(
             tokenizedLyricsCharIndex
           ];
       } else if (
+        tokenizedLyrics[tokenizedLyricsIndex].pronunciation &&
         tokenizedLyrics[tokenizedLyricsIndex].surface_form.length > 1 &&
         tokenizedLyricsCharIndex ===
           tokenizedLyrics[tokenizedLyricsIndex].surface_form.length - 1 &&
@@ -300,7 +301,7 @@ function getMainRomajiBlocks(
 }
 
 function getFuriganaRomajiBlocks(
-  furigana: JoysoundLyricsFurigana[]
+  furigana: JoysoundLyricsFurigana[],
 ): JoysoundLyricsRomaji[] {
   const furiganaRomajiBlocks = [];
 
@@ -324,7 +325,7 @@ function getFuriganaRomajiBlocks(
 
 function getNonKanaRomajiBlocks(
   chars: JoysoundLyricsChar[],
-  tokenizedLyrics: AnalyzerResult[]
+  tokenizedLyrics: AnalyzerResult[],
 ): JoysoundLyricsRomaji[] {
   const fillerRomajiBlocks = [];
 
@@ -345,7 +346,7 @@ function getNonKanaRomajiBlocks(
       currGlyph.font === 0 &&
       (currPhrase.length > 0 || currGlyph.furiganaIndex < 0) &&
       !Kuroshiro.Util.hasKana(
-        tokenizedLyrics[tokenizedLyricsIndex].surface_form
+        tokenizedLyrics[tokenizedLyricsIndex].surface_form,
       )
     ) {
       // XXX: This is a mega hack
@@ -396,7 +397,7 @@ function getNonKanaRomajiBlocks(
 
 function getFillerRomajiBlocks(
   chars: JoysoundLyricsChar[],
-  okuriganaLyrics: string
+  okuriganaLyrics: string,
 ): JoysoundLyricsRomaji[] {
   const fillerRomajiBlocks = [];
 
@@ -496,7 +497,7 @@ function getFillerRomajiBlocks(
 
 function mapCharsToFurigana(
   chars: JoysoundLyricsChar[],
-  furiganaList: JoysoundLyricsFurigana[]
+  furiganaList: JoysoundLyricsFurigana[],
 ): void {
   let currXPos = 0;
 
@@ -513,7 +514,7 @@ function mapCharsToFurigana(
         currXPos + char.width,
         furigana.xPos,
         furigana.xPos +
-          furigana.chars.length * (RUBY_FONT_SIZE + RUBY_FONT_STROKE * 2)
+          furigana.chars.length * (RUBY_FONT_SIZE + RUBY_FONT_STROKE * 2),
       );
 
       if (intersection > bestIntersection) {
@@ -528,7 +529,7 @@ function mapCharsToFurigana(
 
 function deleteOverwrittenFuriganaRomaji(
   chars: JoysoundLyricsChar[],
-  furiganaRomaji: JoysoundLyricsRomaji[]
+  furiganaRomaji: JoysoundLyricsRomaji[],
 ): void {
   for (let i = furiganaRomaji.length - 1; i >= 0; i--) {
     let isFuriganaOverwritten = true;
@@ -550,7 +551,7 @@ async function parseLyricsBlock(
   view: DataView,
   offset: number,
   palette: JoysoundPaletteColor[],
-  kuroshiro: KuroshiroSingleton
+  kuroshiro: KuroshiroSingleton,
 ) {
   let currOffset = offset;
 
@@ -688,7 +689,7 @@ function readSJISString(view: DataView, offset: number, size: number): string {
 function parseJoy02Metadata(
   data: ArrayBuffer,
   offset: number,
-  size: number
+  size: number,
 ): JoysoundMetadata {
   const metadataView = new DataView(data, offset, size);
 
@@ -707,32 +708,32 @@ function parseJoy02Metadata(
   const musicName = readSJISString(
     metadataView,
     musicNameOffset,
-    artistNameOffset - musicNameOffset
+    artistNameOffset - musicNameOffset,
   );
   const artistName = readSJISString(
     metadataView,
     artistNameOffset,
-    lyricistNameOffset - artistNameOffset
+    lyricistNameOffset - artistNameOffset,
   );
   const lyricistName = readSJISString(
     metadataView,
     lyricistNameOffset,
-    composerNameOffset - lyricistNameOffset
+    composerNameOffset - lyricistNameOffset,
   );
   const composerName = readSJISString(
     metadataView,
     composerNameOffset,
-    musicNameReadingOffset - composerNameOffset
+    musicNameReadingOffset - composerNameOffset,
   );
   const musicNameReading = readSJISString(
     metadataView,
     musicNameReadingOffset,
-    artistNameReadingOffset - musicNameReadingOffset
+    artistNameReadingOffset - musicNameReadingOffset,
   );
   const artistNameReading = readSJISString(
     metadataView,
     artistNameReadingOffset,
-    jasracCodeOffset - artistNameReadingOffset
+    jasracCodeOffset - artistNameReadingOffset,
   );
 
   return {
@@ -750,7 +751,7 @@ function intervalIntersection(
   aStart: number,
   aEnd: number,
   bStart: number,
-  bEnd: number
+  bEnd: number,
 ): number {
   if (bStart > aEnd || aStart > bEnd) {
     return -1;
@@ -766,7 +767,7 @@ async function parseJoy02LyricsData(
   data: ArrayBuffer,
   offset: number,
   size: number,
-  kuroshiro: KuroshiroSingleton
+  kuroshiro: KuroshiroSingleton,
 ): Promise<JoysoundLyricsBlock[]> {
   const lyricsView = new DataView(data, offset, size);
   const lyricsBlocks = [];
@@ -796,7 +797,7 @@ async function parseJoy02LyricsData(
       lyricsView,
       currOffset,
       palette,
-      kuroshiro
+      kuroshiro,
     );
     lyricsBlocks.push(block);
 
@@ -836,7 +837,7 @@ function parseJoy02TimingData(data: ArrayBuffer, offset: number, size: number) {
 function processTimeline(
   timeline: JoysoundTimelineEvent[],
   metadata: JoysoundMetadata,
-  lyricsData: JoysoundLyricsBlock[]
+  lyricsData: JoysoundLyricsBlock[],
 ) {
   const activeLyricsBlocks = [];
 
@@ -884,7 +885,7 @@ function processTimeline(
 
 async function parseJoysoundData(
   data: ArrayBuffer,
-  kuroshiro: KuroshiroSingleton
+  kuroshiro: KuroshiroSingleton,
 ): Promise<JoysoundTelopData> {
   const lyricsBlocks = [];
 
@@ -897,18 +898,18 @@ async function parseJoysoundData(
   const metadata = parseJoy02Metadata(
     data,
     metadataOffset,
-    lyricsOffset - metadataOffset
+    lyricsOffset - metadataOffset,
   );
   const lyricsData = await parseJoy02LyricsData(
     data,
     lyricsOffset,
     timingOffset - lyricsOffset,
-    kuroshiro
+    kuroshiro,
   );
   const timeline = parseJoy02TimingData(
     data,
     timingOffset,
-    data.byteLength - timingOffset
+    data.byteLength - timingOffset,
   );
 
   processTimeline(timeline, metadata, lyricsData);
