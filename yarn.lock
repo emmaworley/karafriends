@@ -5735,12 +5735,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:25.2.1":
-  version: 25.2.1
-  resolution: "@types/node@npm:25.2.1"
+"@types/node@npm:25.2.2":
+  version: 25.2.2
+  resolution: "@types/node@npm:25.2.2"
   dependencies:
     undici-types: "npm:~7.16.0"
-  checksum: 10/aab73de56dbb674a173a49618b9f9b4aff3ed5815c47104a8fcaa8ca0728effced8d6ed941aa342b7d1f9dfcd641513250a178f4a656067f461dd793ab422911
+  checksum: 10/a5d689d69168065da0ef2972c711b0382664fa52ad99e9988d174028444c71ecb6c5b641178c404acb6b526f27cd791341aa3998a66e71b9a9ee193d853db61e
   languageName: node
   linkType: hard
 
@@ -12693,7 +12693,7 @@ __metadata:
     "@types/kuromoji": "npm:0.1.3"
     "@types/lodash": "npm:4.17.20"
     "@types/materialize-css": "npm:1.0.14"
-    "@types/node": "npm:25.2.1"
+    "@types/node": "npm:25.2.2"
     "@types/node-fetch": "npm:2.6.13"
     "@types/promise-retry": "npm:1.1.6"
     "@types/qrcode": "npm:1.5.6"
