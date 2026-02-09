@@ -111,7 +111,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: lts/*
-      - uses: actions/cache@v4
+      - uses: actions/cache@v5
         with:
           path: |
             buildResources
@@ -142,7 +142,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: lts/*
-      - uses: actions/cache@v4
+      - uses: actions/cache@v5
         with:
           path: |
             buildResources
