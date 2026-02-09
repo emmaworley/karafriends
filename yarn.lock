@@ -12772,7 +12772,7 @@ __metadata:
     path-browserify: "npm:^1.0.0"
     polyline-normals: "npm:2.0.2"
     postcss: "npm:8.5.6"
-    prettier: "npm:3.6.2"
+    prettier: "npm:3.8.1"
     process: "npm:0.11.10"
     promise-retry: "npm:2.0.1"
     puppeteer-core: "npm:24.37.2"
@@ -15072,7 +15072,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.6.2, prettier@npm:^3.4.2":
+"prettier@npm:3.8.1":
+  version: 3.8.1
+  resolution: "prettier@npm:3.8.1"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 10/3da1cf8c1ef9bea828aa618553696c312e951f810bee368f6887109b203f18ee869fe88f66e65f9cf60b7cb1f2eae859892c860a300c062ff8ec69c381fc8dbd
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^3.4.2":
   version: 3.6.2
   resolution: "prettier@npm:3.6.2"
   bin:
