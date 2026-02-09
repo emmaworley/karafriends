@@ -74,7 +74,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:25.2.1"],\
           ["@types/node-fetch", "npm:2.6.13"],\
           ["@types/promise-retry", "npm:1.1.6"],\
-          ["@types/qrcode", "npm:1.5.5"],\
+          ["@types/qrcode", "npm:1.5.6"],\
           ["@types/react", "npm:19.2.2"],\
           ["@types/react-dom", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:19.2.1"],\
           ["@types/react-fade-in", "npm:2.0.2"],\
@@ -8297,10 +8297,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/qrcode", [\
-      ["npm:1.5.5", {\
-        "packageLocation": "./.yarn/cache/@types-qrcode-npm-1.5.5-5154f24dc8-a25686339b.zip/node_modules/@types/qrcode/",\
+      ["npm:1.5.6", {\
+        "packageLocation": "./.yarn/cache/@types-qrcode-npm-1.5.6-1e3cf640f4-61aa00ba56.zip/node_modules/@types/qrcode/",\
         "packageDependencies": [\
-          ["@types/qrcode", "npm:1.5.5"],\
+          ["@types/qrcode", "npm:1.5.6"],\
           ["@types/node", "npm:24.7.2"]\
         ],\
         "linkType": "HARD"\
@@ -15971,7 +15971,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:25.2.1"],\
           ["@types/node-fetch", "npm:2.6.13"],\
           ["@types/promise-retry", "npm:1.1.6"],\
-          ["@types/qrcode", "npm:1.5.5"],\
+          ["@types/qrcode", "npm:1.5.6"],\
           ["@types/react", "npm:19.2.2"],\
           ["@types/react-dom", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:19.2.1"],\
           ["@types/react-fade-in", "npm:2.0.2"],\
