@@ -160,7 +160,7 @@ const RAW_RUNTIME_STATE =
           ["tunnel", "npm:0.0.6"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
           ["user-agents", "npm:1.1.669"],\
-          ["utf-8-validate", "npm:6.0.5"],\
+          ["utf-8-validate", "npm:6.0.6"],\
           ["uuid", "npm:13.0.0"],\
           ["wait-on", "npm:9.0.3"],\
           ["wanakana", "npm:5.3.1"],\
@@ -16028,7 +16028,7 @@ const RAW_RUNTIME_STATE =
           ["tunnel", "npm:0.0.6"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
           ["user-agents", "npm:1.1.669"],\
-          ["utf-8-validate", "npm:6.0.5"],\
+          ["utf-8-validate", "npm:6.0.6"],\
           ["uuid", "npm:13.0.0"],\
           ["wait-on", "npm:9.0.3"],\
           ["wanakana", "npm:5.3.1"],\
@@ -21805,10 +21805,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["utf-8-validate", [\
-      ["npm:6.0.5", {\
-        "packageLocation": "./.yarn/unplugged/utf-8-validate-npm-6.0.5-0c83b6bb07/node_modules/utf-8-validate/",\
+      ["npm:6.0.6", {\
+        "packageLocation": "./.yarn/unplugged/utf-8-validate-npm-6.0.6-8b7e7f96b1/node_modules/utf-8-validate/",\
         "packageDependencies": [\
-          ["utf-8-validate", "npm:6.0.5"],\
+          ["utf-8-validate", "npm:6.0.6"],\
           ["node-gyp", "npm:11.0.0"],\
           ["node-gyp-build", "npm:4.8.4"]\
         ],\
@@ -22395,7 +22395,7 @@ const RAW_RUNTIME_STATE =
           ["@types/bufferutil", null],\
           ["@types/utf-8-validate", null],\
           ["bufferutil", "npm:4.1.0"],\
-          ["utf-8-validate", "npm:6.0.5"]\
+          ["utf-8-validate", "npm:6.0.6"]\
         ],\
         "packagePeers": [\
           "@types/bufferutil",\
