@@ -97,7 +97,7 @@ const RAW_RUNTIME_STATE =
           ["bufferutil", "npm:4.1.0"],\
           ["cargo-cp-artifact", "npm:0.1.9"],\
           ["classnames", "npm:2.5.1"],\
-          ["color-convert", "npm:3.1.2"],\
+          ["color-convert", "npm:3.1.3"],\
           ["compression", "npm:1.8.1"],\
           ["concurrently", "npm:9.2.1"],\
           ["cors", "npm:2.8.6"],\
@@ -10928,10 +10928,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:3.1.2", {\
-        "packageLocation": "./.yarn/cache/color-convert-npm-3.1.2-eca60588e1-6731d4d4e1.zip/node_modules/color-convert/",\
+      ["npm:3.1.3", {\
+        "packageLocation": "./.yarn/cache/color-convert-npm-3.1.3-4ccfd70ef2-36b9b99c13.zip/node_modules/color-convert/",\
         "packageDependencies": [\
-          ["color-convert", "npm:3.1.2"],\
+          ["color-convert", "npm:3.1.3"],\
           ["color-name", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
@@ -15981,7 +15981,7 @@ const RAW_RUNTIME_STATE =
           ["bufferutil", "npm:4.1.0"],\
           ["cargo-cp-artifact", "npm:0.1.9"],\
           ["classnames", "npm:2.5.1"],\
-          ["color-convert", "npm:3.1.2"],\
+          ["color-convert", "npm:3.1.3"],\
           ["compression", "npm:1.8.1"],\
           ["concurrently", "npm:9.2.1"],\
           ["cors", "npm:2.8.6"],\
