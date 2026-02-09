@@ -168,7 +168,8 @@ const RAW_RUNTIME_STATE =
           ["webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.20.0"],\
           ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.18.3"],\
           ["yaml", "npm:2.8.1"],\
-          ["youtube-player", "npm:5.6.0"]\
+          ["youtube-player", "npm:5.6.0"],\
+          ["youtubei.js", "npm:16.0.1"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -3038,6 +3039,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@bcoe-v8-coverage-npm-0.2.3-9e27b3c57e-1a1f0e356a.zip/node_modules/@bcoe/v8-coverage/",\
         "packageDependencies": [\
           ["@bcoe/v8-coverage", "npm:0.2.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@bufbuild/protobuf", [\
+      ["npm:2.11.0", {\
+        "packageLocation": "./.yarn/cache/@bufbuild-protobuf-npm-2.11.0-2f694db663-dddab84c2d.zip/node_modules/@bufbuild/protobuf/",\
+        "packageDependencies": [\
+          ["@bufbuild/protobuf", "npm:2.11.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15808,7 +15818,8 @@ const RAW_RUNTIME_STATE =
           ["webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.20.0"],\
           ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.18.3"],\
           ["yaml", "npm:2.8.1"],\
-          ["youtube-player", "npm:5.6.0"]\
+          ["youtube-player", "npm:5.6.0"],\
+          ["youtubei.js", "npm:16.0.1"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -16562,6 +16573,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/merge2-npm-1.4.1-a2507bd06c-7268db63ed.zip/node_modules/merge2/",\
         "packageDependencies": [\
           ["merge2", "npm:1.4.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["meriyah", [\
+      ["npm:6.1.4", {\
+        "packageLocation": "./.yarn/cache/meriyah-npm-6.1.4-0f6ef618db-16b841b9bf.zip/node_modules/meriyah/",\
+        "packageDependencies": [\
+          ["meriyah", "npm:6.1.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -22450,6 +22470,17 @@ const RAW_RUNTIME_STATE =
           ["debug", "virtual:ffade2903a4701eb4335a8fa42fa50796f82be3ca5c115da3b817ada5adedc1813f0898772f15874e5d8b4e98346e9b24720d1a1180ea98d64817037afb9b443#npm:4.4.3"],\
           ["load-script", "npm:1.0.0"],\
           ["sister", "npm:3.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["youtubei.js", [\
+      ["npm:16.0.1", {\
+        "packageLocation": "./.yarn/cache/youtubei.js-npm-16.0.1-4e48a214d0-3bbee43d1b.zip/node_modules/youtubei.js/",\
+        "packageDependencies": [\
+          ["youtubei.js", "npm:16.0.1"],\
+          ["@bufbuild/protobuf", "npm:2.11.0"],\
+          ["meriyah", "npm:6.1.4"]\
         ],\
         "linkType": "HARD"\
       }]\

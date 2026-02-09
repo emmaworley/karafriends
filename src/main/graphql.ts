@@ -24,6 +24,11 @@ import { useServer } from "graphql-ws/use/ws"; // tslint:disable-line:no-submodu
 import { Nicovideo } from "niconico";
 import nodeFetch from "node-fetch";
 import tunnel from "tunnel";
+import {
+  CaptionTrackData,
+  Innertube,
+  VideoInfo as YTVideoInfo,
+} from "youtubei.js";
 
 // tslint:disable-next-line:no-submodule-imports no-implicit-dependencies
 import rawSchema from "inline-string:../common/schema.graphql";
@@ -37,8 +42,6 @@ import {
   TEMP_FOLDER,
 } from "./../common/videoDownloader";
 import { DkwebsysAPI, MinseiAPI, MinseiCredentialsProvider } from "./damApi";
-import { YoutubeAPI } from "./youtubeApi";
-
 import { JoysoundAPI, JoysoundCredentialsProvider } from "./joysoundApi";
 
 import { memoize } from "lodash";
@@ -49,7 +52,7 @@ export interface IDataSources {
     minsei: MinseiAPI;
     joysound: JoysoundAPI;
     dkwebsys: DkwebsysAPI;
-    youtube: YoutubeAPI;
+    youtube: Innertube;
   };
 }
 
@@ -805,44 +808,44 @@ const resolvers = {
       args: { videoId: string },
       { dataSources }: IDataSources,
     ): Promise<YoutubeVideoInfoResult> => {
-      return dataSources.youtube.getVideoInfo(args.videoId).then((data) => {
-        if (data.playabilityStatus.status !== "OK") {
-          return {
-            __typename: "YoutubeVideoInfoError",
-            reason: data.playabilityStatus.reason,
-          };
-        }
-        const captionLanguages: CaptionLanguage[] = [];
-        if (data?.captions) {
-          data.captions.playerCaptionsTracklistRenderer.captionTracks.forEach(
-            (captionTrack) => {
-              // auto-generated captions have a vssId that start with "a". Skip them
-              if (captionTrack.vssId.startsWith("a")) {
-                return;
-              }
-              captionLanguages.push({
-                code: captionTrack.languageCode,
-                name: captionTrack.name.simpleText,
-              });
-            },
-          );
-        }
+      return dataSources.youtube
+        .getBasicInfo(args.videoId)
+        .then((data: YTVideoInfo) => {
+          if (data.playability_status.status !== "OK") {
+            return {
+              __typename: "YoutubeVideoInfoError",
+              reason: data.playability_status.reason,
+            };
+          }
 
-        return {
-          __typename: "YoutubeVideoInfo",
-          author: data.videoDetails.author,
-          captionLanguages,
-          channelId: data.videoDetails.channelId,
-          keywords: data.videoDetails.keywords,
-          lengthSeconds: parseInt(data.videoDetails.lengthSeconds, 10),
-          description: data.videoDetails.shortDescription,
-          title: data.videoDetails.title,
-          viewCount: parseInt(data.videoDetails.viewCount, 10),
-          gainValue:
-            10 **
-            ((-1 * (data.playerConfig.audioConfig.loudnessDb || 0.0)) / 20),
-        };
-      });
+          const captionTracks: CaptionTrackData[] =
+            data.captions?.caption_tracks || [];
+          const captionLanguages: CaptionLanguage[] = captionTracks
+            .filter(
+              (captionTrack: CaptionTrackData) =>
+                !captionTrack.vss_id.startsWith("a"),
+            )
+            .map((captionTrack: CaptionTrackData) => ({
+              code: captionTrack.language_code,
+              name: captionTrack.name.text,
+            }));
+
+          const loudnessDb =
+            data.player_config?.audio_config?.loudness_db || 0.0;
+
+          return {
+            __typename: "YoutubeVideoInfo",
+            author: data.basic_info.author,
+            captionLanguages,
+            channelId: data.basic_info.channel_id,
+            keywords: data.basic_info.keywords,
+            lengthSeconds: data.basic_info.duration,
+            description: data.basic_info.short_description,
+            title: data.basic_info.title,
+            viewCount: data.basic_info.view_count,
+            gainValue: 10 ** ((-1 * loudnessDb) / 20),
+          };
+        });
     },
     nicoVideoInfo: async (
       _: any,
@@ -1201,6 +1204,10 @@ export const joysoundCredentialsProvider = memoize(async () => {
   return JoysoundAPI.login(joysoundEmail, joysoundPassword);
 });
 
+const innertubeApiProvider = memoize(async () => {
+  return Innertube.create();
+});
+
 export function applyGraphQLMiddleware(app: Application) {
   const httpServer = createServer(app);
 
@@ -1256,20 +1263,27 @@ export function applyGraphQLMiddleware(app: Application) {
       "/graphql",
       express.json(),
       expressMiddleware(server, {
-        context: async () => ({
-          dataSources: {
-            minsei: new MinseiAPI(minseiCredentialsProvider, {
-              cache: server.cache,
-              fetch: fetcher,
-            }),
-            joysound: new JoysoundAPI(joysoundCredentialsProvider, {
-              cache: server.cache,
-              fetch: fetcher,
-            }),
-            dkwebsys: new DkwebsysAPI({ cache: server.cache, fetch: fetcher }),
-            youtube: new YoutubeAPI({ cache: server.cache, fetch: fetcher }),
-          },
-        }),
+        context: async () => {
+          const innertubeApiInstance = await innertubeApiProvider();
+
+          return {
+            dataSources: {
+              minsei: new MinseiAPI(minseiCredentialsProvider, {
+                cache: server.cache,
+                fetch: fetcher,
+              }),
+              joysound: new JoysoundAPI(joysoundCredentialsProvider, {
+                cache: server.cache,
+                fetch: fetcher,
+              }),
+              dkwebsys: new DkwebsysAPI({
+                cache: server.cache,
+                fetch: fetcher,
+              }),
+              youtube: innertubeApiInstance,
+            },
+          };
+        },
       }),
     );
     httpServer.listen(karafriendsConfig.remoconPort, () => {
