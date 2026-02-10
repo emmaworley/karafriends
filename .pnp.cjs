@@ -64,7 +64,7 @@ const RAW_RUNTIME_STATE =
           ["@types/color-convert", "npm:2.0.4"],\
           ["@types/compression", "npm:1.8.1"],\
           ["@types/cors", "npm:2.8.19"],\
-          ["@types/express", "npm:5.0.3"],\
+          ["@types/express", "npm:5.0.6"],\
           ["@types/format-duration", "npm:3.0.0"],\
           ["@types/gl-vec2", "npm:1.3.5"],\
           ["@types/hls.js", "npm:1.0.0"],\
@@ -107,7 +107,7 @@ const RAW_RUNTIME_STATE =
           ["electron", "npm:40.2.1"],\
           ["electron-is-dev", "npm:3.0.1"],\
           ["electron-packager", "npm:17.1.2"],\
-          ["express", "npm:5.1.0"],\
+          ["express", "npm:5.2.1"],\
           ["fft.js", "npm:4.0.4"],\
           ["format-duration", "npm:3.0.2"],\
           ["gl-vec2", "npm:1.3.0"],\
@@ -587,8 +587,8 @@ const RAW_RUNTIME_STATE =
           ["@as-integrations/express5", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:1.1.2"],\
           ["@apollo/server", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:5.4.0"],\
           ["@types/apollo__server", null],\
-          ["@types/express", "npm:5.0.3"],\
-          ["express", "npm:5.1.0"]\
+          ["@types/express", "npm:5.0.6"],\
+          ["express", "npm:5.2.1"]\
         ],\
         "packagePeers": [\
           "@apollo/server",\
@@ -8042,6 +8042,16 @@ const RAW_RUNTIME_STATE =
           ["@types/serve-static", "npm:1.15.7"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:5.0.6", {\
+        "packageLocation": "./.yarn/cache/@types-express-npm-5.0.6-a43836c0f4-da2cc3de1b.zip/node_modules/@types/express/",\
+        "packageDependencies": [\
+          ["@types/express", "npm:5.0.6"],\
+          ["@types/body-parser", "npm:1.19.5"],\
+          ["@types/express-serve-static-core", "npm:5.0.6"],\
+          ["@types/serve-static", "npm:2.2.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@types/express-serve-static-core", [\
@@ -8512,6 +8522,15 @@ const RAW_RUNTIME_STATE =
           ["@types/http-errors", "npm:2.0.4"],\
           ["@types/node", "npm:24.7.2"],\
           ["@types/send", "npm:0.17.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:2.2.0", {\
+        "packageLocation": "./.yarn/cache/@types-serve-static-npm-2.2.0-5b97070e23-f2bad1304c.zip/node_modules/@types/serve-static/",\
+        "packageDependencies": [\
+          ["@types/serve-static", "npm:2.2.0"],\
+          ["@types/http-errors", "npm:2.0.4"],\
+          ["@types/node", "npm:24.7.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12726,10 +12745,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["express", [\
-      ["npm:5.1.0", {\
-        "packageLocation": "./.yarn/cache/express-npm-5.1.0-e44442bf7d-6dba00bbdf.zip/node_modules/express/",\
+      ["npm:5.2.1", {\
+        "packageLocation": "./.yarn/cache/express-npm-5.2.1-d1e97b99e1-4aa545d897.zip/node_modules/express/",\
         "packageDependencies": [\
-          ["express", "npm:5.1.0"],\
+          ["express", "npm:5.2.1"],\
           ["accepts", "npm:2.0.0"],\
           ["body-parser", "npm:2.2.2"],\
           ["content-disposition", "npm:1.0.0"],\
@@ -12737,6 +12756,7 @@ const RAW_RUNTIME_STATE =
           ["cookie", "npm:0.7.2"],\
           ["cookie-signature", "npm:1.2.2"],\
           ["debug", "virtual:85d5d916b6a745b2f8de0d4b1704b7084bdd4f7573c1ef5d1c877f2c866045a9b29fe2bc752d1b73e531c378a0518dd3f9fa187b31427fb9bacbe34b14715dde#npm:4.4.3"],\
+          ["depd", "npm:2.0.0"],\
           ["encodeurl", "npm:2.0.0"],\
           ["escape-html", "npm:1.0.3"],\
           ["etag", "npm:1.8.1"],\
@@ -15932,7 +15952,7 @@ const RAW_RUNTIME_STATE =
           ["@types/color-convert", "npm:2.0.4"],\
           ["@types/compression", "npm:1.8.1"],\
           ["@types/cors", "npm:2.8.19"],\
-          ["@types/express", "npm:5.0.3"],\
+          ["@types/express", "npm:5.0.6"],\
           ["@types/format-duration", "npm:3.0.0"],\
           ["@types/gl-vec2", "npm:1.3.5"],\
           ["@types/hls.js", "npm:1.0.0"],\
@@ -15975,7 +15995,7 @@ const RAW_RUNTIME_STATE =
           ["electron", "npm:40.2.1"],\
           ["electron-is-dev", "npm:3.0.1"],\
           ["electron-packager", "npm:17.1.2"],\
-          ["express", "npm:5.1.0"],\
+          ["express", "npm:5.2.1"],\
           ["fft.js", "npm:4.0.4"],\
           ["format-duration", "npm:3.0.2"],\
           ["gl-vec2", "npm:1.3.0"],\
