@@ -14,7 +14,7 @@ itertools = "0.14.0"
 neon = { version = "1.0.0", default-features = false, features = ["napi-8"] }
 realfft = "3.5.0"
 ringbuf = "0.4.8"
-rubato = "0.16.2"
+rubato = "1.0.1"
 
 [dev-dependencies]
 wavegen = "0.4.1"
