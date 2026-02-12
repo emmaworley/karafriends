@@ -59,7 +59,7 @@ const RAW_RUNTIME_STATE =
           ["@sentry/node", "npm:10.38.0"],\
           ["@testing-library/dom", "npm:10.4.1"],\
           ["@testing-library/webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.2.1"],\
-          ["@types/audioworklet", "npm:0.0.94"],\
+          ["@types/audioworklet", "npm:0.0.95"],\
           ["@types/babel__core", "npm:7.20.5"],\
           ["@types/color-convert", "npm:2.0.4"],\
           ["@types/compression", "npm:1.8.1"],\
@@ -7956,10 +7956,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/audioworklet", [\
-      ["npm:0.0.94", {\
-        "packageLocation": "./.yarn/cache/@types-audioworklet-npm-0.0.94-3d113626f8-d857003841.zip/node_modules/@types/audioworklet/",\
+      ["npm:0.0.95", {\
+        "packageLocation": "./.yarn/cache/@types-audioworklet-npm-0.0.95-128bd726f6-cdaf8dea77.zip/node_modules/@types/audioworklet/",\
         "packageDependencies": [\
-          ["@types/audioworklet", "npm:0.0.94"]\
+          ["@types/audioworklet", "npm:0.0.95"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15996,7 +15996,7 @@ const RAW_RUNTIME_STATE =
           ["@sentry/node", "npm:10.38.0"],\
           ["@testing-library/dom", "npm:10.4.1"],\
           ["@testing-library/webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.2.1"],\
-          ["@types/audioworklet", "npm:0.0.94"],\
+          ["@types/audioworklet", "npm:0.0.95"],\
           ["@types/babel__core", "npm:7.20.5"],\
           ["@types/color-convert", "npm:2.0.4"],\
           ["@types/compression", "npm:1.8.1"],\
