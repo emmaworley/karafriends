@@ -104,7 +104,7 @@ const RAW_RUNTIME_STATE =
           ["cross-env", "npm:10.1.0"],\
           ["cubic-spline", "npm:3.0.3"],\
           ["dataloader", "npm:2.2.3"],\
-          ["electron", "npm:40.2.1"],\
+          ["electron", "npm:40.4.0"],\
           ["electron-is-dev", "npm:3.0.1"],\
           ["electron-packager", "npm:17.1.2"],\
           ["express", "npm:5.1.0"],\
@@ -12132,10 +12132,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["electron", [\
-      ["npm:40.2.1", {\
-        "packageLocation": "./.yarn/unplugged/electron-npm-40.2.1-ae2790a2ea/node_modules/electron/",\
+      ["npm:40.4.0", {\
+        "packageLocation": "./.yarn/unplugged/electron-npm-40.4.0-73265422b1/node_modules/electron/",\
         "packageDependencies": [\
-          ["electron", "npm:40.2.1"],\
+          ["electron", "npm:40.4.0"],\
           ["@electron/get", "npm:2.0.3"],\
           ["@types/node", "npm:24.10.12"],\
           ["extract-zip", "npm:2.0.1"]\
@@ -16041,7 +16041,7 @@ const RAW_RUNTIME_STATE =
           ["cross-env", "npm:10.1.0"],\
           ["cubic-spline", "npm:3.0.3"],\
           ["dataloader", "npm:2.2.3"],\
-          ["electron", "npm:40.2.1"],\
+          ["electron", "npm:40.4.0"],\
           ["electron-is-dev", "npm:3.0.1"],\
           ["electron-packager", "npm:17.1.2"],\
           ["express", "npm:5.1.0"],\
@@ -22046,7 +22046,7 @@ const RAW_RUNTIME_STATE =
           ["@wdio/logger", "npm:9.18.0"],\
           ["compare-versions", "npm:6.1.1"],\
           ["debug", "virtual:85d5d916b6a745b2f8de0d4b1704b7084bdd4f7573c1ef5d1c877f2c866045a9b29fe2bc752d1b73e531c378a0518dd3f9fa187b31427fb9bacbe34b14715dde#npm:4.4.3"],\
-          ["electron", "npm:40.2.1"],\
+          ["electron", "npm:40.4.0"],\
           ["electron-to-chromium", "npm:1.5.286"],\
           ["fast-copy", "npm:3.0.2"],\
           ["get-port", "npm:7.1.0"],\
