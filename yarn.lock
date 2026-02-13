@@ -6270,14 +6270,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/dot-reporter@npm:9.23.3":
-  version: 9.23.3
-  resolution: "@wdio/dot-reporter@npm:9.23.3"
+"@wdio/dot-reporter@npm:9.24.0":
+  version: 9.24.0
+  resolution: "@wdio/dot-reporter@npm:9.24.0"
   dependencies:
-    "@wdio/reporter": "npm:9.23.3"
-    "@wdio/types": "npm:9.23.3"
+    "@wdio/reporter": "npm:9.24.0"
+    "@wdio/types": "npm:9.24.0"
     chalk: "npm:^5.0.1"
-  checksum: 10/09be6b8ae09b2a2b1edcce9c5bb706c8d9020076859a6006f91b39244d420595963eb876f10e0af33d2ed24ad56c751cc092c3703cf9780341b4ca62bf08d916
+  checksum: 10/51e7ba6d1b9ab78fc10b11957479b512d1e3d4771d263b1c84da27881bb02798f4d8a5ee1f861eb4a7d4321795839c54c9bee44edfa1bcba0d4dda15fb723213
   languageName: node
   linkType: hard
 
@@ -6323,21 +6323,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/local-runner@npm:9.23.3":
-  version: 9.23.3
-  resolution: "@wdio/local-runner@npm:9.23.3"
+"@wdio/local-runner@npm:9.24.0":
+  version: 9.24.0
+  resolution: "@wdio/local-runner@npm:9.24.0"
   dependencies:
     "@types/node": "npm:^20.1.0"
     "@wdio/logger": "npm:9.18.0"
     "@wdio/repl": "npm:9.16.2"
-    "@wdio/runner": "npm:9.23.3"
-    "@wdio/types": "npm:9.23.3"
-    "@wdio/xvfb": "npm:9.23.3"
+    "@wdio/runner": "npm:9.24.0"
+    "@wdio/types": "npm:9.24.0"
+    "@wdio/xvfb": "npm:9.24.0"
     exit-hook: "npm:^4.0.0"
     expect-webdriverio: "npm:^5.3.4"
     split2: "npm:^4.1.0"
     stream-buffers: "npm:^3.0.2"
-  checksum: 10/abbb6e5fb2466c074e2f6b2b77508e78ef5d11e485179beaf2c1cbc4fde02cdfb6c29a1f75d60f9b06217b712ea17873b0f7a9775d80e4847f1c06a56c943721
+  checksum: 10/f07a2e030c5fb8b0362e83eb081b2681d6c4d2e8501486f9edba1abca979c585c895d852b171b4d8b1daec27c979ab91b5f751c82956c984bf1807b12e59b866
   languageName: node
   linkType: hard
 
@@ -6391,33 +6391,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/reporter@npm:9.23.3":
-  version: 9.23.3
-  resolution: "@wdio/reporter@npm:9.23.3"
+"@wdio/reporter@npm:9.24.0":
+  version: 9.24.0
+  resolution: "@wdio/reporter@npm:9.24.0"
   dependencies:
     "@types/node": "npm:^20.1.0"
     "@wdio/logger": "npm:9.18.0"
-    "@wdio/types": "npm:9.23.3"
+    "@wdio/types": "npm:9.24.0"
     diff: "npm:^8.0.2"
     object-inspect: "npm:^1.12.0"
-  checksum: 10/896a59088caeb07ed620361b5b88441132512ba9b7f59925ea48b8300b308708ede75867b139a2b1237b45b5f8f6cc3e2f9468c6d8b78160dbf7fa063aa69488
+  checksum: 10/018b530a03ce3bd016b23cbd5318aa30510d793aef899a16448b37e75521fe48bd78ed59ec5f8af99d2b895adf3be247152ef68dd510302ca1b9122fe700ba0b
   languageName: node
   linkType: hard
 
-"@wdio/runner@npm:9.23.3":
-  version: 9.23.3
-  resolution: "@wdio/runner@npm:9.23.3"
+"@wdio/runner@npm:9.24.0":
+  version: 9.24.0
+  resolution: "@wdio/runner@npm:9.24.0"
   dependencies:
     "@types/node": "npm:^20.11.28"
-    "@wdio/config": "npm:9.23.3"
-    "@wdio/dot-reporter": "npm:9.23.3"
+    "@wdio/config": "npm:9.24.0"
+    "@wdio/dot-reporter": "npm:9.24.0"
     "@wdio/globals": "npm:9.23.0"
     "@wdio/logger": "npm:9.18.0"
-    "@wdio/types": "npm:9.23.3"
-    "@wdio/utils": "npm:9.23.3"
+    "@wdio/types": "npm:9.24.0"
+    "@wdio/utils": "npm:9.24.0"
     deepmerge-ts: "npm:^7.0.3"
-    webdriver: "npm:9.23.3"
-    webdriverio: "npm:9.23.3"
+    webdriver: "npm:9.24.0"
+    webdriverio: "npm:9.24.0"
   peerDependencies:
     expect-webdriverio: ^5.3.4
     webdriverio: ^9.0.0
@@ -6426,7 +6426,7 @@ __metadata:
       optional: false
     webdriverio:
       optional: false
-  checksum: 10/ad4919b6e0a2a41c2a448a979f284b357e6d997f7a9e842c18d08e46fc349b5f1ab65170c410c289bb9ce525e8b82920427db1d9ceb0ea10f1c4d4b46871601b
+  checksum: 10/2d4bdbd9786911623a5d0cad8fcb2d80aca68f57fe882320a3ec110a6741793ef467bf99162b388dae694894d3248e7f160aaf238d738014caaf153d55bc9987
   languageName: node
   linkType: hard
 
@@ -6492,12 +6492,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/xvfb@npm:9.23.3":
-  version: 9.23.3
-  resolution: "@wdio/xvfb@npm:9.23.3"
+"@wdio/xvfb@npm:9.24.0":
+  version: 9.24.0
+  resolution: "@wdio/xvfb@npm:9.24.0"
   dependencies:
     "@wdio/logger": "npm:9.18.0"
-  checksum: 10/f7eae6fa04f4a5ea93bcf76e0f49af1bed3866964b7a7307f39988239f4824afea4ec49069ab48559f0410bc74dabc904b2f7d667557bac256b807cfd9dae777
+  checksum: 10/0e1de99ff3104b13dc703d110b13f355602750701750d219f6ef493e35b10880482828002e7823b6d304e6bed0d973317f659c450a66fd6c802ddd6a69c7b6ee
   languageName: node
   linkType: hard
 
@@ -12778,7 +12778,7 @@ __metadata:
     "@types/youtube-player": "npm:5.5.11"
     "@wdio/cli": "npm:9.23.3"
     "@wdio/globals": "npm:9.23.0"
-    "@wdio/local-runner": "npm:9.23.3"
+    "@wdio/local-runner": "npm:9.24.0"
     "@wdio/mocha-framework": "npm:9.24.0"
     "@yarnpkg/pnpify": "npm:4.1.6"
     babel-loader: "npm:10.0.0"
