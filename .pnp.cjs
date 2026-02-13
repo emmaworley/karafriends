@@ -162,7 +162,7 @@ const RAW_RUNTIME_STATE =
           ["user-agents", "npm:1.1.669"],\
           ["utf-8-validate", "npm:6.0.6"],\
           ["uuid", "npm:13.0.0"],\
-          ["wait-on", "npm:9.0.3"],\
+          ["wait-on", "npm:9.0.4"],\
           ["wanakana", "npm:5.3.1"],\
           ["wdio-electron-service", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.2.1"],\
           ["webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.24.0"],\
@@ -15790,10 +15790,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["joi", [\
-      ["npm:18.0.1", {\
-        "packageLocation": "./.yarn/cache/joi-npm-18.0.1-f286682573-d8e391c0e9.zip/node_modules/joi/",\
+      ["npm:18.0.2", {\
+        "packageLocation": "./.yarn/cache/joi-npm-18.0.2-79a3fbcace-0cf4980caf.zip/node_modules/joi/",\
         "packageDependencies": [\
-          ["joi", "npm:18.0.1"],\
+          ["joi", "npm:18.0.2"],\
           ["@hapi/address", "npm:5.1.1"],\
           ["@hapi/formula", "npm:3.0.2"],\
           ["@hapi/hoek", "npm:11.0.7"],\
@@ -16149,7 +16149,7 @@ const RAW_RUNTIME_STATE =
           ["user-agents", "npm:1.1.669"],\
           ["utf-8-validate", "npm:6.0.6"],\
           ["uuid", "npm:13.0.0"],\
-          ["wait-on", "npm:9.0.3"],\
+          ["wait-on", "npm:9.0.4"],\
           ["wanakana", "npm:5.3.1"],\
           ["wdio-electron-service", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.2.1"],\
           ["webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.24.0"],\
@@ -22028,13 +22028,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["wait-on", [\
-      ["npm:9.0.3", {\
-        "packageLocation": "./.yarn/cache/wait-on-npm-9.0.3-cc34d3560e-f5d9e708f9.zip/node_modules/wait-on/",\
+      ["npm:9.0.4", {\
+        "packageLocation": "./.yarn/cache/wait-on-npm-9.0.4-0c132c1dc4-def7285ab9.zip/node_modules/wait-on/",\
         "packageDependencies": [\
-          ["wait-on", "npm:9.0.3"],\
+          ["wait-on", "npm:9.0.4"],\
           ["axios", "npm:1.13.5"],\
-          ["joi", "npm:18.0.1"],\
-          ["lodash", "npm:4.17.21"],\
+          ["joi", "npm:18.0.2"],\
+          ["lodash", "npm:4.17.23"],\
           ["minimist", "npm:1.2.8"],\
           ["rxjs", "npm:7.8.2"]\
         ],\
