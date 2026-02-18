@@ -51,7 +51,7 @@ interface MinseiStreamingUrls extends MinseiResponse {
 }
 
 export class MinseiAPI extends RESTDataSource {
-  override baseURL = "https://csgw.clubdam.com";
+  override baseURL = "https://win10.clubdam.com";
   credsProvider: MinseiCredentialsProvider;
 
   constructor(
@@ -76,6 +76,8 @@ export class MinseiAPI extends RESTDataSource {
       body,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
+        "User-Agent": "WindowsApplication",
+        "win10-access-key": "mbAmgk3GuCOKAgL8dCQR",
       },
     });
   }
@@ -98,12 +100,14 @@ export class MinseiAPI extends RESTDataSource {
 
   static login(loginId: string, password: string) {
     return fetch(
-      `https://csgw.clubdam.com/cwa/win/minsei/auth/LoginByDamtomoMemberId.api`,
+      `https://win10.clubdam.com/cwa/win/minsei/auth/LoginByDamtomoMemberId.api`,
       {
         method: "POST",
         body: `loginId=${loginId}&password=${password}&format=json`,
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
+          "User-Agent": "WindowsApplication",
+          "win10-access-key": "mbAmgk3GuCOKAgL8dCQR",
         },
       },
     )
@@ -256,6 +260,9 @@ export class DkwebsysAPI extends RESTDataSource {
     );
     return super.post(url, {
       body,
+      headers: {
+        "User-Agent": "WindowsApplication",
+      },
     });
   }
 
