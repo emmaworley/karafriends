@@ -136,7 +136,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:3.8.1"],\
           ["process", "npm:0.11.10"],\
           ["promise-retry", "npm:2.0.1"],\
-          ["puppeteer-core", "npm:24.37.3"],\
+          ["puppeteer-core", "npm:24.37.4"],\
           ["qrcode", "npm:1.5.4"],\
           ["raw-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:4.0.2"],\
           ["react", "npm:19.2.0"],\
@@ -7403,10 +7403,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:2.12.1", {\
-        "packageLocation": "./.yarn/cache/@puppeteer-browsers-npm-2.12.1-a4c212cbb4-f8a57f2fd2.zip/node_modules/@puppeteer/browsers/",\
+      ["npm:2.13.0", {\
+        "packageLocation": "./.yarn/cache/@puppeteer-browsers-npm-2.13.0-ea7c9540dd-f14f4fe098.zip/node_modules/@puppeteer/browsers/",\
         "packageDependencies": [\
-          ["@puppeteer/browsers", "npm:2.12.1"],\
+          ["@puppeteer/browsers", "npm:2.13.0"],\
           ["debug", "virtual:85d5d916b6a745b2f8de0d4b1704b7084bdd4f7573c1ef5d1c877f2c866045a9b29fe2bc752d1b73e531c378a0518dd3f9fa187b31427fb9bacbe34b14715dde#npm:4.4.3"],\
           ["extract-zip", "npm:2.0.1"],\
           ["progress", "npm:2.0.3"],\
@@ -10789,10 +10789,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:cd1f2653ebc2e02c48ba5f6f9bff842044915361a84253e48e75f59b0169701d5abcfa91eb428d0c708ff9c05ee4ba90e61308ec6b88fe9055bf50b0147f485d#npm:14.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/chromium-bidi-virtual-0f372d38ce/0/cache/chromium-bidi-npm-14.0.0-e11cc747f8-b931d7fb45.zip/node_modules/chromium-bidi/",\
+      ["virtual:aea14ba145e89b8c55d448dafdf71575f51f8c4c0caf3eb3e619de7e3219ab0bd98c085989e90c713ba7cb079c9b248c19318a35b4a6d06c1505113862eb2e93#npm:14.0.0", {\
+        "packageLocation": "./.yarn/__virtual__/chromium-bidi-virtual-a245082fd1/0/cache/chromium-bidi-npm-14.0.0-e11cc747f8-b931d7fb45.zip/node_modules/chromium-bidi/",\
         "packageDependencies": [\
-          ["chromium-bidi", "virtual:cd1f2653ebc2e02c48ba5f6f9bff842044915361a84253e48e75f59b0169701d5abcfa91eb428d0c708ff9c05ee4ba90e61308ec6b88fe9055bf50b0147f485d#npm:14.0.0"],\
+          ["chromium-bidi", "virtual:aea14ba145e89b8c55d448dafdf71575f51f8c4c0caf3eb3e619de7e3219ab0bd98c085989e90c713ba7cb079c9b248c19318a35b4a6d06c1505113862eb2e93#npm:14.0.0"],\
           ["@types/devtools-protocol", null],\
           ["devtools-protocol", "npm:0.0.1566079"],\
           ["mitt", "npm:3.0.1"],\
@@ -16105,7 +16105,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:3.8.1"],\
           ["process", "npm:0.11.10"],\
           ["promise-retry", "npm:2.0.1"],\
-          ["puppeteer-core", "npm:24.37.3"],\
+          ["puppeteer-core", "npm:24.37.4"],\
           ["qrcode", "npm:1.5.4"],\
           ["raw-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:4.0.2"],\
           ["react", "npm:19.2.0"],\
@@ -18823,17 +18823,17 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:24.37.3", {\
-        "packageLocation": "./.yarn/cache/puppeteer-core-npm-24.37.3-cd1f2653eb-b8ebf4b10d.zip/node_modules/puppeteer-core/",\
+      ["npm:24.37.4", {\
+        "packageLocation": "./.yarn/cache/puppeteer-core-npm-24.37.4-aea14ba145-8648c4fa5d.zip/node_modules/puppeteer-core/",\
         "packageDependencies": [\
-          ["puppeteer-core", "npm:24.37.3"],\
-          ["@puppeteer/browsers", "npm:2.12.1"],\
-          ["chromium-bidi", "virtual:cd1f2653ebc2e02c48ba5f6f9bff842044915361a84253e48e75f59b0169701d5abcfa91eb428d0c708ff9c05ee4ba90e61308ec6b88fe9055bf50b0147f485d#npm:14.0.0"],\
+          ["puppeteer-core", "npm:24.37.4"],\
+          ["@puppeteer/browsers", "npm:2.13.0"],\
+          ["chromium-bidi", "virtual:aea14ba145e89b8c55d448dafdf71575f51f8c4c0caf3eb3e619de7e3219ab0bd98c085989e90c713ba7cb079c9b248c19318a35b4a6d06c1505113862eb2e93#npm:14.0.0"],\
           ["debug", "virtual:85d5d916b6a745b2f8de0d4b1704b7084bdd4f7573c1ef5d1c877f2c866045a9b29fe2bc752d1b73e531c378a0518dd3f9fa187b31427fb9bacbe34b14715dde#npm:4.4.3"],\
           ["devtools-protocol", "npm:0.0.1566079"],\
           ["typed-query-selector", "npm:2.12.0"],\
           ["webdriver-bidi-protocol", "npm:0.4.1"],\
-          ["ws", "virtual:cd1f2653ebc2e02c48ba5f6f9bff842044915361a84253e48e75f59b0169701d5abcfa91eb428d0c708ff9c05ee4ba90e61308ec6b88fe9055bf50b0147f485d#npm:8.19.0"]\
+          ["ws", "virtual:aea14ba145e89b8c55d448dafdf71575f51f8c4c0caf3eb3e619de7e3219ab0bd98c085989e90c713ba7cb079c9b248c19318a35b4a6d06c1505113862eb2e93#npm:8.19.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -22192,7 +22192,7 @@ const RAW_RUNTIME_STATE =
           ["jszip", "npm:3.10.1"],\
           ["lodash.clonedeep", "npm:4.5.0"],\
           ["lodash.zip", "npm:4.2.0"],\
-          ["puppeteer-core", "npm:24.37.3"],\
+          ["puppeteer-core", "npm:24.37.4"],\
           ["query-selector-shadow-dom", "npm:1.0.1"],\
           ["resq", "npm:1.11.0"],\
           ["rgb2hex", "npm:0.2.5"],\
@@ -22530,10 +22530,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:cd1f2653ebc2e02c48ba5f6f9bff842044915361a84253e48e75f59b0169701d5abcfa91eb428d0c708ff9c05ee4ba90e61308ec6b88fe9055bf50b0147f485d#npm:8.19.0", {\
-        "packageLocation": "./.yarn/__virtual__/ws-virtual-d5cc2abf87/0/cache/ws-npm-8.19.0-c967c046a5-26e4901e93.zip/node_modules/ws/",\
+      ["virtual:aea14ba145e89b8c55d448dafdf71575f51f8c4c0caf3eb3e619de7e3219ab0bd98c085989e90c713ba7cb079c9b248c19318a35b4a6d06c1505113862eb2e93#npm:8.19.0", {\
+        "packageLocation": "./.yarn/__virtual__/ws-virtual-ec6129e7ce/0/cache/ws-npm-8.19.0-c967c046a5-26e4901e93.zip/node_modules/ws/",\
         "packageDependencies": [\
-          ["ws", "virtual:cd1f2653ebc2e02c48ba5f6f9bff842044915361a84253e48e75f59b0169701d5abcfa91eb428d0c708ff9c05ee4ba90e61308ec6b88fe9055bf50b0147f485d#npm:8.19.0"],\
+          ["ws", "virtual:aea14ba145e89b8c55d448dafdf71575f51f8c4c0caf3eb3e619de7e3219ab0bd98c085989e90c713ba7cb079c9b248c19318a35b4a6d06c1505113862eb2e93#npm:8.19.0"],\
           ["@types/bufferutil", null],\
           ["@types/utf-8-validate", null],\
           ["bufferutil", null],\
