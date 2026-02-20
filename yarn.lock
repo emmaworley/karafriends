@@ -12896,7 +12896,7 @@ __metadata:
     prettier: "npm:3.8.1"
     process: "npm:0.11.10"
     promise-retry: "npm:2.0.1"
-    puppeteer-core: "npm:24.37.4"
+    puppeteer-core: "npm:24.37.5"
     qrcode: "npm:1.5.4"
     raw-loader: "npm:4.0.2"
     react: "npm:19.2.4"
@@ -15388,9 +15388,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"puppeteer-core@npm:24.37.4":
-  version: 24.37.4
-  resolution: "puppeteer-core@npm:24.37.4"
+"puppeteer-core@npm:24.37.5":
+  version: 24.37.5
+  resolution: "puppeteer-core@npm:24.37.5"
   dependencies:
     "@puppeteer/browsers": "npm:2.13.0"
     chromium-bidi: "npm:14.0.0"
@@ -15399,7 +15399,7 @@ __metadata:
     typed-query-selector: "npm:^2.12.0"
     webdriver-bidi-protocol: "npm:0.4.1"
     ws: "npm:^8.19.0"
-  checksum: 10/8648c4fa5d5c63c5401314e45d4a4a01cad72573b9d59ee62fab67cf1e35e2b57f40ce4472b1b9d86a2dbb687a8f720f6393bfcc4936890f4ed06be02adb2f28
+  checksum: 10/b3f49b8396441cd9792672d35b80feaa545f5e2bd4df21e507a3ef547dbb76ca64977848363ffb6b3ba69552182480cc65795a0d08b0fb8bc8e8aace547691dc
   languageName: node
   linkType: hard
 
