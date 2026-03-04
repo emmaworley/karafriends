@@ -120,7 +120,7 @@ const RAW_RUNTIME_STATE =
           ["kuromoji", "npm:0.1.2"],\
           ["kuroshiro", "npm:1.2.0"],\
           ["kuroshiro-analyzer-kuromoji", "npm:1.1.0"],\
-          ["lint-staged", "npm:16.2.7"],\
+          ["lint-staged", "npm:16.3.2"],\
           ["lodash", "npm:4.17.23"],\
           ["materialize-css", "npm:1.0.0"],\
           ["multicast-dns", "npm:7.2.5"],\
@@ -16104,7 +16104,7 @@ const RAW_RUNTIME_STATE =
           ["kuromoji", "npm:0.1.2"],\
           ["kuroshiro", "npm:1.2.0"],\
           ["kuroshiro-analyzer-kuromoji", "npm:1.1.0"],\
-          ["lint-staged", "npm:16.2.7"],\
+          ["lint-staged", "npm:16.3.2"],\
           ["lodash", "npm:4.17.23"],\
           ["materialize-css", "npm:1.0.0"],\
           ["multicast-dns", "npm:7.2.5"],\
@@ -16390,17 +16390,16 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lint-staged", [\
-      ["npm:16.2.7", {\
-        "packageLocation": "./.yarn/cache/lint-staged-npm-16.2.7-9ab2185fb2-c1fd768530.zip/node_modules/lint-staged/",\
+      ["npm:16.3.2", {\
+        "packageLocation": "./.yarn/cache/lint-staged-npm-16.3.2-66096e73a0-41497d746e.zip/node_modules/lint-staged/",\
         "packageDependencies": [\
-          ["lint-staged", "npm:16.2.7"],\
+          ["lint-staged", "npm:16.3.2"],\
           ["commander", "npm:14.0.3"],\
           ["listr2", "npm:9.0.5"],\
           ["micromatch", "npm:4.0.8"],\
-          ["nano-spawn", "npm:2.0.0"],\
-          ["pidtree", "npm:0.6.0"],\
           ["string-argv", "npm:0.3.2"],\
-          ["yaml", "npm:2.8.1"]\
+          ["tinyexec", "npm:1.0.2"],\
+          ["yaml", "npm:2.8.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17337,15 +17336,6 @@ const RAW_RUNTIME_STATE =
           ["mkdirp", "npm:0.5.6"],\
           ["ncp", "npm:2.0.0"],\
           ["rimraf", "npm:2.4.5"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["nano-spawn", [\
-      ["npm:2.0.0", {\
-        "packageLocation": "./.yarn/cache/nano-spawn-npm-2.0.0-96abe72805-117d35d7bd.zip/node_modules/nano-spawn/",\
-        "packageDependencies": [\
-          ["nano-spawn", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18444,15 +18434,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/picomatch-npm-4.0.3-0a647b87cc-57b99055f4.zip/node_modules/picomatch/",\
         "packageDependencies": [\
           ["picomatch", "npm:4.0.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["pidtree", [\
-      ["npm:0.6.0", {\
-        "packageLocation": "./.yarn/cache/pidtree-npm-0.6.0-3d92e16117-ea67fb3159.zip/node_modules/pidtree/",\
-        "packageDependencies": [\
-          ["pidtree", "npm:0.6.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21160,6 +21141,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/tiny-invariant-npm-1.3.3-e622f1447c-5e185c8cc2.zip/node_modules/tiny-invariant/",\
         "packageDependencies": [\
           ["tiny-invariant", "npm:1.3.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["tinyexec", [\
+      ["npm:1.0.2", {\
+        "packageLocation": "./.yarn/cache/tinyexec-npm-1.0.2-321b713e56-cb709ed424.zip/node_modules/tinyexec/",\
+        "packageDependencies": [\
+          ["tinyexec", "npm:1.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
