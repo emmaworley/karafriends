@@ -92,7 +92,7 @@ const RAW_RUNTIME_STATE =
           ["@wdio/local-runner", "npm:9.24.0"],\
           ["@wdio/mocha-framework", "npm:9.24.0"],\
           ["@yarnpkg/pnpify", "npm:4.1.6"],\
-          ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.0.0"],\
+          ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.1.1"],\
           ["babel-plugin-relay", "npm:20.1.1"],\
           ["bufferutil", "npm:4.1.0"],\
           ["cargo-cp-artifact", "npm:0.1.9"],\
@@ -9847,26 +9847,30 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["babel-loader", [\
-      ["npm:10.0.0", {\
-        "packageLocation": "./.yarn/cache/babel-loader-npm-10.0.0-0ac52159c5-f22dc803e3.zip/node_modules/babel-loader/",\
+      ["npm:10.1.1", {\
+        "packageLocation": "./.yarn/cache/babel-loader-npm-10.1.1-20e52285c9-4169d55704.zip/node_modules/babel-loader/",\
         "packageDependencies": [\
-          ["babel-loader", "npm:10.0.0"]\
+          ["babel-loader", "npm:10.1.1"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/babel-loader-virtual-41b4eac911/0/cache/babel-loader-npm-10.0.0-0ac52159c5-f22dc803e3.zip/node_modules/babel-loader/",\
+      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/babel-loader-virtual-d9fdabb160/0/cache/babel-loader-npm-10.1.1-20e52285c9-4169d55704.zip/node_modules/babel-loader/",\
         "packageDependencies": [\
-          ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.0.0"],\
+          ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.1.1"],\
           ["@babel/core", "npm:7.29.0"],\
+          ["@rspack/core", null],\
           ["@types/babel__core", "npm:7.20.5"],\
+          ["@types/rspack__core", null],\
           ["@types/webpack", null],\
           ["find-up", "npm:5.0.0"],\
           ["webpack", null]\
         ],\
         "packagePeers": [\
           "@babel/core",\
+          "@rspack/core",\
           "@types/babel__core",\
+          "@types/rspack__core",\
           "@types/webpack",\
           "webpack"\
         ],\
@@ -16076,7 +16080,7 @@ const RAW_RUNTIME_STATE =
           ["@wdio/local-runner", "npm:9.24.0"],\
           ["@wdio/mocha-framework", "npm:9.24.0"],\
           ["@yarnpkg/pnpify", "npm:4.1.6"],\
-          ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.0.0"],\
+          ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.1.1"],\
           ["babel-plugin-relay", "npm:20.1.1"],\
           ["bufferutil", "npm:4.1.0"],\
           ["cargo-cp-artifact", "npm:0.1.9"],\
