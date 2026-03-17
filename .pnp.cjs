@@ -169,7 +169,7 @@ const RAW_RUNTIME_STATE =
           ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.19.0"],\
           ["yaml", "npm:2.8.2"],\
           ["youtube-player", "npm:5.6.0"],\
-          ["youtubei.js", "npm:16.0.1"]\
+          ["youtubei.js", "npm:17.0.1"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -16153,7 +16153,7 @@ const RAW_RUNTIME_STATE =
           ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.19.0"],\
           ["yaml", "npm:2.8.2"],\
           ["youtube-player", "npm:5.6.0"],\
-          ["youtubei.js", "npm:16.0.1"]\
+          ["youtubei.js", "npm:17.0.1"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -22854,10 +22854,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["youtubei.js", [\
-      ["npm:16.0.1", {\
-        "packageLocation": "./.yarn/cache/youtubei.js-npm-16.0.1-4e48a214d0-3bbee43d1b.zip/node_modules/youtubei.js/",\
+      ["npm:17.0.1", {\
+        "packageLocation": "./.yarn/cache/youtubei.js-npm-17.0.1-8be204e356-6db2dda5e8.zip/node_modules/youtubei.js/",\
         "packageDependencies": [\
-          ["youtubei.js", "npm:16.0.1"],\
+          ["youtubei.js", "npm:17.0.1"],\
           ["@bufbuild/protobuf", "npm:2.11.0"],\
           ["meriyah", "npm:6.1.4"]\
         ],\

@@ -12929,7 +12929,7 @@ __metadata:
     ws: "npm:8.19.0"
     yaml: "npm:2.8.2"
     youtube-player: "npm:5.6.0"
-    youtubei.js: "npm:16.0.1"
+    youtubei.js: "npm:17.0.1"
   dependenciesMeta:
     "@electron/osx-sign@1.3.2":
       unplugged: true
@@ -18945,13 +18945,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"youtubei.js@npm:16.0.1":
-  version: 16.0.1
-  resolution: "youtubei.js@npm:16.0.1"
+"youtubei.js@npm:17.0.1":
+  version: 17.0.1
+  resolution: "youtubei.js@npm:17.0.1"
   dependencies:
     "@bufbuild/protobuf": "npm:^2.0.0"
     meriyah: "npm:^6.1.4"
-  checksum: 10/3bbee43d1b8df181d8d435b3ac6d38e6d7829874565d66beff21943d071d19c61b0cde2dfc4ad17bc6f7b9f2380a8e230e9150e024d2e0fc0238a73b03d2b1f4
+  checksum: 10/6db2dda5e8719a8f4b783c5d4f37195b80ae0157db92bf3ec47a4476e5795a29dfb56eb5a255c60e431129eaf7819e7c97f5ae586208bea8aef12fac396f1b6f
   languageName: node
   linkType: hard
 
