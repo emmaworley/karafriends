@@ -61,7 +61,7 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.2.1"],\
           ["@types/audioworklet", "npm:0.0.95"],\
           ["@types/babel__core", "npm:7.20.5"],\
-          ["@types/color-convert", "npm:2.0.4"],\
+          ["@types/color-convert", "npm:3.0.1"],\
           ["@types/compression", "npm:1.8.1"],\
           ["@types/cors", "npm:2.8.19"],\
           ["@types/express", "npm:5.0.6"],\
@@ -8022,20 +8022,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/color-convert", [\
-      ["npm:2.0.4", {\
-        "packageLocation": "./.yarn/cache/@types-color-convert-npm-2.0.4-50a5c56b9c-08385948a3.zip/node_modules/@types/color-convert/",\
+      ["npm:3.0.1", {\
+        "packageLocation": "./.yarn/cache/@types-color-convert-npm-3.0.1-6056e7ffd3-4e65b695af.zip/node_modules/@types/color-convert/",\
         "packageDependencies": [\
-          ["@types/color-convert", "npm:2.0.4"],\
-          ["@types/color-name", "npm:1.1.5"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@types/color-name", [\
-      ["npm:1.1.5", {\
-        "packageLocation": "./.yarn/cache/@types-color-name-npm-1.1.5-08876d8ea1-47600afcd1.zip/node_modules/@types/color-name/",\
-        "packageDependencies": [\
-          ["@types/color-name", "npm:1.1.5"]\
+          ["@types/color-convert", "npm:3.0.1"],\
+          ["color-convert", "npm:3.1.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16045,7 +16036,7 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.2.1"],\
           ["@types/audioworklet", "npm:0.0.95"],\
           ["@types/babel__core", "npm:7.20.5"],\
-          ["@types/color-convert", "npm:2.0.4"],\
+          ["@types/color-convert", "npm:3.0.1"],\
           ["@types/compression", "npm:1.8.1"],\
           ["@types/cors", "npm:2.8.19"],\
           ["@types/express", "npm:5.0.6"],\

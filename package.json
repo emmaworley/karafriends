@@ -118,7 +118,7 @@
     "@testing-library/webdriverio": "3.2.1",
     "@types/audioworklet": "0.0.95",
     "@types/babel__core": "7",
-    "@types/color-convert": "2.0.4",
+    "@types/color-convert": "3.0.1",
     "@types/compression": "1.8.1",
     "@types/cors": "^2",
     "@types/express": "5.0.6",
