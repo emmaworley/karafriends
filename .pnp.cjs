@@ -70,7 +70,7 @@ const RAW_RUNTIME_STATE =
           ["@types/hls.js", "npm:1.0.0"],\
           ["@types/kuromoji", "npm:0.1.3"],\
           ["@types/lodash", "npm:4.17.20"],\
-          ["@types/materialize-css", "npm:1.0.14"],\
+          ["@types/materialize-css", "npm:1.0.15"],\
           ["@types/node", "npm:25.3.0"],\
           ["@types/node-fetch", "npm:2.6.13"],\
           ["@types/promise-retry", "npm:1.1.6"],\
@@ -8267,10 +8267,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/materialize-css", [\
-      ["npm:1.0.14", {\
-        "packageLocation": "./.yarn/cache/@types-materialize-css-npm-1.0.14-7366169744-b02f28152a.zip/node_modules/@types/materialize-css/",\
+      ["npm:1.0.15", {\
+        "packageLocation": "./.yarn/cache/@types-materialize-css-npm-1.0.15-330fa9b834-9d2f6c8c27.zip/node_modules/@types/materialize-css/",\
         "packageDependencies": [\
-          ["@types/materialize-css", "npm:1.0.14"],\
+          ["@types/materialize-css", "npm:1.0.15"],\
           ["@types/jquery", "npm:3.5.32"],\
           ["cash-dom", "npm:8.1.5"]\
         ],\
@@ -16054,7 +16054,7 @@ const RAW_RUNTIME_STATE =
           ["@types/hls.js", "npm:1.0.0"],\
           ["@types/kuromoji", "npm:0.1.3"],\
           ["@types/lodash", "npm:4.17.20"],\
-          ["@types/materialize-css", "npm:1.0.14"],\
+          ["@types/materialize-css", "npm:1.0.15"],\
           ["@types/node", "npm:25.3.0"],\
           ["@types/node-fetch", "npm:2.6.13"],\
           ["@types/promise-retry", "npm:1.1.6"],\

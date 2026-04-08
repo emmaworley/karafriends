@@ -5765,13 +5765,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/materialize-css@npm:1.0.14":
-  version: 1.0.14
-  resolution: "@types/materialize-css@npm:1.0.14"
+"@types/materialize-css@npm:1.0.15":
+  version: 1.0.15
+  resolution: "@types/materialize-css@npm:1.0.15"
   dependencies:
     "@types/jquery": "npm:*"
     cash-dom: "npm:*"
-  checksum: 10/b02f28152aef75d8506a1b617878b491be6cd0ec67de947a7de3f4642ab60a80d926e55791bc5be475d2b9d97ec7c4f43b00a076d03a79032bb95c42f9cded3b
+  checksum: 10/9d2f6c8c279e73ce33cd8f309a3ac2c003446ca31b12beb799a744523daec3ca7b84aea75d6716723596f600b8b692b32c39808819e96c3c51011207eaa2acd3
   languageName: node
   linkType: hard
 
@@ -12830,7 +12830,7 @@ __metadata:
     "@types/hls.js": "npm:1.0.0"
     "@types/kuromoji": "npm:0.1.3"
     "@types/lodash": "npm:4.17.20"
-    "@types/materialize-css": "npm:1.0.14"
+    "@types/materialize-css": "npm:1.0.15"
     "@types/node": "npm:25.3.0"
     "@types/node-fetch": "npm:2.6.13"
     "@types/promise-retry": "npm:1.1.6"
