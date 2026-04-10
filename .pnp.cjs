@@ -133,7 +133,7 @@ const RAW_RUNTIME_STATE =
           ["path-browserify", "npm:1.0.1"],\
           ["polyline-normals", "npm:2.0.2"],\
           ["postcss", "npm:8.5.6"],\
-          ["prettier", "npm:3.8.1"],\
+          ["prettier", "npm:3.8.2"],\
           ["process", "npm:0.11.10"],\
           ["promise-retry", "npm:2.0.1"],\
           ["puppeteer-core", "npm:24.37.4"],\
@@ -16117,7 +16117,7 @@ const RAW_RUNTIME_STATE =
           ["path-browserify", "npm:1.0.1"],\
           ["polyline-normals", "npm:2.0.2"],\
           ["postcss", "npm:8.5.6"],\
-          ["prettier", "npm:3.8.1"],\
+          ["prettier", "npm:3.8.2"],\
           ["process", "npm:0.11.10"],\
           ["promise-retry", "npm:2.0.1"],\
           ["puppeteer-core", "npm:24.37.4"],\
@@ -18627,10 +18627,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:3.8.1", {\
-        "packageLocation": "./.yarn/unplugged/prettier-npm-3.8.1-04022a855f/node_modules/prettier/",\
+      ["npm:3.8.2", {\
+        "packageLocation": "./.yarn/unplugged/prettier-npm-3.8.2-9004f3b431/node_modules/prettier/",\
         "packageDependencies": [\
-          ["prettier", "npm:3.8.1"]\
+          ["prettier", "npm:3.8.2"]\
         ],\
         "linkType": "HARD"\
       }]\
