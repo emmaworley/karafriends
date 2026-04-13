@@ -5,10 +5,10 @@ __metadata:
   version: 8
   cacheKey: 10
 
-"7zip-bin@npm:5.1.1":
-  version: 5.1.1
-  resolution: "7zip-bin@npm:5.1.1"
-  checksum: 10/853e636745131719b85650df93d1a3a9af0b0db1c0e2a0884451ec87e14c8b0f4fb911c04805984ece1211ff1235f7869547b780e06939469410f2da9b5e0da6
+"7zip-bin@npm:5.2.0":
+  version: 5.2.0
+  resolution: "7zip-bin@npm:5.2.0"
+  checksum: 10/5339c7a56f57f8d7d16ac8d15f588d155e5705cd4822e0d161ea45e6fbfe4a5226b464a331ec555a1ec9376ad04e5f61c125656cf3a1507900c1968ccbcfe80b
   languageName: node
   linkType: hard
 
@@ -12787,7 +12787,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "karafriends@workspace:."
   dependencies:
-    7zip-bin: "npm:5.1.1"
+    7zip-bin: "npm:5.2.0"
     "@apollo/datasource-rest": "npm:6.4.1"
     "@apollo/server": "npm:5.4.0"
     "@apollo/utils.fetcher": "npm:3.1.0"
