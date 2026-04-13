@@ -44,7 +44,7 @@ jobs:
           NOTARIZATION_KEY_PATH=$RUNNER_TEMP/notarization_key.p8 yarn package-prod
         env:
           PACKAGER_ARCH: arm64
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           files: dist/karafriends-darwin-arm64.zip
   release-macos-x86_64:
@@ -86,7 +86,7 @@ jobs:
           NOTARIZATION_KEY_PATH=$RUNNER_TEMP/notarization_key.p8 yarn package-prod
         env:
           PACKAGER_ARCH: x64
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           files: dist/karafriends-darwin-x64.zip
   release-windows-x86_64:
@@ -105,7 +105,7 @@ jobs:
         env:
           CARGO_ARGS: --features asio
       - run: yarn package-prod
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           files: dist/karafriends-win32-x64.zip
   release-linux-x86_64:
@@ -123,6 +123,6 @@ jobs:
       - run: yarn install --immutable
       - run: yarn build-prod
       - run: yarn package-prod
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           files: dist/karafriends-linux-x64.zip
