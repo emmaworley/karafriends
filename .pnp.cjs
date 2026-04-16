@@ -136,7 +136,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:3.8.1"],\
           ["process", "npm:0.11.10"],\
           ["promise-retry", "npm:2.0.1"],\
-          ["puppeteer-core", "npm:24.37.4"],\
+          ["puppeteer-core", "npm:24.41.0"],\
           ["qrcode", "npm:1.5.4"],\
           ["raw-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:4.0.2"],\
           ["react", "npm:19.2.4"],\
@@ -10797,12 +10797,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:aea14ba145e89b8c55d448dafdf71575f51f8c4c0caf3eb3e619de7e3219ab0bd98c085989e90c713ba7cb079c9b248c19318a35b4a6d06c1505113862eb2e93#npm:14.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/chromium-bidi-virtual-a245082fd1/0/cache/chromium-bidi-npm-14.0.0-e11cc747f8-b931d7fb45.zip/node_modules/chromium-bidi/",\
+      ["virtual:83cd2fa4760a248b35b74d40ed91cbe313a2c38c4722dae6a9e6cdf7647d1d325cb3eac733f7d22b4e11bd505f99a04659a829f979340902390caf7133bcb896#npm:14.0.0", {\
+        "packageLocation": "./.yarn/__virtual__/chromium-bidi-virtual-89442a5f5e/0/cache/chromium-bidi-npm-14.0.0-e11cc747f8-b931d7fb45.zip/node_modules/chromium-bidi/",\
         "packageDependencies": [\
-          ["chromium-bidi", "virtual:aea14ba145e89b8c55d448dafdf71575f51f8c4c0caf3eb3e619de7e3219ab0bd98c085989e90c713ba7cb079c9b248c19318a35b4a6d06c1505113862eb2e93#npm:14.0.0"],\
+          ["chromium-bidi", "virtual:83cd2fa4760a248b35b74d40ed91cbe313a2c38c4722dae6a9e6cdf7647d1d325cb3eac733f7d22b4e11bd505f99a04659a829f979340902390caf7133bcb896#npm:14.0.0"],\
           ["@types/devtools-protocol", null],\
-          ["devtools-protocol", "npm:0.0.1566079"],\
+          ["devtools-protocol", "npm:0.0.1595872"],\
           ["mitt", "npm:3.0.1"],\
           ["zod", "npm:3.25.76"]\
         ],\
@@ -11915,10 +11915,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:0.0.1566079", {\
-        "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.1566079-fc9d3b51d7-38e6cbaa03.zip/node_modules/devtools-protocol/",\
+      ["npm:0.0.1595872", {\
+        "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.1595872-b5d710b4a6-0352934308.zip/node_modules/devtools-protocol/",\
         "packageDependencies": [\
-          ["devtools-protocol", "npm:0.0.1566079"]\
+          ["devtools-protocol", "npm:0.0.1595872"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16120,7 +16120,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:3.8.1"],\
           ["process", "npm:0.11.10"],\
           ["promise-retry", "npm:2.0.1"],\
-          ["puppeteer-core", "npm:24.37.4"],\
+          ["puppeteer-core", "npm:24.41.0"],\
           ["qrcode", "npm:1.5.4"],\
           ["raw-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:4.0.2"],\
           ["react", "npm:19.2.4"],\
@@ -18838,17 +18838,17 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:24.37.4", {\
-        "packageLocation": "./.yarn/cache/puppeteer-core-npm-24.37.4-aea14ba145-8648c4fa5d.zip/node_modules/puppeteer-core/",\
+      ["npm:24.41.0", {\
+        "packageLocation": "./.yarn/cache/puppeteer-core-npm-24.41.0-83cd2fa476-f5719ca57b.zip/node_modules/puppeteer-core/",\
         "packageDependencies": [\
-          ["puppeteer-core", "npm:24.37.4"],\
+          ["puppeteer-core", "npm:24.41.0"],\
           ["@puppeteer/browsers", "npm:2.13.0"],\
-          ["chromium-bidi", "virtual:aea14ba145e89b8c55d448dafdf71575f51f8c4c0caf3eb3e619de7e3219ab0bd98c085989e90c713ba7cb079c9b248c19318a35b4a6d06c1505113862eb2e93#npm:14.0.0"],\
+          ["chromium-bidi", "virtual:83cd2fa4760a248b35b74d40ed91cbe313a2c38c4722dae6a9e6cdf7647d1d325cb3eac733f7d22b4e11bd505f99a04659a829f979340902390caf7133bcb896#npm:14.0.0"],\
           ["debug", "virtual:85d5d916b6a745b2f8de0d4b1704b7084bdd4f7573c1ef5d1c877f2c866045a9b29fe2bc752d1b73e531c378a0518dd3f9fa187b31427fb9bacbe34b14715dde#npm:4.4.3"],\
-          ["devtools-protocol", "npm:0.0.1566079"],\
-          ["typed-query-selector", "npm:2.12.0"],\
+          ["devtools-protocol", "npm:0.0.1595872"],\
+          ["typed-query-selector", "npm:2.12.1"],\
           ["webdriver-bidi-protocol", "npm:0.4.1"],\
-          ["ws", "virtual:aea14ba145e89b8c55d448dafdf71575f51f8c4c0caf3eb3e619de7e3219ab0bd98c085989e90c713ba7cb079c9b248c19318a35b4a6d06c1505113862eb2e93#npm:8.19.0"]\
+          ["ws", "virtual:83cd2fa4760a248b35b74d40ed91cbe313a2c38c4722dae6a9e6cdf7647d1d325cb3eac733f7d22b4e11bd505f99a04659a829f979340902390caf7133bcb896#npm:8.19.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21591,10 +21591,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["typed-query-selector", [\
-      ["npm:2.12.0", {\
-        "packageLocation": "./.yarn/cache/typed-query-selector-npm-2.12.0-682535ccea-e65b646830.zip/node_modules/typed-query-selector/",\
+      ["npm:2.12.1", {\
+        "packageLocation": "./.yarn/cache/typed-query-selector-npm-2.12.1-c8f155af2a-d0947b3f68.zip/node_modules/typed-query-selector/",\
         "packageDependencies": [\
-          ["typed-query-selector", "npm:2.12.0"]\
+          ["typed-query-selector", "npm:2.12.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -22214,7 +22214,7 @@ const RAW_RUNTIME_STATE =
           ["jszip", "npm:3.10.1"],\
           ["lodash.clonedeep", "npm:4.5.0"],\
           ["lodash.zip", "npm:4.2.0"],\
-          ["puppeteer-core", "npm:24.37.4"],\
+          ["puppeteer-core", "npm:24.41.0"],\
           ["query-selector-shadow-dom", "npm:1.0.1"],\
           ["resq", "npm:1.11.0"],\
           ["rgb2hex", "npm:0.2.5"],\
@@ -22535,10 +22535,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:9cfdc401d23554c1b117650724616bb83fb5c87223445a14d868f382dd81edaec64f3ce5dbc5b7eff8757b0482576ba342d2f7501f2332cc39085d57491f20ac#npm:8.18.3", {\
-        "packageLocation": "./.yarn/__virtual__/ws-virtual-4e574dd5fa/0/cache/ws-npm-8.18.3-665d39209d-725964438d.zip/node_modules/ws/",\
+      ["virtual:83cd2fa4760a248b35b74d40ed91cbe313a2c38c4722dae6a9e6cdf7647d1d325cb3eac733f7d22b4e11bd505f99a04659a829f979340902390caf7133bcb896#npm:8.19.0", {\
+        "packageLocation": "./.yarn/__virtual__/ws-virtual-ce51956098/0/cache/ws-npm-8.19.0-c967c046a5-26e4901e93.zip/node_modules/ws/",\
         "packageDependencies": [\
-          ["ws", "virtual:9cfdc401d23554c1b117650724616bb83fb5c87223445a14d868f382dd81edaec64f3ce5dbc5b7eff8757b0482576ba342d2f7501f2332cc39085d57491f20ac#npm:8.18.3"],\
+          ["ws", "virtual:83cd2fa4760a248b35b74d40ed91cbe313a2c38c4722dae6a9e6cdf7647d1d325cb3eac733f7d22b4e11bd505f99a04659a829f979340902390caf7133bcb896#npm:8.19.0"],\
           ["@types/bufferutil", null],\
           ["@types/utf-8-validate", null],\
           ["bufferutil", null],\
@@ -22552,10 +22552,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:aea14ba145e89b8c55d448dafdf71575f51f8c4c0caf3eb3e619de7e3219ab0bd98c085989e90c713ba7cb079c9b248c19318a35b4a6d06c1505113862eb2e93#npm:8.19.0", {\
-        "packageLocation": "./.yarn/__virtual__/ws-virtual-ec6129e7ce/0/cache/ws-npm-8.19.0-c967c046a5-26e4901e93.zip/node_modules/ws/",\
+      ["virtual:9cfdc401d23554c1b117650724616bb83fb5c87223445a14d868f382dd81edaec64f3ce5dbc5b7eff8757b0482576ba342d2f7501f2332cc39085d57491f20ac#npm:8.18.3", {\
+        "packageLocation": "./.yarn/__virtual__/ws-virtual-4e574dd5fa/0/cache/ws-npm-8.18.3-665d39209d-725964438d.zip/node_modules/ws/",\
         "packageDependencies": [\
-          ["ws", "virtual:aea14ba145e89b8c55d448dafdf71575f51f8c4c0caf3eb3e619de7e3219ab0bd98c085989e90c713ba7cb079c9b248c19318a35b4a6d06c1505113862eb2e93#npm:8.19.0"],\
+          ["ws", "virtual:9cfdc401d23554c1b117650724616bb83fb5c87223445a14d868f382dd81edaec64f3ce5dbc5b7eff8757b0482576ba342d2f7501f2332cc39085d57491f20ac#npm:8.18.3"],\
           ["@types/bufferutil", null],\
           ["@types/utf-8-validate", null],\
           ["bufferutil", null],\
