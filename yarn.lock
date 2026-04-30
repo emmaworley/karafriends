@@ -5484,10 +5484,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/audioworklet@npm:0.0.95":
-  version: 0.0.95
-  resolution: "@types/audioworklet@npm:0.0.95"
-  checksum: 10/cdaf8dea774cb37e99e683920577a277d6d718cc339f54e987f169b0193f06d0c6cf38b9025d30be541077ecb75bbc49b32061f806359a690a3258e5089c0006
+"@types/audioworklet@npm:0.0.99":
+  version: 0.0.99
+  resolution: "@types/audioworklet@npm:0.0.99"
+  checksum: 10/9261ed54b3e0c797c98482364e032369572cc8e6fa67ed9787e83a18c38a9db0acfa3fac2c4f69d3c9e157afda6762557360a6cce8e05417211c7adab6928709
   languageName: node
   linkType: hard
 
@@ -12819,7 +12819,7 @@ __metadata:
     "@sentry/node": "npm:10.39.0"
     "@testing-library/dom": "npm:10.4.1"
     "@testing-library/webdriverio": "npm:3.2.1"
-    "@types/audioworklet": "npm:0.0.95"
+    "@types/audioworklet": "npm:0.0.99"
     "@types/babel__core": "npm:7"
     "@types/color-convert": "npm:2.0.4"
     "@types/compression": "npm:1.8.1"
