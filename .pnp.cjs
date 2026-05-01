@@ -88,7 +88,7 @@ const RAW_RUNTIME_STATE =
           ["@types/ws", "npm:8.18.1"],\
           ["@types/youtube-player", "npm:5.5.11"],\
           ["@wdio/cli", "npm:9.24.0"],\
-          ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.23.0"],\
+          ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.27.1"],\
           ["@wdio/local-runner", "npm:9.24.0"],\
           ["@wdio/mocha-framework", "npm:9.24.0"],\
           ["@yarnpkg/pnpify", "npm:4.1.6"],\
@@ -8905,6 +8905,13 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:9.27.1", {\
+        "packageLocation": "./.yarn/cache/@wdio-globals-npm-9.27.1-7fd7163517-84f8ea3b36.zip/node_modules/@wdio/globals/",\
+        "packageDependencies": [\
+          ["@wdio/globals", "npm:9.27.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["virtual:0088ab68b28306eda723deb50e79e236192be51d571e0ae90b8fede050b5ecc9aa80afabe88aca82a74f4de0221b18547d72b9593625fa2e2c0215f000014e4f#npm:9.23.0", {\
         "packageLocation": "./.yarn/__virtual__/@wdio-globals-virtual-86599e6ac2/0/cache/@wdio-globals-npm-9.23.0-1f3291d9ec-33e079815c.zip/node_modules/@wdio/globals/",\
         "packageDependencies": [\
@@ -8922,10 +8929,27 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.23.0", {\
-        "packageLocation": "./.yarn/__virtual__/@wdio-globals-virtual-a6061bdab4/0/cache/@wdio-globals-npm-9.23.0-1f3291d9ec-33e079815c.zip/node_modules/@wdio/globals/",\
+      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.27.1", {\
+        "packageLocation": "./.yarn/__virtual__/@wdio-globals-virtual-6f83eccede/0/cache/@wdio-globals-npm-9.27.1-7fd7163517-84f8ea3b36.zip/node_modules/@wdio/globals/",\
         "packageDependencies": [\
-          ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.23.0"],\
+          ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.27.1"],\
+          ["@types/expect-webdriverio", null],\
+          ["@types/webdriverio", null],\
+          ["expect-webdriverio", null],\
+          ["webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.24.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/expect-webdriverio",\
+          "@types/webdriverio",\
+          "expect-webdriverio",\
+          "webdriverio"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:a2361fdd4d3d7e0ccecd97f62b8ef9b516c8f9d2e7030386a79cb55d9ff928788b7525aee1b10dbf20f1fac5369fd3639ad8b103bba8aeb17554ac0308fd83bb#npm:9.23.0", {\
+        "packageLocation": "./.yarn/__virtual__/@wdio-globals-virtual-b355024666/0/cache/@wdio-globals-npm-9.23.0-1f3291d9ec-33e079815c.zip/node_modules/@wdio/globals/",\
+        "packageDependencies": [\
+          ["@wdio/globals", "virtual:a2361fdd4d3d7e0ccecd97f62b8ef9b516c8f9d2e7030386a79cb55d9ff928788b7525aee1b10dbf20f1fac5369fd3639ad8b103bba8aeb17554ac0308fd83bb#npm:9.23.0"],\
           ["@types/expect-webdriverio", null],\
           ["@types/webdriverio", null],\
           ["expect-webdriverio", null],\
@@ -16072,7 +16096,7 @@ const RAW_RUNTIME_STATE =
           ["@types/ws", "npm:8.18.1"],\
           ["@types/youtube-player", "npm:5.5.11"],\
           ["@wdio/cli", "npm:9.24.0"],\
-          ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.23.0"],\
+          ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.27.1"],\
           ["@wdio/local-runner", "npm:9.24.0"],\
           ["@wdio/mocha-framework", "npm:9.24.0"],\
           ["@yarnpkg/pnpify", "npm:4.1.6"],\
@@ -22103,7 +22127,7 @@ const RAW_RUNTIME_STATE =
           ["@wdio/cdp-bridge", "npm:9.2.1"],\
           ["@wdio/electron-types", "npm:9.2.1"],\
           ["@wdio/electron-utils", "npm:9.2.1"],\
-          ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.23.0"],\
+          ["@wdio/globals", "virtual:a2361fdd4d3d7e0ccecd97f62b8ef9b516c8f9d2e7030386a79cb55d9ff928788b7525aee1b10dbf20f1fac5369fd3639ad8b103bba8aeb17554ac0308fd83bb#npm:9.23.0"],\
           ["@wdio/logger", "npm:9.18.0"],\
           ["compare-versions", "npm:6.1.1"],\
           ["debug", "virtual:85d5d916b6a745b2f8de0d4b1704b7084bdd4f7573c1ef5d1c877f2c866045a9b29fe2bc752d1b73e531c378a0518dd3f9fa187b31427fb9bacbe34b14715dde#npm:4.4.3"],\
