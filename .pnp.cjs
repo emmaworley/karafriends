@@ -132,7 +132,7 @@ const RAW_RUNTIME_STATE =
           ["parcel-reporter-static-files-copy", "npm:1.5.3"],\
           ["path-browserify", "npm:1.0.1"],\
           ["polyline-normals", "npm:2.0.2"],\
-          ["postcss", "npm:8.5.6"],\
+          ["postcss", "npm:8.5.14"],\
           ["prettier", "npm:3.8.1"],\
           ["process", "npm:0.11.10"],\
           ["promise-retry", "npm:2.0.1"],\
@@ -16116,7 +16116,7 @@ const RAW_RUNTIME_STATE =
           ["parcel-reporter-static-files-copy", "npm:1.5.3"],\
           ["path-browserify", "npm:1.0.1"],\
           ["polyline-normals", "npm:2.0.2"],\
-          ["postcss", "npm:8.5.6"],\
+          ["postcss", "npm:8.5.14"],\
           ["prettier", "npm:3.8.1"],\
           ["process", "npm:0.11.10"],\
           ["promise-retry", "npm:2.0.1"],\
@@ -18552,10 +18552,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["postcss", [\
-      ["npm:8.5.6", {\
-        "packageLocation": "./.yarn/cache/postcss-npm-8.5.6-e7f126c6f3-9e4fbe9757.zip/node_modules/postcss/",\
+      ["npm:8.5.14", {\
+        "packageLocation": "./.yarn/cache/postcss-npm-8.5.14-1cf8d01c78-2e3f4dea69.zip/node_modules/postcss/",\
         "packageDependencies": [\
-          ["postcss", "npm:8.5.6"],\
+          ["postcss", "npm:8.5.14"],\
           ["nanoid", "npm:3.3.11"],\
           ["picocolors", "npm:1.1.1"],\
           ["source-map-js", "npm:1.2.1"]\
