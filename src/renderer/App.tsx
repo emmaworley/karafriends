@@ -6,6 +6,8 @@ import { graphql, useSubscription } from "react-relay";
 import { HOSTNAME } from "../common/constants";
 import { KuroshiroSingleton } from "../common/joysoundParser";
 import "./App.css";
+import BackgroundMusic from "./BackgroundMusic";
+import BackgroundMusicSetting from "./BackgroundMusicSetting";
 import Effects from "./Effects";
 import HostnameSetting from "./HostnameSetting";
 import MicrophoneSetting from "./MicrophoneSetting";
@@ -15,6 +17,8 @@ import QRCode from "./QRCode";
 import Queue from "./Queue";
 import KarafriendsAudio from "./webAudio";
 import { AppQueueAddedSubscription } from "./__generated__/AppQueueAddedSubscription.graphql";
+
+const BGM_STORAGE_KEY = "bgmTrack";
 
 interface SavedMic {
   name: string;
@@ -39,6 +43,18 @@ function App(props: {
   const [mics, _setMics] = useState<InputDevice[]>([]);
   const [hostname, setHostname] = useState(HOSTNAME);
   const [sidebarVisible, setSidebarVisible] = useState(true);
+  const [bgmTrack, _setBgmTrack] = useState<string | null>(() =>
+    localStorage.getItem(BGM_STORAGE_KEY),
+  );
+
+  const setBgmTrack = (filename: string | null) => {
+    if (filename === null) {
+      localStorage.removeItem(BGM_STORAGE_KEY);
+    } else {
+      localStorage.setItem(BGM_STORAGE_KEY, filename);
+    }
+    _setBgmTrack(filename);
+  };
 
   const setMics = (newMics: InputDevice[]) => {
     const micsToSave = newMics.map((mic) => ({
@@ -119,6 +135,7 @@ function App(props: {
       >
         <Player mics={mics} kuroshiro={props.kuroshiro} audio={props.audio} />
         <Effects />
+        <BackgroundMusic trackFilename={bgmTrack} />
       </div>
       {sidebarVisible && (
         <div className="appSidebar col s1 grey lighten-3">
@@ -140,6 +157,10 @@ function App(props: {
             <button className="btn" onClick={clearMics}>
               Clear mics
             </button>
+            <BackgroundMusicSetting
+              selected={bgmTrack}
+              onChange={setBgmTrack}
+            />
           </div>
           <nav className="center-align">Queue</nav>
           <Queue />
