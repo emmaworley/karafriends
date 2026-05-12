@@ -99,8 +99,14 @@ function Player(props: {
         mutation: popSongMutation,
         variables: {},
         onCompleted: ({ popSong }) => {
-          if (!popSong) return;
           if (!videoRef.current) return;
+
+          if (!popSong) {
+            setPlaybackState("WAITING");
+            pollTimeoutRef.current = setTimeout(pollQueue, POLL_INTERVAL_MS);
+            return;
+          }
+
           if (trackRef?.current) {
             trackRef.current.default = false;
             trackRef.current.src = "";
@@ -108,149 +114,144 @@ function Player(props: {
 
           setPitchShiftSemis(0);
 
-          if (popSong !== null) {
-            if (hls) hls.destroy();
+          if (hls) hls.destroy();
 
-            switch (popSong.__typename) {
-              case "DamQueueItem":
-                setShouldShowPianoRoll(true);
-                setShouldShowJoysound(false);
-                setShouldShowAdhocLyrics(false);
-                setScoringData(popSong.scoringData);
+          switch (popSong.__typename) {
+            case "DamQueueItem":
+              setShouldShowPianoRoll(true);
+              setShouldShowJoysound(false);
+              setShouldShowAdhocLyrics(false);
+              setScoringData(popSong.scoringData);
 
-                // If caching is on this means we'll be serving almost everything through /static
-                // which seems kind of stupid, but whatever
-                const fileUrl = `karafriends://${popSong.songId}-${popSong.streamingUrlIdx}.mp4`;
+              // If caching is on this means we'll be serving almost everything through /static
+              // which seems kind of stupid, but whatever
+              const fileUrl = `karafriends://${popSong.songId}-${popSong.streamingUrlIdx}.mp4`;
 
-                const loadRemote = () => {
+              const loadRemote = () => {
+                if (!videoRef.current) return;
+
+                hls = new Hls({ maxBufferLength: 90 /* seconds */ });
+                hls.attachMedia(videoRef.current);
+                hls.loadSource(
+                  popSong.streamingUrls[popSong.streamingUrlIdx].url,
+                );
+              };
+
+              fetch(fileUrl, { method: "HEAD" })
+                .then((response) => {
+                  // I can guarantee this does not happen
                   if (!videoRef.current) return;
 
-                  hls = new Hls({ maxBufferLength: 90 /* seconds */ });
-                  hls.attachMedia(videoRef.current);
-                  hls.loadSource(
-                    popSong.streamingUrls[popSong.streamingUrlIdx].url,
-                  );
-                };
-
-                fetch(fileUrl, { method: "HEAD" })
-                  .then((response) => {
-                    // I can guarantee this does not happen
-                    if (!videoRef.current) return;
-
-                    if (response.ok) {
-                      console.log(`Using local file for ${popSong.songId}`);
-                      // This throws a random DOMException about load requests but it's probably fine
-                      videoRef.current.src = fileUrl;
-                    } else {
-                      // Maybe it's not done downloading yet, or predownload is disabled
-                      console.log(
-                        `Local file for ${popSong.songId} doesn't seem available, using remote`,
-                      );
-                      loadRemote();
-                    }
-                    props.audio.gain(DAM_GAIN);
-
-                    navigator.mediaSession.metadata = new MediaMetadata({
-                      title: popSong.name,
-                      artist: popSong.artistName,
-                    });
-
-                    videoRef.current.play();
-                  })
-                  .catch((error) => {
-                    // This throws if the file doesn't exist (as karafriends:// is a file:// passthrough protocol)
+                  if (response.ok) {
+                    console.log(`Using local file for ${popSong.songId}`);
+                    // This throws a random DOMException about load requests but it's probably fine
+                    videoRef.current.src = fileUrl;
+                  } else {
+                    // Maybe it's not done downloading yet, or predownload is disabled
                     console.log(
                       `Local file for ${popSong.songId} doesn't seem available, using remote`,
                     );
-                    console.error(error);
-
-                    // I can guarantee this does not happen
-                    if (!videoRef.current) return;
-
-                    // Pretend nothing happened.
                     loadRemote();
+                  }
+                  props.audio.gain(DAM_GAIN);
 
-                    props.audio.gain(DAM_GAIN);
-
-                    navigator.mediaSession.metadata = new MediaMetadata({
-                      title: popSong.name,
-                      artist: popSong.artistName,
-                    });
-
-                    videoRef.current.play();
-                  });
-                break;
-              case "JoysoundQueueItem":
-                setShouldShowPianoRoll(false);
-                setShouldShowJoysound(true);
-                setShouldShowAdhocLyrics(false);
-
-                const filenameSuffix = popSong.youtubeVideoId
-                  ? popSong.youtubeVideoId
-                  : "default";
-
-                videoRef.current.src = `karafriends://joysound-${popSong.songId}-${filenameSuffix}.mp4`;
-
-                navigator.mediaSession.metadata = new MediaMetadata({
-                  title: popSong.name,
-                  artist: popSong.artistName,
-                });
-
-                fetch(`karafriends://joysound-${popSong.songId}.joy_02`)
-                  .then((resp) => resp.arrayBuffer())
-                  .then((data) => {
-                    setJoysoundTelop(data);
-                    setJoysoundIsRomaji(popSong.isRomaji);
-
-                    invariant(videoRef.current);
-                    videoRef.current.play();
+                  navigator.mediaSession.metadata = new MediaMetadata({
+                    title: popSong.name,
+                    artist: popSong.artistName,
                   });
 
-                break;
-              case "YoutubeQueueItem":
-                setShouldShowPianoRoll(false);
-                setShouldShowJoysound(false);
-                setShouldShowAdhocLyrics(popSong.hasAdhocLyrics);
+                  videoRef.current.play();
+                })
+                .catch((error) => {
+                  // This throws if the file doesn't exist (as karafriends:// is a file:// passthrough protocol)
+                  console.log(
+                    `Local file for ${popSong.songId} doesn't seem available, using remote`,
+                  );
+                  console.error(error);
 
-                videoRef.current.src = `karafriends://yt-${popSong.songId}.mp4`;
+                  // I can guarantee this does not happen
+                  if (!videoRef.current) return;
 
-                if (trackRef?.current && popSong?.hasCaptions) {
-                  trackRef.current.default = true;
-                  trackRef.current.src = `karafriends://yt-${popSong.songId}.vtt`;
-                }
+                  // Pretend nothing happened.
+                  loadRemote();
 
-                console.log(
-                  `Using ${popSong.gainValue} for gain on Youtube queue item`,
-                );
-                props.audio.gain(popSong.gainValue);
+                  props.audio.gain(DAM_GAIN);
 
-                navigator.mediaSession.metadata = new MediaMetadata({
-                  title: popSong.name,
+                  navigator.mediaSession.metadata = new MediaMetadata({
+                    title: popSong.name,
+                    artist: popSong.artistName,
+                  });
+
+                  videoRef.current.play();
+                });
+              break;
+            case "JoysoundQueueItem":
+              setShouldShowPianoRoll(false);
+              setShouldShowJoysound(true);
+              setShouldShowAdhocLyrics(false);
+
+              const filenameSuffix = popSong.youtubeVideoId
+                ? popSong.youtubeVideoId
+                : "default";
+
+              videoRef.current.src = `karafriends://joysound-${popSong.songId}-${filenameSuffix}.mp4`;
+
+              navigator.mediaSession.metadata = new MediaMetadata({
+                title: popSong.name,
+                artist: popSong.artistName,
+              });
+
+              fetch(`karafriends://joysound-${popSong.songId}.joy_02`)
+                .then((resp) => resp.arrayBuffer())
+                .then((data) => {
+                  setJoysoundTelop(data);
+                  setJoysoundIsRomaji(popSong.isRomaji);
+
+                  invariant(videoRef.current);
+                  videoRef.current.play();
                 });
 
-                videoRef.current.play();
-                break;
-              case "NicoQueueItem":
-                setShouldShowPianoRoll(false);
-                setShouldShowJoysound(false);
-                setShouldShowAdhocLyrics(false);
+              break;
+            case "YoutubeQueueItem":
+              setShouldShowPianoRoll(false);
+              setShouldShowJoysound(false);
+              setShouldShowAdhocLyrics(popSong.hasAdhocLyrics);
 
-                videoRef.current.src = `karafriends://nico-${popSong.songId}.mp4`;
+              videoRef.current.src = `karafriends://yt-${popSong.songId}.mp4`;
 
-                props.audio.gain(NON_DAM_GAIN);
+              if (trackRef?.current && popSong?.hasCaptions) {
+                trackRef.current.default = true;
+                trackRef.current.src = `karafriends://yt-${popSong.songId}.vtt`;
+              }
 
-                navigator.mediaSession.metadata = new MediaMetadata({
-                  title: popSong.name,
-                });
+              console.log(
+                `Using ${popSong.gainValue} for gain on Youtube queue item`,
+              );
+              props.audio.gain(popSong.gainValue);
 
-                videoRef.current.play();
-                break;
-            }
-            setPlaybackState("PLAYING");
-          } else {
-            setPlaybackState("WAITING");
-            pollTimeoutRef.current = setTimeout(pollQueue, POLL_INTERVAL_MS);
+              navigator.mediaSession.metadata = new MediaMetadata({
+                title: popSong.name,
+              });
+
+              videoRef.current.play();
+              break;
+            case "NicoQueueItem":
+              setShouldShowPianoRoll(false);
+              setShouldShowJoysound(false);
+              setShouldShowAdhocLyrics(false);
+
+              videoRef.current.src = `karafriends://nico-${popSong.songId}.mp4`;
+
+              props.audio.gain(NON_DAM_GAIN);
+
+              navigator.mediaSession.metadata = new MediaMetadata({
+                title: popSong.name,
+              });
+
+              videoRef.current.play();
+              break;
           }
+          setPlaybackState("PLAYING");
         },
       });
 
