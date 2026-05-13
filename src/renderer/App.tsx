@@ -16,6 +16,8 @@ import Queue from "./Queue";
 import KarafriendsAudio from "./webAudio";
 import { AppQueueAddedSubscription } from "./__generated__/AppQueueAddedSubscription.graphql";
 
+const OLED_FRIENDLY_STORAGE_KEY = "oledFriendly";
+
 interface SavedMic {
   name: string;
   channel: number;
@@ -39,6 +41,25 @@ function App(props: {
   const [mics, _setMics] = useState<InputDevice[]>([]);
   const [hostname, setHostname] = useState(HOSTNAME);
   const [sidebarVisible, setSidebarVisible] = useState(true);
+
+  const [oledFriendly, _setOledFriendly] = useState<boolean>(
+    () => localStorage.getItem(OLED_FRIENDLY_STORAGE_KEY) === "true",
+  );
+
+  const setOledFriendly = (value: boolean) => {
+    if (value) {
+      localStorage.setItem(OLED_FRIENDLY_STORAGE_KEY, "true");
+    } else {
+      localStorage.removeItem(OLED_FRIENDLY_STORAGE_KEY);
+    }
+    _setOledFriendly(value);
+  };
+
+  useEffect(() => {
+    const html = document.documentElement;
+    html.classList.toggle("oledFriendly", oledFriendly);
+    return () => html.classList.remove("oledFriendly");
+  }, [oledFriendly]);
 
   const setMics = (newMics: InputDevice[]) => {
     const micsToSave = newMics.map((mic) => ({
@@ -140,6 +161,17 @@ function App(props: {
             <button className="btn" onClick={clearMics}>
               Clear mics
             </button>
+            <div className="switch">
+              <label>
+                OLED Mode
+                <input
+                  type="checkbox"
+                  checked={oledFriendly}
+                  onChange={(e) => setOledFriendly(e.target.checked)}
+                />
+                <span className="lever"></span>
+              </label>
+            </div>
           </div>
           <nav className="center-align">Queue</nav>
           <Queue />

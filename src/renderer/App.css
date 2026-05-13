@@ -19,3 +19,55 @@
   top: 0px;
   right: 10px;
 }
+
+html.oledFriendly .appSidebar {
+  /* !important overrides Materialize's grey.lighten-3 (#eee). The pre-filter
+     color must be pure #ffffff so the post-filter result is pure #000000 —
+     true OLED off-pixels. #eee would only invert to #111. */
+  background-color: #ffffff !important;
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Drift the QR code by a few pixels every minute so its high-contrast
+   pattern doesn't sit on the same OLED subpixels indefinitely. */
+@keyframes oledQrWiggle {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(3px, 2px);
+  }
+  25% {
+    transform: translate(-2px, 3px);
+  }
+  37.5% {
+    transform: translate(2px, -3px);
+  }
+  50% {
+    transform: translate(-3px, -2px);
+  }
+  62.5% {
+    transform: translate(3px, -2px);
+  }
+  75% {
+    transform: translate(-2px, -3px);
+  }
+  87.5% {
+    transform: translate(0, 3px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+html.oledFriendly .appSidebar canvas {
+  animation: oledQrWiggle 480s step-end infinite;
+}
+
+/* Materialize's floating labels and select text default to ~#9e9e9e, which
+   inverts to a mid-gray on the now-black sidebar and reads as "disabled".
+   Darken the source so they invert to high-contrast ~#ddd. */
+html.oledFriendly .appSidebar .input-field > label,
+html.oledFriendly .appSidebar .input-field input[type="text"] {
+  color: #222;
+}
