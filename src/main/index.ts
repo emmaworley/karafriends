@@ -1,3 +1,5 @@
+import "./winFileUrlFix";
+
 import { fileURLToPath } from "url";
 
 // tslint:disable-next-line:no-submodule-imports no-implicit-dependencies
