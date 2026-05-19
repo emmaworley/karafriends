@@ -104,7 +104,7 @@ const RAW_RUNTIME_STATE =
           ["cross-env", "npm:10.1.0"],\
           ["cubic-spline", "npm:3.0.3"],\
           ["dataloader", "npm:2.2.3"],\
-          ["electron", "npm:40.6.0"],\
+          ["electron", "npm:42.2.0"],\
           ["electron-is-dev", "npm:3.0.1"],\
           ["electron-packager", "npm:17.1.2"],\
           ["express", "npm:5.2.1"],\
@@ -3402,6 +3402,20 @@ const RAW_RUNTIME_STATE =
           ["progress", "npm:2.0.3"],\
           ["semver", "npm:6.3.1"],\
           ["sumchecker", "npm:3.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:5.0.0", {\
+        "packageLocation": "./.yarn/cache/@electron-get-npm-5.0.0-485d8cc2fc-b69a1874c8.zip/node_modules/@electron/get/",\
+        "packageDependencies": [\
+          ["@electron/get", "npm:5.0.0"],\
+          ["debug", "virtual:85d5d916b6a745b2f8de0d4b1704b7084bdd4f7573c1ef5d1c877f2c866045a9b29fe2bc752d1b73e531c378a0518dd3f9fa187b31427fb9bacbe34b14715dde#npm:4.4.3"],\
+          ["env-paths", "npm:3.0.0"],\
+          ["graceful-fs", "npm:4.2.11"],\
+          ["progress", "npm:2.0.3"],\
+          ["semver", "npm:7.7.3"],\
+          ["sumchecker", "npm:3.0.1"],\
+          ["undici", "npm:7.25.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12170,11 +12184,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["electron", [\
-      ["npm:40.6.0", {\
-        "packageLocation": "./.yarn/unplugged/electron-npm-40.6.0-177abd4ad3/node_modules/electron/",\
+      ["npm:42.2.0", {\
+        "packageLocation": "./.yarn/cache/electron-npm-42.2.0-7ef0e62f67-7a1efa4690.zip/node_modules/electron/",\
         "packageDependencies": [\
-          ["electron", "npm:40.6.0"],\
-          ["@electron/get", "npm:2.0.3"],\
+          ["electron", "npm:42.2.0"],\
+          ["@electron/get", "npm:5.0.0"],\
           ["@types/node", "npm:24.10.12"],\
           ["extract-zip", "npm:2.0.1"]\
         ],\
@@ -12340,6 +12354,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/env-paths-npm-2.2.1-7c7577428c-65b5df55a8.zip/node_modules/env-paths/",\
         "packageDependencies": [\
           ["env-paths", "npm:2.2.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:3.0.0", {\
+        "packageLocation": "./.yarn/cache/env-paths-npm-3.0.0-3860895468-b2b0a0d0d9.zip/node_modules/env-paths/",\
+        "packageDependencies": [\
+          ["env-paths", "npm:3.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16088,7 +16109,7 @@ const RAW_RUNTIME_STATE =
           ["cross-env", "npm:10.1.0"],\
           ["cubic-spline", "npm:3.0.3"],\
           ["dataloader", "npm:2.2.3"],\
-          ["electron", "npm:40.6.0"],\
+          ["electron", "npm:42.2.0"],\
           ["electron-is-dev", "npm:3.0.1"],\
           ["electron-packager", "npm:17.1.2"],\
           ["express", "npm:5.2.1"],\
@@ -21645,6 +21666,13 @@ const RAW_RUNTIME_STATE =
           ["undici", "npm:6.21.3"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:7.25.0", {\
+        "packageLocation": "./.yarn/cache/undici-npm-7.25.0-06372b6dbc-038d3568c7.zip/node_modules/undici/",\
+        "packageDependencies": [\
+          ["undici", "npm:7.25.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["undici-types", [\
@@ -22107,7 +22135,7 @@ const RAW_RUNTIME_STATE =
           ["@wdio/logger", "npm:9.18.0"],\
           ["compare-versions", "npm:6.1.1"],\
           ["debug", "virtual:85d5d916b6a745b2f8de0d4b1704b7084bdd4f7573c1ef5d1c877f2c866045a9b29fe2bc752d1b73e531c378a0518dd3f9fa187b31427fb9bacbe34b14715dde#npm:4.4.3"],\
-          ["electron", "npm:40.6.0"],\
+          ["electron", "npm:42.2.0"],\
           ["electron-to-chromium", "npm:1.5.286"],\
           ["fast-copy", "npm:3.0.2"],\
           ["get-port", "npm:7.1.0"],\
