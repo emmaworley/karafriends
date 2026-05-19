@@ -12904,7 +12904,7 @@ __metadata:
     react-fade-in: "npm:2.0.1"
     react-icons: "npm:5.5.0"
     react-mobile-picker-scroll: "npm:0.2.14"
-    react-relay: "npm:20.1.1"
+    react-relay: "npm:21.0.0"
     react-router: "npm:7.13.0"
     react-swipeable: "npm:7.0.2"
     regenerator-runtime: "npm:0.14.1"
@@ -15584,18 +15584,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-relay@npm:20.1.1":
-  version: 20.1.1
-  resolution: "react-relay@npm:20.1.1"
+"react-relay@npm:21.0.0":
+  version: 21.0.0
+  resolution: "react-relay@npm:21.0.0"
   dependencies:
     "@babel/runtime": "npm:^7.25.0"
     fbjs: "npm:^3.0.2"
     invariant: "npm:^2.2.4"
     nullthrows: "npm:^1.1.1"
-    relay-runtime: "npm:20.1.1"
+    relay-runtime: "npm:21.0.0"
   peerDependencies:
     react: ^16.9.0 || ^17 || ^18 || ^19
-  checksum: 10/d619ef8b31190dc3c2ecf8650d8bebc1de069212a3598074d87467ed1bac06fb24227906b0e3641ab7028e19a6d0d7205e6955b65b684b4b8195bafcd9d724b8
+  checksum: 10/b9c382ee2c2f3426513c4f91e03ff24765bd50c38fe9ae4adf90f27fcf0e8bb1816b2fb74d425fd9e2879a8f415bff337eb2f71561a699956bb62593b6cd6673
   languageName: node
   linkType: hard
 
@@ -15963,6 +15963,17 @@ __metadata:
     fbjs: "npm:^3.0.2"
     invariant: "npm:^2.2.4"
   checksum: 10/ee2d043397d2fb6e5e2cc48930145707a86f80f9c8470153ceae08609806353178f02767f3f0709058d753e0c7bedd3b7d8c149bd2bd7edab64deb2d1bcffbfb
+  languageName: node
+  linkType: hard
+
+"relay-runtime@npm:21.0.0":
+  version: 21.0.0
+  resolution: "relay-runtime@npm:21.0.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.25.0"
+    fbjs: "npm:^3.0.2"
+    invariant: "npm:^2.2.4"
+  checksum: 10/7e0612ec1c37f1f38f1c0bd65e86b1bfefc5b8d0bb7a51321a60f4357f2b8d41c1dd9441bfec76d349df20968cb5534139488ce6b1531032fcf69d829d2031f2
   languageName: node
   linkType: hard
 
