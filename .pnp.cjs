@@ -151,7 +151,7 @@ const RAW_RUNTIME_STATE =
           ["relay-compiler", "npm:20.1.1"],\
           ["relay-compiler-language-typescript", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:15.0.1"],\
           ["relay-config", "npm:12.0.1"],\
-          ["relay-runtime", "npm:20.1.1"],\
+          ["relay-runtime", "npm:21.0.0"],\
           ["supports-color", "npm:10.2.2"],\
           ["ts-invariant", "npm:0.10.3"],\
           ["ts-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.5.4"],\
@@ -16135,7 +16135,7 @@ const RAW_RUNTIME_STATE =
           ["relay-compiler", "npm:20.1.1"],\
           ["relay-compiler-language-typescript", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:15.0.1"],\
           ["relay-config", "npm:12.0.1"],\
-          ["relay-runtime", "npm:20.1.1"],\
+          ["relay-runtime", "npm:21.0.0"],\
           ["supports-color", "npm:10.2.2"],\
           ["ts-invariant", "npm:0.10.3"],\
           ["ts-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.5.4"],\
@@ -19538,7 +19538,7 @@ const RAW_RUNTIME_STATE =
           ["@types/typescript", null],\
           ["invariant", "npm:2.2.4"],\
           ["relay-compiler", "npm:20.1.1"],\
-          ["relay-runtime", "npm:20.1.1"],\
+          ["relay-runtime", "npm:21.0.0"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"]\
         ],\
         "packagePeers": [\
@@ -19568,6 +19568,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/relay-runtime-npm-20.1.1-8ed0ff448c-ee2d043397.zip/node_modules/relay-runtime/",\
         "packageDependencies": [\
           ["relay-runtime", "npm:20.1.1"],\
+          ["@babel/runtime", "npm:7.28.4"],\
+          ["fbjs", "npm:3.0.5"],\
+          ["invariant", "npm:2.2.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:21.0.0", {\
+        "packageLocation": "./.yarn/cache/relay-runtime-npm-21.0.0-7999d118c6-7e0612ec1c.zip/node_modules/relay-runtime/",\
+        "packageDependencies": [\
+          ["relay-runtime", "npm:21.0.0"],\
           ["@babel/runtime", "npm:7.28.4"],\
           ["fbjs", "npm:3.0.5"],\
           ["invariant", "npm:2.2.4"]\
