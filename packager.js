@@ -1,11 +1,34 @@
 #!/usr/bin/env yarn node
 const { spawnSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 
 const sevenBin = require("7zip-bin");
 const packager = require("electron-packager");
 const { glob } = require("glob");
 
+// Copy the archive extractor for the target architecture into extraResources/
+// so it ships with the app and can unpack the runtime downloads. 7zip-bin lays
+// its binaries out as <root>/<platform>/<arch>/7za[.exe]; path7za points at the
+// host binary, so we derive the package root from it and pick the target arch.
+function bundleExtractor() {
+  const arch = process.env.PACKAGER_ARCH || process.arch;
+  const platformDir = { darwin: "mac", win32: "win", linux: "linux" }[
+    process.platform
+  ];
+  const binName = process.platform === "win32" ? "7za.exe" : "7za";
+  const root = path.resolve(path.dirname(sevenBin.path7za), "..", "..");
+  const src = path.join(root, platformDir, arch, binName);
+  const dest = path.join("extraResources", binName);
+  fs.mkdirSync("extraResources", { recursive: true });
+  fs.copyFileSync(src, dest);
+  if (process.platform !== "win32") {
+    fs.chmodSync(dest, 0o755);
+  }
+}
+
 (async () => {
+  bundleExtractor();
   const buildFiles = new Set([
     "",
     "/package.json",
@@ -30,15 +53,6 @@ const { glob } = require("glob");
       },
       osxSign: {
         identity: "Developer ID Application: Connor Worley (WZ6JC3T383)",
-        // yt-dlp needs to load python dylibs we don't have control over
-        optionsForFile: (path) =>
-          path.endsWith("/yt-dlp_macos")
-            ? {
-                entitlements: [
-                  "com.apple.security.cs.disable-library-validation",
-                ],
-              }
-            : {},
       },
     }),
     ...(process.platform === "win32" && {
