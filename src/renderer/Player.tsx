@@ -99,16 +99,19 @@ function Player(props: {
         mutation: popSongMutation,
         variables: {},
         onCompleted: ({ popSong }) => {
-          if (!popSong) return;
           if (!videoRef.current) return;
-          if (trackRef?.current) {
-            trackRef.current.default = false;
-            trackRef.current.src = "";
-          }
 
-          setPitchShiftSemis(0);
+          if (popSong) {
+            // Only reset caption/pitch state when we actually have a song to
+            // play; doing it on every empty poll would spam the pitch-shift
+            // mutation while idle.
+            if (trackRef?.current) {
+              trackRef.current.default = false;
+              trackRef.current.src = "";
+            }
 
-          if (popSong !== null) {
+            setPitchShiftSemis(0);
+
             if (hls) hls.destroy();
 
             switch (popSong.__typename) {
