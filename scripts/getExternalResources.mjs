@@ -9,24 +9,45 @@ import process from "process";
 import { exec, execFile } from "child_process";
 
 const pathTo7zip = sevenBin.path7za;
+// 7zip-bin >= 5.2.0 ships the unix `7za` without the executable bit under Yarn
+// PnP, so spawning it fails with EACCES. Restore the executable bit. (No-op on
+// Windows, and harmless for versions that already set it.)
+if (process.platform !== "win32") {
+  try {
+    fs.chmodSync(pathTo7zip, 0o755);
+  } catch {
+    // best-effort; extraction will surface a clearer error if this fails
+  }
+}
 const buildResourcesDir = `${process.cwd()}/buildResources`;
 const extraResourcesDir = `${process.cwd()}/extraResources`;
 const maxMsToWaitForExtraction = 20000;
 
 async function fetchWithRetries(url, retries) {
-  return fetch(url).then((res) => {
-    if (res.ok) {
-      return res;
+  let lastError;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    if (attempt > 0) {
+      // Exponential backoff between attempts. Some hosts (e.g. CDNs that
+      // rate-limit CI IPs) reset the connection instead of returning an HTTP
+      // error, so we must retry on thrown network errors too, not just on
+      // non-ok responses.
+      await new Promise((r) => setTimeout(r, 1000 * 2 ** (attempt - 1)));
     }
-    if (retries > 0) {
-      return fetchWithRetries(url, retries - 1);
+    try {
+      const res = await fetch(url);
+      if (res.ok) {
+        return res;
+      }
+      lastError = new Error(String(res.status));
+    } catch (error) {
+      lastError = error;
     }
-    throw new Error(res.status);
-  });
+  }
+  throw lastError;
 }
 
 async function downloadFile(url, path) {
-  const res = await fetchWithRetries(url, 3);
+  const res = await fetchWithRetries(url, 5);
   const fileStream = fs.createWriteStream(path);
   await new Promise((resolve, reject) => {
     res.body.pipe(fileStream);
@@ -39,9 +60,7 @@ const winTasks = {
   doChecks: () => [
     fs.existsSync(`${extraResourcesDir}/ytdlp/yt-dlp.exe`),
     fs.existsSync(`${extraResourcesDir}/ffmpeg/win/ffmpeg.exe`),
-    fs.existsSync(
-      `${buildResourcesDir}/asio/asiosdk/common/asio.h`
-    ),
+    fs.existsSync(`${buildResourcesDir}/asio/asiosdk/common/asio.h`),
   ],
   prepareDirs: async (tmpDir) =>
     Promise.all([
@@ -50,7 +69,7 @@ const winTasks = {
       fs.mkdir(
         `${extraResourcesDir}/ffmpeg/win`,
         { recursive: true },
-        () => null
+        () => null,
       ),
       fs.mkdir(`${tmpDir}/asio`, { recursive: true }, () => null),
       fs.mkdir(`${buildResourcesDir}/asio`, { recursive: true }, () => null),
@@ -59,15 +78,15 @@ const winTasks = {
     Promise.all([
       downloadFile(
         "https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe",
-        `${extraResourcesDir}/ytdlp/yt-dlp.exe`
+        `${extraResourcesDir}/ytdlp/yt-dlp.exe`,
       ),
       downloadFile(
         "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z",
-        `${tmpDir}/ffmpeg/win/ffmpeg.7z`
+        `${tmpDir}/ffmpeg/win/ffmpeg.7z`,
       ),
       downloadFile(
         "https://www.steinberg.net/asiosdk",
-        `${tmpDir}/asio/asio.zip`
+        `${tmpDir}/asio/asio.zip`,
       ),
     ]),
   extractAssets: async (tmpDir, hasFinishedExtracting) => {
@@ -89,9 +108,9 @@ const winTasks = {
               throw err;
             }
             hasFinishedExtracting[0] = true;
-          }
+          },
         );
-      }
+      },
     );
     execFile(
       pathTo7zip,
@@ -102,7 +121,7 @@ const winTasks = {
           throw error;
         }
         hasFinishedExtracting[1] = true;
-      }
+      },
     );
   },
   setPermissions: () => null,
@@ -121,7 +140,7 @@ const macosTasks = {
       fs.mkdir(
         `${extraResourcesDir}/ffmpeg/macos`,
         { recursive: true },
-        () => null
+        () => null,
       ),
       fs.mkdir(buildResourcesDir, () => null),
     ]),
@@ -129,11 +148,11 @@ const macosTasks = {
     Promise.all([
       downloadFile(
         "https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos",
-        `${extraResourcesDir}/ytdlp/yt-dlp_macos`
+        `${extraResourcesDir}/ytdlp/yt-dlp_macos`,
       ),
       downloadFile(
         "https://evermeet.cx/ffmpeg/ffmpeg-6.1.1.zip",
-        `${tmpDir}/ffmpeg/macos/ffmpeg.zip`
+        `${tmpDir}/ffmpeg/macos/ffmpeg.zip`,
       ),
     ]),
   extractAssets: async (tmpDir, hasFinishedExtracting) => {
@@ -155,9 +174,9 @@ const macosTasks = {
               throw err;
             }
             hasFinishedExtracting[0] = true;
-          }
+          },
         );
-      }
+      },
     );
     hasFinishedExtracting[1] = true;
   },
@@ -180,7 +199,7 @@ const linuxTasks = {
       fs.mkdir(
         `${extraResourcesDir}/ffmpeg/linux`,
         { recursive: true },
-        () => null
+        () => null,
       ),
       fs.mkdir(buildResourcesDir, () => null),
     ]),
@@ -188,11 +207,13 @@ const linuxTasks = {
     Promise.all([
       downloadFile(
         "https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp",
-        `${extraResourcesDir}/ytdlp/yt-dlp`
+        `${extraResourcesDir}/ytdlp/yt-dlp`,
       ),
       downloadFile(
-        "https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz",
-        `${tmpDir}/ffmpeg/linux/ffmpeg.tar.xz`
+        // GitHub-hosted static build; johnvansickle.com resets connections
+        // from CI runner IPs. 7za flat-extraction still yields contents/ffmpeg.
+        "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz",
+        `${tmpDir}/ffmpeg/linux/ffmpeg.tar.xz`,
       ),
     ]),
   extractAssets: async (tmpDir, hasFinishedExtracting) => {
@@ -223,11 +244,11 @@ const linuxTasks = {
                   throw err;
                 }
                 hasFinishedExtracting[0] = true;
-              }
+              },
             );
-          }
+          },
         );
-      }
+      },
     );
     hasFinishedExtracting[1] = true;
   },
@@ -242,7 +263,7 @@ async function getExternalResources(tasks) {
     return;
   }
   const tmpDir = fs.mkdtempSync(
-    path.join(os.tmpdir(), "karafriends_getExternalResources")
+    path.join(os.tmpdir(), "karafriends_getExternalResources"),
   );
   await tasks.prepareDirs(tmpDir);
   await tasks.getAssets(tmpDir);
@@ -261,7 +282,7 @@ async function getExternalResources(tasks) {
     fs.rmdirSync(tmpDir, { recursive: true });
     if (!hasFinishedExtracting.every((x) => x)) {
       console.error(
-        `Extracting resources did not complete after ${maxMsToWaitForExtraction} ms and was aborted!`
+        `Extracting resources did not complete after ${maxMsToWaitForExtraction} ms and was aborted!`,
       );
       process.exit(1);
     }
@@ -278,7 +299,7 @@ const tasks =
   process.platform === "win32"
     ? winTasks
     : process.platform === "darwin"
-    ? macosTasks
-    : linuxTasks;
+      ? macosTasks
+      : linuxTasks;
 
 await getExternalResources(tasks);
