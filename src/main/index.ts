@@ -155,12 +155,37 @@ function createWindow() {
   // This middleware terminates the request/response cycle and should be applied last
   expressApp.use(remoconReverseProxy(karafriendsConfig.devPort));
 
-  if (rendererWindow)
-    rendererWindow.loadURL(
-      isDev
-        ? `http://localhost:${karafriendsConfig.devPort}/renderer/`
-        : `file://${path.join(__dirname, "..", "..", "build", "prod", "renderer", "index.html")}`,
+  if (rendererWindow) {
+    const rendererUrl = isDev
+      ? `http://localhost:${karafriendsConfig.devPort}/renderer/`
+      : `file://${path.join(__dirname, "..", "..", "build", "prod", "renderer", "index.html")}`;
+    // A failed load (dev server not ready, a transient file/protocol error)
+    // would leave the karaoke display blank, and the unhandled loadURL
+    // rejection would reach the process-level handler. Catch it and retry a few
+    // times so the show still comes up.
+    let rendererLoadAttempts = 0;
+    const loadRenderer = () => {
+      rendererWindow
+        ?.loadURL(rendererUrl)
+        .catch((err) =>
+          console.error(`Failed to load renderer ${rendererUrl}:`, err),
+        );
+    };
+    rendererWindow.webContents.on(
+      "did-fail-load",
+      (_event, errorCode, errorDescription, _url, isMainFrame) => {
+        // -3 (ERR_ABORTED) is a benign navigation cancel, not a real failure.
+        if (!isMainFrame || errorCode === -3) return;
+        console.error(
+          `Renderer failed to load (${errorCode} ${errorDescription})`,
+        );
+        if (rendererLoadAttempts++ < 10) {
+          setTimeout(loadRenderer, 1000);
+        }
+      },
     );
+    loadRenderer();
+  }
 
   ipcMain.on("config", (event: IpcMainEvent) => {
     console.log("Sending config over ipc");

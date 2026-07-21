@@ -83,25 +83,57 @@ async function fetchAsset(
     if (attempt > 0) {
       await new Promise((r) => setTimeout(r, 1000 * 2 ** (attempt - 1)));
     }
+    // Time out the request itself so a connection that hangs (rather than
+    // erroring) doesn't stall forever. ensureExternalResources() is
+    // single-flight, so one hung fetch would otherwise wedge every download.
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 30000);
     try {
-      const res = await fetch(url, { headers });
+      const res = await fetch(url, { headers, signal: controller.signal });
       if (res.ok || res.status === 304) {
         return res;
       }
       lastError = new Error(String(res.status));
     } catch (error) {
       lastError = error;
+    } finally {
+      // Headers have arrived (or we failed); stop the timer so it can't abort
+      // an in-progress body stream we're about to hand back for downloading.
+      clearTimeout(timer);
     }
   }
   throw lastError;
 }
 
+const DOWNLOAD_STALL_MS = 60000;
+
 async function streamToFile(res: FetchResponse, dest: string): Promise<void> {
   const fileStream = fs.createWriteStream(dest);
+  const body = res.body!;
   await new Promise<void>((resolve, reject) => {
-    res.body!.pipe(fileStream);
-    res.body!.on("error", reject);
-    fileStream.on("finish", () => resolve());
+    // Watchdog: if the body produces no data for DOWNLOAD_STALL_MS, treat it as
+    // a stalled download and fail so the caller can retry instead of hanging.
+    let stallTimer: ReturnType<typeof setTimeout>;
+    const armStall = () => {
+      clearTimeout(stallTimer);
+      stallTimer = setTimeout(
+        () =>
+          (body as unknown as import("stream").Readable).destroy(
+            new Error(`download stalled: ${dest}`),
+          ),
+        DOWNLOAD_STALL_MS,
+      );
+    };
+    const settle = (fn: () => void) => {
+      clearTimeout(stallTimer);
+      fn();
+    };
+    armStall();
+    body.on("data", armStall);
+    body.pipe(fileStream);
+    body.on("error", (err) => settle(() => reject(err)));
+    fileStream.on("error", (err) => settle(() => reject(err)));
+    fileStream.on("finish", () => settle(() => resolve()));
   });
 }
 
