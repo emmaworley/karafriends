@@ -169,7 +169,7 @@ const RAW_RUNTIME_STATE =
           ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.20.1"],\
           ["yaml", "npm:2.9.0"],\
           ["youtube-player", "npm:5.6.0"],\
-          ["youtubei.js", "npm:17.0.1"]\
+          ["youtubei.js", "npm:17.2.0"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -13252,6 +13252,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["fflate", [\
+      ["npm:0.8.3", {\
+        "packageLocation": "./.yarn/cache/fflate-npm-0.8.3-35acaff861-6ebf528dc9.zip/node_modules/fflate/",\
+        "packageDependencies": [\
+          ["fflate", "npm:0.8.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["fft.js", [\
       ["npm:4.0.4", {\
         "packageLocation": "./.yarn/cache/fft.js-npm-4.0.4-e8af1075af-bb2cada2e5.zip/node_modules/fft.js/",\
@@ -16380,7 +16389,7 @@ const RAW_RUNTIME_STATE =
           ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.20.1"],\
           ["yaml", "npm:2.9.0"],\
           ["youtube-player", "npm:5.6.0"],\
-          ["youtubei.js", "npm:17.0.1"]\
+          ["youtubei.js", "npm:17.2.0"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -23152,11 +23161,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["youtubei.js", [\
-      ["npm:17.0.1", {\
-        "packageLocation": "./.yarn/cache/youtubei.js-npm-17.0.1-8be204e356-6db2dda5e8.zip/node_modules/youtubei.js/",\
+      ["npm:17.2.0", {\
+        "packageLocation": "./.yarn/cache/youtubei.js-npm-17.2.0-918dc9c4d4-8d3a0f0c3a.zip/node_modules/youtubei.js/",\
         "packageDependencies": [\
-          ["youtubei.js", "npm:17.0.1"],\
+          ["youtubei.js", "npm:17.2.0"],\
           ["@bufbuild/protobuf", "npm:2.11.0"],\
+          ["fflate", "npm:0.8.3"],\
           ["meriyah", "npm:6.1.4"]\
         ],\
         "linkType": "HARD"\

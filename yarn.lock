@@ -10306,6 +10306,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fflate@npm:^0.8.2":
+  version: 0.8.3
+  resolution: "fflate@npm:0.8.3"
+  checksum: 10/6ebf528dc9c56e78e715eac615b009b25dc33e15c1920b11ebba44e6d76181c647756a81a23e19247907496b93aa99928514c53090579a65109e026ac2824aa7
+  languageName: node
+  linkType: hard
+
 "fft.js@npm:4.0.4":
   version: 4.0.4
   resolution: "fft.js@npm:4.0.4"
@@ -13165,7 +13172,7 @@ __metadata:
     ws: "npm:8.20.1"
     yaml: "npm:2.9.0"
     youtube-player: "npm:5.6.0"
-    youtubei.js: "npm:17.0.1"
+    youtubei.js: "npm:17.2.0"
   dependenciesMeta:
     "@electron/osx-sign@1.3.2":
       unplugged: true
@@ -19262,13 +19269,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"youtubei.js@npm:17.0.1":
-  version: 17.0.1
-  resolution: "youtubei.js@npm:17.0.1"
+"youtubei.js@npm:17.2.0":
+  version: 17.2.0
+  resolution: "youtubei.js@npm:17.2.0"
   dependencies:
     "@bufbuild/protobuf": "npm:^2.0.0"
+    fflate: "npm:^0.8.2"
     meriyah: "npm:^6.1.4"
-  checksum: 10/6db2dda5e8719a8f4b783c5d4f37195b80ae0157db92bf3ec47a4476e5795a29dfb56eb5a255c60e431129eaf7819e7c97f5ae586208bea8aef12fac396f1b6f
+  checksum: 10/8d3a0f0c3a786542b6f5333490922861be1a31e20cf84ecbb86f5a5863b378489a3debd4f9c0bd39e06b6ae5da9f9e8d25cde7518ff71358d55122637b6bb5c4
   languageName: node
   linkType: hard
 
