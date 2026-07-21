@@ -26,11 +26,7 @@ import { useServer } from "graphql-ws/use/ws"; // tslint:disable-line:no-submodu
 import { Nicovideo } from "niconico";
 import nodeFetch from "node-fetch";
 import tunnel from "tunnel";
-import {
-  CaptionTrackData,
-  Innertube,
-  VideoInfo as YTVideoInfo,
-} from "youtubei.js";
+import { Innertube } from "youtubei.js";
 
 // tslint:disable-next-line:no-submodule-imports no-implicit-dependencies
 import rawSchema from "inline-string:../common/schema.graphql";
@@ -832,44 +828,46 @@ const resolvers = {
       args: { videoId: string },
       { dataSources }: IDataSources,
     ): Promise<YoutubeVideoInfoResult> => {
-      return dataSources.youtube
-        .getBasicInfo(args.videoId)
-        .then((data: YTVideoInfo) => {
-          if (data.playability_status.status !== "OK") {
+      return (
+        dataSources.youtube
+          .getBasicInfo(args.videoId)
+          // youtubei.js's response is loosely/partially typed and its shape
+          // shifts between versions, so treat it as untyped here.
+          .then((data: any) => {
+            if (data.playability_status?.status !== "OK") {
+              return {
+                __typename: "YoutubeVideoInfoError",
+                reason: data.playability_status?.reason ?? "Unknown",
+              };
+            }
+
+            const captionTracks = data.captions?.caption_tracks || [];
+            const captionLanguages: CaptionLanguage[] = captionTracks
+              .filter(
+                (captionTrack: any) => !captionTrack.vss_id.startsWith("a"),
+              )
+              .map((captionTrack: any) => ({
+                code: captionTrack.language_code,
+                name: captionTrack.name.text ?? "",
+              }));
+
+            const loudnessDb =
+              data.player_config?.audio_config?.loudness_db || 0.0;
+
             return {
-              __typename: "YoutubeVideoInfoError",
-              reason: data.playability_status.reason,
+              __typename: "YoutubeVideoInfo",
+              author: data.basic_info.author,
+              captionLanguages,
+              channelId: data.basic_info.channel_id,
+              keywords: data.basic_info.keywords,
+              lengthSeconds: data.basic_info.duration,
+              description: data.basic_info.short_description,
+              title: data.basic_info.title,
+              viewCount: data.basic_info.view_count,
+              gainValue: 10 ** ((-1 * loudnessDb) / 20),
             };
-          }
-
-          const captionTracks: CaptionTrackData[] =
-            data.captions?.caption_tracks || [];
-          const captionLanguages: CaptionLanguage[] = captionTracks
-            .filter(
-              (captionTrack: CaptionTrackData) =>
-                !captionTrack.vss_id.startsWith("a"),
-            )
-            .map((captionTrack: CaptionTrackData) => ({
-              code: captionTrack.language_code,
-              name: captionTrack.name.text,
-            }));
-
-          const loudnessDb =
-            data.player_config?.audio_config?.loudness_db || 0.0;
-
-          return {
-            __typename: "YoutubeVideoInfo",
-            author: data.basic_info.author,
-            captionLanguages,
-            channelId: data.basic_info.channel_id,
-            keywords: data.basic_info.keywords,
-            lengthSeconds: data.basic_info.duration,
-            description: data.basic_info.short_description,
-            title: data.basic_info.title,
-            viewCount: data.basic_info.view_count,
-            gainValue: 10 ** ((-1 * loudnessDb) / 20),
-          };
-        });
+          })
+      );
     },
     nicoVideoInfo: async (
       _: any,

@@ -140,6 +140,9 @@ jobs:
       - run: yarn build-dev
         env:
           CARGO_INCREMENTAL: false
+      # Type-check the whole codebase. Runs after build-dev so the generated
+      # relay artifacts exist. Platform-independent, so only this job needs it.
+      - run: yarn typecheck
       - run: cargo install cargo-careful
         continue-on-error: true
       - run: yarn test:native

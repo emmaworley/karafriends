@@ -16,7 +16,7 @@ export default function HostnameSetting(props: {
     ],
     ...window.karafriends
       .ipAddresses()
-      .map((address) => [
+      .map((address): [string, string] => [
         address,
         `${address}:${window.karafriends.karafriendsConfig().remoconPort}`,
       ]),
