@@ -71,7 +71,7 @@ const RAW_RUNTIME_STATE =
           ["@types/kuromoji", "npm:0.1.3"],\
           ["@types/lodash", "npm:4.17.24"],\
           ["@types/materialize-css", "npm:1.0.15"],\
-          ["@types/node", "npm:25.9.1"],\
+          ["@types/node", "npm:26.1.1"],\
           ["@types/node-fetch", "npm:2.6.13"],\
           ["@types/promise-retry", "npm:1.1.6"],\
           ["@types/qrcode", "npm:1.5.6"],\
@@ -8475,11 +8475,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:25.9.1", {\
-        "packageLocation": "./.yarn/cache/@types-node-npm-25.9.1-fa3ebe64ec-8a1ccf60f0.zip/node_modules/@types/node/",\
+      ["npm:26.1.1", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-26.1.1-7a7a9f32f4-df6555a94c.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:25.9.1"],\
-          ["undici-types", "npm:7.24.6"]\
+          ["@types/node", "npm:26.1.1"],\
+          ["undici-types", "npm:8.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16282,7 +16282,7 @@ const RAW_RUNTIME_STATE =
           ["@types/kuromoji", "npm:0.1.3"],\
           ["@types/lodash", "npm:4.17.24"],\
           ["@types/materialize-css", "npm:1.0.15"],\
-          ["@types/node", "npm:25.9.1"],\
+          ["@types/node", "npm:26.1.1"],\
           ["@types/node-fetch", "npm:2.6.13"],\
           ["@types/promise-retry", "npm:1.1.6"],\
           ["@types/qrcode", "npm:1.5.6"],\
@@ -21958,10 +21958,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:7.24.6", {\
-        "packageLocation": "./.yarn/cache/undici-types-npm-7.24.6-8759b28e34-defc9538b9.zip/node_modules/undici-types/",\
+      ["npm:8.3.0", {\
+        "packageLocation": "./.yarn/cache/undici-types-npm-8.3.0-d34470de3e-6681d2837a.zip/node_modules/undici-types/",\
         "packageDependencies": [\
-          ["undici-types", "npm:7.24.6"]\
+          ["undici-types", "npm:8.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
