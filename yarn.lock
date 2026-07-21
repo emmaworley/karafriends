@@ -7422,14 +7422,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-relay@npm:20.1.1":
-  version: 20.1.1
-  resolution: "babel-plugin-relay@npm:20.1.1"
+"babel-plugin-relay@npm:21.0.0":
+  version: 21.0.0
+  resolution: "babel-plugin-relay@npm:21.0.0"
   dependencies:
     babel-plugin-macros: "npm:^2.0.0"
     cosmiconfig: "npm:^5.0.5"
     graphql: "npm:15.3.0"
-  checksum: 10/365798837d0c142294e7e527f6058ebf8a8de8043d9188cdf33380a3dcea3ea15f8f8d132025b445bea505b274bb8a2a357abe843513af4483c43e5e23e5f606
+  checksum: 10/dc6131481ff47ea72d20825f4586c9e0a5b17c8bfaff5cfc010dc9ba8a6574c01f1443de72bf12998e4f60f2828fa922c1b4de4988766b0fe32dfb5bb67249ba
   languageName: node
   linkType: hard
 
@@ -13063,7 +13063,7 @@ __metadata:
     "@wdio/mocha-framework": "npm:9.27.1"
     "@yarnpkg/pnpify": "npm:4.1.6"
     babel-loader: "npm:10.1.1"
-    babel-plugin-relay: "npm:20.1.1"
+    babel-plugin-relay: "npm:21.0.0"
     bufferutil: "npm:4.1.0"
     cargo-cp-artifact: "npm:0.1.9"
     classnames: "npm:2.5.1"
@@ -13109,19 +13109,19 @@ __metadata:
     puppeteer-core: "npm:25.0.4"
     qrcode: "npm:1.5.4"
     raw-loader: "npm:4.0.2"
-    react: "npm:19.2.4"
-    react-dom: "npm:19.2.4"
+    react: "npm:19.2.6"
+    react-dom: "npm:19.2.6"
     react-fade-in: "npm:2.0.1"
     react-icons: "npm:5.6.0"
     react-mobile-picker-scroll: "npm:0.2.14"
-    react-relay: "npm:20.1.1"
+    react-relay: "npm:21.0.0"
     react-router: "npm:7.15.1"
     react-swipeable: "npm:7.0.2"
     regenerator-runtime: "npm:0.14.1"
-    relay-compiler: "npm:20.1.1"
+    relay-compiler: "npm:21.0.0"
     relay-compiler-language-typescript: "npm:15.0.1"
     relay-config: "npm:12.0.1"
-    relay-runtime: "npm:20.1.1"
+    relay-runtime: "npm:21.0.0"
     supports-color: "npm:10.2.2"
     ts-invariant: "npm:0.10.3"
     ts-loader: "npm:9.5.7"
@@ -15740,14 +15740,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:19.2.4":
-  version: 19.2.4
-  resolution: "react-dom@npm:19.2.4"
+"react-dom@npm:19.2.6":
+  version: 19.2.6
+  resolution: "react-dom@npm:19.2.6"
   dependencies:
     scheduler: "npm:^0.27.0"
   peerDependencies:
-    react: ^19.2.4
-  checksum: 10/ec17721a8cb131bc33480a9f738bc5bbfe4bd11b11cf69f3f473605346578a329ad26ceef6ef0761ea67a4b455803407dd7ed4ba3d8a5abd2cee8c32d221e498
+    react: ^19.2.6
+  checksum: 10/695122e37dec3460311231ff1f9a96368d74457d4ccf60010eaebc08c3e1c47b054c9267b40d98c689ae99d0c29a340acacfd405016a954a4f11613146191e68
   languageName: node
   linkType: hard
 
@@ -15816,18 +15816,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-relay@npm:20.1.1":
-  version: 20.1.1
-  resolution: "react-relay@npm:20.1.1"
+"react-relay@npm:21.0.0":
+  version: 21.0.0
+  resolution: "react-relay@npm:21.0.0"
   dependencies:
     "@babel/runtime": "npm:^7.25.0"
     fbjs: "npm:^3.0.2"
     invariant: "npm:^2.2.4"
     nullthrows: "npm:^1.1.1"
-    relay-runtime: "npm:20.1.1"
+    relay-runtime: "npm:21.0.0"
   peerDependencies:
     react: ^16.9.0 || ^17 || ^18 || ^19
-  checksum: 10/d619ef8b31190dc3c2ecf8650d8bebc1de069212a3598074d87467ed1bac06fb24227906b0e3641ab7028e19a6d0d7205e6955b65b684b4b8195bafcd9d724b8
+  checksum: 10/b9c382ee2c2f3426513c4f91e03ff24765bd50c38fe9ae4adf90f27fcf0e8bb1816b2fb74d425fd9e2879a8f415bff337eb2f71561a699956bb62593b6cd6673
   languageName: node
   linkType: hard
 
@@ -15856,10 +15856,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:19.2.4":
-  version: 19.2.4
-  resolution: "react@npm:19.2.4"
-  checksum: 10/18179fe217f67eb2d0bc61cd04e7ad3c282ea09a1dface7eacd71816f62609f4bbf566c447c704335284deb8397b00bca084e0cd60e6f437279a7498e2d0bfe0
+"react@npm:19.2.6":
+  version: 19.2.6
+  resolution: "react@npm:19.2.6"
+  checksum: 10/205f0db93bd6c6485f94471d1c3437ae1d410f322297c76186fe4f658f88a6786bb0805e3cf8f330f24d1daa923b6b610ec63960d2461e9201bca64ca8361db9
   languageName: node
   linkType: hard
 
@@ -16169,12 +16169,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"relay-compiler@npm:20.1.1":
-  version: 20.1.1
-  resolution: "relay-compiler@npm:20.1.1"
+"relay-compiler@npm:21.0.0":
+  version: 21.0.0
+  resolution: "relay-compiler@npm:21.0.0"
   bin:
     relay-compiler: cli.js
-  checksum: 10/5a86ae297865cbdb65c723fa5004ba870e451d04cf295f4a6c21e1bcedac4c8bda200fc3e3147f94a72f5413158374cf551e5be3fc4207f7a1620a70724ddc60
+  checksum: 10/d923bfc1d2b9bc2326179bd4ebc82d229984b7482ba294be231593f998d8865ea1bc7b033c8856b4507d5ff8a74ee04386e858f7046c081e50302ee840487781
   languageName: node
   linkType: hard
 
@@ -16187,14 +16187,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"relay-runtime@npm:20.1.1":
-  version: 20.1.1
-  resolution: "relay-runtime@npm:20.1.1"
+"relay-runtime@npm:21.0.0":
+  version: 21.0.0
+  resolution: "relay-runtime@npm:21.0.0"
   dependencies:
     "@babel/runtime": "npm:^7.25.0"
     fbjs: "npm:^3.0.2"
     invariant: "npm:^2.2.4"
-  checksum: 10/ee2d043397d2fb6e5e2cc48930145707a86f80f9c8470153ceae08609806353178f02767f3f0709058d753e0c7bedd3b7d8c149bd2bd7edab64deb2d1bcffbfb
+  checksum: 10/7e0612ec1c37f1f38f1c0bd65e86b1bfefc5b8d0bb7a51321a60f4357f2b8d41c1dd9441bfec76d349df20968cb5534139488ce6b1531032fcf69d829d2031f2
   languageName: node
   linkType: hard
 
