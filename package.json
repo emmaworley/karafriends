@@ -49,7 +49,7 @@
     "electron-is-dev": "3.0.1",
     "express": "5.2.1",
     "fft.js": "4.0.4",
-    "format-duration": "3.0.2",
+    "format-duration": "4.0.0",
     "gl-vec2": "1.3.0",
     "graphql": "16.14.0",
     "graphql-subscriptions": "3.0.0",

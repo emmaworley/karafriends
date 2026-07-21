@@ -109,7 +109,7 @@ const RAW_RUNTIME_STATE =
           ["electron-packager", "npm:17.1.2"],\
           ["express", "npm:5.2.1"],\
           ["fft.js", "npm:4.0.4"],\
-          ["format-duration", "npm:3.0.2"],\
+          ["format-duration", "npm:4.0.0"],\
           ["gl-vec2", "npm:1.3.0"],\
           ["glob", "npm:13.0.6"],\
           ["graphql", "npm:16.14.0"],\
@@ -13514,10 +13514,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["format-duration", [\
-      ["npm:3.0.2", {\
-        "packageLocation": "./.yarn/cache/format-duration-npm-3.0.2-d3eb0fece8-b86f65907f.zip/node_modules/format-duration/",\
+      ["npm:4.0.0", {\
+        "packageLocation": "./.yarn/cache/format-duration-npm-4.0.0-e866487199-903b66c900.zip/node_modules/format-duration/",\
         "packageDependencies": [\
-          ["format-duration", "npm:3.0.2"]\
+          ["format-duration", "npm:4.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16320,7 +16320,7 @@ const RAW_RUNTIME_STATE =
           ["electron-packager", "npm:17.1.2"],\
           ["express", "npm:5.2.1"],\
           ["fft.js", "npm:4.0.4"],\
-          ["format-duration", "npm:3.0.2"],\
+          ["format-duration", "npm:4.0.0"],\
           ["gl-vec2", "npm:1.3.0"],\
           ["glob", "npm:13.0.6"],\
           ["graphql", "npm:16.14.0"],\
