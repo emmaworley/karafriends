@@ -120,7 +120,7 @@ const RAW_RUNTIME_STATE =
           ["kuromoji", "npm:0.1.2"],\
           ["kuroshiro", "npm:1.2.0"],\
           ["kuroshiro-analyzer-kuromoji", "npm:1.1.0"],\
-          ["lint-staged", "npm:17.0.5"],\
+          ["lint-staged", "npm:17.1.0"],\
           ["lodash", "npm:4.17.23"],\
           ["materialize-css", "npm:1.0.0"],\
           ["multicast-dns", "npm:7.2.5"],\
@@ -9618,14 +9618,6 @@ const RAW_RUNTIME_STATE =
           ["type-fest", "npm:0.21.3"]\
         ],\
         "linkType": "HARD"\
-      }],\
-      ["npm:7.0.0", {\
-        "packageLocation": "./.yarn/cache/ansi-escapes-npm-7.0.0-70628135e5-2d0e234508.zip/node_modules/ansi-escapes/",\
-        "packageDependencies": [\
-          ["ansi-escapes", "npm:7.0.0"],\
-          ["environment", "npm:1.1.0"]\
-        ],\
-        "linkType": "HARD"\
       }]\
     ]],\
     ["ansi-regex", [\
@@ -9640,13 +9632,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/ansi-regex-npm-6.1.0-abe011aae4-495834a53b.zip/node_modules/ansi-regex/",\
         "packageDependencies": [\
           ["ansi-regex", "npm:6.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:6.2.2", {\
-        "packageLocation": "./.yarn/cache/ansi-regex-npm-6.2.2-f2d6691eb1-9b17ce2c6d.zip/node_modules/ansi-regex/",\
-        "packageDependencies": [\
-          ["ansi-regex", "npm:6.2.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9679,13 +9664,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/ansi-styles-npm-6.2.1-d43647018c-70fdf883b7.zip/node_modules/ansi-styles/",\
         "packageDependencies": [\
           ["ansi-styles", "npm:6.2.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:6.2.3", {\
-        "packageLocation": "./.yarn/cache/ansi-styles-npm-6.2.3-6fc7ca2bf5-c49dad7639.zip/node_modules/ansi-styles/",\
-        "packageDependencies": [\
-          ["ansi-styles", "npm:6.2.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11068,27 +11046,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["cli-cursor", [\
-      ["npm:5.0.0", {\
-        "packageLocation": "./.yarn/cache/cli-cursor-npm-5.0.0-444bec1bef-1eb9a3f878.zip/node_modules/cli-cursor/",\
-        "packageDependencies": [\
-          ["cli-cursor", "npm:5.0.0"],\
-          ["restore-cursor", "npm:5.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["cli-truncate", [\
-      ["npm:5.2.0", {\
-        "packageLocation": "./.yarn/cache/cli-truncate-npm-5.2.0-4f8f591c55-b789b6c2ca.zip/node_modules/cli-truncate/",\
-        "packageDependencies": [\
-          ["cli-truncate", "npm:5.2.0"],\
-          ["slice-ansi", "npm:8.0.0"],\
-          ["string-width", "npm:8.2.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["cli-width", [\
       ["npm:4.1.0", {\
         "packageLocation": "./.yarn/cache/cli-width-npm-4.1.0-c08b53be83-b58876fbf0.zip/node_modules/cli-width/",\
@@ -12429,13 +12386,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["emoji-regex", [\
-      ["npm:10.4.0", {\
-        "packageLocation": "./.yarn/cache/emoji-regex-npm-10.4.0-919f0a031a-76bb92c5bc.zip/node_modules/emoji-regex/",\
-        "packageDependencies": [\
-          ["emoji-regex", "npm:10.4.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:8.0.0", {\
         "packageLocation": "./.yarn/cache/emoji-regex-npm-8.0.0-213764015c-c72d67a682.zip/node_modules/emoji-regex/",\
         "packageDependencies": [\
@@ -12532,15 +12482,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/env-paths-npm-3.0.0-3860895468-b2b0a0d0d9.zip/node_modules/env-paths/",\
         "packageDependencies": [\
           ["env-paths", "npm:3.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["environment", [\
-      ["npm:1.1.0", {\
-        "packageLocation": "./.yarn/cache/environment-npm-1.1.0-3f2409b698-dd3c1b9825.zip/node_modules/environment/",\
-        "packageDependencies": [\
-          ["environment", "npm:1.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12846,15 +12787,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/event-target-shim-npm-5.0.1-cb48709025-49ff46c3a7.zip/node_modules/event-target-shim/",\
         "packageDependencies": [\
           ["event-target-shim", "npm:5.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["eventemitter3", [\
-      ["npm:5.0.4", {\
-        "packageLocation": "./.yarn/cache/eventemitter3-npm-5.0.4-012eae30d7-54f5c8c543.zip/node_modules/eventemitter3/",\
-        "packageDependencies": [\
-          ["eventemitter3", "npm:5.0.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -13717,22 +13649,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/get-caller-file-npm-2.0.5-80e8a86305-b9769a836d.zip/node_modules/get-caller-file/",\
         "packageDependencies": [\
           ["get-caller-file", "npm:2.0.5"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["get-east-asian-width", [\
-      ["npm:1.4.0", {\
-        "packageLocation": "./.yarn/cache/get-east-asian-width-npm-1.4.0-1e67c6ac3b-c9ae85bfc2.zip/node_modules/get-east-asian-width/",\
-        "packageDependencies": [\
-          ["get-east-asian-width", "npm:1.4.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:1.6.0", {\
-        "packageLocation": "./.yarn/cache/get-east-asian-width-npm-1.6.0-1350227ead-3e5370b5df.zip/node_modules/get-east-asian-width/",\
-        "packageDependencies": [\
-          ["get-east-asian-width", "npm:1.6.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15003,22 +14919,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/is-fullwidth-code-point-npm-3.0.0-1ecf4ebee5-44a30c2945.zip/node_modules/is-fullwidth-code-point/",\
         "packageDependencies": [\
           ["is-fullwidth-code-point", "npm:3.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:5.0.0", {\
-        "packageLocation": "./.yarn/cache/is-fullwidth-code-point-npm-5.0.0-5eb90c2a6e-8dfb2d2831.zip/node_modules/is-fullwidth-code-point/",\
-        "packageDependencies": [\
-          ["is-fullwidth-code-point", "npm:5.0.0"],\
-          ["get-east-asian-width", "npm:1.4.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:5.1.0", {\
-        "packageLocation": "./.yarn/cache/is-fullwidth-code-point-npm-5.1.0-4eb5872a79-4700d8a82c.zip/node_modules/is-fullwidth-code-point/",\
-        "packageDependencies": [\
-          ["is-fullwidth-code-point", "npm:5.1.0"],\
-          ["get-east-asian-width", "npm:1.6.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16331,7 +16231,7 @@ const RAW_RUNTIME_STATE =
           ["kuromoji", "npm:0.1.2"],\
           ["kuroshiro", "npm:1.2.0"],\
           ["kuroshiro-analyzer-kuromoji", "npm:1.1.0"],\
-          ["lint-staged", "npm:17.0.5"],\
+          ["lint-staged", "npm:17.1.0"],\
           ["lodash", "npm:4.17.23"],\
           ["materialize-css", "npm:1.0.0"],\
           ["multicast-dns", "npm:7.2.5"],\
@@ -16617,29 +16517,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lint-staged", [\
-      ["npm:17.0.5", {\
-        "packageLocation": "./.yarn/cache/lint-staged-npm-17.0.5-817319800d-a0bea43689.zip/node_modules/lint-staged/",\
+      ["npm:17.1.0", {\
+        "packageLocation": "./.yarn/cache/lint-staged-npm-17.1.0-4eae0a0f99-050d8ce1f6.zip/node_modules/lint-staged/",\
         "packageDependencies": [\
-          ["lint-staged", "npm:17.0.5"],\
-          ["listr2", "npm:10.2.2"],\
+          ["lint-staged", "npm:17.1.0"],\
           ["picomatch", "npm:4.0.5"],\
           ["string-argv", "npm:0.3.2"],\
           ["tinyexec", "npm:1.2.4"],\
           ["yaml", "npm:2.9.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["listr2", [\
-      ["npm:10.2.2", {\
-        "packageLocation": "./.yarn/cache/listr2-npm-10.2.2-60b2f53604-e9589e1cc8.zip/node_modules/listr2/",\
-        "packageDependencies": [\
-          ["listr2", "npm:10.2.2"],\
-          ["cli-truncate", "npm:5.2.0"],\
-          ["eventemitter3", "npm:5.0.4"],\
-          ["log-update", "npm:6.1.0"],\
-          ["rfdc", "npm:1.4.1"],\
-          ["wrap-ansi", "npm:10.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16902,20 +16787,6 @@ const RAW_RUNTIME_STATE =
           ["log-symbols", "npm:4.1.0"],\
           ["chalk", "npm:4.1.2"],\
           ["is-unicode-supported", "npm:0.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["log-update", [\
-      ["npm:6.1.0", {\
-        "packageLocation": "./.yarn/cache/log-update-npm-6.1.0-2ca9435417-5abb4131e3.zip/node_modules/log-update/",\
-        "packageDependencies": [\
-          ["log-update", "npm:6.1.0"],\
-          ["ansi-escapes", "npm:7.0.0"],\
-          ["cli-cursor", "npm:5.0.0"],\
-          ["slice-ansi", "npm:7.1.0"],\
-          ["strip-ansi", "npm:7.1.0"],\
-          ["wrap-ansi", "npm:9.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17236,15 +17107,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/mimic-fn-npm-2.1.0-4fbeb3abb4-d2421a3444.zip/node_modules/mimic-fn/",\
         "packageDependencies": [\
           ["mimic-fn", "npm:2.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["mimic-function", [\
-      ["npm:5.0.1", {\
-        "packageLocation": "./.yarn/cache/mimic-function-npm-5.0.1-5078456e31-eb5893c99e.zip/node_modules/mimic-function/",\
-        "packageDependencies": [\
-          ["mimic-function", "npm:5.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18105,14 +17967,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["onetime", "npm:5.1.2"],\
           ["mimic-fn", "npm:2.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:7.0.0", {\
-        "packageLocation": "./.yarn/cache/onetime-npm-7.0.0-cfdd2a579d-eb08d2da93.zip/node_modules/onetime/",\
-        "packageDependencies": [\
-          ["onetime", "npm:7.0.0"],\
-          ["mimic-function", "npm:5.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20008,17 +19862,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["restore-cursor", [\
-      ["npm:5.1.0", {\
-        "packageLocation": "./.yarn/cache/restore-cursor-npm-5.1.0-b8fd1128bf-838dd54e45.zip/node_modules/restore-cursor/",\
-        "packageDependencies": [\
-          ["restore-cursor", "npm:5.1.0"],\
-          ["onetime", "npm:7.0.0"],\
-          ["signal-exit", "npm:4.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["ret", [\
       ["npm:0.1.15", {\
         "packageLocation": "./.yarn/cache/ret-npm-0.1.15-0d3c19de76-07c9e7619b.zip/node_modules/ret/",\
@@ -20056,15 +19899,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/reusify-npm-1.0.4-95ac4aec11-14222c9e1d.zip/node_modules/reusify/",\
         "packageDependencies": [\
           ["reusify", "npm:1.0.4"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["rfdc", [\
-      ["npm:1.4.1", {\
-        "packageLocation": "./.yarn/cache/rfdc-npm-1.4.1-1a1c63d052-2f3d11d3d8.zip/node_modules/rfdc/",\
-        "packageDependencies": [\
-          ["rfdc", "npm:1.4.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20676,26 +20510,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["slice-ansi", [\
-      ["npm:7.1.0", {\
-        "packageLocation": "./.yarn/cache/slice-ansi-npm-7.1.0-ecf63701b8-10313dd3cf.zip/node_modules/slice-ansi/",\
-        "packageDependencies": [\
-          ["slice-ansi", "npm:7.1.0"],\
-          ["ansi-styles", "npm:6.2.1"],\
-          ["is-fullwidth-code-point", "npm:5.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:8.0.0", {\
-        "packageLocation": "./.yarn/cache/slice-ansi-npm-8.0.0-43410a40af-6a7e146852.zip/node_modules/slice-ansi/",\
-        "packageDependencies": [\
-          ["slice-ansi", "npm:8.0.0"],\
-          ["ansi-styles", "npm:6.2.3"],\
-          ["is-fullwidth-code-point", "npm:5.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["smart-buffer", [\
       ["npm:4.2.0", {\
         "packageLocation": "./.yarn/cache/smart-buffer-npm-4.2.0-5ac3f668bb-927484aa0b.zip/node_modules/smart-buffer/",\
@@ -21045,25 +20859,6 @@ const RAW_RUNTIME_STATE =
           ["strip-ansi", "npm:7.1.0"]\
         ],\
         "linkType": "HARD"\
-      }],\
-      ["npm:7.2.0", {\
-        "packageLocation": "./.yarn/cache/string-width-npm-7.2.0-93572222c9-42f9e82f61.zip/node_modules/string-width/",\
-        "packageDependencies": [\
-          ["string-width", "npm:7.2.0"],\
-          ["emoji-regex", "npm:10.4.0"],\
-          ["get-east-asian-width", "npm:1.4.0"],\
-          ["strip-ansi", "npm:7.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:8.2.2", {\
-        "packageLocation": "./.yarn/cache/string-width-npm-8.2.2-0bda90c64f-18da8c8e52.zip/node_modules/string-width/",\
-        "packageDependencies": [\
-          ["string-width", "npm:8.2.2"],\
-          ["get-east-asian-width", "npm:1.6.0"],\
-          ["strip-ansi", "npm:7.2.0"]\
-        ],\
-        "linkType": "HARD"\
       }]\
     ]],\
     ["string_decoder", [\
@@ -21105,14 +20900,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["strip-ansi", "npm:7.1.0"],\
           ["ansi-regex", "npm:6.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:7.2.0", {\
-        "packageLocation": "./.yarn/cache/strip-ansi-npm-7.2.0-f2a3a63299-96da3bc6d7.zip/node_modules/strip-ansi/",\
-        "packageDependencies": [\
-          ["strip-ansi", "npm:7.2.0"],\
-          ["ansi-regex", "npm:6.2.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -22714,16 +22501,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["wrap-ansi", [\
-      ["npm:10.0.0", {\
-        "packageLocation": "./.yarn/cache/wrap-ansi-npm-10.0.0-4aa0845d6f-b9ac5290e2.zip/node_modules/wrap-ansi/",\
-        "packageDependencies": [\
-          ["wrap-ansi", "npm:10.0.0"],\
-          ["ansi-styles", "npm:6.2.3"],\
-          ["string-width", "npm:8.2.2"],\
-          ["strip-ansi", "npm:7.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:6.2.0", {\
         "packageLocation": "./.yarn/cache/wrap-ansi-npm-6.2.0-439a7246d8-0d64f2d438.zip/node_modules/wrap-ansi/",\
         "packageDependencies": [\
@@ -22750,16 +22527,6 @@ const RAW_RUNTIME_STATE =
           ["wrap-ansi", "npm:8.1.0"],\
           ["ansi-styles", "npm:6.2.1"],\
           ["string-width", "npm:5.1.2"],\
-          ["strip-ansi", "npm:7.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:9.0.0", {\
-        "packageLocation": "./.yarn/cache/wrap-ansi-npm-9.0.0-c35f82c87c-b9d91564c0.zip/node_modules/wrap-ansi/",\
-        "packageDependencies": [\
-          ["wrap-ansi", "npm:9.0.0"],\
-          ["ansi-styles", "npm:6.2.1"],\
-          ["string-width", "npm:7.2.0"],\
           ["strip-ansi", "npm:7.1.0"]\
         ],\
         "linkType": "HARD"\
