@@ -11,7 +11,7 @@ jobs:
   build-macos-aarch64:
     runs-on: [self-hosted, karafriends-integration]
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: Homebrew/actions/setup-homebrew@master
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
@@ -23,11 +23,11 @@ jobs:
           toolchain: stable
           target: aarch64-apple-darwin
           components: clippy, rustfmt
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: lts/*
       - run: npm install -g yarn
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
@@ -62,7 +62,7 @@ jobs:
   build-macos-x86_64:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: nightly
@@ -73,7 +73,7 @@ jobs:
           toolchain: stable
           target: x86_64-apple-darwin
           components: clippy, rustfmt
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: lts/*
       - run: npm install -g yarn
@@ -89,7 +89,7 @@ jobs:
   build-windows-x86_64:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: nightly
@@ -100,10 +100,10 @@ jobs:
           toolchain: stable
           target: x86_64-pc-windows-msvc
           components: clippy, rustfmt
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: lts/*
-      - uses: actions/cache@v5
+      - uses: actions/cache@v6
         with:
           path: |
             buildResources
@@ -120,7 +120,7 @@ jobs:
   build-linux-x86_64:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: nightly
@@ -131,7 +131,7 @@ jobs:
           toolchain: stable
           target: x86_64-unknown-linux-gnu
           components: clippy, rustfmt
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: lts/*
       - run: sudo apt-get update && sudo apt-get install -y libasound2-dev
