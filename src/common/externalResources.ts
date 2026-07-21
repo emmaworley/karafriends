@@ -8,6 +8,18 @@ import { promisify } from "util";
 
 import fetch, { Response as FetchResponse } from "node-fetch";
 
+import {
+  AssetPlan,
+  assetPlans,
+  canSkipUnvalidated,
+  conditionalHeaders,
+  extractorFileName,
+  isStale,
+  ResourcePaths,
+  resourcePathsFor,
+  Versions,
+} from "./externalResourcesPlan";
+
 const execFileAsync = promisify(execFile);
 
 // External runtime binaries are downloaded lazily on the user's machine and
@@ -17,6 +29,10 @@ const execFileAsync = promisify(execFile);
 // launch we ask the server whether a newer version exists and refresh only when
 // it does. The archive extractor is the only piece that ships with the app (see
 // extraResources), because we need it to unpack these downloads at runtime.
+//
+// The pure planning and decision logic lives in externalResourcesPlan.ts so it
+// can be unit tested across platforms without electron, the filesystem, or the
+// network; this module wires that plan up to the real side effects.
 const isDev = process.env.NODE_ENV === "development";
 
 const extractorDir = isDev
@@ -25,67 +41,19 @@ const extractorDir = isDev
 
 const extractorPath = path.join(
   extractorDir,
-  process.platform === "win32" ? "7za.exe" : "7za",
+  extractorFileName(process.platform),
 );
 
 const cacheDir = path.join(app.getPath("userData"), "externalResources");
 const versionsFile = path.join(cacheDir, "versions.json");
 
-// When the server exposes no cache validators for an asset, fall back to
-// refreshing the cached copy once it is older than this, so we neither
-// re-download it on every launch nor let it go stale forever.
-const STALE_MS = 7 * 24 * 60 * 60 * 1000;
-
-export interface ResourcePaths {
-  // Path to the ffmpeg executable
-  ffmpeg: string;
-  // Path to the ytdlp executable
-  ytdlp: string;
-}
-
-const linuxResourcePaths: ResourcePaths = {
-  ffmpeg: path.join(cacheDir, "ffmpeg", "ffmpeg"),
-  ytdlp: path.join(cacheDir, "ytdlp", "yt-dlp"),
-};
-
-const macosResourcePaths: ResourcePaths = {
-  ffmpeg: path.join(cacheDir, "ffmpeg", "ffmpeg"),
-  ytdlp: path.join(cacheDir, "ytdlp", "yt-dlp_macos"),
-};
-
-const winResourcePaths: ResourcePaths = {
-  ffmpeg: path.join(cacheDir, "ffmpeg", "ffmpeg.exe"),
-  ytdlp: path.join(cacheDir, "ytdlp", "yt-dlp.exe"),
-};
-
-const resourcePaths: ResourcePaths =
-  process.platform === "win32"
-    ? winResourcePaths
-    : process.platform === "darwin"
-      ? macosResourcePaths
-      : linuxResourcePaths;
+const resourcePaths: ResourcePaths = resourcePathsFor(
+  process.platform,
+  cacheDir,
+);
 
 export function getResourcePaths(): ResourcePaths {
   return resourcePaths;
-}
-
-// An HTTP cache validator for a downloaded asset. Persisted between launches so
-// we can make a conditional request and skip the download when it is unchanged.
-interface Validator {
-  etag?: string;
-  lastModified?: string;
-}
-
-type Versions = Record<string, Validator>;
-
-// A single downloadable binary. `materialize` streams an already-fetched 200
-// response into `tmpDir`, unpacks it if necessary, and returns the path of the
-// finished binary to move into place.
-interface Asset {
-  id: string;
-  url: string;
-  dest: string;
-  materialize: (tmpDir: string, res: FetchResponse) => Promise<string>;
 }
 
 function readVersions(): Versions {
@@ -152,143 +120,62 @@ async function extract(archive: string, outDir: string): Promise<void> {
   await execFileAsync(extractorPath, ["e", archive, "-y", `-o${outDir}`]);
 }
 
-function binaryAsset(id: string, url: string, dest: string): Asset {
-  return {
-    id,
-    url,
-    dest,
-    materialize: async (tmpDir, res) => {
-      const bin = path.join(tmpDir, "bin");
-      await streamToFile(res, bin);
-      return bin;
-    },
-  };
-}
-
-function archiveAsset(
-  id: string,
-  url: string,
-  dest: string,
-  archiveName: string,
-  // Unpack the downloaded archive and return the path of the extracted binary.
-  unpack: (tmpDir: string, archive: string) => Promise<string>,
-): Asset {
-  return {
-    id,
-    url,
-    dest,
-    materialize: async (tmpDir, res) => {
-      const archive = path.join(tmpDir, archiveName);
-      await streamToFile(res, archive);
-      return unpack(tmpDir, archive);
-    },
-  };
-}
-
-function platformAssets(): Asset[] {
-  switch (process.platform) {
-    case "win32":
-      return [
-        binaryAsset(
-          "ytdlp",
-          "https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe",
-          winResourcePaths.ytdlp,
-        ),
-        archiveAsset(
-          "ffmpeg",
-          "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z",
-          winResourcePaths.ffmpeg,
-          "ffmpeg.7z",
-          async (tmpDir, archive) => {
-            const out = path.join(tmpDir, "out");
-            await extract(archive, out);
-            return path.join(out, "ffmpeg.exe");
-          },
-        ),
-      ];
-    case "darwin":
-      return [
-        binaryAsset(
-          "ytdlp",
-          "https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos",
-          macosResourcePaths.ytdlp,
-        ),
-        archiveAsset(
-          "ffmpeg",
-          "https://evermeet.cx/ffmpeg/ffmpeg-6.1.1.zip",
-          macosResourcePaths.ffmpeg,
-          "ffmpeg.zip",
-          async (tmpDir, archive) => {
-            const out = path.join(tmpDir, "out");
-            await extract(archive, out);
-            return path.join(out, "ffmpeg");
-          },
-        ),
-      ];
-    default:
-      return [
-        binaryAsset(
-          "ytdlp",
-          "https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp",
-          linuxResourcePaths.ytdlp,
-        ),
-        archiveAsset(
-          "ffmpeg",
-          // GitHub-hosted static build; johnvansickle.com resets connections
-          // from some IPs. Flat extraction still yields the ffmpeg binary.
-          "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz",
-          linuxResourcePaths.ffmpeg,
-          "ffmpeg.tar.xz",
-          async (tmpDir, archive) => {
-            // .tar.xz needs two passes: first to the .tar, then to the contents.
-            const tarOut = path.join(tmpDir, "tar");
-            const out = path.join(tmpDir, "out");
-            await extract(archive, tarOut);
-            await extract(path.join(tarOut, "ffmpeg.tar"), out);
-            return path.join(out, "ffmpeg");
-          },
-        ),
-      ];
+// Download an asset into `tmpDir`, unpack it per its plan, and return the path
+// of the finished binary to move into place.
+async function materialize(
+  plan: AssetPlan,
+  tmpDir: string,
+  res: FetchResponse,
+): Promise<string> {
+  if (plan.download.kind === "binary") {
+    const bin = path.join(tmpDir, "bin");
+    await streamToFile(res, bin);
+    return bin;
   }
+
+  const { archiveName, steps, binary } = plan.download;
+  await streamToFile(res, path.join(tmpDir, archiveName));
+  for (const step of steps) {
+    await extract(
+      path.join(tmpDir, step.input),
+      path.join(tmpDir, step.outDir),
+    );
+  }
+  return path.join(tmpDir, binary);
 }
 
-function isStale(dest: string): boolean {
+function mtimeMs(dest: string): number {
   try {
-    return Date.now() - fs.statSync(dest).mtimeMs > STALE_MS;
+    return fs.statSync(dest).mtimeMs;
   } catch {
-    return true;
+    return 0;
   }
 }
 
 // Make sure a single asset is present and up to date. Returns true when the
 // cached copy changed (so the version metadata needs to be persisted).
-async function ensureAsset(asset: Asset, versions: Versions): Promise<boolean> {
-  const exists = fs.existsSync(asset.dest);
-  const stored = versions[asset.id] ?? {};
-  const canValidate = Boolean(stored.etag || stored.lastModified);
+async function ensureAsset(
+  plan: AssetPlan,
+  versions: Versions,
+): Promise<boolean> {
+  const exists = fs.existsSync(plan.dest);
+  const stored = versions[plan.id];
+  const stale = exists ? isStale(mtimeMs(plan.dest), Date.now()) : true;
 
   // Without a stored validator we cannot make a conditional request, so a plain
   // GET would re-download every launch. Skip until the cached copy is stale.
-  if (exists && !canValidate && !isStale(asset.dest)) {
+  if (canSkipUnvalidated(exists, stored, stale)) {
     return false;
-  }
-
-  const headers: Record<string, string> = {};
-  if (exists && stored.etag) {
-    headers["If-None-Match"] = stored.etag;
-  }
-  if (exists && stored.lastModified) {
-    headers["If-Modified-Since"] = stored.lastModified;
   }
 
   let res: FetchResponse;
   try {
-    res = await fetchAsset(asset.url, headers, 5);
+    res = await fetchAsset(plan.url, conditionalHeaders(exists, stored), 5);
   } catch (err) {
     // Offline or the server is unreachable. Keep whatever we already have; only
     // fail if there is nothing cached to fall back on.
     if (exists) {
-      console.error(`Keeping cached ${asset.id}; version check failed: ${err}`);
+      console.error(`Keeping cached ${plan.id}; version check failed: ${err}`);
       return false;
     }
     throw err;
@@ -302,15 +189,15 @@ async function ensureAsset(asset: Asset, versions: Versions): Promise<boolean> {
     path.join(os.tmpdir(), "karafriends_externalResources"),
   );
   try {
-    const src = await asset.materialize(tmpDir, res);
-    await finalize(src, asset.dest);
+    const src = await materialize(plan, tmpDir, res);
+    await finalize(src, plan.dest);
     if (process.platform !== "win32") {
-      fs.chmodSync(asset.dest, 0o755);
+      fs.chmodSync(plan.dest, 0o755);
     }
   } catch (err) {
     // A failed refresh must not destroy a working cached copy.
     if (exists) {
-      console.error(`Keeping cached ${asset.id}; update failed: ${err}`);
+      console.error(`Keeping cached ${plan.id}; update failed: ${err}`);
       return false;
     }
     throw err;
@@ -318,7 +205,7 @@ async function ensureAsset(asset: Asset, versions: Versions): Promise<boolean> {
     fs.rmSync(tmpDir, { recursive: true, force: true });
   }
 
-  versions[asset.id] = {
+  versions[plan.id] = {
     etag: res.headers.get("etag") ?? undefined,
     lastModified: res.headers.get("last-modified") ?? undefined,
   };
@@ -326,11 +213,11 @@ async function ensureAsset(asset: Asset, versions: Versions): Promise<boolean> {
 }
 
 async function doEnsure(): Promise<void> {
-  const assets = platformAssets();
+  const plans = assetPlans(process.platform, resourcePaths);
   const versions = readVersions();
 
   const changed = await Promise.all(
-    assets.map((asset) => ensureAsset(asset, versions)),
+    plans.map((plan) => ensureAsset(plan, versions)),
   );
 
   if (changed.some(Boolean)) {

@@ -16,6 +16,7 @@
     "_run-dev": "yarn build-dev && concurrently --success !command-0 --kill-others \"parcel serve --target remocon --target renderer --dist-dir build/dev --port 3000\" \"wait-on http://127.0.0.1:3000/ && node electron.js build/dev/main_/index.js\"",
     "package-prod": "node ./packager.js",
     "get-external-resources": "node scripts/getExternalResources.mjs",
+    "test:unit": "cross-env NODE_OPTIONS= node --experimental-strip-types --test \"src/**/*.test.ts\"",
     "test:native": "cargo clippy --manifest-path native/Cargo.toml && cargo +nightly careful test --manifest-path native/Cargo.toml",
     "test:wdio": "cross-env KARAFRIENDS_DEV_PORT=\"$(ephemeral-port-reserve)\" yarn _test:wdio",
     "_test:wdio": "concurrently --success !command-0 --kill-others \"unbuffer -p parcel serve --target remocon --target renderer --dist-dir build/dev --port $KARAFRIENDS_DEV_PORT\" \"cross-env KARAFRIENDS_REMOCON_PORT=\\\"$(ephemeral-port-reserve)\\\" yarn _test:wdio:renderer && cross-env KARAFRIENDS_REMOCON_PORT=\\\"$(ephemeral-port-reserve)\\\" yarn _test:wdio:remocon\"",

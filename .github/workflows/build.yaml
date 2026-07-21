@@ -33,6 +33,7 @@ jobs:
           cache: pip
       - run: pip install ephemeral-port-reserve
       - run: yarn install --immutable
+      - run: yarn test:unit
       - run: yarn build-dev
         env:
           CARGO_ARGS: --target aarch64-apple-darwin
@@ -77,6 +78,7 @@ jobs:
           node-version: lts/*
       - run: npm install -g yarn
       - run: yarn install --immutable
+      - run: yarn test:unit
       - run: yarn build-dev
         env:
           CARGO_ARGS: --target x86_64-apple-darwin
@@ -107,6 +109,7 @@ jobs:
             buildResources
           key: ${{ runner.os }}-resources-${{ hashFiles('scripts/getExternalResources.mjs') }}
       - run: yarn install --immutable
+      - run: yarn test:unit
       - run: yarn build-dev
         env:
           CARGO_ARGS: --features asio
@@ -133,6 +136,7 @@ jobs:
           node-version: lts/*
       - run: sudo apt-get update && sudo apt-get install -y libasound2-dev
       - run: yarn install --immutable
+      - run: yarn test:unit
       - run: yarn build-dev
         env:
           CARGO_INCREMENTAL: false
