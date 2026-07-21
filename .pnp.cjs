@@ -59,9 +59,9 @@ const RAW_RUNTIME_STATE =
           ["@sentry/node", "npm:10.39.0"],\
           ["@testing-library/dom", "npm:10.4.1"],\
           ["@testing-library/webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.2.1"],\
-          ["@types/audioworklet", "npm:0.0.95"],\
+          ["@types/audioworklet", "npm:0.0.100"],\
           ["@types/babel__core", "npm:7.20.5"],\
-          ["@types/color-convert", "npm:2.0.4"],\
+          ["@types/color-convert", "npm:3.0.1"],\
           ["@types/compression", "npm:1.8.1"],\
           ["@types/cors", "npm:2.8.19"],\
           ["@types/express", "npm:5.0.6"],\
@@ -69,9 +69,9 @@ const RAW_RUNTIME_STATE =
           ["@types/gl-vec2", "npm:1.3.5"],\
           ["@types/hls.js", "npm:1.0.0"],\
           ["@types/kuromoji", "npm:0.1.3"],\
-          ["@types/lodash", "npm:4.17.20"],\
-          ["@types/materialize-css", "npm:1.0.14"],\
-          ["@types/node", "npm:25.3.0"],\
+          ["@types/lodash", "npm:4.17.24"],\
+          ["@types/materialize-css", "npm:1.0.15"],\
+          ["@types/node", "npm:25.9.1"],\
           ["@types/node-fetch", "npm:2.6.13"],\
           ["@types/promise-retry", "npm:1.1.6"],\
           ["@types/qrcode", "npm:1.5.6"],\
@@ -7944,10 +7944,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/audioworklet", [\
-      ["npm:0.0.95", {\
-        "packageLocation": "./.yarn/cache/@types-audioworklet-npm-0.0.95-128bd726f6-cdaf8dea77.zip/node_modules/@types/audioworklet/",\
+      ["npm:0.0.100", {\
+        "packageLocation": "./.yarn/cache/@types-audioworklet-npm-0.0.100-07c4264092-c876f026ab.zip/node_modules/@types/audioworklet/",\
         "packageDependencies": [\
-          ["@types/audioworklet", "npm:0.0.95"]\
+          ["@types/audioworklet", "npm:0.0.100"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -8022,20 +8022,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/color-convert", [\
-      ["npm:2.0.4", {\
-        "packageLocation": "./.yarn/cache/@types-color-convert-npm-2.0.4-50a5c56b9c-08385948a3.zip/node_modules/@types/color-convert/",\
+      ["npm:3.0.1", {\
+        "packageLocation": "./.yarn/cache/@types-color-convert-npm-3.0.1-6056e7ffd3-4e65b695af.zip/node_modules/@types/color-convert/",\
         "packageDependencies": [\
-          ["@types/color-convert", "npm:2.0.4"],\
-          ["@types/color-name", "npm:1.1.5"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@types/color-name", [\
-      ["npm:1.1.5", {\
-        "packageLocation": "./.yarn/cache/@types-color-name-npm-1.1.5-08876d8ea1-47600afcd1.zip/node_modules/@types/color-name/",\
-        "packageDependencies": [\
-          ["@types/color-name", "npm:1.1.5"]\
+          ["@types/color-convert", "npm:3.0.1"],\
+          ["color-convert", "npm:3.1.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -8249,10 +8240,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/lodash", [\
-      ["npm:4.17.20", {\
-        "packageLocation": "./.yarn/cache/@types-lodash-npm-4.17.20-d7ed6ac7af-8cd8ad3bd7.zip/node_modules/@types/lodash/",\
+      ["npm:4.17.24", {\
+        "packageLocation": "./.yarn/cache/@types-lodash-npm-4.17.24-4a04035060-0f2082565f.zip/node_modules/@types/lodash/",\
         "packageDependencies": [\
-          ["@types/lodash", "npm:4.17.20"]\
+          ["@types/lodash", "npm:4.17.24"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -8267,10 +8258,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/materialize-css", [\
-      ["npm:1.0.14", {\
-        "packageLocation": "./.yarn/cache/@types-materialize-css-npm-1.0.14-7366169744-b02f28152a.zip/node_modules/@types/materialize-css/",\
+      ["npm:1.0.15", {\
+        "packageLocation": "./.yarn/cache/@types-materialize-css-npm-1.0.15-330fa9b834-9d2f6c8c27.zip/node_modules/@types/materialize-css/",\
         "packageDependencies": [\
-          ["@types/materialize-css", "npm:1.0.14"],\
+          ["@types/materialize-css", "npm:1.0.15"],\
           ["@types/jquery", "npm:3.5.32"],\
           ["cash-dom", "npm:8.1.5"]\
         ],\
@@ -8338,11 +8329,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:25.3.0", {\
-        "packageLocation": "./.yarn/cache/@types-node-npm-25.3.0-543725d5a4-061b00c8de.zip/node_modules/@types/node/",\
+      ["npm:25.9.1", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-25.9.1-fa3ebe64ec-8a1ccf60f0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:25.3.0"],\
-          ["undici-types", "npm:7.18.2"]\
+          ["@types/node", "npm:25.9.1"],\
+          ["undici-types", "npm:7.24.6"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16043,9 +16034,9 @@ const RAW_RUNTIME_STATE =
           ["@sentry/node", "npm:10.39.0"],\
           ["@testing-library/dom", "npm:10.4.1"],\
           ["@testing-library/webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.2.1"],\
-          ["@types/audioworklet", "npm:0.0.95"],\
+          ["@types/audioworklet", "npm:0.0.100"],\
           ["@types/babel__core", "npm:7.20.5"],\
-          ["@types/color-convert", "npm:2.0.4"],\
+          ["@types/color-convert", "npm:3.0.1"],\
           ["@types/compression", "npm:1.8.1"],\
           ["@types/cors", "npm:2.8.19"],\
           ["@types/express", "npm:5.0.6"],\
@@ -16053,9 +16044,9 @@ const RAW_RUNTIME_STATE =
           ["@types/gl-vec2", "npm:1.3.5"],\
           ["@types/hls.js", "npm:1.0.0"],\
           ["@types/kuromoji", "npm:0.1.3"],\
-          ["@types/lodash", "npm:4.17.20"],\
-          ["@types/materialize-css", "npm:1.0.14"],\
-          ["@types/node", "npm:25.3.0"],\
+          ["@types/lodash", "npm:4.17.24"],\
+          ["@types/materialize-css", "npm:1.0.15"],\
+          ["@types/node", "npm:25.9.1"],\
           ["@types/node-fetch", "npm:2.6.13"],\
           ["@types/promise-retry", "npm:1.1.6"],\
           ["@types/qrcode", "npm:1.5.6"],\
@@ -21676,10 +21667,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:7.18.2", {\
-        "packageLocation": "./.yarn/cache/undici-types-npm-7.18.2-3e6d69d829-e61a5918f6.zip/node_modules/undici-types/",\
+      ["npm:7.24.6", {\
+        "packageLocation": "./.yarn/cache/undici-types-npm-7.24.6-8759b28e34-defc9538b9.zip/node_modules/undici-types/",\
         "packageDependencies": [\
-          ["undici-types", "npm:7.18.2"]\
+          ["undici-types", "npm:7.24.6"]\
         ],\
         "linkType": "HARD"\
       }]\

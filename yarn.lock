@@ -5484,10 +5484,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/audioworklet@npm:0.0.95":
-  version: 0.0.95
-  resolution: "@types/audioworklet@npm:0.0.95"
-  checksum: 10/cdaf8dea774cb37e99e683920577a277d6d718cc339f54e987f169b0193f06d0c6cf38b9025d30be541077ecb75bbc49b32061f806359a690a3258e5089c0006
+"@types/audioworklet@npm:0.0.100":
+  version: 0.0.100
+  resolution: "@types/audioworklet@npm:0.0.100"
+  checksum: 10/c876f026ab33d102f4f64597b55c9a45b3678ccd5fbb69e248f819f2ee9686948e8c2e76e3c19af508cc6abb1782dc35388192c3f3e68f164a6141aa94f424b5
   languageName: node
   linkType: hard
 
@@ -5554,19 +5554,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/color-convert@npm:2.0.4":
-  version: 2.0.4
-  resolution: "@types/color-convert@npm:2.0.4"
+"@types/color-convert@npm:3.0.1":
+  version: 3.0.1
+  resolution: "@types/color-convert@npm:3.0.1"
   dependencies:
-    "@types/color-name": "npm:^1.1.0"
-  checksum: 10/08385948a3baf0c1dcb021791c3980d948423e92d1f1f400d7d50d089f4d26cf3a6ef1fdc402bd5bbccc325c44d2884834e66cde242c794483950e99967b9c8d
-  languageName: node
-  linkType: hard
-
-"@types/color-name@npm:^1.1.0":
-  version: 1.1.5
-  resolution: "@types/color-name@npm:1.1.5"
-  checksum: 10/47600afcd1dbd7c668103ccaed912acd97760336dbb9fb08bdb34be004daa1f06a336183b51d44852e4460fe8b336347c7f5af330160c755f6a8fb4fa19e6bc0
+    color-convert: "npm:*"
+  checksum: 10/4e65b695af5f0f641de51d8acca898a7446cd9a1d607397879aad6da64b7f96f1984b1a3274713475f481e8661b64d56ed3e431058e14419a2e29dccccd9b71c
   languageName: node
   linkType: hard
 
@@ -5751,10 +5744,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash@npm:4.17.20":
-  version: 4.17.20
-  resolution: "@types/lodash@npm:4.17.20"
-  checksum: 10/8cd8ad3bd78d2e06a93ae8d6c9907981d5673655fec7cb274a4d9a59549aab5bb5b3017361280773b8990ddfccf363e14d1b37c97af8a9fe363de677f9a61524
+"@types/lodash@npm:4.17.24":
+  version: 4.17.24
+  resolution: "@types/lodash@npm:4.17.24"
+  checksum: 10/0f2082565f60f9787eefc046edc38458054512be5a8b3584ef0bad5fd9e85d0ab55ec5a1fbfae1ed6ba015cf1f9e837d5fb4da1f99fc60b8f74b2a46146fb00f
   languageName: node
   linkType: hard
 
@@ -5765,13 +5758,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/materialize-css@npm:1.0.14":
-  version: 1.0.14
-  resolution: "@types/materialize-css@npm:1.0.14"
+"@types/materialize-css@npm:1.0.15":
+  version: 1.0.15
+  resolution: "@types/materialize-css@npm:1.0.15"
   dependencies:
     "@types/jquery": "npm:*"
     cash-dom: "npm:*"
-  checksum: 10/b02f28152aef75d8506a1b617878b491be6cd0ec67de947a7de3f4642ab60a80d926e55791bc5be475d2b9d97ec7c4f43b00a076d03a79032bb95c42f9cded3b
+  checksum: 10/9d2f6c8c279e73ce33cd8f309a3ac2c003446ca31b12beb799a744523daec3ca7b84aea75d6716723596f600b8b692b32c39808819e96c3c51011207eaa2acd3
   languageName: node
   linkType: hard
 
@@ -5817,12 +5810,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:25.3.0":
-  version: 25.3.0
-  resolution: "@types/node@npm:25.3.0"
+"@types/node@npm:25.9.1":
+  version: 25.9.1
+  resolution: "@types/node@npm:25.9.1"
   dependencies:
-    undici-types: "npm:~7.18.0"
-  checksum: 10/061b00c8de070a606a052afaa4c45dca5f8d6a8e7e39c0c3e196bb650ee37e986bbb161991ea39076a05aada102f36b13c974528448a09efd8d36bdfee75de4b
+    undici-types: "npm:>=7.24.0 <7.24.7"
+  checksum: 10/8a1ccf60f0c0ca856d3324a690ee35776f26dfc1d51c3763aecdf246a3246a7971a0156bf6eb3239aa22dfa940eb361d048212f5c3204264d31ef4c41d17416a
   languageName: node
   linkType: hard
 
@@ -8110,7 +8103,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-convert@npm:3.1.3":
+"color-convert@npm:*, color-convert@npm:3.1.3":
   version: 3.1.3
   resolution: "color-convert@npm:3.1.3"
   dependencies:
@@ -12819,9 +12812,9 @@ __metadata:
     "@sentry/node": "npm:10.39.0"
     "@testing-library/dom": "npm:10.4.1"
     "@testing-library/webdriverio": "npm:3.2.1"
-    "@types/audioworklet": "npm:0.0.95"
+    "@types/audioworklet": "npm:0.0.100"
     "@types/babel__core": "npm:7"
-    "@types/color-convert": "npm:2.0.4"
+    "@types/color-convert": "npm:3.0.1"
     "@types/compression": "npm:1.8.1"
     "@types/cors": "npm:^2"
     "@types/express": "npm:5.0.6"
@@ -12829,9 +12822,9 @@ __metadata:
     "@types/gl-vec2": "npm:1.3.5"
     "@types/hls.js": "npm:1.0.0"
     "@types/kuromoji": "npm:0.1.3"
-    "@types/lodash": "npm:4.17.20"
-    "@types/materialize-css": "npm:1.0.14"
-    "@types/node": "npm:25.3.0"
+    "@types/lodash": "npm:4.17.24"
+    "@types/materialize-css": "npm:1.0.15"
+    "@types/node": "npm:25.9.1"
     "@types/node-fetch": "npm:2.6.13"
     "@types/promise-retry": "npm:1.1.6"
     "@types/qrcode": "npm:1.5.6"
@@ -17867,6 +17860,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"undici-types@npm:>=7.24.0 <7.24.7":
+  version: 7.24.6
+  resolution: "undici-types@npm:7.24.6"
+  checksum: 10/defc9538b952e3c15b8526596c591f7c1f0c7605ad27a2b7feddbea7ef2e3003f3eda2cdb051a3cb1a2185e3893100fd9cb925c799db99d48131ea63b5233d10
+  languageName: node
+  linkType: hard
+
 "undici-types@npm:~5.26.4":
   version: 5.26.5
   resolution: "undici-types@npm:5.26.5"
@@ -17892,13 +17892,6 @@ __metadata:
   version: 7.16.0
   resolution: "undici-types@npm:7.16.0"
   checksum: 10/db43439f69c2d94cc29f75cbfe9de86df87061d6b0c577ebe9bb3255f49b22c50162a7d7eb413b0458b6510b8ca299ac7cff38c3a29fbd31af9f504bcf7fbc0d
-  languageName: node
-  linkType: hard
-
-"undici-types@npm:~7.18.0":
-  version: 7.18.2
-  resolution: "undici-types@npm:7.18.2"
-  checksum: 10/e61a5918f624d68420c3ca9d301e9f15b61cba6e97be39fe2ce266dd6151e4afe424d679372638826cb506be33952774e0424141200111a9857e464216c009af
   languageName: node
   linkType: hard
 
