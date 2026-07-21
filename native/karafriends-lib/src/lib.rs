@@ -18,7 +18,7 @@ use rubato::Resampler;
 type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;
 
 #[cfg(feature = "asio")]
-static CPAL_ASIO_HOST: LazyLock<std::result::Result<cpal::Host, cpal::HostUnavailable>> =
+static CPAL_ASIO_HOST: LazyLock<std::result::Result<cpal::Host, cpal::Error>> =
     LazyLock::new(|| cpal::host_from_id(cpal::HostId::Asio));
 
 static INPUT_DEVICES: LazyLock<Mutex<HashMap<String, cpal::Device>>> =
