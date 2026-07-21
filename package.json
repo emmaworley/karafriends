@@ -98,7 +98,7 @@
     "@babel/core": "7.29.0",
     "@babel/preset-env": "7.29.5",
     "@babel/preset-react": "7.28.5",
-    "@babel/runtime": "7.29.2",
+    "@babel/runtime": "8.0.0",
     "@parcel/config-default": "2.16.4",
     "@parcel/core": "2.16.4",
     "@parcel/resolver-default": "2.16.4",
