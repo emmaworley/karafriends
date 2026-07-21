@@ -42,6 +42,7 @@ import isDev from "electron-is-dev";
 import express from "express";
 
 import karafriendsConfig from "../common/config";
+import { ensureExternalResources } from "./../common/externalResources";
 import { TEMP_FOLDER } from "./../common/videoDownloader";
 import { MinseiAPI } from "./damApi";
 import { applyGraphQLMiddleware } from "./graphql";
@@ -155,7 +156,16 @@ function createWindow() {
   });
 }
 
-app.on("ready", createWindow);
+app.on("ready", () => {
+  // Start warming the external resource cache as soon as the app is ready so
+  // the binaries are usually in place before the first song is queued. This is
+  // best-effort: failures are logged and retried on demand by the downloader,
+  // and must be caught here so the unhandledRejection handler doesn't exit.
+  ensureExternalResources().catch((err) =>
+    console.error(`Error preparing external resources: ${err}`),
+  );
+  createWindow();
+});
 
 app.on("window-all-closed", () => {
   app.quit();

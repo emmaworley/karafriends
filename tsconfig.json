@@ -11,5 +11,6 @@
     "ignoreDeprecations": "6.0",
     "resolveJsonModule": true,
     "jsx": "react"
-  }
+  },
+  "exclude": ["**/*.test.ts"]
 }

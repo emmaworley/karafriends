@@ -39,7 +39,8 @@ yarn-error.log*
 # react-relay
 __generated__
 
-# Extra resources that are downloaded on build
-/extraResources/ffmpeg/**/*
-/extraResources/ytdlp/*
+# Archive extractor copied into the app on build (runtime downloads are cached
+# in the user data directory, not here)
+/extraResources/7za
+/extraResources/7za.exe
 /buildResources/asio/*

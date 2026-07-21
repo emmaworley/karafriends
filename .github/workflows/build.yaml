@@ -32,12 +32,8 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install ephemeral-port-reserve
-      - uses: MasterworksIO/action-local-cache@2.1.0
-        with:
-          path: |
-            extraResources
-          key: ${{ runner.os }}-resources-${{ hashFiles('scripts/getExternalResources.mjs') }}
       - run: yarn install --immutable
+      - run: yarn test:unit
       - run: yarn build-dev
         env:
           CARGO_ARGS: --target aarch64-apple-darwin
@@ -81,12 +77,8 @@ jobs:
         with:
           node-version: lts/*
       - run: npm install -g yarn
-      - uses: MasterworksIO/action-local-cache@2.1.0
-        with:
-          path: |
-            extraResources
-          key: ${{ runner.os }}-resources-${{ hashFiles('scripts/getExternalResources.mjs') }}
       - run: yarn install --immutable
+      - run: yarn test:unit
       - run: yarn build-dev
         env:
           CARGO_ARGS: --target x86_64-apple-darwin
@@ -115,9 +107,9 @@ jobs:
         with:
           path: |
             buildResources
-            extraResources
           key: ${{ runner.os }}-resources-${{ hashFiles('scripts/getExternalResources.mjs') }}
       - run: yarn install --immutable
+      - run: yarn test:unit
       - run: yarn build-dev
         env:
           CARGO_ARGS: --features asio
@@ -142,14 +134,9 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: lts/*
-      - uses: actions/cache@v5
-        with:
-          path: |
-            buildResources
-            extraResources
-          key: ${{ runner.os }}-resources-${{ hashFiles('scripts/getExternalResources.mjs') }}
       - run: sudo apt-get update && sudo apt-get install -y libasound2-dev
       - run: yarn install --immutable
+      - run: yarn test:unit
       - run: yarn build-dev
         env:
           CARGO_INCREMENTAL: false
