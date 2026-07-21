@@ -9,7 +9,7 @@ name = "karafriends_lib"
 crate-type = ["lib"]
 
 [dependencies]
-cpal = { version = "0.17.3" }
+cpal = { version = "0.18.1" }
 itertools = "0.15.0"
 neon = { version = "1.0.0", default-features = false, features = ["napi-8"] }
 realfft = "3.5.0"

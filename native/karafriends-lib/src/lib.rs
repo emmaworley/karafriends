@@ -148,7 +148,7 @@ impl InputDevice {
                     output_tx,
                 )?;
                 input_device.build_input_stream(
-                    &input_config,
+                    input_config,
                     move |samples: _, _| input_callback(samples),
                     error_callback,
                     None,
@@ -163,7 +163,7 @@ impl InputDevice {
                     output_tx,
                 )?;
                 input_device.build_input_stream(
-                    &input_config,
+                    input_config,
                     move |samples: _, _| input_callback(samples),
                     error_callback,
                     None,
@@ -178,7 +178,7 @@ impl InputDevice {
                     output_tx,
                 )?;
                 input_device.build_input_stream(
-                    &input_config,
+                    input_config,
                     move |samples: _, _| input_callback(samples),
                     error_callback,
                     None,
@@ -193,7 +193,7 @@ impl InputDevice {
                     output_tx,
                 )?;
                 input_device.build_input_stream(
-                    &input_config,
+                    input_config,
                     move |samples: _, _| input_callback(samples),
                     error_callback,
                     None,
@@ -208,7 +208,7 @@ impl InputDevice {
                     output_tx,
                 )?;
                 input_device.build_input_stream(
-                    &input_config,
+                    input_config,
                     move |samples: _, _| input_callback(samples),
                     error_callback,
                     None,
@@ -223,7 +223,7 @@ impl InputDevice {
                     output_tx,
                 )?;
                 input_device.build_input_stream(
-                    &input_config,
+                    input_config,
                     move |samples: _, _| input_callback(samples),
                     error_callback,
                     None,
@@ -238,7 +238,7 @@ impl InputDevice {
                     output_tx,
                 )?;
                 input_device.build_input_stream(
-                    &input_config,
+                    input_config,
                     move |samples: _, _| input_callback(samples),
                     error_callback,
                     None,
@@ -253,7 +253,7 @@ impl InputDevice {
                     output_tx,
                 )?;
                 input_device.build_input_stream(
-                    &input_config,
+                    input_config,
                     move |samples: _, _| input_callback(samples),
                     error_callback,
                     None,
@@ -268,7 +268,7 @@ impl InputDevice {
                     output_tx,
                 )?;
                 input_device.build_input_stream(
-                    &input_config,
+                    input_config,
                     move |samples: _, _| input_callback(samples),
                     error_callback,
                     None,
@@ -283,20 +283,20 @@ impl InputDevice {
                     output_tx,
                 )?;
                 input_device.build_input_stream(
-                    &input_config,
+                    input_config,
                     move |samples: _, _| input_callback(samples),
                     error_callback,
                     None,
                 )
             }
-            _ => Err(cpal::BuildStreamError::StreamConfigNotSupported),
+            _ => Err(cpal::Error::new(cpal::ErrorKind::UnsupportedConfig)),
         }?;
 
         let output_stream = match best_supported_output_config.sample_format() {
             cpal::SampleFormat::U8 => {
                 let mut output_callback = Self::output_data_callback::<u8>(output_rx)?;
                 output_device.build_output_stream(
-                    &output_config,
+                    output_config,
                     move |samples: _, _| output_callback(samples),
                     error_callback,
                     None,
@@ -305,7 +305,7 @@ impl InputDevice {
             cpal::SampleFormat::U16 => {
                 let mut output_callback = Self::output_data_callback::<u16>(output_rx)?;
                 output_device.build_output_stream(
-                    &output_config,
+                    output_config,
                     move |samples: _, _| output_callback(samples),
                     error_callback,
                     None,
@@ -314,7 +314,7 @@ impl InputDevice {
             cpal::SampleFormat::U32 => {
                 let mut output_callback = Self::output_data_callback::<u32>(output_rx)?;
                 output_device.build_output_stream(
-                    &output_config,
+                    output_config,
                     move |samples: _, _| output_callback(samples),
                     error_callback,
                     None,
@@ -323,7 +323,7 @@ impl InputDevice {
             cpal::SampleFormat::U64 => {
                 let mut output_callback = Self::output_data_callback::<u64>(output_rx)?;
                 output_device.build_output_stream(
-                    &output_config,
+                    output_config,
                     move |samples: _, _| output_callback(samples),
                     error_callback,
                     None,
@@ -332,7 +332,7 @@ impl InputDevice {
             cpal::SampleFormat::I8 => {
                 let mut output_callback = Self::output_data_callback::<i8>(output_rx)?;
                 output_device.build_output_stream(
-                    &output_config,
+                    output_config,
                     move |samples: _, _| output_callback(samples),
                     error_callback,
                     None,
@@ -341,7 +341,7 @@ impl InputDevice {
             cpal::SampleFormat::I16 => {
                 let mut output_callback = Self::output_data_callback::<i16>(output_rx)?;
                 output_device.build_output_stream(
-                    &output_config,
+                    output_config,
                     move |samples: _, _| output_callback(samples),
                     error_callback,
                     None,
@@ -350,7 +350,7 @@ impl InputDevice {
             cpal::SampleFormat::I32 => {
                 let mut output_callback = Self::output_data_callback::<i32>(output_rx)?;
                 output_device.build_output_stream(
-                    &output_config,
+                    output_config,
                     move |samples: _, _| output_callback(samples),
                     error_callback,
                     None,
@@ -359,7 +359,7 @@ impl InputDevice {
             cpal::SampleFormat::I64 => {
                 let mut output_callback = Self::output_data_callback::<i64>(output_rx)?;
                 output_device.build_output_stream(
-                    &output_config,
+                    output_config,
                     move |samples: _, _| output_callback(samples),
                     error_callback,
                     None,
@@ -368,7 +368,7 @@ impl InputDevice {
             cpal::SampleFormat::F32 => {
                 let mut output_callback = Self::output_data_callback::<f32>(output_rx)?;
                 output_device.build_output_stream(
-                    &output_config,
+                    output_config,
                     move |samples: _, _| output_callback(samples),
                     error_callback,
                     None,
@@ -377,13 +377,13 @@ impl InputDevice {
             cpal::SampleFormat::F64 => {
                 let mut output_callback = Self::output_data_callback::<f64>(output_rx)?;
                 output_device.build_output_stream(
-                    &output_config,
+                    output_config,
                     move |samples: _, _| output_callback(samples),
                     error_callback,
                     None,
                 )
             }
-            _ => Err(cpal::BuildStreamError::StreamConfigNotSupported),
+            _ => Err(cpal::Error::new(cpal::ErrorKind::UnsupportedConfig)),
         }?;
 
         input_stream.play()?;
@@ -420,8 +420,8 @@ impl InputDevice {
     where
         f32: cpal::FromSample<Sample>,
     {
-        let input_config = input_config.clone();
-        let output_config = output_config.clone();
+        let input_config = *input_config;
+        let output_config = *output_config;
 
         let input_channels = input_config.channels as usize;
         let output_channels = output_config.channels as usize;
