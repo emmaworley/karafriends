@@ -154,7 +154,7 @@ const RAW_RUNTIME_STATE =
           ["relay-runtime", "npm:21.0.0"],\
           ["supports-color", "npm:10.2.2"],\
           ["ts-invariant", "npm:0.10.3"],\
-          ["ts-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.5.7"],\
+          ["ts-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.6.2"],\
           ["tslint", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.1.3"],\
           ["tslint-config-prettier", "npm:1.18.0"],\
           ["tunnel", "npm:0.0.6"],\
@@ -12500,17 +12500,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["enhanced-resolve", [\
-      ["npm:5.18.0", {\
-        "packageLocation": "./.yarn/cache/enhanced-resolve-npm-5.18.0-afcf74b9eb-e88463ef97.zip/node_modules/enhanced-resolve/",\
-        "packageDependencies": [\
-          ["enhanced-resolve", "npm:5.18.0"],\
-          ["graceful-fs", "npm:4.2.11"],\
-          ["tapable", "npm:2.2.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["entities", [\
       ["npm:4.5.0", {\
         "packageLocation": "./.yarn/cache/entities-npm-4.5.0-7cdb83b832-ede2a35c9b.zip/node_modules/entities/",\
@@ -16365,7 +16354,7 @@ const RAW_RUNTIME_STATE =
           ["relay-runtime", "npm:21.0.0"],\
           ["supports-color", "npm:10.2.2"],\
           ["ts-invariant", "npm:0.10.3"],\
-          ["ts-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.5.7"],\
+          ["ts-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.6.2"],\
           ["tslint", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.1.3"],\
           ["tslint-config-prettier", "npm:1.18.0"],\
           ["tunnel", "npm:0.0.6"],\
@@ -21269,15 +21258,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["tapable", [\
-      ["npm:2.2.1", {\
-        "packageLocation": "./.yarn/cache/tapable-npm-2.2.1-8cf5ff3039-1769336dd2.zip/node_modules/tapable/",\
-        "packageDependencies": [\
-          ["tapable", "npm:2.2.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["tar", [\
       ["npm:6.2.1", {\
         "packageLocation": "./.yarn/cache/tar-npm-6.2.1-237800bb20-bfbfbb2861.zip/node_modules/tar/",\
@@ -21621,30 +21601,32 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["ts-loader", [\
-      ["npm:9.5.7", {\
-        "packageLocation": "./.yarn/cache/ts-loader-npm-9.5.7-c6cf2bfeb2-c70c53679a.zip/node_modules/ts-loader/",\
+      ["npm:9.6.2", {\
+        "packageLocation": "./.yarn/cache/ts-loader-npm-9.6.2-fb95e8881d-9df2167f5d.zip/node_modules/ts-loader/",\
         "packageDependencies": [\
-          ["ts-loader", "npm:9.5.7"]\
+          ["ts-loader", "npm:9.6.2"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.5.7", {\
-        "packageLocation": "./.yarn/__virtual__/ts-loader-virtual-faaced54ca/0/cache/ts-loader-npm-9.5.7-c6cf2bfeb2-c70c53679a.zip/node_modules/ts-loader/",\
+      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.6.2", {\
+        "packageLocation": "./.yarn/__virtual__/ts-loader-virtual-923dc6363b/0/cache/ts-loader-npm-9.6.2-fb95e8881d-9df2167f5d.zip/node_modules/ts-loader/",\
         "packageDependencies": [\
-          ["ts-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.5.7"],\
+          ["ts-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.6.2"],\
+          ["@types/loader-utils", null],\
           ["@types/typescript", null],\
           ["@types/webpack", null],\
           ["chalk", "npm:4.1.2"],\
-          ["enhanced-resolve", "npm:5.18.0"],\
-          ["micromatch", "npm:4.0.8"],\
-          ["semver", "npm:7.7.3"],\
+          ["loader-utils", null],\
+          ["picomatch", "npm:4.0.5"],\
           ["source-map", "npm:0.7.4"],\
           ["typescript", "patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"],\
           ["webpack", null]\
         ],\
         "packagePeers": [\
+          "@types/loader-utils",\
           "@types/typescript",\
           "@types/webpack",\
+          "loader-utils",\
           "typescript",\
           "webpack"\
         ],\
