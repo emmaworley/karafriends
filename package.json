@@ -34,7 +34,7 @@
     "@as-integrations/express5": "1.1.2",
     "@graphql-tools/schema": "10.0.38",
     "@opentelemetry/api": "1.9.0",
-    "@opentelemetry/core": "2.1.0",
+    "@opentelemetry/core": "2.8.0",
     "@opentelemetry/sdk-trace-base": "2.1.0",
     "@parcel/transformer-react-refresh-wrap": "2.16.4",
     "@sentry/browser": "10.67.0",
@@ -99,7 +99,7 @@
   },
   "devDependencies": {
     "7zip-bin": "5.2.0",
-    "@babel/core": "7.29.0",
+    "@babel/core": "7.29.6",
     "@babel/preset-env": "7.29.5",
     "@babel/preset-react": "7.28.5",
     "@babel/runtime": "7.29.2",
