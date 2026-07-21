@@ -2007,6 +2007,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@electron-internal/extract-zip@npm:^1.0.1":
+  version: 1.0.4
+  resolution: "@electron-internal/extract-zip@npm:1.0.4"
+  checksum: 10/de4f721b3810a8ef6a615e3f1a1eae901f3ad0c528cd4a20fe78efc67250c70c4c8bf91dc76a730bbea970dfc81e9aed18fd5ef465ac46856edd1f34f595b4ad
+  languageName: node
+  linkType: hard
+
 "@electron/asar@npm:^3.2.1, @electron/asar@npm:^3.2.13, @electron/asar@npm:^3.2.7":
   version: 3.2.18
   resolution: "@electron/asar@npm:3.2.18"
@@ -9339,17 +9346,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron@npm:42.2.0":
-  version: 42.2.0
-  resolution: "electron@npm:42.2.0"
+"electron@npm:43.1.1":
+  version: 43.1.1
+  resolution: "electron@npm:43.1.1"
   dependencies:
+    "@electron-internal/extract-zip": "npm:^1.0.1"
     "@electron/get": "npm:^5.0.0"
     "@types/node": "npm:^24.9.0"
-    extract-zip: "npm:^2.0.1"
   bin:
     electron: cli.js
     install-electron: install.js
-  checksum: 10/7a1efa469036dc5795884cc0d95e862ce7ee3611396ed85b605187e00c641babd3e1ac734ca78b186cd2a5a070c69e959478ec324249afd4bcdfc35fb0583217
+  checksum: 10/3d0b4aafd5cc0c3292d87294703aba824d5f104ece6b15f5b1edc2edeb3f1b8ff4a34ce0e349a8da5fef8529a9f28ccc5065c837553e429b1d3b0ac1da8184cf
   languageName: node
   linkType: hard
 
@@ -13031,7 +13038,7 @@ __metadata:
     cross-env: "npm:10.1.0"
     cubic-spline: "npm:3.0.3"
     dataloader: "npm:2.2.3"
-    electron: "npm:42.2.0"
+    electron: "npm:43.1.1"
     electron-is-dev: "npm:3.0.1"
     electron-packager: "npm:17.1.2"
     express: "npm:5.2.1"
