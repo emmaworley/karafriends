@@ -9,6 +9,16 @@ import process from "process";
 import { exec, execFile } from "child_process";
 
 const pathTo7zip = sevenBin.path7za;
+// 7zip-bin >= 5.2.0 ships the unix `7za` without the executable bit under Yarn
+// PnP, so spawning it fails with EACCES. Restore the executable bit. (No-op on
+// Windows, and harmless for versions that already set it.)
+if (process.platform !== "win32") {
+  try {
+    fs.chmodSync(pathTo7zip, 0o755);
+  } catch {
+    // best-effort; extraction will surface a clearer error if this fails
+  }
+}
 const buildResourcesDir = `${process.cwd()}/buildResources`;
 const extraResourcesDir = `${process.cwd()}/extraResources`;
 const maxMsToWaitForExtraction = 20000;
