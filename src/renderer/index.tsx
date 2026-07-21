@@ -9,6 +9,7 @@ import { RelayEnvironmentProvider } from "react-relay";
 import environment from "../common/graphqlEnvironment";
 import { KuroshiroSingleton } from "../common/joysoundParser";
 import App from "./App";
+import ErrorBoundary from "./ErrorBoundary";
 import "./index.css";
 import KarafriendsAudio from "./webAudio";
 
@@ -34,8 +35,10 @@ const root = createRoot(container!);
 
 root.render(
   <React.StrictMode>
-    <RelayEnvironmentProvider environment={environment}>
-      <App kuroshiro={kuroshiroSingleton} audio={audio} />
-    </RelayEnvironmentProvider>
-  </React.StrictMode>
+    <ErrorBoundary>
+      <RelayEnvironmentProvider environment={environment}>
+        <App kuroshiro={kuroshiroSingleton} audio={audio} />
+      </RelayEnvironmentProvider>
+    </ErrorBoundary>
+  </React.StrictMode>,
 );
