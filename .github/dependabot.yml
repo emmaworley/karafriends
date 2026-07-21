@@ -10,13 +10,25 @@ updates:
     schedule:
       interval: "daily"
     open-pull-requests-limit: 1000
+    # Only propose versions that have been published for at least a week, so we
+    # skip releases that get yanked or hotfixed shortly after publishing.
+    cooldown:
+      default-days: 7
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
     open-pull-requests-limit: 1000
+    # Only propose versions that have been published for at least a week, so we
+    # skip releases that get yanked or hotfixed shortly after publishing.
+    cooldown:
+      default-days: 7
   - package-ecosystem: "github-actions" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
     open-pull-requests-limit: 1000
+    # Only propose versions that have been published for at least a week, so we
+    # skip releases that get yanked or hotfixed shortly after publishing.
+    cooldown:
+      default-days: 7
