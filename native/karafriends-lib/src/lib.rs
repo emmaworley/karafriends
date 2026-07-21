@@ -12,6 +12,7 @@ use cpal::traits::{DeviceTrait, HostTrait, StreamTrait};
 use itertools::{EitherOrBoth, Itertools};
 use neon::prelude::Finalize;
 use ringbuf::traits::{Consumer, Observer, Producer, Split};
+use rubato::audioadapter_buffers::direct::InterleavedSlice;
 use rubato::Resampler;
 
 type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;
@@ -439,21 +440,23 @@ impl InputDevice {
                 (input_config.sample_rate / output_config.sample_rate) as usize
             }
         };
-        let mut resampler = rubato::SincFixedIn::<f32>::new(
-            output_config.sample_rate as f64 / input_config.sample_rate as f64,
-            1.0,
-            rubato::SincInterpolationParameters {
-                sinc_len: 256,
-                f_cutoff: 0.95,
-                interpolation: rubato::SincInterpolationType::Linear,
-                oversampling_factor: 256,
-                window: rubato::WindowFunction::BlackmanHarris2,
-            },
+        // The input and output sample rates are both known from the cpal stream
+        // configs, so use rubato's synchronous FFT resampler with a fixed input
+        // chunk size.
+        let mut resampler = rubato::Fft::<f32>::new(
+            input_config.sample_rate as usize,
+            output_config.sample_rate as usize,
             resampler_chunk_size,
             1,
+            rubato::FixedSync::Input,
         )?;
-        // TODO: file a PR against rubato so that it doesn't error for unfilled buffers
-        let mut resampler_output = resampler.output_buffer_allocate(true);
+        let mut resampler_output = vec![0.0; resampler.output_frames_max()];
+        let resampler_output_len = resampler_output.len();
+        // The FFT resampler primes its overlap-add buffers with silence, so the
+        // first `output_delay()` output frames are the algorithmic delay. Drop
+        // them once at startup so the output stream stays aligned with the input
+        // (this removes latency rather than adding any).
+        let mut resampler_delay = resampler.output_delay();
 
         Ok(move |samples: &[Sample]| {
             let mono_samples: Vec<_> = samples
@@ -483,19 +486,28 @@ impl InputDevice {
                 output_samples
                     .chunks(resampler_chunk_size)
                     .for_each(|chunk| {
-                        match resampler.process_into_buffer(&[&chunk], &mut resampler_output, None)
-                        {
+                        let input = InterleavedSlice::new(chunk, 1, chunk.len()).unwrap();
+                        let mut output = InterleavedSlice::new_mut(
+                            &mut resampler_output,
+                            1,
+                            resampler_output_len,
+                        )
+                        .unwrap();
+                        match resampler.process_into_buffer(&input, &mut output, None) {
                             Err(e) => eprintln!("resampling error: {}", e),
                             Ok((_input_samples_consumed, output_samples_produced)) => {
+                                let skip = resampler_delay.min(output_samples_produced);
+                                resampler_delay -= skip;
                                 let samples_written = output_tx.push_iter(
-                                    &mut resampler_output[0]
-                                        .iter_mut()
-                                        .take(output_samples_produced)
+                                    &mut resampler_output[skip..output_samples_produced]
+                                        .iter()
                                         .flat_map(|sample| {
                                             std::iter::repeat_n(*sample, output_channels)
                                         }),
                                 );
-                                if samples_written < output_samples_produced {
+                                if samples_written
+                                    < (output_samples_produced - skip) * output_channels
+                                {
                                     eprintln!("output fell behind (with sample rate conversion)!");
                                 }
                             }
@@ -507,7 +519,7 @@ impl InputDevice {
                         .iter_mut()
                         .flat_map(|sample| std::iter::repeat_n(*sample, output_channels)),
                 );
-                if samples_written < resampler_output[0].len() {
+                if samples_written < resampler_output_len {
                     eprintln!("output fell behind (without sample rate conversion)!");
                 }
             }
@@ -664,11 +676,11 @@ mod tests {
         let input_samples = wf!(f32, input_config.sample_rate as f32, sine!(185.0))
             .iter()
             .take(latency_sample_count)
-            .collect::<Vec<_>>();
+            .collect_vec();
         input_callback(&input_samples);
 
-        let output_samples = output_rx.pop_iter().collect::<Vec<_>>();
-        let pitch_samples: Vec<f32> = pitch_rx.pop_iter().collect::<Vec<_>>();
+        let output_samples = output_rx.pop_iter().collect_vec();
+        let pitch_samples: Vec<f32> = pitch_rx.pop_iter().collect_vec();
         assert_eq!(input_samples[..output_samples.len()], output_samples);
         assert_eq!(input_samples[..pitch_samples.len()], pitch_samples);
 
@@ -676,13 +688,13 @@ mod tests {
         input_callback(&silence);
 
         // We should now have some echo in the output, but pitch should get a clean signal
-        let output_samples = output_rx.pop_iter().collect::<Vec<_>>();
-        let pitch_samples: Vec<f32> = pitch_rx.pop_iter().collect::<Vec<_>>();
+        let output_samples = output_rx.pop_iter().collect_vec();
+        let pitch_samples: Vec<f32> = pitch_rx.pop_iter().collect_vec();
         assert_eq!(
             input_samples[..output_samples.len()]
                 .iter()
                 .map(|f| f * /*ECHO_AMPLITUDE*/ 0.0)
-                .collect::<Vec<_>>(),
+                .collect_vec(),
             output_samples
         );
         assert_eq!(silence[..pitch_samples.len()], pitch_samples);
@@ -721,7 +733,7 @@ mod tests {
         let input_samples = wf!(f32, input_config.sample_rate as f32, sine!(185.0))
             .iter()
             .take(2048)
-            .collect::<Vec<_>>();
+            .collect_vec();
         input_callback(&input_samples);
 
         // Resampling doesn't preserve phase very well, so use the pitch detector to validate output
@@ -730,7 +742,7 @@ mod tests {
 
         let mut output_samples = vec![0.0; pitch_sample_count];
         output_rx.pop_slice(&mut output_samples);
-        let pitch_samples: Vec<f32> = pitch_rx.pop_iter().collect::<Vec<_>>();
+        let pitch_samples: Vec<f32> = pitch_rx.pop_iter().collect_vec();
         let (midi_number, confidence) = pd.detect(output_samples[..pitch_sample_count].to_vec());
         assert!((midi_number - freq2midi(185.0)).abs() < 0.001);
         assert!(confidence > 0.999);
@@ -771,7 +783,7 @@ mod tests {
         let input_samples = wf!(f32, input_config.sample_rate as f32, sine!(185.0))
             .iter()
             .take(2048)
-            .collect::<Vec<_>>();
+            .collect_vec();
         input_callback(&input_samples);
 
         // Resampling doesn't preserve phase very well, so use the pitch detector to validate output
@@ -780,7 +792,7 @@ mod tests {
 
         let mut output_samples = vec![0.0; pitch_sample_count];
         output_rx.pop_slice(&mut output_samples);
-        let pitch_samples: Vec<f32> = pitch_rx.pop_iter().collect::<Vec<_>>();
+        let pitch_samples: Vec<f32> = pitch_rx.pop_iter().collect_vec();
         let (midi_number, confidence) = pd.detect(output_samples[..pitch_sample_count].to_vec());
         assert!((midi_number - freq2midi(185.0)).abs() < 0.001);
         assert!(confidence > 0.999);
