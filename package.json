@@ -145,7 +145,7 @@
     "@wdio/mocha-framework": "9.27.1",
     "@yarnpkg/pnpify": "4.1.6",
     "babel-loader": "10.1.1",
-    "babel-plugin-relay": "21.0.0",
+    "babel-plugin-relay": "21.0.1",
     "cargo-cp-artifact": "0.1.9",
     "concurrently": "9.2.1",
     "cross-env": "10.1.0",
