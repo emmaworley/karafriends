@@ -1226,9 +1226,42 @@ export const joysoundCredentialsProvider = memoize(async () => {
   return JoysoundAPI.login(joysoundEmail, joysoundPassword);
 });
 
-const innertubeApiProvider = memoize(async () => {
-  return Innertube.create();
-});
+function withTimeout<T>(
+  promise: Promise<T>,
+  ms: number,
+  label: string,
+): Promise<T> {
+  let timer: ReturnType<typeof setTimeout>;
+  const timeout = new Promise<never>((_, reject) => {
+    timer = setTimeout(
+      () => reject(new Error(`${label} timed out after ${ms}ms`)),
+      ms,
+    );
+  });
+  return Promise.race([promise, timeout]).finally(() =>
+    clearTimeout(timer),
+  ) as Promise<T>;
+}
+
+// Every GraphQL request awaits this to build its context, so if
+// Innertube.create() hangs (YouTube unreachable) it would stall the entire
+// API. memoize would also cache a rejected promise forever, permanently
+// killing the backend until restart. Use a manual singleton that times out and
+// clears itself on failure so the next request retries.
+let innertubePromise: Promise<Innertube> | null = null;
+function innertubeApiProvider(): Promise<Innertube> {
+  if (!innertubePromise) {
+    innertubePromise = withTimeout(
+      Innertube.create(),
+      30000,
+      "Innertube.create",
+    ).catch((err) => {
+      innertubePromise = null;
+      throw err;
+    });
+  }
+  return innertubePromise;
+}
 
 export function applyGraphQLMiddleware(app: Application) {
   const httpServer = createServer(app);
@@ -1297,7 +1330,20 @@ export function applyGraphQLMiddleware(app: Application) {
     : undefined;
 
   const fetcher = async (url: string, init?: FetcherRequestInit) => {
-    return nodeFetch(url, { ...init, agent: tunnelAgent });
+    // Without a timeout, a hung upstream (DAM/Joysound) stalls the resolver —
+    // and the client request — indefinitely. Abort after 30s so it surfaces as
+    // an error (and the promise-retry wrappers can retry) instead of hanging.
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 30000);
+    try {
+      return await nodeFetch(url, {
+        ...init,
+        agent: tunnelAgent,
+        signal: controller.signal,
+      });
+    } finally {
+      clearTimeout(timer);
+    }
   };
 
   server
