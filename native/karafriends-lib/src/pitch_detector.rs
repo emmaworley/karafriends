@@ -135,10 +135,14 @@ mod tests {
         let pd = PitchDetector::new(sample_rate as f32, sample_count);
 
         for freq in 81..=1000 {
-            let samples = wf!(f32, sample_rate as f32, sine!(freq as f32))
-                .iter()
-                .take(sample_count)
-                .collect::<Vec<_>>();
+            let samples = wf!(
+                f32,
+                sample_rate as f32,
+                sine!(freq as f32, 1.0_f32, 0.0_f32)
+            )
+            .iter()
+            .take(sample_count)
+            .collect::<Vec<_>>();
             let (midi_number, confidence) = pd.detect(samples);
 
             assert_eq!(midi_number.round(), freq2midi(freq as f32).round());
