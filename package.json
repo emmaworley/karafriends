@@ -158,7 +158,7 @@
     "parcel": "2.16.4",
     "path-browserify": "^1.0.0",
     "prettier": "3.8.3",
-    "puppeteer-core": "25.0.4",
+    "puppeteer-core": "25.3.0",
     "raw-loader": "4.0.2",
     "relay-compiler": "21.0.0",
     "relay-compiler-language-typescript": "15.0.1",
