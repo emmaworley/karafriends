@@ -103,7 +103,7 @@ const RAW_RUNTIME_STATE =
           ["classnames", "npm:2.5.1"],\
           ["color-convert", "npm:3.1.3"],\
           ["compression", "npm:1.8.1"],\
-          ["concurrently", "npm:9.2.1"],\
+          ["concurrently", "npm:10.0.3"],\
           ["cors", "npm:2.8.6"],\
           ["cross-env", "npm:10.1.0"],\
           ["cubic-spline", "npm:3.0.3"],\
@@ -10273,6 +10273,13 @@ const RAW_RUNTIME_STATE =
           ["chalk", "npm:5.6.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:5.6.2", {\
+        "packageLocation": "./.yarn/cache/chalk-npm-5.6.2-ecbd482482-1b2f48f6fb.zip/node_modules/chalk/",\
+        "packageDependencies": [\
+          ["chalk", "npm:5.6.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["char-regex", [\
@@ -10772,16 +10779,16 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["concurrently", [\
-      ["npm:9.2.1", {\
-        "packageLocation": "./.yarn/cache/concurrently-npm-9.2.1-695cfd169a-2a6b1acbcd.zip/node_modules/concurrently/",\
+      ["npm:10.0.3", {\
+        "packageLocation": "./.yarn/cache/concurrently-npm-10.0.3-efe139d53b-ef1ffc31df.zip/node_modules/concurrently/",\
         "packageDependencies": [\
-          ["concurrently", "npm:9.2.1"],\
-          ["chalk", "npm:4.1.2"],\
+          ["concurrently", "npm:10.0.3"],\
+          ["chalk", "npm:5.6.2"],\
           ["rxjs", "npm:7.8.2"],\
-          ["shell-quote", "npm:1.8.3"],\
-          ["supports-color", "npm:8.1.1"],\
+          ["shell-quote", "npm:1.8.4"],\
+          ["supports-color", "npm:10.2.2"],\
           ["tree-kill", "npm:1.2.2"],\
-          ["yargs", "npm:17.7.2"]\
+          ["yargs", "npm:18.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15661,7 +15668,7 @@ const RAW_RUNTIME_STATE =
           ["classnames", "npm:2.5.1"],\
           ["color-convert", "npm:3.1.3"],\
           ["compression", "npm:1.8.1"],\
-          ["concurrently", "npm:9.2.1"],\
+          ["concurrently", "npm:10.0.3"],\
           ["cors", "npm:2.8.6"],\
           ["cross-env", "npm:10.1.0"],\
           ["cubic-spline", "npm:3.0.3"],\
@@ -19767,10 +19774,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["shell-quote", [\
-      ["npm:1.8.3", {\
-        "packageLocation": "./.yarn/cache/shell-quote-npm-1.8.3-b29f851134-5473e35463.zip/node_modules/shell-quote/",\
+      ["npm:1.8.4", {\
+        "packageLocation": "./.yarn/cache/shell-quote-npm-1.8.4-13eacaabff-a3e3796385.zip/node_modules/shell-quote/",\
         "packageDependencies": [\
-          ["shell-quote", "npm:1.8.3"]\
+          ["shell-quote", "npm:1.8.4"]\
         ],\
         "linkType": "HARD"\
       }]\
