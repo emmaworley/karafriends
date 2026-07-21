@@ -673,10 +673,14 @@ mod tests {
         let latency_sample_count =
             (input_config.sample_rate as f32 * /*ECHO_DELAY_SECS*/ 0.0) as usize;
 
-        let input_samples = wf!(f32, input_config.sample_rate as f32, sine!(185.0))
-            .iter()
-            .take(latency_sample_count)
-            .collect_vec();
+        let input_samples = wf!(
+            f32,
+            input_config.sample_rate as f32,
+            sine!(185.0_f32, 1.0_f32, 0.0_f32)
+        )
+        .iter()
+        .take(latency_sample_count)
+        .collect_vec();
         input_callback(&input_samples);
 
         let output_samples = output_rx.pop_iter().collect_vec();
@@ -730,10 +734,14 @@ mod tests {
             output_tx,
         )?;
 
-        let input_samples = wf!(f32, input_config.sample_rate as f32, sine!(185.0))
-            .iter()
-            .take(2048)
-            .collect_vec();
+        let input_samples = wf!(
+            f32,
+            input_config.sample_rate as f32,
+            sine!(185.0_f32, 1.0_f32, 0.0_f32)
+        )
+        .iter()
+        .take(2048)
+        .collect_vec();
         input_callback(&input_samples);
 
         // Resampling doesn't preserve phase very well, so use the pitch detector to validate output
@@ -780,10 +788,14 @@ mod tests {
             output_tx,
         )?;
 
-        let input_samples = wf!(f32, input_config.sample_rate as f32, sine!(185.0))
-            .iter()
-            .take(2048)
-            .collect_vec();
+        let input_samples = wf!(
+            f32,
+            input_config.sample_rate as f32,
+            sine!(185.0_f32, 1.0_f32, 0.0_f32)
+        )
+        .iter()
+        .take(2048)
+        .collect_vec();
         input_callback(&input_samples);
 
         // Resampling doesn't preserve phase very well, so use the pitch detector to validate output
