@@ -88,7 +88,7 @@ const RAW_RUNTIME_STATE =
           ["@types/ws", "npm:8.18.1"],\
           ["@types/youtube-player", "npm:5.5.11"],\
           ["@wdio/cli", "npm:9.27.1"],\
-          ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.27.1"],\
+          ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.29.1"],\
           ["@wdio/local-runner", "npm:9.27.1"],\
           ["@wdio/mocha-framework", "npm:9.27.1"],\
           ["@yarnpkg/pnpify", "npm:4.1.6"],\
@@ -9062,10 +9062,17 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.27.1", {\
-        "packageLocation": "./.yarn/__virtual__/@wdio-globals-virtual-6f83eccede/0/cache/@wdio-globals-npm-9.27.1-7fd7163517-84f8ea3b36.zip/node_modules/@wdio/globals/",\
+      ["npm:9.29.1", {\
+        "packageLocation": "./.yarn/cache/@wdio-globals-npm-9.29.1-f24d870301-81cb91221b.zip/node_modules/@wdio/globals/",\
         "packageDependencies": [\
-          ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.27.1"],\
+          ["@wdio/globals", "npm:9.29.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.29.1", {\
+        "packageLocation": "./.yarn/__virtual__/@wdio-globals-virtual-ccc48d4e35/0/cache/@wdio-globals-npm-9.29.1-f24d870301-81cb91221b.zip/node_modules/@wdio/globals/",\
+        "packageDependencies": [\
+          ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.29.1"],\
           ["@types/expect-webdriverio", null],\
           ["@types/webdriverio", null],\
           ["expect-webdriverio", null],\
@@ -16299,7 +16306,7 @@ const RAW_RUNTIME_STATE =
           ["@types/ws", "npm:8.18.1"],\
           ["@types/youtube-player", "npm:5.5.11"],\
           ["@wdio/cli", "npm:9.27.1"],\
-          ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.27.1"],\
+          ["@wdio/globals", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.29.1"],\
           ["@wdio/local-runner", "npm:9.27.1"],\
           ["@wdio/mocha-framework", "npm:9.27.1"],\
           ["@yarnpkg/pnpify", "npm:4.1.6"],\
