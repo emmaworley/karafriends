@@ -22,7 +22,7 @@
     "_test:wdio:renderer": "wait-on http://127.0.0.1:$KARAFRIENDS_DEV_PORT/renderer/ && pnpify wdio run renderer.wdio.conf.ts",
     "_test:wdio:remocon": "concurrently --success !command-0 --kill-others \"./electron.js build/dev/main_/index.js\" \"wait-on http://127.0.0.1:$KARAFRIENDS_REMOCON_PORT/ && pnpify wdio run remocon.wdio.conf.ts\"",
     "ephemeral-port-reserve": "cargo run --manifest-path native/Cargo.toml --quiet --release ephemeral-port-reserve",
-    "postinstall": "husky"
+    "postinstall": "husky && install-electron"
   },
   "dependencies": {
     "@apollo/datasource-rest": "6.4.1",
@@ -149,7 +149,7 @@
     "cargo-cp-artifact": "0.1.9",
     "concurrently": "9.2.1",
     "cross-env": "10.1.0",
-    "electron": "40.6.0",
+    "electron": "42.2.0",
     "electron-packager": "17.1.2",
     "glob": "13.0.6",
     "husky": "9.1.7",
@@ -215,6 +215,9 @@
   },
   "dependenciesMeta": {
     "@electron/osx-sign@1.3.2": {
+      "unplugged": true
+    },
+    "electron": {
       "unplugged": true
     }
   }
