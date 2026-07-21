@@ -17,6 +17,8 @@ import { type FetcherRequestInit } from "@apollo/utils.fetcher";
 // tslint:disable-next-line:no-submodule-imports
 import { expressMiddleware } from "@as-integrations/express5";
 import { makeExecutableSchema } from "@graphql-tools/schema";
+// tslint:disable-next-line:no-implicit-dependencies
+import { app as electronApp, dialog } from "electron";
 import isDev from "electron-is-dev";
 import express, { Application } from "express";
 import { PubSub } from "graphql-subscriptions";
@@ -185,10 +187,7 @@ interface NicoQueueItem extends QueueItemInterface {
 }
 
 type QueueItem =
-  | DamQueueItem
-  | JoysoundQueueItem
-  | YoutubeQueueItem
-  | NicoQueueItem;
+  DamQueueItem | JoysoundQueueItem | YoutubeQueueItem | NicoQueueItem;
 
 type QueueSongInfo = {
   readonly __typename: "QueueSongInfo";
@@ -321,25 +320,32 @@ const DB_PATH = path.resolve(TEMP_FOLDER, "queue.json");
 
 // TODO: write a db interface and call these from within mutating methods instead of at their call sites
 function saveDb() {
-  if (!fs.existsSync(TEMP_FOLDER)) {
-    fs.mkdirSync(TEMP_FOLDER);
-  }
-  fs.writeFileSync(
-    DB_PATH,
-    JSON.stringify({
+  try {
+    if (!fs.existsSync(TEMP_FOLDER)) {
+      fs.mkdirSync(TEMP_FOLDER, { recursive: true });
+    }
+    const serialized = JSON.stringify({
       ...db,
       pitchShiftSemis: 0,
       currentSong: null,
       currentSongAdhocLyrics: [],
       songQueue: [db.currentSong, ...db.songQueue],
       downloadQueue: [],
-    }),
-    "utf-8",
-  );
+    });
+    // Write to a temp file and rename into place so an interrupted write can
+    // never leave a half-written queue.json that fails to parse on next launch.
+    const tmpPath = `${DB_PATH}.tmp`;
+    fs.writeFileSync(tmpPath, serialized, "utf-8");
+    fs.renameSync(tmpPath, DB_PATH);
+  } catch (err) {
+    // A failed persist shouldn't take down the app; the in-memory queue is
+    // still intact and will be retried on the next mutation.
+    console.error(`Failed to persist queue to ${DB_PATH}:`, err);
+  }
 }
 
 function loadDb(): NotARealDb {
-  return {
+  const defaults: NotARealDb = {
     currentSong: null,
     currentSongAdhocLyrics: [],
     idToAdhocLyrics: {},
@@ -348,9 +354,27 @@ function loadDb(): NotARealDb {
     songQueue: [],
     downloadQueue: [],
     songHistory: [],
-    ...(fs.existsSync(DB_PATH) &&
-      JSON.parse(fs.readFileSync(DB_PATH, "utf-8"))),
   };
+  if (!fs.existsSync(DB_PATH)) {
+    return defaults;
+  }
+  try {
+    return { ...defaults, ...JSON.parse(fs.readFileSync(DB_PATH, "utf-8")) };
+  } catch (err) {
+    // A corrupt or partially-written queue.json (e.g. an interrupted save or a
+    // power loss mid-party) previously threw here at startup, bricking every
+    // launch. Preserve the bad file for debugging and start from a clean state.
+    console.error(
+      `Failed to load saved queue from ${DB_PATH}; ignoring it:`,
+      err,
+    );
+    try {
+      fs.renameSync(DB_PATH, `${DB_PATH}.corrupt`);
+    } catch (renameErr) {
+      console.error("Failed to back up corrupt queue file:", renameErr);
+    }
+    return defaults;
+  }
 }
 
 const pubsub = new PubSub();
@@ -1216,6 +1240,26 @@ export function applyGraphQLMiddleware(app: Application) {
     path: "/graphql",
   });
 
+  // These servers are EventEmitters: an unhandled "error" event (most commonly
+  // the remocon port already being in use) would otherwise crash the whole app
+  // with a bare stack trace. Fail loudly with a clear message and quit cleanly.
+  httpServer.on("error", (err: NodeJS.ErrnoException) => {
+    if (err.code === "EADDRINUSE") {
+      dialog.showErrorBox(
+        "karafriends: port already in use",
+        `Port ${karafriendsConfig.remoconPort} is already in use. ` +
+          "Is karafriends already running? Close the other instance " +
+          "(or free the port) and relaunch.",
+      );
+    } else {
+      console.error("HTTP server error:", err);
+    }
+    electronApp.quit();
+  });
+  wsServer.on("error", (err) => {
+    console.error("WebSocket server error:", err);
+  });
+
   const serverCleanup = useServer({ schema }, wsServer);
 
   db = loadDb();
@@ -1258,38 +1302,47 @@ export function applyGraphQLMiddleware(app: Application) {
     return nodeFetch(url, { ...init, agent: tunnelAgent });
   };
 
-  server.start().then(() => {
-    app.use(
-      "/graphql",
-      express.json(),
-      expressMiddleware(server, {
-        context: async () => {
-          const innertubeApiInstance = await innertubeApiProvider();
+  server
+    .start()
+    .then(() => {
+      app.use(
+        "/graphql",
+        express.json(),
+        expressMiddleware(server, {
+          context: async () => {
+            const innertubeApiInstance = await innertubeApiProvider();
 
-          return {
-            dataSources: {
-              minsei: new MinseiAPI(minseiCredentialsProvider, {
-                cache: server.cache,
-                fetch: fetcher,
-              }),
-              joysound: new JoysoundAPI(joysoundCredentialsProvider, {
-                cache: server.cache,
-                fetch: fetcher,
-              }),
-              dkwebsys: new DkwebsysAPI({
-                cache: server.cache,
-                fetch: fetcher,
-              }),
-              youtube: innertubeApiInstance,
-            },
-          };
-        },
-      }),
-    );
-    httpServer.listen(karafriendsConfig.remoconPort, () => {
-      console.log(
-        `Server is now running on http://localhost:${karafriendsConfig.remoconPort}`,
+            return {
+              dataSources: {
+                minsei: new MinseiAPI(minseiCredentialsProvider, {
+                  cache: server.cache,
+                  fetch: fetcher,
+                }),
+                joysound: new JoysoundAPI(joysoundCredentialsProvider, {
+                  cache: server.cache,
+                  fetch: fetcher,
+                }),
+                dkwebsys: new DkwebsysAPI({
+                  cache: server.cache,
+                  fetch: fetcher,
+                }),
+                youtube: innertubeApiInstance,
+              },
+            };
+          },
+        }),
       );
+      httpServer.listen(karafriendsConfig.remoconPort, () => {
+        console.log(
+          `Server is now running on http://localhost:${karafriendsConfig.remoconPort}`,
+        );
+      });
+    })
+    .catch((err) => {
+      // server.start() rejecting leaves the app with no GraphQL backend, so there
+      // is nothing useful to keep running — surface it and quit cleanly.
+      console.error("Failed to start the GraphQL server:", err);
+      dialog.showErrorBox("karafriends: failed to start", String(err));
+      electronApp.quit();
     });
-  });
 }

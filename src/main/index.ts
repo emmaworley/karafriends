@@ -90,6 +90,15 @@ function createWindow() {
     },
   });
 
+  // A renderer crash (GPU reset, OOM, native fault) would otherwise leave the
+  // karaoke display permanently blank. Reload the window so the show goes on.
+  rendererWindow.webContents.on("render-process-gone", (_event, details) => {
+    console.error(`Renderer process gone (${details.reason})`);
+    if (details.reason !== "clean-exit") {
+      rendererWindow?.reload();
+    }
+  });
+
   // Ignore CORS when fetching ipcasting HLS and when sending requests to remocon
   const session = rendererWindow.webContents.session;
   const ignoreCORSFilter = {
@@ -112,18 +121,21 @@ function createWindow() {
     (details, callback) => {
       // Chrome is not happy if ACAO is set twice, which is what happens
       // when the Express static middleware is setting this one
-      delete details.responseHeaders!["access-control-allow-origin"];
-      details.responseHeaders!["Access-Control-Allow-Origin"] = ["*"];
+      if (details.responseHeaders) {
+        delete details.responseHeaders["access-control-allow-origin"];
+        details.responseHeaders["Access-Control-Allow-Origin"] = ["*"];
+      }
       callback({ responseHeaders: details.responseHeaders });
     },
   );
 
   if (karafriendsConfig.proxyEnable) {
-    session.setProxy({
-      proxyRules: `${karafriendsConfig.proxyHost}:${karafriendsConfig.proxyPort}`,
-      proxyBypassRules: "<local>,192.168.0.0/16,172.16.0.0/12,10.0.0.0/8",
-    });
-    // Technically should await this promise
+    session
+      .setProxy({
+        proxyRules: `${karafriendsConfig.proxyHost}:${karafriendsConfig.proxyPort}`,
+        proxyBypassRules: "<local>,192.168.0.0/16,172.16.0.0/12,10.0.0.0/8",
+      })
+      .catch((err) => console.error("Failed to set proxy:", err));
   }
 
   protocol.registerFileProtocol("karafriends", (request, callback) => {
@@ -205,7 +217,7 @@ app.on("login", (event, webContents, request, authInfo, callback) => {
   );
   if (karafriendsConfig.proxyEnable) {
     const { proxyHost, proxyPort, proxyUser, proxyPass } = karafriendsConfig;
-    console.log(`Time to login to ${proxyURL}:${proxyPort}`);
+    console.log(`Time to login to ${proxyHost}:${proxyPort}`);
     callback(proxyUser, proxyPass);
     event.preventDefault();
   } else {

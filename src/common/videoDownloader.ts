@@ -1,6 +1,7 @@
-import { spawn } from "child_process";
+import { ChildProcess, spawn } from "child_process";
 import { app } from "electron"; // tslint:disable-line:no-implicit-dependencies
 import fs from "fs";
+import path from "path";
 import process from "process";
 
 import invariant from "ts-invariant";
@@ -29,14 +30,69 @@ interface JoysoundVideoData {
 
 const resourcePaths = getResourcePaths();
 
-function deleteTempFiles(prefix: string): void {
-  for (const filename of fs.readdirSync(TEMP_FOLDER)) {
-    if (!filename) {
-      continue;
-    }
+// Filesystem cleanup helpers. These run inside async spawn/exit callbacks where
+// an uncaught throw would crash the whole app, so they must never throw: a
+// missing or already-removed file during cleanup is not fatal.
+function safeUnlink(filename: string): void {
+  try {
+    fs.rmSync(filename, { force: true });
+  } catch (err) {
+    console.error(`Failed to remove ${filename}:`, err);
+  }
+}
 
-    if (filename.includes(prefix)) {
-      fs.unlinkSync(filename);
+function safeRename(from: string, to: string): void {
+  try {
+    fs.renameSync(from, to);
+  } catch (err) {
+    console.error(`Failed to rename ${from} -> ${to}:`, err);
+  }
+}
+
+// A spawned binary (ffmpeg / yt-dlp) emits an "error" event if it can't be
+// launched (missing, not executable, etc). Unhandled, an EventEmitter "error"
+// throws and crashes the app -- a real risk now that these binaries are
+// downloaded at runtime. Log it and run the caller's cleanup instead of letting
+// one failed download take everything down.
+function handleProcessError(
+  proc: ChildProcess,
+  label: string,
+  cleanup: () => void,
+): void {
+  proc.on("error", (err) => {
+    console.error(`${label} failed to run:`, err);
+    try {
+      cleanup();
+    } catch (cleanupErr) {
+      console.error(`${label} cleanup failed:`, cleanupErr);
+    }
+  });
+}
+
+// A log write stream can emit "error" (bad path, disk full); unhandled, it
+// crashes the app. Logging is best-effort, so swallow it.
+function attachLogStreamErrorHandler(
+  stream: fs.WriteStream,
+  label: string,
+): void {
+  stream.on("error", (err) => {
+    console.error(`${label} log stream error:`, err);
+  });
+}
+
+function deleteTempFiles(prefix: string): void {
+  let filenames: string[];
+  try {
+    filenames = fs.readdirSync(TEMP_FOLDER);
+  } catch (err) {
+    console.error(`Failed to list ${TEMP_FOLDER} for cleanup:`, err);
+    return;
+  }
+  for (const filename of filenames) {
+    if (filename && filename.includes(prefix)) {
+      // NB: readdirSync returns bare names; they must be joined with
+      // TEMP_FOLDER or the unlink targets the wrong (cwd-relative) path.
+      safeUnlink(path.join(TEMP_FOLDER, filename));
     }
   }
 }
@@ -196,6 +252,7 @@ function downloadDamVideoImpl(
 
   const ffmpegLogFilename = `${TEMP_FOLDER}/dam-${songId}.log`;
   const ffmpegLogStream = fs.createWriteStream(ffmpegLogFilename);
+  attachLogStreamErrorHandler(ffmpegLogStream, "ffmpeg (DAM)");
 
   const ffmpeg = spawn(
     resourcePaths.ffmpeg,
@@ -221,9 +278,11 @@ function downloadDamVideoImpl(
   ffmpeg.stderr.pipe(process.stderr);
   ffmpeg.stderr.pipe(ffmpegLogStream);
 
+  handleProcessError(ffmpeg, "ffmpeg (DAM)", () => safeUnlink(tempFilename));
+
   ffmpeg.on("exit", (code, signal) => {
     if (code === 0) {
-      fs.renameSync(tempFilename, filename);
+      safeRename(tempFilename, filename);
     } else {
       console.error(
         `Error downloading DAM video with ID ${songId}: code=${code}, signal=${signal}, log=${ffmpegLogFilename}`,
@@ -243,6 +302,7 @@ function makeJoysoundFFmpegCall(
   const ffmpegLogStream = fs.createWriteStream(ffmpegLogFilename, {
     flags: "a",
   });
+  attachLogStreamErrorHandler(ffmpegLogStream, "ffmpeg (Joysound)");
 
   const ffmpeg = spawn(resourcePaths.ffmpeg, ffmpegArgs, {
     stdio: ["pipe", "pipe", "pipe"],
@@ -264,6 +324,14 @@ function makeJoysoundFFmpegCall(
   if (onExit) {
     ffmpeg.on("exit", onExit);
   }
+
+  // If ffmpeg can't be launched at all, drive the same exit path (non-zero
+  // code) so the wrapping promise rejects instead of hanging or crashing.
+  handleProcessError(ffmpeg, "ffmpeg (Joysound)", () => {
+    if (onExit) {
+      onExit(-1, 0);
+    }
+  });
 
   if (stdinBuffer) {
     ffmpeg.stdin.write(stdinBuffer);
@@ -350,6 +418,7 @@ function downloadJoysoundYoutubeVideoPromise(
   return new Promise((resolve, reject) => {
     const ytdlpLogFilename = `${TEMP_FOLDER}/yt-${youtubeVideoId}.log`;
     const ytdlpLogStream = fs.createWriteStream(ytdlpLogFilename);
+    attachLogStreamErrorHandler(ytdlpLogStream, "yt-dlp");
 
     const env = { ...process.env };
     // Don't need a proxy to download from YouTube
@@ -391,10 +460,15 @@ function downloadJoysoundYoutubeVideoPromise(
       handleYoutubeDownloadLog(data.toString(), downloadQueueItem);
     });
 
+    handleProcessError(ytdlp, "yt-dlp (Joysound/YouTube)", () => {
+      removeVideoDownloadFromQueue(downloadQueue, downloadQueueItem);
+      reject(-1);
+    });
+
     ytdlp.on("exit", (code, signal) => {
       if (code === 0) {
-        fs.unlinkSync(tempFilename);
-        fs.renameSync(tempFilename + ".mp4", tempFilename);
+        safeUnlink(tempFilename);
+        safeRename(tempFilename + ".mp4", tempFilename);
 
         removeVideoDownloadFromQueue(downloadQueue, downloadQueueItem);
 
@@ -455,7 +529,7 @@ function composeJoysoundVideoPromise(
     };
 
     const onExit = (code: number, signal: number) => {
-      fs.unlinkSync(tempFilename);
+      safeUnlink(tempFilename);
 
       if (code === 0) {
         const metadata: JoysoundVideoData = {
@@ -680,14 +754,14 @@ function padJoysoundVideoPromise(
 
         const onExit = (code: number, signal: number) => {
           if (code === 0) {
-            fs.renameSync(videoFilename, videoTempFilename);
-            fs.renameSync(videoOutFilename, videoFilename);
+            safeRename(videoFilename, videoTempFilename);
+            safeRename(videoOutFilename, videoFilename);
 
-            fs.unlinkSync(videoNoSoundFilename);
-            fs.unlinkSync(videoPadFrameFilename);
-            fs.unlinkSync(videoPadFilename);
-            fs.unlinkSync(videoTempFilename);
-            fs.unlinkSync(videoConcatFilename);
+            safeUnlink(videoNoSoundFilename);
+            safeUnlink(videoPadFrameFilename);
+            safeUnlink(videoPadFilename);
+            safeUnlink(videoTempFilename);
+            safeUnlink(videoConcatFilename);
 
             pushSongToQueue(queueItem, pushToHead);
 
@@ -788,7 +862,7 @@ function downloadJoysoundDataImpl(
         `${videoFilename} already exists, but ${telopFilename} does not.`,
       );
 
-      fs.unlinkSync(videoFilename);
+      safeUnlink(videoFilename);
     }
   }
 
@@ -901,6 +975,15 @@ function downloadJoysoundDataImpl(
       } else {
         pushSongToQueue(queueItem, pushToHead);
       }
+    })
+    .catch((err) => {
+      // This chain is fire-and-forget (not awaited by the caller), so an
+      // unhandled rejection here — a Joysound API failure, an ffmpeg/yt-dlp
+      // launch failure, bad telop/ogg data, etc. — would otherwise reach the
+      // process-level handler and crash the app. Fail just this download.
+      console.error(`Error downloading Joysound video with ID ${songId}:`, err);
+      removeVideoDownloadFromQueue(downloadQueue, downloadQueueItem);
+      deleteTempFiles(filenamePrefix);
     });
 }
 
@@ -979,6 +1062,8 @@ function downloadYoutubeVideoImpl(
 
   const ytdlpLogStream = fs.createWriteStream(ytdlpLogFilename);
 
+  attachLogStreamErrorHandler(ytdlpLogStream, "yt-dlp");
+
   const captionArgs = captionCode
     ? ["--write-subs", "--sub-langs", captionCode]
     : [];
@@ -1015,10 +1100,15 @@ function downloadYoutubeVideoImpl(
     handleYoutubeDownloadLog(data.toString(), downloadQueueItem);
   });
 
+  handleProcessError(ytdlp, "yt-dlp", () => {
+    removeVideoDownloadFromQueue(downloadQueue, downloadQueueItem);
+    safeUnlink(tempFilename);
+  });
+
   ytdlp.on("exit", (code, signal) => {
     removeVideoDownloadFromQueue(downloadQueue, downloadQueueItem);
 
-    fs.unlinkSync(tempFilename);
+    safeUnlink(tempFilename);
 
     if (code !== 0) {
       console.error(
@@ -1100,6 +1190,8 @@ function downloadNicoVideoImpl(
 
   const ytdlpLogStream = fs.createWriteStream(ytdlpLogFilename);
 
+  attachLogStreamErrorHandler(ytdlpLogStream, "yt-dlp");
+
   const env = { ...process.env };
   // Don't need a proxy to download from Niconico
   delete process.env.http_proxy;
@@ -1132,10 +1224,15 @@ function downloadNicoVideoImpl(
     handleYoutubeDownloadLog(data.toString(), downloadQueueItem);
   });
 
+  handleProcessError(ytdlp, "yt-dlp", () => {
+    removeVideoDownloadFromQueue(downloadQueue, downloadQueueItem);
+    safeUnlink(tempFilename);
+  });
+
   ytdlp.on("exit", (code, signal) => {
     removeVideoDownloadFromQueue(downloadQueue, downloadQueueItem);
 
-    fs.unlinkSync(tempFilename);
+    safeUnlink(tempFilename);
 
     if (code === 0) {
       onComplete();

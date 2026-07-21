@@ -79,17 +79,35 @@ function getConfig(): KarafriendsConfig {
 
   if (fs.existsSync(configFilepath)) {
     console.log(`Configs found. Loading them up.`);
-    const localConfig: KarafriendsConfig = parse(
-      fs.readFileSync(configFilepath, { encoding: "utf8", flag: "r" }),
-    );
-    config = { ...DEFAULT_CONFIG, ...localConfig };
+    try {
+      const localConfig: KarafriendsConfig = parse(
+        fs.readFileSync(configFilepath, { encoding: "utf8", flag: "r" }),
+      );
+      config = { ...DEFAULT_CONFIG, ...localConfig };
+    } catch (err) {
+      // config.yaml is hand-edited by the user (for DAM/Joysound credentials),
+      // so a YAML typo must not crash the app on startup. Fall back to defaults
+      // for this session and, crucially, return before the write-back below so
+      // the user's (fixable) config -- and their credentials -- are preserved.
+      console.error(
+        `Failed to parse ${configFilepath}; using defaults for this session. ` +
+          "Fix the YAML and relaunch to restore your settings:",
+        err,
+      );
+      return applyEnvironmentOverrides({ ...DEFAULT_CONFIG });
+    }
   } else {
     console.log("No local configs found. Using default.");
   }
 
-  // write back defaults
-  fs.mkdirSync(path.dirname(configFilepath), { recursive: true });
-  fs.writeFileSync(configFilepath, stringify(config));
+  // write back defaults (persists any newly-added config fields); best-effort
+  // so an unwritable userData directory doesn't crash startup.
+  try {
+    fs.mkdirSync(path.dirname(configFilepath), { recursive: true });
+    fs.writeFileSync(configFilepath, stringify(config));
+  } catch (err) {
+    console.error(`Failed to write config to ${configFilepath}:`, err);
+  }
 
   return applyEnvironmentOverrides(config);
 }
