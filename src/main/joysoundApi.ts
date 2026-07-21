@@ -180,11 +180,9 @@ export class JoysoundAPI extends RESTDataSource {
   async getSongDetail(id: string) {
     const creds = await this.credsProvider();
 
-    const data = await this.get(
-      `songdetail/${id}`,
-      {},
-      { headers: { Cookie: generateCookieString(creds.cookies) } },
-    );
+    const data = await this.get(`songdetail/${id}`, {
+      headers: { Cookie: generateCookieString(creds.cookies) },
+    });
 
     const re = new RegExp(
       /<div class="flex items-center w-full border-b border-gray">([^<>]*)/,

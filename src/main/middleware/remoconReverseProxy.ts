@@ -19,7 +19,7 @@ function remoconReverseProxy(devPort: number) {
         }${req.originalUrl}`,
         {
           method: req.method,
-          headers: Object.keys(req.headers).map((header) => [
+          headers: Object.keys(req.headers).map((header): [string, string] => [
             header,
             req.headers[header] as string,
           ]),

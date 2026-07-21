@@ -6,8 +6,8 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "es2020",
-    "moduleResolution": "node",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "ignoreDeprecations": "6.0",
     "resolveJsonModule": true,
     "jsx": "react"
