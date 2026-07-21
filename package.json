@@ -157,7 +157,7 @@
     "node-loader": "2.1.0",
     "parcel": "2.16.4",
     "path-browserify": "^1.0.0",
-    "prettier": "3.8.3",
+    "prettier": "3.9.6",
     "puppeteer-core": "25.0.4",
     "raw-loader": "4.0.2",
     "relay-compiler": "21.0.0",
