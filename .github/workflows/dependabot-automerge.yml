@@ -1,0 +1,56 @@
+name: Dependabot auto-merge
+
+# Auto-merge a Dependabot PR once the Build workflow has succeeded for it.
+#
+# This runs via workflow_run rather than on: pull_request for two reasons:
+#   1. It only fires after Build completes, and we gate on conclusion ==
+#      "success", so a PR is merged only if it actually passed CI.
+#   2. workflow_run executes in the base-repo context with a token that honors
+#      the permissions below. Dependabot's own pull_request token is read-only,
+#      so it could not merge from a pull_request-triggered workflow.
+on:
+  workflow_run:
+    workflows: ["Build"]
+    types:
+      - completed
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    # Only for successful Build runs that came from a Dependabot pull request.
+    if: >-
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.actor.login == 'dependabot[bot]'
+    steps:
+      - name: Merge the Dependabot PR that passed CI
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          # Resolve the PR from the commit that Build ran against.
+          pr=$(gh api "repos/$REPO/commits/$HEAD_SHA/pulls" \
+            --jq '.[] | select(.state == "open") | .number' | head -n1)
+          if [ -z "$pr" ]; then
+            echo "No open PR found for $HEAD_SHA; nothing to merge."
+            exit 0
+          fi
+
+          # Defense in depth: confirm the PR is actually authored by Dependabot
+          # before merging.
+          author=$(gh pr view "$pr" --repo "$REPO" --json author --jq '.author.login')
+          case "$author" in
+            "app/dependabot" | "dependabot[bot]") ;;
+            *)
+              echo "PR #$pr is authored by '$author', not Dependabot; skipping."
+              exit 0
+              ;;
+          esac
+
+          echo "Build passed for Dependabot PR #$pr; squash-merging."
+          gh pr merge "$pr" --repo "$REPO" --squash --delete-branch
