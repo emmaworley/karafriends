@@ -42,7 +42,7 @@ describe("Electron tests", () => {
       "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+M8AAAMBAQDJ/pLvAAAAAElFTkSuQmCC";
 
     // Write the probe into the app's temp folder from the main process.
-    await browser.electron.execute(
+    const probe = await browser.electron.execute(
       (electron, name, b64) => {
         // eslint-disable-next-line no-var-requires
         const fs = require("fs");
@@ -50,24 +50,47 @@ describe("Electron tests", () => {
         const path = require("path");
         const dir = path.join(electron.app.getPath("temp"), "karafriends_tmp");
         fs.mkdirSync(dir, { recursive: true });
-        fs.writeFileSync(path.join(dir, name), Buffer.from(b64, "base64"));
+        const full = path.join(dir, name);
+        fs.writeFileSync(full, Buffer.from(b64, "base64"));
+        return { full, exists: fs.existsSync(full) };
       },
       fileName,
       pngBase64,
     );
 
-    const loaded = await browser.executeAsync((url, done) => {
+    const res = await browser.executeAsync((url, done) => {
+      const out = { origin: location.origin };
+      let pending = 2;
+      const settle = () => {
+        if (--pending === 0) done(out);
+      };
       const img = new Image();
-      img.onload = () => done(true);
-      img.onerror = () => done(false);
+      img.onload = () => {
+        out.img = "load";
+        settle();
+      };
+      img.onerror = () => {
+        out.img = "error";
+        settle();
+      };
       img.src = url;
-      setTimeout(() => done(false), 10 * 1000);
+      // no-cors mirrors how the app loads media; used here only for diagnostics.
+      fetch(url, { mode: "no-cors" })
+        .then((r) => {
+          out.noCorsFetch = `type=${r.type} status=${r.status}`;
+          settle();
+        })
+        .catch((e) => {
+          out.noCorsFetch = `throw:${e}`;
+          settle();
+        });
+      setTimeout(() => done(out), 8 * 1000);
     }, `karafriends://local/${fileName}`);
 
     assert.strictEqual(
-      loaded,
-      true,
-      "karafriends:// resource was blocked (CORS/scheme) or failed to load",
+      res.img,
+      "load",
+      `karafriends:// load failed. probe=${JSON.stringify(probe)} result=${JSON.stringify(res)}`,
     );
   });
 });
