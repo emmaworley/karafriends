@@ -52,7 +52,7 @@ function bundleExtractor() {
         appleApiIssuer: "69a6de70-1249-47e3-e053-5b8c7c11a4d1",
       },
       osxSign: {
-        identity: "Developer ID Application: Connor Worley (WZ6JC3T383)",
+        identity: "Developer ID Application: Emma Worley (WZ6JC3T383)",
       },
     }),
     ...(process.platform === "win32" && {
