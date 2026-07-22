@@ -66,7 +66,16 @@ protocol.registerSchemesAsPrivileged([
   {
     scheme: "karafriends",
     privileges: {
+      // standard + corsEnabled make this scheme requestable cross-origin from
+      // the file:// renderer; without them Chromium blocks e.g. a <video src>
+      // pointing at karafriends:// with a CORS error. secure keeps it a
+      // trustworthy origin. NB: a standard scheme lowercases the URL host, so
+      // the (case-sensitive) file name must live in the path -- see the handler
+      // and the karafriends://local/<file> URLs in the renderer.
+      standard: true,
+      secure: true,
       supportFetchAPI: true,
+      corsEnabled: true,
       stream: true,
     },
   },
@@ -140,8 +149,13 @@ function createWindow() {
 
   protocol.registerFileProtocol("karafriends", (request, callback) => {
     console.log(`Got protocol request: ${request.method} ${request.url}`);
-    const url = request.url.substr(14 /* 'karafriends://'.length */);
-    callback({ path: path.normalize(`${TEMP_FOLDER}/${url}`) });
+    // URLs are karafriends://local/<file>; the case-sensitive file name is in
+    // the path (the standard-scheme host is lowercased, so it can't go there).
+    const file = decodeURIComponent(new URL(request.url).pathname).replace(
+      /^\/+/,
+      "",
+    );
+    callback({ path: path.join(TEMP_FOLDER, file) });
   });
 
   const expressApp = express();

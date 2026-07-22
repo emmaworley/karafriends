@@ -123,7 +123,7 @@ function Player(props: {
 
                 // If caching is on this means we'll be serving almost everything through /static
                 // which seems kind of stupid, but whatever
-                const fileUrl = `karafriends://${popSong.songId}-${popSong.streamingUrlIdx}.mp4`;
+                const fileUrl = `karafriends://local/${popSong.songId}-${popSong.streamingUrlIdx}.mp4`;
 
                 const loadRemote = () => {
                   if (!videoRef.current) return;
@@ -192,14 +192,14 @@ function Player(props: {
                   ? popSong.youtubeVideoId
                   : "default";
 
-                videoRef.current.src = `karafriends://joysound-${popSong.songId}-${filenameSuffix}.mp4`;
+                videoRef.current.src = `karafriends://local/joysound-${popSong.songId}-${filenameSuffix}.mp4`;
 
                 navigator.mediaSession.metadata = new MediaMetadata({
                   title: popSong.name,
                   artist: popSong.artistName,
                 });
 
-                fetch(`karafriends://joysound-${popSong.songId}.joy_02`)
+                fetch(`karafriends://local/joysound-${popSong.songId}.joy_02`)
                   .then((resp) => resp.arrayBuffer())
                   .then((data) => {
                     setJoysoundTelop(data);
@@ -215,11 +215,11 @@ function Player(props: {
                 setShouldShowJoysound(false);
                 setShouldShowAdhocLyrics(popSong.hasAdhocLyrics);
 
-                videoRef.current.src = `karafriends://yt-${popSong.songId}.mp4`;
+                videoRef.current.src = `karafriends://local/yt-${popSong.songId}.mp4`;
 
                 if (trackRef?.current && popSong?.hasCaptions) {
                   trackRef.current.default = true;
-                  trackRef.current.src = `karafriends://yt-${popSong.songId}.vtt`;
+                  trackRef.current.src = `karafriends://local/yt-${popSong.songId}.vtt`;
                 }
 
                 console.log(
@@ -238,7 +238,7 @@ function Player(props: {
                 setShouldShowJoysound(false);
                 setShouldShowAdhocLyrics(false);
 
-                videoRef.current.src = `karafriends://nico-${popSong.songId}.mp4`;
+                videoRef.current.src = `karafriends://local/nico-${popSong.songId}.mp4`;
 
                 props.audio.gain(NON_DAM_GAIN);
 
