@@ -1,5 +1,7 @@
 const { setupBrowser } = require("@testing-library/webdriverio");
 const assert = require("assert");
+const fs = require("fs");
+const path = require("path");
 
 describe("Electron tests", () => {
   it("Renderer screenshot", async () => {
@@ -41,22 +43,18 @@ describe("Electron tests", () => {
     const pngBase64 =
       "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+M8AAAMBAQDJ/pLvAAAAAElFTkSuQmCC";
 
-    // Write the probe into the app's temp folder from the main process.
-    const probe = await browser.electron.execute(
-      (electron, name, b64) => {
-        // eslint-disable-next-line no-var-requires
-        const fs = require("fs");
-        // eslint-disable-next-line no-var-requires
-        const path = require("path");
-        const dir = path.join(electron.app.getPath("temp"), "karafriends_tmp");
-        fs.mkdirSync(dir, { recursive: true });
-        const full = path.join(dir, name);
-        fs.writeFileSync(full, Buffer.from(b64, "base64"));
-        return { full, exists: fs.existsSync(full) };
-      },
-      fileName,
-      pngBase64,
+    // The protocol handler serves app.getPath("temp")/karafriends_tmp/<file>.
+    // Ask the main process for that temp dir, then write the probe from here
+    // (the WDIO Node process) -- the bundled main context doesn't expose
+    // require(), so writing from inside browser.electron.execute doesn't work.
+    const tempDir = await browser.electron.execute((electron) =>
+      electron.app.getPath("temp"),
     );
+    const dir = path.join(tempDir, "karafriends_tmp");
+    fs.mkdirSync(dir, { recursive: true });
+    const full = path.join(dir, fileName);
+    fs.writeFileSync(full, Buffer.from(pngBase64, "base64"));
+    const probe = { full, exists: fs.existsSync(full) };
 
     const res = await browser.executeAsync((url, done) => {
       const out = { origin: location.origin };
