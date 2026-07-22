@@ -24,6 +24,10 @@ export const config = {
   ],
   connectionRetryTimeout: 5 * 60 * 1000,
   framework: "mocha",
+  // Run specs one at a time: each spec launches its own Electron app, and the
+  // karafriends main process binds the remocon server on a fixed port, so two
+  // concurrent instances collide (EADDRINUSE) and one exits.
+  maxInstances: 1,
   logLevel: "warn",
   mochaOpts: {
     timeout: 5 * 60 * 1000,
