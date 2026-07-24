@@ -15,7 +15,7 @@ import {
 import { JoysoundAPI, JoysoundSongRawData } from "../main/joysoundApi";
 
 import { ensureExternalResources, getResourcePaths } from "./externalResources";
-import { getSongDuration } from "./joysoundParser";
+import { getSongDuration } from "./joysoundDuration";
 
 export const TEMP_FOLDER: string = `${app.getPath("temp")}/karafriends_tmp`;
 const captionCodeRe: RegExp = new RegExp(/^[a-z]{2}$/);
@@ -199,7 +199,14 @@ function getJoysoundOggPlaytime(oggBuffer: Buffer): number {
 
     fieldOffset = i + FIELD_TAG.length;
 
-    const fieldLengthView = new DataView(oggBuffer.buffer, i - 4, 4);
+    // `oggBuffer` may be a view into a larger, pool-backed ArrayBuffer, so the
+    // 4-byte comment-length field lives at `byteOffset + i - 4`, not `i - 4`
+    // (which would read from unrelated pool bytes / out of bounds).
+    const fieldLengthView = new DataView(
+      oggBuffer.buffer,
+      oggBuffer.byteOffset + i - 4,
+      4,
+    );
     fieldLength = fieldLengthView.getUint32(0, true) - FIELD_TAG.length;
 
     break;
@@ -532,13 +539,24 @@ function composeJoysoundVideoPromise(
       safeUnlink(tempFilename);
 
       if (code === 0) {
-        const metadata: JoysoundVideoData = {
-          songDuration: getSongDuration(telopBuffer.buffer) * 1000,
-          songPlaytime: getJoysoundOggPlaytime(oggBuffer),
-          songId,
-          oggBuffer,
-          videoPlaytime,
-        };
+        // Parsing runs synchronously inside this child-process "exit" handler,
+        // so a throw here escapes the promise chain's .catch and reaches the
+        // process-level handler (which exits). Route parse failures (malformed
+        // telop/ogg) through reject() so just this download fails instead.
+        let metadata: JoysoundVideoData;
+        try {
+          metadata = {
+            songDuration: getSongDuration(telopBuffer) * 1000,
+            songPlaytime: getJoysoundOggPlaytime(oggBuffer),
+            songId,
+            oggBuffer,
+            videoPlaytime,
+          };
+        } catch (err) {
+          console.error(`Error parsing Joysound data for ID ${songId}:`, err);
+          reject(err);
+          return;
+        }
 
         resolve(metadata);
       } else {
@@ -852,7 +870,7 @@ function downloadJoysoundDataImpl(
 
       queueItem = {
         ...queueItem,
-        playtime: getSongDuration(telopBuffer.buffer),
+        playtime: getSongDuration(telopBuffer),
       };
 
       pushSongToQueue(queueItem, pushToHead);
