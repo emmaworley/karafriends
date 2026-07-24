@@ -602,7 +602,16 @@ fn supported_config_to_config(
         buffer_size: match config_range.buffer_size() {
             // WASAPI lies about buffer size ranges and doesn't repect fixed size requests
             #[cfg(not(windows))]
-            cpal::SupportedBufferSize::Range { min, max: _ } => cpal::BufferSize::Fixed(*min),
+            cpal::SupportedBufferSize::Range { min, max } => {
+                // Request a standard 256-frame buffer rather than the reported
+                // minimum. cpal 0.18 validates a fixed buffer size against the
+                // device's real range when the stream is built, and the range
+                // reported here can understate that minimum (e.g. it reports 14
+                // but only 29..=4096 is actually accepted), which made the build
+                // fail. Clamp 256 to the reported range so we stay in bounds;
+                // 256 is what the fixed-config streams elsewhere use too.
+                cpal::BufferSize::Fixed(256u32.clamp(*min, *max))
+            }
             _ => cpal::BufferSize::Default,
         },
     }
