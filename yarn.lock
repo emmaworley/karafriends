@@ -6038,21 +6038,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/local-runner@npm:9.29.1":
-  version: 9.29.1
-  resolution: "@wdio/local-runner@npm:9.29.1"
+"@wdio/local-runner@npm:9.30.0":
+  version: 9.30.0
+  resolution: "@wdio/local-runner@npm:9.30.0"
   dependencies:
     "@types/node": "npm:^20.1.0"
     "@wdio/logger": "npm:9.29.1"
     "@wdio/repl": "npm:9.16.2"
-    "@wdio/runner": "npm:9.29.1"
+    "@wdio/runner": "npm:9.30.0"
     "@wdio/types": "npm:9.29.1"
-    "@wdio/xvfb": "npm:9.29.1"
+    "@wdio/xvfb": "npm:9.30.0"
     exit-hook: "npm:^4.0.0"
     expect-webdriverio: "npm:^5.6.5"
     split2: "npm:^4.1.0"
     stream-buffers: "npm:^3.0.2"
-  checksum: 10/d1179ad71b275962e10d4cf15fae2e388b8c113ea9c111d55164b299a2e1a57717cea219e57a8a50ca6c20f82d38df7c0b33a2d0789a323ff776cbd3653a8e0b
+  checksum: 10/40d6cea295bea969d091f2219f1027d2009ec4f14dfd422936a0baf6bf16451006bad03e5945f6ecc359bc48095debdf1fe8109848f56f4218caf0d1adb4548c
   languageName: node
   linkType: hard
 
@@ -6139,20 +6139,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/runner@npm:9.29.1":
-  version: 9.29.1
-  resolution: "@wdio/runner@npm:9.29.1"
+"@wdio/runner@npm:9.30.0":
+  version: 9.30.0
+  resolution: "@wdio/runner@npm:9.30.0"
   dependencies:
     "@types/node": "npm:^20.11.28"
-    "@wdio/config": "npm:9.29.1"
+    "@wdio/config": "npm:9.30.0"
     "@wdio/dot-reporter": "npm:9.29.1"
     "@wdio/globals": "npm:9.29.1"
     "@wdio/logger": "npm:9.29.1"
     "@wdio/types": "npm:9.29.1"
-    "@wdio/utils": "npm:9.29.1"
+    "@wdio/utils": "npm:9.30.0"
     deepmerge-ts: "npm:^7.0.3"
-    webdriver: "npm:9.29.1"
-    webdriverio: "npm:9.29.1"
+    webdriver: "npm:9.30.0"
+    webdriverio: "npm:9.30.0"
   peerDependencies:
     expect-webdriverio: ^5.6.5
     webdriverio: ^9.0.0
@@ -6161,7 +6161,7 @@ __metadata:
       optional: false
     webdriverio:
       optional: false
-  checksum: 10/c92b45e39565809a8d718e0a2745ce8488bffd1797a923f77ea8cd09921a61f6c9a593f2f653ec0852c620b730cdaa145a23d17c10d5d80b9c9525352722ca0d
+  checksum: 10/450d27b026cef6696c62ac43ae3c97e02a46921e89fe53f0b001611ebdd262e6a16e597618df8775adc9571b7feaaa3263ba6e5154d021fa50678150f54a9c8d
   languageName: node
   linkType: hard
 
@@ -6249,12 +6249,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/xvfb@npm:9.29.1":
-  version: 9.29.1
-  resolution: "@wdio/xvfb@npm:9.29.1"
+"@wdio/xvfb@npm:9.30.0":
+  version: 9.30.0
+  resolution: "@wdio/xvfb@npm:9.30.0"
   dependencies:
     "@wdio/logger": "npm:9.29.1"
-  checksum: 10/0af4a4518310c8c0a068de0e42d1905a439c9ed083f21dce36dca44f6cfc2dc466acdfedba7ce386614c3182ea79f7b0549be6bc7a9a17d8bc6f5a152440aec2
+  checksum: 10/aa0222057fe92b21a4db0edc65856e80e886e12470a541e37f3473e999e501bdf7ca560dd661590d42ce80665d8c05f0737c084ce6fedf5a1242b072a90bf4f4
   languageName: node
   linkType: hard
 
@@ -12528,7 +12528,7 @@ __metadata:
     "@types/youtube-player": "npm:5.5.11"
     "@wdio/cli": "npm:9.29.1"
     "@wdio/globals": "npm:9.29.1"
-    "@wdio/local-runner": "npm:9.29.1"
+    "@wdio/local-runner": "npm:9.30.0"
     "@wdio/mocha-framework": "npm:9.29.1"
     "@yarnpkg/pnpify": "npm:4.1.6"
     babel-loader: "npm:10.1.1"
