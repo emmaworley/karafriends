@@ -37,7 +37,7 @@
     "@opentelemetry/core": "2.9.0",
     "@opentelemetry/sdk-trace-base": "2.9.0",
     "@parcel/transformer-react-refresh-wrap": "2.16.4",
-    "@sentry/browser": "10.67.0",
+    "@sentry/browser": "10.68.0",
     "@sentry/node": "10.68.0",
     "@types/react-fade-in": "2.0.2",
     "@types/react-swipeable": "5.2.0",
