@@ -12482,7 +12482,7 @@ __metadata:
     "@babel/runtime": "npm:7.29.2"
     "@graphql-tools/schema": "npm:10.0.38"
     "@opentelemetry/api": "npm:1.9.1"
-    "@opentelemetry/core": "npm:2.9.0"
+    "@opentelemetry/core": "npm:2.10.0"
     "@opentelemetry/sdk-trace-base": "npm:2.10.0"
     "@parcel/config-default": "npm:2.16.4"
     "@parcel/core": "npm:2.16.4"
