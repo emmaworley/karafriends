@@ -156,7 +156,7 @@ const RAW_RUNTIME_STATE =
           ["relay-compiler-language-typescript", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:15.0.1"],\
           ["relay-config", "npm:12.0.1"],\
           ["relay-runtime", "npm:21.0.1"],\
-          ["supports-color", "npm:10.2.2"],\
+          ["supports-color", "npm:11.0.0"],\
           ["ts-invariant", "npm:0.10.3"],\
           ["ts-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.6.2"],\
           ["tslint", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.1.3"],\
@@ -15619,7 +15619,7 @@ const RAW_RUNTIME_STATE =
           ["relay-compiler-language-typescript", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:15.0.1"],\
           ["relay-config", "npm:12.0.1"],\
           ["relay-runtime", "npm:21.0.1"],\
-          ["supports-color", "npm:10.2.2"],\
+          ["supports-color", "npm:11.0.0"],\
           ["ts-invariant", "npm:0.10.3"],\
           ["ts-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.6.2"],\
           ["tslint", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.1.3"],\
@@ -20319,6 +20319,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/supports-color-npm-10.2.2-e43ac15f9f-bd132705fc.zip/node_modules/supports-color/",\
         "packageDependencies": [\
           ["supports-color", "npm:10.2.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:11.0.0", {\
+        "packageLocation": "./.yarn/cache/supports-color-npm-11.0.0-5ec3d962a8-6480981c00.zip/node_modules/supports-color/",\
+        "packageDependencies": [\
+          ["supports-color", "npm:11.0.0"]\
         ],\
         "linkType": "HARD"\
       }],\

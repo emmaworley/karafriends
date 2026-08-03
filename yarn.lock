@@ -12619,7 +12619,7 @@ __metadata:
     relay-compiler-language-typescript: "npm:15.0.1"
     relay-config: "npm:12.0.1"
     relay-runtime: "npm:21.0.1"
-    supports-color: "npm:10.2.2"
+    supports-color: "npm:11.0.0"
     ts-invariant: "npm:0.10.3"
     ts-loader: "npm:9.6.2"
     tslint: "npm:6.1.3"
@@ -16866,6 +16866,13 @@ __metadata:
   version: 10.2.2
   resolution: "supports-color@npm:10.2.2"
   checksum: 10/bd132705fc07213a4024131fb061f0a46a48b49ecaf434bb029c0a5aa0339b969236d496d63969e3c248a90fdcac16d4f9c5bf187e7be0bfb5e804ed13bef6b0
+  languageName: node
+  linkType: hard
+
+"supports-color@npm:11.0.0":
+  version: 11.0.0
+  resolution: "supports-color@npm:11.0.0"
+  checksum: 10/6480981c00359da2cd22a25543e8bee3cea248a32194e98fade18ac5ada178bcb950fa225d262ff4dbf23c81caaed65660eb4093302bbdd0d1f1d93a18768854
   languageName: node
   linkType: hard
 
