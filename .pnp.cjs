@@ -103,7 +103,7 @@ const RAW_RUNTIME_STATE =
           ["classnames", "npm:2.5.1"],\
           ["color-convert", "npm:3.1.3"],\
           ["compression", "npm:1.8.1"],\
-          ["concurrently", "npm:10.0.3"],\
+          ["concurrently", "npm:10.0.4"],\
           ["cors", "npm:2.8.6"],\
           ["cross-env", "npm:10.1.0"],\
           ["cubic-spline", "npm:3.0.3"],\
@@ -10641,13 +10641,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["concurrently", [\
-      ["npm:10.0.3", {\
-        "packageLocation": "./.yarn/cache/concurrently-npm-10.0.3-efe139d53b-ef1ffc31df.zip/node_modules/concurrently/",\
+      ["npm:10.0.4", {\
+        "packageLocation": "./.yarn/cache/concurrently-npm-10.0.4-eed9b99a80-609696fc32.zip/node_modules/concurrently/",\
         "packageDependencies": [\
-          ["concurrently", "npm:10.0.3"],\
+          ["concurrently", "npm:10.0.4"],\
           ["chalk", "npm:5.6.2"],\
           ["rxjs", "npm:7.8.2"],\
-          ["shell-quote", "npm:1.8.4"],\
+          ["shell-quote", "npm:1.9.0"],\
           ["supports-color", "npm:10.2.2"],\
           ["tree-kill", "npm:1.2.2"],\
           ["yargs", "npm:18.0.0"]\
@@ -15547,7 +15547,7 @@ const RAW_RUNTIME_STATE =
           ["classnames", "npm:2.5.1"],\
           ["color-convert", "npm:3.1.3"],\
           ["compression", "npm:1.8.1"],\
-          ["concurrently", "npm:10.0.3"],\
+          ["concurrently", "npm:10.0.4"],\
           ["cors", "npm:2.8.6"],\
           ["cross-env", "npm:10.1.0"],\
           ["cubic-spline", "npm:3.0.3"],\
@@ -19653,10 +19653,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["shell-quote", [\
-      ["npm:1.8.4", {\
-        "packageLocation": "./.yarn/cache/shell-quote-npm-1.8.4-13eacaabff-a3e3796385.zip/node_modules/shell-quote/",\
+      ["npm:1.9.0", {\
+        "packageLocation": "./.yarn/cache/shell-quote-npm-1.9.0-50e37d57df-c3bc91e74a.zip/node_modules/shell-quote/",\
         "packageDependencies": [\
-          ["shell-quote", "npm:1.8.4"]\
+          ["shell-quote", "npm:1.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
