@@ -140,7 +140,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:3.9.6"],\
           ["process", "npm:0.11.10"],\
           ["promise-retry", "npm:2.0.1"],\
-          ["puppeteer-core", "npm:25.3.0"],\
+          ["puppeteer-core", "npm:25.4.0"],\
           ["qrcode", "npm:1.5.4"],\
           ["raw-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:4.0.2"],\
           ["react", "npm:19.2.7"],\
@@ -6944,10 +6944,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:08886ff07c9ea9ca6ebadb3e205172ddd5a752c307d9fc14934d8e00c19b65d3f1b24719a92a857ea606ee25393e346b0aefb49c920e8d9688102a1ed3769c06#npm:3.0.6", {\
-        "packageLocation": "./.yarn/__virtual__/@puppeteer-browsers-virtual-92687452b3/0/cache/@puppeteer-browsers-npm-3.0.6-c16b4c243b-e2507e7ad3.zip/node_modules/@puppeteer/browsers/",\
+      ["virtual:4a0f3fcfe8db9872a357bec9993af099746440800a870005fa4605c06bb870804fd590ad25f9ac1f514e704379d09e34dd45dbdefdf38ec3e6226a69764e3280#npm:3.0.6", {\
+        "packageLocation": "./.yarn/__virtual__/@puppeteer-browsers-virtual-fe9ec4df6d/0/cache/@puppeteer-browsers-npm-3.0.6-c16b4c243b-e2507e7ad3.zip/node_modules/@puppeteer/browsers/",\
         "packageDependencies": [\
-          ["@puppeteer/browsers", "virtual:08886ff07c9ea9ca6ebadb3e205172ddd5a752c307d9fc14934d8e00c19b65d3f1b24719a92a857ea606ee25393e346b0aefb49c920e8d9688102a1ed3769c06#npm:3.0.6"],\
+          ["@puppeteer/browsers", "virtual:4a0f3fcfe8db9872a357bec9993af099746440800a870005fa4605c06bb870804fd590ad25f9ac1f514e704379d09e34dd45dbdefdf38ec3e6226a69764e3280#npm:3.0.6"],\
           ["@types/proxy-agent", null],\
           ["@types/yauzl", null],\
           ["modern-tar", "npm:0.7.7"],\
@@ -10297,27 +10297,12 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["npm:16.0.1", {\
-        "packageLocation": "./.yarn/cache/chromium-bidi-npm-16.0.1-f001491224-119c3e1dfb.zip/node_modules/chromium-bidi/",\
+      ["npm:17.0.2", {\
+        "packageLocation": "./.yarn/cache/chromium-bidi-npm-17.0.2-4b93447755-32b2236813.zip/node_modules/chromium-bidi/",\
         "packageDependencies": [\
-          ["chromium-bidi", "npm:16.0.1"]\
+          ["chromium-bidi", "npm:17.0.2"]\
         ],\
         "linkType": "SOFT"\
-      }],\
-      ["virtual:08886ff07c9ea9ca6ebadb3e205172ddd5a752c307d9fc14934d8e00c19b65d3f1b24719a92a857ea606ee25393e346b0aefb49c920e8d9688102a1ed3769c06#npm:16.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/chromium-bidi-virtual-c11afdf6f0/0/cache/chromium-bidi-npm-16.0.1-f001491224-119c3e1dfb.zip/node_modules/chromium-bidi/",\
-        "packageDependencies": [\
-          ["chromium-bidi", "virtual:08886ff07c9ea9ca6ebadb3e205172ddd5a752c307d9fc14934d8e00c19b65d3f1b24719a92a857ea606ee25393e346b0aefb49c920e8d9688102a1ed3769c06#npm:16.0.1"],\
-          ["@types/devtools-protocol", null],\
-          ["devtools-protocol", "npm:0.0.1638949"],\
-          ["mitt", "npm:3.0.1"],\
-          ["zod", "npm:3.25.76"]\
-        ],\
-        "packagePeers": [\
-          "@types/devtools-protocol",\
-          "devtools-protocol"\
-        ],\
-        "linkType": "HARD"\
       }],\
       ["virtual:2dabb1e0b8013e2fdaca43a04ff5516e907d269a5b47d4ffc6f2b442eb957d8cb548f1c54645d78ef91af0b871a6b7fcdd66cbf007351b1269163c63d2b058f7#npm:0.6.3", {\
         "packageLocation": "./.yarn/__virtual__/chromium-bidi-virtual-98a5a9b777/0/cache/chromium-bidi-npm-0.6.3-ae4efa3e9c-5a4dd35a09.zip/node_modules/chromium-bidi/",\
@@ -10328,6 +10313,21 @@ const RAW_RUNTIME_STATE =
           ["mitt", "npm:3.0.1"],\
           ["urlpattern-polyfill", "npm:10.0.0"],\
           ["zod", "npm:3.23.8"]\
+        ],\
+        "packagePeers": [\
+          "@types/devtools-protocol",\
+          "devtools-protocol"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:4a0f3fcfe8db9872a357bec9993af099746440800a870005fa4605c06bb870804fd590ad25f9ac1f514e704379d09e34dd45dbdefdf38ec3e6226a69764e3280#npm:17.0.2", {\
+        "packageLocation": "./.yarn/__virtual__/chromium-bidi-virtual-ac3405b924/0/cache/chromium-bidi-npm-17.0.2-4b93447755-32b2236813.zip/node_modules/chromium-bidi/",\
+        "packageDependencies": [\
+          ["chromium-bidi", "virtual:4a0f3fcfe8db9872a357bec9993af099746440800a870005fa4605c06bb870804fd590ad25f9ac1f514e704379d09e34dd45dbdefdf38ec3e6226a69764e3280#npm:17.0.2"],\
+          ["@types/devtools-protocol", null],\
+          ["devtools-protocol", "npm:0.0.1653615"],\
+          ["mitt", "npm:3.0.1"],\
+          ["zod", "npm:3.25.76"]\
         ],\
         "packagePeers": [\
           "@types/devtools-protocol",\
@@ -11420,10 +11420,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:0.0.1638949", {\
-        "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.1638949-e62c349055-e70e162e46.zip/node_modules/devtools-protocol/",\
+      ["npm:0.0.1653615", {\
+        "packageLocation": "./.yarn/cache/devtools-protocol-npm-0.0.1653615-99b26f4040-bf26dddcb6.zip/node_modules/devtools-protocol/",\
         "packageDependencies": [\
-          ["devtools-protocol", "npm:0.0.1638949"]\
+          ["devtools-protocol", "npm:0.0.1653615"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15626,7 +15626,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:3.9.6"],\
           ["process", "npm:0.11.10"],\
           ["promise-retry", "npm:2.0.1"],\
-          ["puppeteer-core", "npm:25.3.0"],\
+          ["puppeteer-core", "npm:25.4.0"],\
           ["qrcode", "npm:1.5.4"],\
           ["raw-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:4.0.2"],\
           ["react", "npm:19.2.7"],\
@@ -18238,16 +18238,16 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:25.3.0", {\
-        "packageLocation": "./.yarn/cache/puppeteer-core-npm-25.3.0-08886ff07c-2adfe9d9c0.zip/node_modules/puppeteer-core/",\
+      ["npm:25.4.0", {\
+        "packageLocation": "./.yarn/cache/puppeteer-core-npm-25.4.0-4a0f3fcfe8-7443f3ba37.zip/node_modules/puppeteer-core/",\
         "packageDependencies": [\
-          ["puppeteer-core", "npm:25.3.0"],\
-          ["@puppeteer/browsers", "virtual:08886ff07c9ea9ca6ebadb3e205172ddd5a752c307d9fc14934d8e00c19b65d3f1b24719a92a857ea606ee25393e346b0aefb49c920e8d9688102a1ed3769c06#npm:3.0.6"],\
-          ["chromium-bidi", "virtual:08886ff07c9ea9ca6ebadb3e205172ddd5a752c307d9fc14934d8e00c19b65d3f1b24719a92a857ea606ee25393e346b0aefb49c920e8d9688102a1ed3769c06#npm:16.0.1"],\
-          ["devtools-protocol", "npm:0.0.1638949"],\
+          ["puppeteer-core", "npm:25.4.0"],\
+          ["@puppeteer/browsers", "virtual:4a0f3fcfe8db9872a357bec9993af099746440800a870005fa4605c06bb870804fd590ad25f9ac1f514e704379d09e34dd45dbdefdf38ec3e6226a69764e3280#npm:3.0.6"],\
+          ["chromium-bidi", "virtual:4a0f3fcfe8db9872a357bec9993af099746440800a870005fa4605c06bb870804fd590ad25f9ac1f514e704379d09e34dd45dbdefdf38ec3e6226a69764e3280#npm:17.0.2"],\
+          ["devtools-protocol", "npm:0.0.1653615"],\
           ["typed-query-selector", "npm:2.12.2"],\
           ["webdriver-bidi-protocol", "npm:0.4.2"],\
-          ["ws", "virtual:5f4e934f47c57bffa3a16a92ebfef06a6c9c2a8a3ca050c37dd4613d4658fa773a89d90d8df90fcc79ec9d7e1f85cb735cef74d334ff8fcfcfafec68620fecf8#npm:8.21.1"]\
+          ["ws", "virtual:4a0f3fcfe8db9872a357bec9993af099746440800a870005fa4605c06bb870804fd590ad25f9ac1f514e704379d09e34dd45dbdefdf38ec3e6226a69764e3280#npm:8.21.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21626,7 +21626,7 @@ const RAW_RUNTIME_STATE =
           ["jszip", "npm:3.10.1"],\
           ["lodash.clonedeep", "npm:4.5.0"],\
           ["lodash.zip", "npm:4.2.0"],\
-          ["puppeteer-core", "npm:25.3.0"],\
+          ["puppeteer-core", "npm:25.4.0"],\
           ["query-selector-shadow-dom", "npm:1.0.1"],\
           ["resq", "npm:1.11.0"],\
           ["rgb2hex", "npm:0.2.5"],\
@@ -21930,6 +21930,13 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:8.21.2", {\
+        "packageLocation": "./.yarn/cache/ws-npm-8.21.2-512967068b-1fa65bfadc.zip/node_modules/ws/",\
+        "packageDependencies": [\
+          ["ws", "npm:8.21.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.21.1", {\
         "packageLocation": "./.yarn/__virtual__/ws-virtual-4ab026fcb7/0/cache/ws-npm-8.21.1-15d3d5537c-8493bc5430.zip/node_modules/ws/",\
         "packageDependencies": [\
@@ -21938,6 +21945,23 @@ const RAW_RUNTIME_STATE =
           ["@types/utf-8-validate", null],\
           ["bufferutil", "npm:4.1.0"],\
           ["utf-8-validate", "npm:6.0.6"]\
+        ],\
+        "packagePeers": [\
+          "@types/bufferutil",\
+          "@types/utf-8-validate",\
+          "bufferutil",\
+          "utf-8-validate"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:4a0f3fcfe8db9872a357bec9993af099746440800a870005fa4605c06bb870804fd590ad25f9ac1f514e704379d09e34dd45dbdefdf38ec3e6226a69764e3280#npm:8.21.2", {\
+        "packageLocation": "./.yarn/__virtual__/ws-virtual-3df2ea57d8/0/cache/ws-npm-8.21.2-512967068b-1fa65bfadc.zip/node_modules/ws/",\
+        "packageDependencies": [\
+          ["ws", "virtual:4a0f3fcfe8db9872a357bec9993af099746440800a870005fa4605c06bb870804fd590ad25f9ac1f514e704379d09e34dd45dbdefdf38ec3e6226a69764e3280#npm:8.21.2"],\
+          ["@types/bufferutil", null],\
+          ["@types/utf-8-validate", null],\
+          ["bufferutil", null],\
+          ["utf-8-validate", null]\
         ],\
         "packagePeers": [\
           "@types/bufferutil",\
