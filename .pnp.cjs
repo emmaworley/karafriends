@@ -72,7 +72,7 @@ const RAW_RUNTIME_STATE =
           ["@types/gl-vec2", "npm:1.3.5"],\
           ["@types/hls.js", "npm:1.0.0"],\
           ["@types/kuromoji", "npm:0.1.3"],\
-          ["@types/lodash", "npm:4.17.24"],\
+          ["@types/lodash", "npm:4.17.25"],\
           ["@types/materialize-css", "npm:1.0.15"],\
           ["@types/node", "npm:26.1.2"],\
           ["@types/node-fetch", "npm:2.6.13"],\
@@ -7765,10 +7765,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/lodash", [\
-      ["npm:4.17.24", {\
-        "packageLocation": "./.yarn/cache/@types-lodash-npm-4.17.24-4a04035060-0f2082565f.zip/node_modules/@types/lodash/",\
+      ["npm:4.17.25", {\
+        "packageLocation": "./.yarn/cache/@types-lodash-npm-4.17.25-a1b18c42d0-f786e05664.zip/node_modules/@types/lodash/",\
         "packageDependencies": [\
-          ["@types/lodash", "npm:4.17.24"]\
+          ["@types/lodash", "npm:4.17.25"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15558,7 +15558,7 @@ const RAW_RUNTIME_STATE =
           ["@types/gl-vec2", "npm:1.3.5"],\
           ["@types/hls.js", "npm:1.0.0"],\
           ["@types/kuromoji", "npm:0.1.3"],\
-          ["@types/lodash", "npm:4.17.24"],\
+          ["@types/lodash", "npm:4.17.25"],\
           ["@types/materialize-css", "npm:1.0.15"],\
           ["@types/node", "npm:26.1.2"],\
           ["@types/node-fetch", "npm:2.6.13"],\
