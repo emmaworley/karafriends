@@ -163,7 +163,7 @@ const RAW_RUNTIME_STATE =
           ["tslint-config-prettier", "npm:1.18.0"],\
           ["tunnel", "npm:0.0.6"],\
           ["typescript", "patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"],\
-          ["user-agents", "npm:2.1.141"],\
+          ["user-agents", "npm:2.1.142"],\
           ["utf-8-validate", "npm:6.0.6"],\
           ["uuid", "npm:14.0.1"],\
           ["wait-on", "npm:9.1.0"],\
@@ -15649,7 +15649,7 @@ const RAW_RUNTIME_STATE =
           ["tslint-config-prettier", "npm:1.18.0"],\
           ["tunnel", "npm:0.0.6"],\
           ["typescript", "patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"],\
-          ["user-agents", "npm:2.1.141"],\
+          ["user-agents", "npm:2.1.142"],\
           ["utf-8-validate", "npm:6.0.6"],\
           ["uuid", "npm:14.0.1"],\
           ["wait-on", "npm:9.1.0"],\
@@ -21309,10 +21309,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["user-agents", [\
-      ["npm:2.1.141", {\
-        "packageLocation": "./.yarn/cache/user-agents-npm-2.1.141-3750432d42-d6a7e1e6a2.zip/node_modules/user-agents/",\
+      ["npm:2.1.142", {\
+        "packageLocation": "./.yarn/cache/user-agents-npm-2.1.142-d23e75ee95-e43e7fcdf6.zip/node_modules/user-agents/",\
         "packageDependencies": [\
-          ["user-agents", "npm:2.1.141"]\
+          ["user-agents", "npm:2.1.142"]\
         ],\
         "linkType": "HARD"\
       }]\

@@ -12656,7 +12656,7 @@ __metadata:
     tslint-config-prettier: "npm:1.18.0"
     tunnel: "npm:0.0.6"
     typescript: "npm:6.0.3"
-    user-agents: "npm:2.1.141"
+    user-agents: "npm:2.1.142"
     utf-8-validate: "npm:6.0.6"
     uuid: "npm:14.0.1"
     wait-on: "npm:9.1.0"
@@ -17745,10 +17745,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"user-agents@npm:2.1.141":
-  version: 2.1.141
-  resolution: "user-agents@npm:2.1.141"
-  checksum: 10/d6a7e1e6a2d933e4aca6dce450b2be7c9ff9600db74df506810999b5d29787ab141c1811cd68eabb6d77dc2afe64beba2b2d7bb53cea74efaa05054b724ed43b
+"user-agents@npm:2.1.142":
+  version: 2.1.142
+  resolution: "user-agents@npm:2.1.142"
+  checksum: 10/e43e7fcdf6df8a7fed952deda8674dc4a587a6070936cfd0900bca395eb5e60b8720db4010d6cd191687d2f7539e706a3205abf83022792df6279b315eb73366
   languageName: node
   linkType: hard
 
