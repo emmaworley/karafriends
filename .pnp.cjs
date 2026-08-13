@@ -170,7 +170,7 @@ const RAW_RUNTIME_STATE =
           ["wanakana", "npm:5.3.1"],\
           ["wdio-electron-service", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.2.1"],\
           ["webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.30.1"],\
-          ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.21.1"],\
+          ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.21.2"],\
           ["yaml", "npm:2.9.0"],\
           ["youtube-player", "npm:5.6.0"],\
           ["youtubei.js", "npm:17.2.0"]\
@@ -13508,7 +13508,7 @@ const RAW_RUNTIME_STATE =
           ["@types/ws", "npm:8.18.1"],\
           ["crossws", null],\
           ["graphql", "npm:17.0.2"],\
-          ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.21.1"]\
+          ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.21.2"]\
         ],\
         "packagePeers": [\
           "@fastify/websocket",\
@@ -15656,7 +15656,7 @@ const RAW_RUNTIME_STATE =
           ["wanakana", "npm:5.3.1"],\
           ["wdio-electron-service", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.2.1"],\
           ["webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:9.30.1"],\
-          ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.21.1"],\
+          ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.21.2"],\
           ["yaml", "npm:2.9.0"],\
           ["youtube-player", "npm:5.6.0"],\
           ["youtubei.js", "npm:17.2.0"]\
@@ -21910,6 +21910,13 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:8.21.2", {\
+        "packageLocation": "./.yarn/cache/ws-npm-8.21.2-512967068b-1fa65bfadc.zip/node_modules/ws/",\
+        "packageDependencies": [\
+          ["ws", "npm:8.21.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["npm:8.21.3", {\
         "packageLocation": "./.yarn/cache/ws-npm-8.21.3-63c47e1f60-8856922c26.zip/node_modules/ws/",\
         "packageDependencies": [\
@@ -21917,10 +21924,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.21.1", {\
-        "packageLocation": "./.yarn/__virtual__/ws-virtual-4ab026fcb7/0/cache/ws-npm-8.21.1-15d3d5537c-8493bc5430.zip/node_modules/ws/",\
+      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.21.2", {\
+        "packageLocation": "./.yarn/__virtual__/ws-virtual-43400383ce/0/cache/ws-npm-8.21.2-512967068b-1fa65bfadc.zip/node_modules/ws/",\
         "packageDependencies": [\
-          ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.21.1"],\
+          ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.21.2"],\
           ["@types/bufferutil", null],\
           ["@types/utf-8-validate", null],\
           ["bufferutil", "npm:4.1.0"],\
