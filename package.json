@@ -32,7 +32,7 @@
     "@apollo/utils.fetcher": "3.1.0",
     "@apollo/utils.keyvaluecache": "4.0.0",
     "@as-integrations/express5": "1.1.2",
-    "@graphql-tools/schema": "10.0.38",
+    "@graphql-tools/schema": "10.1.0",
     "@opentelemetry/api": "1.9.1",
     "@opentelemetry/core": "2.10.0",
     "@opentelemetry/sdk-trace-base": "2.10.0",
