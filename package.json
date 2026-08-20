@@ -95,7 +95,7 @@
     "ws": "8.21.3",
     "yaml": "2.9.0",
     "youtube-player": "5.6.0",
-    "youtubei.js": "17.2.0"
+    "youtubei.js": "18.0.0"
   },
   "devDependencies": {
     "7zip-bin": "5.2.0",
