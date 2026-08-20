@@ -173,7 +173,7 @@ const RAW_RUNTIME_STATE =
           ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.21.3"],\
           ["yaml", "npm:2.9.0"],\
           ["youtube-player", "npm:5.6.0"],\
-          ["youtubei.js", "npm:17.2.0"]\
+          ["youtubei.js", "npm:18.0.0"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -15659,7 +15659,7 @@ const RAW_RUNTIME_STATE =
           ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.21.3"],\
           ["yaml", "npm:2.9.0"],\
           ["youtube-player", "npm:5.6.0"],\
-          ["youtubei.js", "npm:17.2.0"]\
+          ["youtubei.js", "npm:18.0.0"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -16405,6 +16405,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/meriyah-npm-6.1.4-0f6ef618db-16b841b9bf.zip/node_modules/meriyah/",\
         "packageDependencies": [\
           ["meriyah", "npm:6.1.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:7.3.2", {\
+        "packageLocation": "./.yarn/cache/meriyah-npm-7.3.2-b75bb79ff2-54b13bc592.zip/node_modules/meriyah/",\
+        "packageDependencies": [\
+          ["meriyah", "npm:7.3.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -22299,13 +22306,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["youtubei.js", [\
-      ["npm:17.2.0", {\
-        "packageLocation": "./.yarn/cache/youtubei.js-npm-17.2.0-918dc9c4d4-8d3a0f0c3a.zip/node_modules/youtubei.js/",\
+      ["npm:18.0.0", {\
+        "packageLocation": "./.yarn/cache/youtubei.js-npm-18.0.0-0d3f1af340-65ced02f14.zip/node_modules/youtubei.js/",\
         "packageDependencies": [\
-          ["youtubei.js", "npm:17.2.0"],\
+          ["youtubei.js", "npm:18.0.0"],\
           ["@bufbuild/protobuf", "npm:2.11.0"],\
           ["fflate", "npm:0.8.3"],\
-          ["meriyah", "npm:6.1.4"]\
+          ["meriyah", "npm:7.3.2"]\
         ],\
         "linkType": "HARD"\
       }]\
