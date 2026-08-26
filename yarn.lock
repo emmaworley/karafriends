@@ -6184,17 +6184,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/mocha-framework@npm:9.30.1":
-  version: 9.30.1
-  resolution: "@wdio/mocha-framework@npm:9.30.1"
+"@wdio/mocha-framework@npm:9.31.1":
+  version: 9.31.1
+  resolution: "@wdio/mocha-framework@npm:9.31.1"
   dependencies:
     "@types/mocha": "npm:^10.0.6"
     "@types/node": "npm:^20.11.28"
     "@wdio/logger": "npm:9.29.1"
-    "@wdio/types": "npm:9.30.1"
-    "@wdio/utils": "npm:9.30.1"
+    "@wdio/types": "npm:9.31.1"
+    "@wdio/utils": "npm:9.31.1"
     mocha: "npm:^10.3.0"
-  checksum: 10/36a95ef9b195b827062cf881b6293f69ab1d9fb0dd22300c00a2d3a44f0548f8e8ab1952ad659950d74e515e481bd85704503e9fd53ee045699c9723d3a86734
+  checksum: 10/1d610c8099cda2033e64ac5da5b1d4868c82d610f58f5b36d9889b8e197242ab4d39351d2e761231375bb9f5798ac458056de0cb6a763ab058966f7fca467d4c
   languageName: node
   linkType: hard
 
@@ -12654,7 +12654,7 @@ __metadata:
     "@wdio/cli": "npm:9.30.1"
     "@wdio/globals": "npm:9.31.1"
     "@wdio/local-runner": "npm:9.30.1"
-    "@wdio/mocha-framework": "npm:9.30.1"
+    "@wdio/mocha-framework": "npm:9.31.1"
     "@yarnpkg/pnpify": "npm:4.1.7"
     babel-loader: "npm:10.1.1"
     babel-plugin-relay: "npm:21.0.1"
