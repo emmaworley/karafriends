@@ -6095,6 +6095,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@wdio/globals@npm:9.31.1":
+  version: 9.31.1
+  resolution: "@wdio/globals@npm:9.31.1"
+  peerDependencies:
+    expect-webdriverio: ^6.0.5
+    webdriverio: ^9.0.0
+  peerDependenciesMeta:
+    expect-webdriverio:
+      optional: false
+    webdriverio:
+      optional: false
+  checksum: 10/f628cf984979611f25015ff31ad296a3cac2e0a3ed2bd0cee2a5d4008a7c3378983eaf05a594d72879c239b1252f1634d4681abcbcb8546a3613efdd0587dbd1
+  languageName: node
+  linkType: hard
+
 "@wdio/globals@npm:^9.17.0":
   version: 9.23.0
   resolution: "@wdio/globals@npm:9.23.0"
@@ -12584,7 +12599,7 @@ __metadata:
     "@types/ws": "npm:^8"
     "@types/youtube-player": "npm:5.5.11"
     "@wdio/cli": "npm:9.30.1"
-    "@wdio/globals": "npm:9.29.1"
+    "@wdio/globals": "npm:9.31.1"
     "@wdio/local-runner": "npm:9.30.1"
     "@wdio/mocha-framework": "npm:9.30.1"
     "@yarnpkg/pnpify": "npm:4.1.7"
