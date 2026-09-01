@@ -12662,7 +12662,7 @@ __metadata:
     wait-on: "npm:9.1.0"
     wanakana: "npm:5.3.1"
     wdio-electron-service: "npm:9.2.1"
-    webdriverio: "npm:9.31.2"
+    webdriverio: "npm:9.31.3"
     ws: "npm:8.21.3"
     yaml: "npm:2.9.0"
     youtube-player: "npm:5.6.0"
@@ -18049,6 +18049,44 @@ __metadata:
     puppeteer-core:
       optional: true
   checksum: 10/a185108cc9e334329cadeff30569ecc5328e511e830060137f67658b7dc1df16652fbf2c14febed0e99155dad1ad726845bc5389d6ade17dfeebd8ecf4ac9c14
+  languageName: node
+  linkType: hard
+
+"webdriverio@npm:9.31.3":
+  version: 9.31.3
+  resolution: "webdriverio@npm:9.31.3"
+  dependencies:
+    "@types/node": "npm:^20.11.30"
+    "@types/sinonjs__fake-timers": "npm:^8.1.5"
+    "@wdio/config": "npm:9.31.2"
+    "@wdio/logger": "npm:9.29.1"
+    "@wdio/protocols": "npm:9.31.1"
+    "@wdio/repl": "npm:9.16.2"
+    "@wdio/types": "npm:9.31.2"
+    "@wdio/utils": "npm:9.31.2"
+    archiver: "npm:^7.0.1"
+    aria-query: "npm:^5.3.0"
+    cheerio: "npm:^1.0.0-rc.12"
+    css-shorthand-properties: "npm:^1.1.1"
+    css-value: "npm:^0.0.1"
+    grapheme-splitter: "npm:^1.0.4"
+    htmlfy: "npm:^0.8.1"
+    is-plain-obj: "npm:^4.1.0"
+    jszip: "npm:^3.10.1"
+    lodash.clonedeep: "npm:^4.5.0"
+    lodash.zip: "npm:^4.2.0"
+    query-selector-shadow-dom: "npm:^1.0.1"
+    resq: "npm:^1.11.0"
+    rgb2hex: "npm:0.2.5"
+    serialize-error: "npm:^12.0.0"
+    urlpattern-polyfill: "npm:^10.0.0"
+    webdriver: "npm:9.31.2"
+  peerDependencies:
+    puppeteer-core: ">=22.x <=24.x"
+  peerDependenciesMeta:
+    puppeteer-core:
+      optional: true
+  checksum: 10/8237ca878684ad2d3dd3a253e9b58f80767b2bf01ab2cdc1b0c96208396c2c175705ae4ddc4dfd02abc9ef9395149966614408e2743478a45264c5a760e026d5
   languageName: node
   linkType: hard
 
