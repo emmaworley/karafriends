@@ -5982,13 +5982,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wdio/cli@npm:9.31.2":
-  version: 9.31.2
-  resolution: "@wdio/cli@npm:9.31.2"
+"@wdio/cli@npm:9.31.4":
+  version: 9.31.4
+  resolution: "@wdio/cli@npm:9.31.4"
   dependencies:
     "@vitest/snapshot": "npm:^2.1.1"
     "@wdio/config": "npm:9.31.2"
-    "@wdio/globals": "npm:9.31.1"
+    "@wdio/globals": "npm:9.31.3"
     "@wdio/logger": "npm:9.29.1"
     "@wdio/protocols": "npm:9.31.1"
     "@wdio/types": "npm:9.31.2"
@@ -6004,11 +6004,11 @@ __metadata:
     lodash.union: "npm:^4.6.0"
     read-pkg-up: "npm:^10.0.0"
     tsx: "npm:^4.7.2"
-    webdriverio: "npm:9.31.2"
+    webdriverio: "npm:9.31.4"
     yargs: "npm:^17.7.2"
   bin:
     wdio: bin/wdio.js
-  checksum: 10/8a2fa218606dfe86bcb2a2868d403c36f79d7ce22bf93e9bc3e14a7863138b057dc3a91ae1fb403791fadbe203635edf0d40fa2444b3fc40a84407d38a6febd3
+  checksum: 10/14e549fa0a0f837456f1142fc49a7be0a848123125c7afb86c1b415d3675c87455a4544dfb59635f7e1a77e1b7b15fb0b6e35d47212d4467dfcb4f97c9ca4b33
   languageName: node
   linkType: hard
 
@@ -6092,6 +6092,21 @@ __metadata:
     webdriverio:
       optional: false
   checksum: 10/f628cf984979611f25015ff31ad296a3cac2e0a3ed2bd0cee2a5d4008a7c3378983eaf05a594d72879c239b1252f1634d4681abcbcb8546a3613efdd0587dbd1
+  languageName: node
+  linkType: hard
+
+"@wdio/globals@npm:9.31.3":
+  version: 9.31.3
+  resolution: "@wdio/globals@npm:9.31.3"
+  peerDependencies:
+    expect-webdriverio: ^6.0.9
+    webdriverio: ^9.28.0
+  peerDependenciesMeta:
+    expect-webdriverio:
+      optional: false
+    webdriverio:
+      optional: false
+  checksum: 10/683dbcf1320cc3d1d8279c57c9dfa44e959572016237afdfc191d40e2eabcb87c3595d884ca0301017c10b037c07b029ee081540d2c7f4d5e6496bc3f442a200
   languageName: node
   linkType: hard
 
@@ -12583,7 +12598,7 @@ __metadata:
     "@types/wicg-mediasession": "npm:1.1.8"
     "@types/ws": "npm:^8"
     "@types/youtube-player": "npm:5.5.11"
-    "@wdio/cli": "npm:9.31.2"
+    "@wdio/cli": "npm:9.31.4"
     "@wdio/globals": "npm:9.31.1"
     "@wdio/local-runner": "npm:9.31.2"
     "@wdio/mocha-framework": "npm:9.31.2"
@@ -18021,6 +18036,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"webdriver@npm:9.31.4":
+  version: 9.31.4
+  resolution: "webdriver@npm:9.31.4"
+  dependencies:
+    "@types/node": "npm:^20.1.0"
+    "@types/ws": "npm:^8.5.3"
+    "@wdio/config": "npm:9.31.2"
+    "@wdio/logger": "npm:9.29.1"
+    "@wdio/protocols": "npm:9.31.1"
+    "@wdio/types": "npm:9.31.2"
+    "@wdio/utils": "npm:9.31.2"
+    deepmerge-ts: "npm:^7.0.3"
+    https-proxy-agent: "npm:^7.0.6"
+    undici: "npm:^6.27.0"
+    ws: "npm:^8.21.0"
+  checksum: 10/0df47c33b287c0d89ba2cada48cff5c244a6f1d8aa87782ccd670752b07e98a023d79161d02cc4a92314761f6a8ac96c933b516300e1f8ecd78fd9bc199d4c25
+  languageName: node
+  linkType: hard
+
 "webdriverio@npm:9.31.2":
   version: 9.31.2
   resolution: "webdriverio@npm:9.31.2"
@@ -18056,6 +18090,44 @@ __metadata:
     puppeteer-core:
       optional: true
   checksum: 10/a185108cc9e334329cadeff30569ecc5328e511e830060137f67658b7dc1df16652fbf2c14febed0e99155dad1ad726845bc5389d6ade17dfeebd8ecf4ac9c14
+  languageName: node
+  linkType: hard
+
+"webdriverio@npm:9.31.4":
+  version: 9.31.4
+  resolution: "webdriverio@npm:9.31.4"
+  dependencies:
+    "@types/node": "npm:^20.11.30"
+    "@types/sinonjs__fake-timers": "npm:^8.1.5"
+    "@wdio/config": "npm:9.31.2"
+    "@wdio/logger": "npm:9.29.1"
+    "@wdio/protocols": "npm:9.31.1"
+    "@wdio/repl": "npm:9.16.2"
+    "@wdio/types": "npm:9.31.2"
+    "@wdio/utils": "npm:9.31.2"
+    archiver: "npm:^7.0.1"
+    aria-query: "npm:^5.3.0"
+    cheerio: "npm:^1.0.0-rc.12"
+    css-shorthand-properties: "npm:^1.1.1"
+    css-value: "npm:^0.0.1"
+    grapheme-splitter: "npm:^1.0.4"
+    htmlfy: "npm:^0.8.1"
+    is-plain-obj: "npm:^4.1.0"
+    jszip: "npm:^3.10.1"
+    lodash.clonedeep: "npm:^4.5.0"
+    lodash.zip: "npm:^4.2.0"
+    query-selector-shadow-dom: "npm:^1.0.1"
+    resq: "npm:^1.11.0"
+    rgb2hex: "npm:0.2.5"
+    serialize-error: "npm:^12.0.0"
+    urlpattern-polyfill: "npm:^10.0.0"
+    webdriver: "npm:9.31.4"
+  peerDependencies:
+    puppeteer-core: ">=22.x <=24.x"
+  peerDependenciesMeta:
+    puppeteer-core:
+      optional: true
+  checksum: 10/6fc6c9373d23e9e0c86c9808e61bb13f2ff4b70ce3b203bdc772fd424c26f319bbbfd788bbb7cbb8afbaabeadffde228339b41da38757b05c5024b611a49ecf1
   languageName: node
   linkType: hard
 
