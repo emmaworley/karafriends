@@ -146,7 +146,7 @@
     "@types/ws": "^8",
     "@wdio/cli": "9.31.4",
     "@wdio/globals": "9.31.3",
-    "@wdio/local-runner": "9.31.2",
+    "@wdio/local-runner": "9.31.4",
     "@wdio/mocha-framework": "9.31.2",
     "@yarnpkg/pnpify": "4.1.7",
     "babel-loader": "10.1.1",
