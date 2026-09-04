@@ -8961,9 +8961,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron@npm:43.4.1":
-  version: 43.4.1
-  resolution: "electron@npm:43.4.1"
+"electron@npm:44.0.0":
+  version: 44.0.0
+  resolution: "electron@npm:44.0.0"
   dependencies:
     "@electron-internal/extract-zip": "npm:^1.0.1"
     "@electron/get": "npm:^5.0.0"
@@ -8971,7 +8971,7 @@ __metadata:
   bin:
     electron: cli.js
     install-electron: install.js
-  checksum: 10/e5a038d02fd1073902df549d0b9e16d268b74afd1f1bc37ce675c8b13c2196fd28740a40225396cd6c7868e10a5aa8a094b1bb6221180e1f2920c1a9237173f0
+  checksum: 10/d2daa4127b4b080e796dcbebff2e39c517f6160567e918e8a0abd62aef90aa80bba3a6cc485f14b427369d7621d70955fd5a7996ffe100fd5ad7de26307bb188
   languageName: node
   linkType: hard
 
@@ -12616,7 +12616,7 @@ __metadata:
     cross-env: "npm:10.1.0"
     cubic-spline: "npm:3.0.3"
     dataloader: "npm:2.2.3"
-    electron: "npm:43.4.1"
+    electron: "npm:44.0.0"
     electron-is-dev: "npm:3.0.1"
     electron-packager: "npm:17.1.2"
     express: "npm:5.2.1"
