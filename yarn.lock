@@ -12599,7 +12599,7 @@ __metadata:
     "@types/ws": "npm:^8"
     "@types/youtube-player": "npm:5.5.11"
     "@wdio/cli": "npm:9.31.4"
-    "@wdio/globals": "npm:9.31.1"
+    "@wdio/globals": "npm:9.31.3"
     "@wdio/local-runner": "npm:9.31.2"
     "@wdio/mocha-framework": "npm:9.31.2"
     "@yarnpkg/pnpify": "npm:4.1.7"
