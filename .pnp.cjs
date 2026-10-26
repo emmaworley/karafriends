@@ -136,7 +136,7 @@ const RAW_RUNTIME_STATE =
           ["parcel-reporter-static-files-copy", "npm:1.5.3"],\
           ["path-browserify", "npm:1.0.1"],\
           ["polyline-normals", "npm:2.0.2"],\
-          ["postcss", "npm:8.5.26"],\
+          ["postcss", "npm:8.5.31"],\
           ["prettier", "npm:3.9.6"],\
           ["process", "npm:0.11.10"],\
           ["promise-retry", "npm:2.0.1"],\
@@ -15622,7 +15622,7 @@ const RAW_RUNTIME_STATE =
           ["parcel-reporter-static-files-copy", "npm:1.5.3"],\
           ["path-browserify", "npm:1.0.1"],\
           ["polyline-normals", "npm:2.0.2"],\
-          ["postcss", "npm:8.5.26"],\
+          ["postcss", "npm:8.5.31"],\
           ["prettier", "npm:3.9.6"],\
           ["process", "npm:0.11.10"],\
           ["promise-retry", "npm:2.0.1"],\
@@ -16814,10 +16814,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["nanoid", [\
-      ["npm:3.3.18", {\
-        "packageLocation": "./.yarn/cache/nanoid-npm-3.3.18-3dd24ff2e6-1b3b4fdac8.zip/node_modules/nanoid/",\
+      ["npm:3.3.20", {\
+        "packageLocation": "./.yarn/cache/nanoid-npm-3.3.20-aad4bb378d-b19641487f.zip/node_modules/nanoid/",\
         "packageDependencies": [\
-          ["nanoid", "npm:3.3.18"]\
+          ["nanoid", "npm:3.3.20"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17989,13 +17989,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["postcss", [\
-      ["npm:8.5.26", {\
-        "packageLocation": "./.yarn/cache/postcss-npm-8.5.26-b0fc538b49-842a624f82.zip/node_modules/postcss/",\
+      ["npm:8.5.31", {\
+        "packageLocation": "./.yarn/cache/postcss-npm-8.5.31-fb3b85fb1d-d2a3415681.zip/node_modules/postcss/",\
         "packageDependencies": [\
-          ["postcss", "npm:8.5.26"],\
-          ["nanoid", "npm:3.3.18"],\
+          ["postcss", "npm:8.5.31"],\
+          ["nanoid", "npm:3.3.20"],\
           ["picocolors", "npm:1.1.1"],\
-          ["source-map-js", "npm:1.2.1"]\
+          ["source-map-js", "npm:1.2.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19956,6 +19956,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/source-map-js-npm-1.2.1-b9a47d7e1a-ff9d8c8bf0.zip/node_modules/source-map-js/",\
         "packageDependencies": [\
           ["source-map-js", "npm:1.2.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:1.2.2", {\
+        "packageLocation": "./.yarn/cache/source-map-js-npm-1.2.2-d40ce9a415-4807c894bb.zip/node_modules/source-map-js/",\
+        "packageDependencies": [\
+          ["source-map-js", "npm:1.2.2"]\
         ],\
         "linkType": "HARD"\
       }]\
