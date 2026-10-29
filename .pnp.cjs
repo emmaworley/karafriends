@@ -87,7 +87,7 @@ const RAW_RUNTIME_STATE =
           ["@types/tunnel", "npm:0.0.7"],\
           ["@types/user-agents", "npm:1.0.4"],\
           ["@types/uuid", "npm:11.0.0"],\
-          ["@types/wicg-mediasession", "npm:1.1.8"],\
+          ["@types/wicg-mediasession", "npm:1.1.9"],\
           ["@types/ws", "npm:8.18.1"],\
           ["@types/youtube-player", "npm:5.5.11"],\
           ["@wdio/cli", "npm:9.31.4"],\
@@ -8149,10 +8149,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/wicg-mediasession", [\
-      ["npm:1.1.8", {\
-        "packageLocation": "./.yarn/cache/@types-wicg-mediasession-npm-1.1.8-988ce26b65-90db25e990.zip/node_modules/@types/wicg-mediasession/",\
+      ["npm:1.1.9", {\
+        "packageLocation": "./.yarn/cache/@types-wicg-mediasession-npm-1.1.9-4dd9048cbc-5ba57116dc.zip/node_modules/@types/wicg-mediasession/",\
         "packageDependencies": [\
-          ["@types/wicg-mediasession", "npm:1.1.8"]\
+          ["@types/wicg-mediasession", "npm:1.1.9"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15573,7 +15573,7 @@ const RAW_RUNTIME_STATE =
           ["@types/tunnel", "npm:0.0.7"],\
           ["@types/user-agents", "npm:1.0.4"],\
           ["@types/uuid", "npm:11.0.0"],\
-          ["@types/wicg-mediasession", "npm:1.1.8"],\
+          ["@types/wicg-mediasession", "npm:1.1.9"],\
           ["@types/ws", "npm:8.18.1"],\
           ["@types/youtube-player", "npm:5.5.11"],\
           ["@wdio/cli", "npm:9.31.4"],\
