@@ -1923,10 +1923,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.29.2":
-  version: 7.29.2
-  resolution: "@babel/runtime@npm:7.29.2"
-  checksum: 10/f55ba4052aa0255055b34371a145fbe69c29b37b49eaea14805b095bfb4153701486416e89392fd27ec8abafa53868be86e960b9f8f959fff91f2c8ac2a14b02
+"@babel/runtime@npm:8.0.10":
+  version: 8.0.10
+  resolution: "@babel/runtime@npm:8.0.10"
+  checksum: 10/7a5375aa26f57396ceeae045705acdb86c961b658153247382306cdd15775a895dc3d80a3f7d38fb5f762bb99df5eb05e1ac99808d79c23205b0fc4be9fa90a0
   languageName: node
   linkType: hard
 
@@ -12529,7 +12529,7 @@ __metadata:
     "@babel/core": "npm:7.29.7"
     "@babel/preset-env": "npm:7.29.5"
     "@babel/preset-react": "npm:7.28.5"
-    "@babel/runtime": "npm:7.29.2"
+    "@babel/runtime": "npm:8.0.10"
     "@graphql-tools/schema": "npm:10.1.0"
     "@opentelemetry/api": "npm:1.9.1"
     "@opentelemetry/core": "npm:2.10.0"
