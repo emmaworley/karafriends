@@ -36,7 +36,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.29.7"],\
           ["@babel/preset-env", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.29.5"],\
           ["@babel/preset-react", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.28.5"],\
-          ["@babel/runtime", "npm:7.29.2"],\
+          ["@babel/runtime", "npm:8.1.0"],\
           ["@graphql-tools/schema", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.1.0"],\
           ["@opentelemetry/api", "npm:1.9.1"],\
           ["@opentelemetry/core", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.10.0"],\
@@ -3419,10 +3419,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:7.29.2", {\
-        "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.29.2-b49cad1c67-f55ba4052a.zip/node_modules/@babel/runtime/",\
+      ["npm:8.1.0", {\
+        "packageLocation": "./.yarn/cache/@babel-runtime-npm-8.1.0-07dd947637-b14d2bb784.zip/node_modules/@babel/runtime/",\
         "packageDependencies": [\
-          ["@babel/runtime", "npm:7.29.2"]\
+          ["@babel/runtime", "npm:8.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15522,7 +15522,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.29.7"],\
           ["@babel/preset-env", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.29.5"],\
           ["@babel/preset-react", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:7.28.5"],\
-          ["@babel/runtime", "npm:7.29.2"],\
+          ["@babel/runtime", "npm:8.1.0"],\
           ["@graphql-tools/schema", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.1.0"],\
           ["@opentelemetry/api", "npm:1.9.1"],\
           ["@opentelemetry/core", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.10.0"],\
