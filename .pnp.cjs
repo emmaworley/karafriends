@@ -59,7 +59,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-sass", "npm:2.16.4"],\
           ["@parcel/transformer-worklet", "npm:2.16.4"],\
           ["@sentry/browser", "npm:10.70.0"],\
-          ["@sentry/node", "npm:10.70.0"],\
+          ["@sentry/node", "npm:11.11.0"],\
           ["@testing-library/dom", "npm:10.4.1"],\
           ["@testing-library/webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.2.1"],\
           ["@types/audioworklet", "npm:0.0.100"],\
@@ -183,59 +183,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/unplugged/7zip-bin-npm-5.2.0-965f95d0fd/node_modules/7zip-bin/",\
         "packageDependencies": [\
           ["7zip-bin", "npm:5.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@apm-js-collab/code-transformer", [\
-      ["npm:0.18.0", {\
-        "packageLocation": "./.yarn/cache/@apm-js-collab-code-transformer-npm-0.18.0-72e36d84b1-b1d6fac6e7.zip/node_modules/@apm-js-collab/code-transformer/",\
-        "packageDependencies": [\
-          ["@apm-js-collab/code-transformer", "npm:0.18.0"],\
-          ["@types/estree", "npm:1.0.9"],\
-          ["astring", "npm:1.9.0"],\
-          ["esquery", "npm:1.7.0"],\
-          ["meriyah", "npm:6.1.4"],\
-          ["semifies", "npm:1.0.0"],\
-          ["source-map", "npm:0.6.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:0.18.1", {\
-        "packageLocation": "./.yarn/cache/@apm-js-collab-code-transformer-npm-0.18.1-a9fa17fa2b-891307a025.zip/node_modules/@apm-js-collab/code-transformer/",\
-        "packageDependencies": [\
-          ["@apm-js-collab/code-transformer", "npm:0.18.1"],\
-          ["@types/estree", "npm:1.0.9"],\
-          ["astring", "npm:1.9.0"],\
-          ["esquery", "npm:1.7.0"],\
-          ["meriyah", "npm:6.1.4"],\
-          ["semifies", "npm:1.0.0"],\
-          ["source-map", "npm:0.6.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@apm-js-collab/code-transformer-bundler-plugins", [\
-      ["npm:0.7.4", {\
-        "packageLocation": "./.yarn/cache/@apm-js-collab-code-transformer-bundler-plugins-npm-0.7.4-d2696c78ca-cb3d85584b.zip/node_modules/@apm-js-collab/code-transformer-bundler-plugins/",\
-        "packageDependencies": [\
-          ["@apm-js-collab/code-transformer-bundler-plugins", "npm:0.7.4"],\
-          ["@apm-js-collab/code-transformer", "npm:0.18.1"],\
-          ["es-module-lexer", "npm:2.3.1"],\
-          ["magic-string", "npm:0.30.21"],\
-          ["module-details-from-path", "npm:1.0.4"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@apm-js-collab/tracing-hooks", [\
-      ["npm:0.13.0", {\
-        "packageLocation": "./.yarn/cache/@apm-js-collab-tracing-hooks-npm-0.13.0-e03b89e2e5-8c91f20c18.zip/node_modules/@apm-js-collab/tracing-hooks/",\
-        "packageDependencies": [\
-          ["@apm-js-collab/tracing-hooks", "npm:0.13.0"],\
-          ["@apm-js-collab/code-transformer", "npm:0.18.0"],\
-          ["debug", "virtual:3d605855b6d3d7eafd6eb5da331a216b7cc7ce7f73ae41f045460c895430bc3047336a53df4f4b3df05785b1b909917bd50bab97736ed695443f6fb65c923513#npm:4.4.3"],\
-          ["module-details-from-path", "npm:1.0.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4787,6 +4734,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@isaacs/nonrecursive-glob-match", [\
+      ["npm:1.1.0", {\
+        "packageLocation": "./.yarn/cache/@isaacs-nonrecursive-glob-match-npm-1.1.0-93d6912161-ef0e63803b.zip/node_modules/@isaacs/nonrecursive-glob-match/",\
+        "packageDependencies": [\
+          ["@isaacs/nonrecursive-glob-match", "npm:1.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@istanbuljs/load-nyc-config", [\
       ["npm:1.1.0", {\
         "packageLocation": "./.yarn/cache/@istanbuljs-load-nyc-config-npm-1.1.0-42d17c9cb1-b000a5acd8.zip/node_modules/@istanbuljs/load-nyc-config/",\
@@ -5121,6 +5077,13 @@ const RAW_RUNTIME_STATE =
           ["@jridgewell/sourcemap-codec", "npm:1.5.5"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:1.6.0", {\
+        "packageLocation": "./.yarn/cache/@jridgewell-sourcemap-codec-npm-1.6.0-ba2e670569-eb53fbf7eb.zip/node_modules/@jridgewell/sourcemap-codec/",\
+        "packageDependencies": [\
+          ["@jridgewell/sourcemap-codec", "npm:1.6.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@jridgewell/trace-mapping", [\
@@ -5365,27 +5328,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@opentelemetry/api", [\
-      ["npm:1.9.0", {\
-        "packageLocation": "./.yarn/cache/@opentelemetry-api-npm-1.9.0-7d0560d0dd-a607f0eef9.zip/node_modules/@opentelemetry/api/",\
-        "packageDependencies": [\
-          ["@opentelemetry/api", "npm:1.9.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:1.9.1", {\
         "packageLocation": "./.yarn/cache/@opentelemetry-api-npm-1.9.1-a6d8abf4cb-b26032739d.zip/node_modules/@opentelemetry/api/",\
         "packageDependencies": [\
           ["@opentelemetry/api", "npm:1.9.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@opentelemetry/api-logs", [\
-      ["npm:0.220.0", {\
-        "packageLocation": "./.yarn/cache/@opentelemetry-api-logs-npm-0.220.0-b105feb85e-6cc0b409db.zip/node_modules/@opentelemetry/api-logs/",\
-        "packageDependencies": [\
-          ["@opentelemetry/api-logs", "npm:0.220.0"],\
-          ["@opentelemetry/api", "npm:1.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5395,13 +5341,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@opentelemetry-core-npm-2.10.0-308d480e3e-b95d912461.zip/node_modules/@opentelemetry/core/",\
         "packageDependencies": [\
           ["@opentelemetry/core", "npm:2.10.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["npm:2.9.0", {\
-        "packageLocation": "./.yarn/cache/@opentelemetry-core-npm-2.9.0-0599fdb933-07de59f6a0.zip/node_modules/@opentelemetry/core/",\
-        "packageDependencies": [\
-          ["@opentelemetry/core", "npm:2.9.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -5418,45 +5357,6 @@ const RAW_RUNTIME_STATE =
           "@types/opentelemetry__api"\
         ],\
         "linkType": "HARD"\
-      }],\
-      ["virtual:2ce1c0dd7f3e0835ad8fd37de6a36b1d889d5c3bc232f3637f80614d20f1de14ae3d40b390af5fb1e78be7d10a90dd088caf10b16ebee9e17870736ea9086c2b#npm:2.9.0", {\
-        "packageLocation": "./.yarn/__virtual__/@opentelemetry-core-virtual-6c3e9d0a2d/0/cache/@opentelemetry-core-npm-2.9.0-0599fdb933-07de59f6a0.zip/node_modules/@opentelemetry/core/",\
-        "packageDependencies": [\
-          ["@opentelemetry/core", "virtual:2ce1c0dd7f3e0835ad8fd37de6a36b1d889d5c3bc232f3637f80614d20f1de14ae3d40b390af5fb1e78be7d10a90dd088caf10b16ebee9e17870736ea9086c2b#npm:2.9.0"],\
-          ["@opentelemetry/api", "npm:1.9.1"],\
-          ["@opentelemetry/semantic-conventions", "npm:1.37.0"],\
-          ["@types/opentelemetry__api", null]\
-        ],\
-        "packagePeers": [\
-          "@opentelemetry/api",\
-          "@types/opentelemetry__api"\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@opentelemetry/instrumentation", [\
-      ["npm:0.220.0", {\
-        "packageLocation": "./.yarn/cache/@opentelemetry-instrumentation-npm-0.220.0-b921dbcc8b-c84e33937e.zip/node_modules/@opentelemetry/instrumentation/",\
-        "packageDependencies": [\
-          ["@opentelemetry/instrumentation", "npm:0.220.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:0.220.0", {\
-        "packageLocation": "./.yarn/__virtual__/@opentelemetry-instrumentation-virtual-c5aac37826/0/cache/@opentelemetry-instrumentation-npm-0.220.0-b921dbcc8b-c84e33937e.zip/node_modules/@opentelemetry/instrumentation/",\
-        "packageDependencies": [\
-          ["@opentelemetry/instrumentation", "virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:0.220.0"],\
-          ["@opentelemetry/api", "npm:1.9.1"],\
-          ["@opentelemetry/api-logs", "npm:0.220.0"],\
-          ["@types/opentelemetry__api", null],\
-          ["import-in-the-middle", "npm:3.3.2"],\
-          ["require-in-the-middle", "npm:8.0.1"]\
-        ],\
-        "packagePeers": [\
-          "@opentelemetry/api",\
-          "@types/opentelemetry__api"\
-        ],\
-        "linkType": "HARD"\
       }]\
     ]],\
     ["@opentelemetry/resources", [\
@@ -5466,28 +5366,6 @@ const RAW_RUNTIME_STATE =
           ["@opentelemetry/resources", "npm:2.10.0"]\
         ],\
         "linkType": "SOFT"\
-      }],\
-      ["npm:2.9.0", {\
-        "packageLocation": "./.yarn/cache/@opentelemetry-resources-npm-2.9.0-06871bbec0-eccdb801ac.zip/node_modules/@opentelemetry/resources/",\
-        "packageDependencies": [\
-          ["@opentelemetry/resources", "npm:2.9.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:2ce1c0dd7f3e0835ad8fd37de6a36b1d889d5c3bc232f3637f80614d20f1de14ae3d40b390af5fb1e78be7d10a90dd088caf10b16ebee9e17870736ea9086c2b#npm:2.9.0", {\
-        "packageLocation": "./.yarn/__virtual__/@opentelemetry-resources-virtual-a49f1f15d6/0/cache/@opentelemetry-resources-npm-2.9.0-06871bbec0-eccdb801ac.zip/node_modules/@opentelemetry/resources/",\
-        "packageDependencies": [\
-          ["@opentelemetry/resources", "virtual:2ce1c0dd7f3e0835ad8fd37de6a36b1d889d5c3bc232f3637f80614d20f1de14ae3d40b390af5fb1e78be7d10a90dd088caf10b16ebee9e17870736ea9086c2b#npm:2.9.0"],\
-          ["@opentelemetry/api", "npm:1.9.1"],\
-          ["@opentelemetry/core", "virtual:2ce1c0dd7f3e0835ad8fd37de6a36b1d889d5c3bc232f3637f80614d20f1de14ae3d40b390af5fb1e78be7d10a90dd088caf10b16ebee9e17870736ea9086c2b#npm:2.9.0"],\
-          ["@opentelemetry/semantic-conventions", "npm:1.37.0"],\
-          ["@types/opentelemetry__api", null]\
-        ],\
-        "packagePeers": [\
-          "@opentelemetry/api",\
-          "@types/opentelemetry__api"\
-        ],\
-        "linkType": "HARD"\
       }],\
       ["virtual:36640a633429a3df1726bff24d1ce5a86ae376a2fa1eeb4858398b8f4600da2267058dd678f87087ed25eb34df42760dd986340f8158c7f13493fdaeddb5b9d5#npm:2.10.0", {\
         "packageLocation": "./.yarn/__virtual__/@opentelemetry-resources-virtual-6283b7e78c/0/cache/@opentelemetry-resources-npm-2.10.0-4828fdf503-514248ae27.zip/node_modules/@opentelemetry/resources/",\
@@ -5512,29 +5390,6 @@ const RAW_RUNTIME_STATE =
           ["@opentelemetry/sdk-trace", "npm:2.10.0"]\
         ],\
         "linkType": "SOFT"\
-      }],\
-      ["npm:2.9.0", {\
-        "packageLocation": "./.yarn/cache/@opentelemetry-sdk-trace-npm-2.9.0-c3b4914aae-ed4caddf29.zip/node_modules/@opentelemetry/sdk-trace/",\
-        "packageDependencies": [\
-          ["@opentelemetry/sdk-trace", "npm:2.9.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:2ce1c0dd7f3e0835ad8fd37de6a36b1d889d5c3bc232f3637f80614d20f1de14ae3d40b390af5fb1e78be7d10a90dd088caf10b16ebee9e17870736ea9086c2b#npm:2.9.0", {\
-        "packageLocation": "./.yarn/__virtual__/@opentelemetry-sdk-trace-virtual-78708113d9/0/cache/@opentelemetry-sdk-trace-npm-2.9.0-c3b4914aae-ed4caddf29.zip/node_modules/@opentelemetry/sdk-trace/",\
-        "packageDependencies": [\
-          ["@opentelemetry/sdk-trace", "virtual:2ce1c0dd7f3e0835ad8fd37de6a36b1d889d5c3bc232f3637f80614d20f1de14ae3d40b390af5fb1e78be7d10a90dd088caf10b16ebee9e17870736ea9086c2b#npm:2.9.0"],\
-          ["@opentelemetry/api", "npm:1.9.1"],\
-          ["@opentelemetry/core", "virtual:2ce1c0dd7f3e0835ad8fd37de6a36b1d889d5c3bc232f3637f80614d20f1de14ae3d40b390af5fb1e78be7d10a90dd088caf10b16ebee9e17870736ea9086c2b#npm:2.9.0"],\
-          ["@opentelemetry/resources", "virtual:2ce1c0dd7f3e0835ad8fd37de6a36b1d889d5c3bc232f3637f80614d20f1de14ae3d40b390af5fb1e78be7d10a90dd088caf10b16ebee9e17870736ea9086c2b#npm:2.9.0"],\
-          ["@opentelemetry/semantic-conventions", "npm:1.37.0"],\
-          ["@types/opentelemetry__api", null]\
-        ],\
-        "packagePeers": [\
-          "@opentelemetry/api",\
-          "@types/opentelemetry__api"\
-        ],\
-        "linkType": "HARD"\
       }],\
       ["virtual:36640a633429a3df1726bff24d1ce5a86ae376a2fa1eeb4858398b8f4600da2267058dd678f87087ed25eb34df42760dd986340f8158c7f13493fdaeddb5b9d5#npm:2.10.0", {\
         "packageLocation": "./.yarn/__virtual__/@opentelemetry-sdk-trace-virtual-f38a88a37e/0/cache/@opentelemetry-sdk-trace-npm-2.10.0-499d6f4eb3-1d818c2391.zip/node_modules/@opentelemetry/sdk-trace/",\
@@ -5561,30 +5416,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["npm:2.9.0", {\
-        "packageLocation": "./.yarn/cache/@opentelemetry-sdk-trace-base-npm-2.9.0-bacdbeeb7f-f2ac24f414.zip/node_modules/@opentelemetry/sdk-trace-base/",\
-        "packageDependencies": [\
-          ["@opentelemetry/sdk-trace-base", "npm:2.9.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:2.9.0", {\
-        "packageLocation": "./.yarn/__virtual__/@opentelemetry-sdk-trace-base-virtual-2ce1c0dd7f/0/cache/@opentelemetry-sdk-trace-base-npm-2.9.0-bacdbeeb7f-f2ac24f414.zip/node_modules/@opentelemetry/sdk-trace-base/",\
-        "packageDependencies": [\
-          ["@opentelemetry/sdk-trace-base", "virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:2.9.0"],\
-          ["@opentelemetry/api", "npm:1.9.1"],\
-          ["@opentelemetry/core", "virtual:2ce1c0dd7f3e0835ad8fd37de6a36b1d889d5c3bc232f3637f80614d20f1de14ae3d40b390af5fb1e78be7d10a90dd088caf10b16ebee9e17870736ea9086c2b#npm:2.9.0"],\
-          ["@opentelemetry/resources", "virtual:2ce1c0dd7f3e0835ad8fd37de6a36b1d889d5c3bc232f3637f80614d20f1de14ae3d40b390af5fb1e78be7d10a90dd088caf10b16ebee9e17870736ea9086c2b#npm:2.9.0"],\
-          ["@opentelemetry/sdk-trace", "virtual:2ce1c0dd7f3e0835ad8fd37de6a36b1d889d5c3bc232f3637f80614d20f1de14ae3d40b390af5fb1e78be7d10a90dd088caf10b16ebee9e17870736ea9086c2b#npm:2.9.0"],\
-          ["@opentelemetry/semantic-conventions", "npm:1.37.0"],\
-          ["@types/opentelemetry__api", null]\
-        ],\
-        "packagePeers": [\
-          "@opentelemetry/api",\
-          "@types/opentelemetry__api"\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:2.10.0", {\
         "packageLocation": "./.yarn/__virtual__/@opentelemetry-sdk-trace-base-virtual-36640a6334/0/cache/@opentelemetry-sdk-trace-base-npm-2.10.0-1cbb1d1429-c1b6076fa5.zip/node_modules/@opentelemetry/sdk-trace-base/",\
         "packageDependencies": [\
@@ -5608,6 +5439,186 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@opentelemetry-semantic-conventions-npm-1.37.0-6c34392e86-919951c2dd.zip/node_modules/@opentelemetry/semantic-conventions/",\
         "packageDependencies": [\
           ["@opentelemetry/semantic-conventions", "npm:1.37.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-android-arm-eabi", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-android-arm-eabi-npm-0.152.0-168ec19ec2/node_modules/@oxc-parser/binding-android-arm-eabi/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-android-arm-eabi", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-android-arm64", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-android-arm64-npm-0.152.0-85cedbd8fe/node_modules/@oxc-parser/binding-android-arm64/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-android-arm64", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-darwin-arm64", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-darwin-arm64-npm-0.152.0-fbdf8f6426/node_modules/@oxc-parser/binding-darwin-arm64/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-darwin-arm64", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-darwin-x64", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-darwin-x64-npm-0.152.0-a1f5447153/node_modules/@oxc-parser/binding-darwin-x64/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-darwin-x64", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-freebsd-x64", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-freebsd-x64-npm-0.152.0-606e2e9405/node_modules/@oxc-parser/binding-freebsd-x64/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-freebsd-x64", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-linux-arm-gnueabihf", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-linux-arm-gnueabihf-npm-0.152.0-8297598a4c/node_modules/@oxc-parser/binding-linux-arm-gnueabihf/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-linux-arm-gnueabihf", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-linux-arm-musleabihf", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-linux-arm-musleabihf-npm-0.152.0-f7f9d03e51/node_modules/@oxc-parser/binding-linux-arm-musleabihf/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-linux-arm-musleabihf", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-linux-arm64-gnu", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-linux-arm64-gnu-npm-0.152.0-de55c031cb/node_modules/@oxc-parser/binding-linux-arm64-gnu/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-linux-arm64-gnu", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-linux-arm64-musl", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-linux-arm64-musl-npm-0.152.0-f77dd1c33b/node_modules/@oxc-parser/binding-linux-arm64-musl/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-linux-arm64-musl", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-linux-ppc64-gnu", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-linux-ppc64-gnu-npm-0.152.0-27406ac244/node_modules/@oxc-parser/binding-linux-ppc64-gnu/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-linux-ppc64-gnu", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-linux-riscv64-gnu", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-linux-riscv64-gnu-npm-0.152.0-21d5f2cbd8/node_modules/@oxc-parser/binding-linux-riscv64-gnu/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-linux-riscv64-gnu", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-linux-riscv64-musl", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-linux-riscv64-musl-npm-0.152.0-cbf72230af/node_modules/@oxc-parser/binding-linux-riscv64-musl/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-linux-riscv64-musl", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-linux-s390x-gnu", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-linux-s390x-gnu-npm-0.152.0-6c796bfd6d/node_modules/@oxc-parser/binding-linux-s390x-gnu/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-linux-s390x-gnu", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-linux-x64-gnu", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-linux-x64-gnu-npm-0.152.0-3ee650d93a/node_modules/@oxc-parser/binding-linux-x64-gnu/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-linux-x64-gnu", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-linux-x64-musl", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-linux-x64-musl-npm-0.152.0-77269cb20b/node_modules/@oxc-parser/binding-linux-x64-musl/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-linux-x64-musl", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-openharmony-arm64", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-openharmony-arm64-npm-0.152.0-b24de603fb/node_modules/@oxc-parser/binding-openharmony-arm64/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-openharmony-arm64", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-win32-arm64-msvc", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-win32-arm64-msvc-npm-0.152.0-375045e5de/node_modules/@oxc-parser/binding-win32-arm64-msvc/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-win32-arm64-msvc", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-win32-ia32-msvc", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-win32-ia32-msvc-npm-0.152.0-88882eaa3d/node_modules/@oxc-parser/binding-win32-ia32-msvc/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-win32-ia32-msvc", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-parser/binding-win32-x64-msvc", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-parser-binding-win32-x64-msvc-npm-0.152.0-0f51ce5a33/node_modules/@oxc-parser/binding-win32-x64-msvc/",\
+        "packageDependencies": [\
+          ["@oxc-parser/binding-win32-x64-msvc", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-project/types", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/cache/@oxc-project-types-npm-0.152.0-7f32199299-67215ef694.zip/node_modules/@oxc-project/types/",\
+        "packageDependencies": [\
+          ["@oxc-project/types", "npm:0.152.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6999,11 +7010,51 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@sentry/bundler-plugins", [\
+      ["npm:11.11.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-bundler-plugins-npm-11.11.0-2fb274c57a-c98ab0e5a7.zip/node_modules/@sentry/bundler-plugins/",\
+        "packageDependencies": [\
+          ["@sentry/bundler-plugins", "npm:11.11.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:c2a867b7e59e6185ce1dd3ae2489a4d3fd1bc4fcad31d96a23c03e20392a5c53c93b9ff5577448afa6b53d295394b31456495404bf2be9ac875ff76f59137bf2#npm:11.11.0", {\
+        "packageLocation": "./.yarn/__virtual__/@sentry-bundler-plugins-virtual-a2f345c90e/0/cache/@sentry-bundler-plugins-npm-11.11.0-2fb274c57a-c98ab0e5a7.zip/node_modules/@sentry/bundler-plugins/",\
+        "packageDependencies": [\
+          ["@sentry/bundler-plugins", "virtual:c2a867b7e59e6185ce1dd3ae2489a4d3fd1bc4fcad31d96a23c03e20392a5c53c93b9ff5577448afa6b53d295394b31456495404bf2be9ac875ff76f59137bf2#npm:11.11.0"],\
+          ["@sentry/core", "npm:11.11.0"],\
+          ["@types/rollup", null],\
+          ["@types/webpack", null],\
+          ["dotenv", "npm:17.4.2"],\
+          ["glob", "npm:14.0.6"],\
+          ["magic-string", "npm:1.4.5"],\
+          ["oxc-parser", "npm:0.152.0"],\
+          ["rollup", null],\
+          ["sentry", "npm:0.45.0"],\
+          ["supports-color", "npm:8.1.1"],\
+          ["webpack", null]\
+        ],\
+        "packagePeers": [\
+          "@types/rollup",\
+          "@types/webpack",\
+          "rollup",\
+          "webpack"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@sentry/conventions", [\
       ["npm:0.16.0", {\
         "packageLocation": "./.yarn/cache/@sentry-conventions-npm-0.16.0-2113a4bc81-21c5bdbde3.zip/node_modules/@sentry/conventions/",\
         "packageDependencies": [\
           ["@sentry/conventions", "npm:0.16.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:0.30.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-conventions-npm-0.30.0-317037be97-020270c022.zip/node_modules/@sentry/conventions/",\
+        "packageDependencies": [\
+          ["@sentry/conventions", "npm:0.30.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7014,6 +7065,14 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@sentry/core", "npm:10.70.0"],\
           ["@sentry/conventions", "npm:0.16.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:11.11.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-core-npm-11.11.0-1b435149fd-3de9d206a8.zip/node_modules/@sentry/core/",\
+        "packageDependencies": [\
+          ["@sentry/core", "npm:11.11.0"],\
+          ["@sentry/conventions", "npm:0.30.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7029,93 +7088,41 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@sentry/node", [\
-      ["npm:10.70.0", {\
-        "packageLocation": "./.yarn/cache/@sentry-node-npm-10.70.0-0d137a124c-735369f74b.zip/node_modules/@sentry/node/",\
+      ["npm:11.11.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-node-npm-11.11.0-c2a867b7e5-851518c551.zip/node_modules/@sentry/node/",\
         "packageDependencies": [\
-          ["@sentry/node", "npm:10.70.0"],\
+          ["@sentry/node", "npm:11.11.0"],\
           ["@opentelemetry/api", "npm:1.9.1"],\
-          ["@opentelemetry/instrumentation", "virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:0.220.0"],\
-          ["@opentelemetry/sdk-trace-base", "virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:2.9.0"],\
-          ["@sentry/conventions", "npm:0.16.0"],\
-          ["@sentry/core", "npm:10.70.0"],\
-          ["@sentry/node-core", "virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:10.70.0"],\
-          ["@sentry/opentelemetry", "virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:10.70.0"],\
-          ["@sentry/server-utils", "npm:10.70.0"],\
-          ["import-in-the-middle", "npm:3.3.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@sentry/node-core", [\
-      ["npm:10.70.0", {\
-        "packageLocation": "./.yarn/cache/@sentry-node-core-npm-10.70.0-d790d3cf1e-41015e38af.zip/node_modules/@sentry/node-core/",\
-        "packageDependencies": [\
-          ["@sentry/node-core", "npm:10.70.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:10.70.0", {\
-        "packageLocation": "./.yarn/__virtual__/@sentry-node-core-virtual-8bddbc5033/0/cache/@sentry-node-core-npm-10.70.0-d790d3cf1e-41015e38af.zip/node_modules/@sentry/node-core/",\
-        "packageDependencies": [\
-          ["@sentry/node-core", "virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:10.70.0"],\
-          ["@opentelemetry/api", "npm:1.9.1"],\
-          ["@opentelemetry/core", null],\
-          ["@opentelemetry/exporter-trace-otlp-http", null],\
-          ["@opentelemetry/instrumentation", "virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:0.220.0"],\
-          ["@opentelemetry/sdk-trace-base", "virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:2.9.0"],\
-          ["@sentry/conventions", "npm:0.16.0"],\
-          ["@sentry/core", "npm:10.70.0"],\
-          ["@sentry/opentelemetry", "virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:10.70.0"],\
-          ["@types/opentelemetry__api", null],\
-          ["@types/opentelemetry__core", null],\
-          ["@types/opentelemetry__exporter-trace-otlp-http", null],\
-          ["@types/opentelemetry__instrumentation", null],\
-          ["@types/opentelemetry__sdk-trace-base", null],\
-          ["import-in-the-middle", "npm:3.3.2"]\
-        ],\
-        "packagePeers": [\
-          "@opentelemetry/api",\
-          "@opentelemetry/core",\
-          "@opentelemetry/exporter-trace-otlp-http",\
-          "@opentelemetry/instrumentation",\
-          "@opentelemetry/sdk-trace-base",\
-          "@types/opentelemetry__api",\
-          "@types/opentelemetry__core",\
-          "@types/opentelemetry__exporter-trace-otlp-http",\
-          "@types/opentelemetry__instrumentation",\
-          "@types/opentelemetry__sdk-trace-base"\
+          ["@sentry/bundler-plugins", "virtual:c2a867b7e59e6185ce1dd3ae2489a4d3fd1bc4fcad31d96a23c03e20392a5c53c93b9ff5577448afa6b53d295394b31456495404bf2be9ac875ff76f59137bf2#npm:11.11.0"],\
+          ["@sentry/conventions", "npm:0.30.0"],\
+          ["@sentry/core", "npm:11.11.0"],\
+          ["@sentry/opentelemetry", "virtual:c2a867b7e59e6185ce1dd3ae2489a4d3fd1bc4fcad31d96a23c03e20392a5c53c93b9ff5577448afa6b53d295394b31456495404bf2be9ac875ff76f59137bf2#npm:11.11.0"],\
+          ["@sentry/server-runtime-injection", "npm:11.11.0"],\
+          ["@sentry/server-utils", "npm:11.11.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@sentry/opentelemetry", [\
-      ["npm:10.70.0", {\
-        "packageLocation": "./.yarn/cache/@sentry-opentelemetry-npm-10.70.0-495a6626ca-d12ba729d1.zip/node_modules/@sentry/opentelemetry/",\
+      ["npm:11.11.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-opentelemetry-npm-11.11.0-8c351dd51f-3fe9cffca9.zip/node_modules/@sentry/opentelemetry/",\
         "packageDependencies": [\
-          ["@sentry/opentelemetry", "npm:10.70.0"]\
+          ["@sentry/opentelemetry", "npm:11.11.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:10.70.0", {\
-        "packageLocation": "./.yarn/__virtual__/@sentry-opentelemetry-virtual-e02818b351/0/cache/@sentry-opentelemetry-npm-10.70.0-495a6626ca-d12ba729d1.zip/node_modules/@sentry/opentelemetry/",\
+      ["virtual:c2a867b7e59e6185ce1dd3ae2489a4d3fd1bc4fcad31d96a23c03e20392a5c53c93b9ff5577448afa6b53d295394b31456495404bf2be9ac875ff76f59137bf2#npm:11.11.0", {\
+        "packageLocation": "./.yarn/__virtual__/@sentry-opentelemetry-virtual-dc9a28705b/0/cache/@sentry-opentelemetry-npm-11.11.0-8c351dd51f-3fe9cffca9.zip/node_modules/@sentry/opentelemetry/",\
         "packageDependencies": [\
-          ["@sentry/opentelemetry", "virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:10.70.0"],\
+          ["@sentry/opentelemetry", "virtual:c2a867b7e59e6185ce1dd3ae2489a4d3fd1bc4fcad31d96a23c03e20392a5c53c93b9ff5577448afa6b53d295394b31456495404bf2be9ac875ff76f59137bf2#npm:11.11.0"],\
           ["@opentelemetry/api", "npm:1.9.1"],\
-          ["@opentelemetry/core", null],\
-          ["@opentelemetry/sdk-trace-base", "virtual:0d137a124cedc44039f0eaab4d670e4231a8b774cd98706b3b1c0bcb4c5fcf2bb4cb7669b17c61e1810838aa2ad896819485d8174647f9140f65b5894e043636#npm:2.9.0"],\
-          ["@sentry/conventions", "npm:0.16.0"],\
-          ["@sentry/core", "npm:10.70.0"],\
-          ["@types/opentelemetry__api", null],\
-          ["@types/opentelemetry__core", null],\
-          ["@types/opentelemetry__sdk-trace-base", null]\
+          ["@sentry/conventions", "npm:0.30.0"],\
+          ["@sentry/core", "npm:11.11.0"],\
+          ["@types/opentelemetry__api", null]\
         ],\
         "packagePeers": [\
           "@opentelemetry/api",\
-          "@opentelemetry/core",\
-          "@opentelemetry/sdk-trace-base",\
-          "@types/opentelemetry__api",\
-          "@types/opentelemetry__core",\
-          "@types/opentelemetry__sdk-trace-base"\
+          "@types/opentelemetry__api"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7142,16 +7149,25 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@sentry/server-utils", [\
-      ["npm:10.70.0", {\
-        "packageLocation": "./.yarn/cache/@sentry-server-utils-npm-10.70.0-d69c4f6528-3e90c14f15.zip/node_modules/@sentry/server-utils/",\
+    ["@sentry/server-runtime-injection", [\
+      ["npm:11.11.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-server-runtime-injection-npm-11.11.0-4d727b5c74-8d241a64cc.zip/node_modules/@sentry/server-runtime-injection/",\
         "packageDependencies": [\
-          ["@sentry/server-utils", "npm:10.70.0"],\
-          ["@apm-js-collab/code-transformer-bundler-plugins", "npm:0.7.4"],\
-          ["@apm-js-collab/tracing-hooks", "npm:0.13.0"],\
-          ["@sentry/conventions", "npm:0.16.0"],\
-          ["@sentry/core", "npm:10.70.0"],\
-          ["meriyah", "npm:6.1.4"]\
+          ["@sentry/server-runtime-injection", "npm:11.11.0"],\
+          ["@sentry/core", "npm:11.11.0"],\
+          ["@sentry/server-utils", "npm:11.11.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sentry/server-utils", [\
+      ["npm:11.11.0", {\
+        "packageLocation": "./.yarn/cache/@sentry-server-utils-npm-11.11.0-2a582d47ac-0d7011b84f.zip/node_modules/@sentry/server-utils/",\
+        "packageDependencies": [\
+          ["@sentry/server-utils", "npm:11.11.0"],\
+          ["@opentelemetry/api", "npm:1.9.1"],\
+          ["@sentry/conventions", "npm:0.30.0"],\
+          ["@sentry/core", "npm:11.11.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7592,15 +7608,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-emscripten-npm-1.40.0-8fced77d84-bf53d5890c.zip/node_modules/@types/emscripten/",\
         "packageDependencies": [\
           ["@types/emscripten", "npm:1.40.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@types/estree", [\
-      ["npm:1.0.9", {\
-        "packageLocation": "./.yarn/cache/@types-estree-npm-1.0.9-63428f58ff-16aabfa703.zip/node_modules/@types/estree/",\
-        "packageDependencies": [\
-          ["@types/estree", "npm:1.0.9"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9188,15 +9195,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["astring", [\
-      ["npm:1.9.0", {\
-        "packageLocation": "./.yarn/cache/astring-npm-1.9.0-88a8c49daf-ee88f71d85.zip/node_modules/astring/",\
-        "packageDependencies": [\
-          ["astring", "npm:1.9.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["async", [\
       ["npm:2.6.4", {\
         "packageLocation": "./.yarn/cache/async-npm-2.6.4-3155e80151-df8e52817d.zip/node_modules/async/",\
@@ -9798,6 +9796,14 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
+      ["npm:5.0.13", {\
+        "packageLocation": "./.yarn/cache/brace-expansion-npm-5.0.13-7b2e92ee26-a2c4dc2481.zip/node_modules/brace-expansion/",\
+        "packageDependencies": [\
+          ["brace-expansion", "npm:5.0.13"],\
+          ["balanced-match", "npm:4.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:5.0.7", {\
         "packageLocation": "./.yarn/cache/brace-expansion-npm-5.0.7-48dc108338-98c12de33f.zip/node_modules/brace-expansion/",\
         "packageDependencies": [\
@@ -10357,13 +10363,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/cjs-module-lexer-npm-0.6.0-e80f3766d3-9105867de7.zip/node_modules/cjs-module-lexer/",\
         "packageDependencies": [\
           ["cjs-module-lexer", "npm:0.6.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:2.2.0", {\
-        "packageLocation": "./.yarn/cache/cjs-module-lexer-npm-2.2.0-a4ea3b2e41-fc8eb5c191.zip/node_modules/cjs-module-lexer/",\
-        "packageDependencies": [\
-          ["cjs-module-lexer", "npm:2.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11575,6 +11574,13 @@ const RAW_RUNTIME_STATE =
           ["dotenv", "npm:17.2.1"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:17.4.2", {\
+        "packageLocation": "./.yarn/cache/dotenv-npm-17.4.2-46ee0c966e-ca1b6f54d5.zip/node_modules/dotenv/",\
+        "packageDependencies": [\
+          ["dotenv", "npm:17.4.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["dotenv-expand", [\
@@ -11900,15 +11906,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["es-module-lexer", [\
-      ["npm:2.3.1", {\
-        "packageLocation": "./.yarn/cache/es-module-lexer-npm-2.3.1-557b1f9cf0-15bd9f6d70.zip/node_modules/es-module-lexer/",\
-        "packageDependencies": [\
-          ["es-module-lexer", "npm:2.3.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["es-object-atoms", [\
       ["npm:1.1.1", {\
         "packageLocation": "./.yarn/cache/es-object-atoms-npm-1.1.1-362d8043c2-54fe77de28.zip/node_modules/es-object-atoms/",\
@@ -12077,16 +12074,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/esprima-npm-4.0.1-1084e98778-f1d3c622ad.zip/node_modules/esprima/",\
         "packageDependencies": [\
           ["esprima", "npm:4.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["esquery", [\
-      ["npm:1.7.0", {\
-        "packageLocation": "./.yarn/cache/esquery-npm-1.7.0-c1e8da438a-4afaf30893.zip/node_modules/esquery/",\
-        "packageDependencies": [\
-          ["esquery", "npm:1.7.0"],\
-          ["estraverse", "npm:5.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -13165,6 +13152,16 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
+      ["npm:14.0.6", {\
+        "packageLocation": "./.yarn/cache/glob-npm-14.0.6-e7f23e98bc-6674454c61.zip/node_modules/glob/",\
+        "packageDependencies": [\
+          ["glob", "npm:14.0.6"],\
+          ["minimatch", "npm:11.0.8"],\
+          ["minipass", "npm:7.1.3"],\
+          ["path-scurry", "npm:3.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:6.0.4", {\
         "packageLocation": "./.yarn/cache/glob-npm-6.0.4-dbb227ba4a-b8fec415f7.zip/node_modules/glob/",\
         "packageDependencies": [\
@@ -13933,18 +13930,6 @@ const RAW_RUNTIME_STATE =
           ["import-fresh", "npm:3.3.0"],\
           ["parent-module", "npm:1.0.1"],\
           ["resolve-from", "npm:4.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["import-in-the-middle", [\
-      ["npm:3.3.2", {\
-        "packageLocation": "./.yarn/cache/import-in-the-middle-npm-3.3.2-f8950f739e-46c4bb22c5.zip/node_modules/import-in-the-middle/",\
-        "packageDependencies": [\
-          ["import-in-the-middle", "npm:3.3.2"],\
-          ["cjs-module-lexer", "npm:2.2.0"],\
-          ["es-module-lexer", "npm:2.3.1"],\
-          ["module-details-from-path", "npm:1.0.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15545,7 +15530,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/transformer-sass", "npm:2.16.4"],\
           ["@parcel/transformer-worklet", "npm:2.16.4"],\
           ["@sentry/browser", "npm:10.70.0"],\
-          ["@sentry/node", "npm:10.70.0"],\
+          ["@sentry/node", "npm:11.11.0"],\
           ["@testing-library/dom", "npm:10.4.1"],\
           ["@testing-library/webdriverio", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.2.1"],\
           ["@types/audioworklet", "npm:0.0.100"],\
@@ -16265,6 +16250,14 @@ const RAW_RUNTIME_STATE =
           ["@jridgewell/sourcemap-codec", "npm:1.5.5"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:1.4.5", {\
+        "packageLocation": "./.yarn/cache/magic-string-npm-1.4.5-b63902d89f-b5639b23f9.zip/node_modules/magic-string/",\
+        "packageDependencies": [\
+          ["magic-string", "npm:1.4.5"],\
+          ["@jridgewell/sourcemap-codec", "npm:1.6.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["make-dir", [\
@@ -16401,13 +16394,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["meriyah", [\
-      ["npm:6.1.4", {\
-        "packageLocation": "./.yarn/cache/meriyah-npm-6.1.4-0f6ef618db-16b841b9bf.zip/node_modules/meriyah/",\
-        "packageDependencies": [\
-          ["meriyah", "npm:6.1.4"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:7.3.2", {\
         "packageLocation": "./.yarn/cache/meriyah-npm-7.3.2-b75bb79ff2-54b13bc592.zip/node_modules/meriyah/",\
         "packageDependencies": [\
@@ -16512,6 +16498,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["minimatch", "npm:10.2.5"],\
           ["brace-expansion", "npm:5.0.7"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:11.0.8", {\
+        "packageLocation": "./.yarn/cache/minimatch-npm-11.0.8-2245e2af86-c72623c8c3.zip/node_modules/minimatch/",\
+        "packageDependencies": [\
+          ["minimatch", "npm:11.0.8"],\
+          ["@isaacs/nonrecursive-glob-match", "npm:1.1.0"],\
+          ["brace-expansion", "npm:5.0.13"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -16716,15 +16711,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/modern-tar-npm-0.8.4-23366e63e8-2f0b60034e.zip/node_modules/modern-tar/",\
         "packageDependencies": [\
           ["modern-tar", "npm:0.8.4"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["module-details-from-path", [\
-      ["npm:1.0.4", {\
-        "packageLocation": "./.yarn/cache/module-details-from-path-npm-1.0.4-c3d0545459-2ebfada535.zip/node_modules/module-details-from-path/",\
-        "packageDependencies": [\
-          ["module-details-from-path", "npm:1.0.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17351,6 +17337,35 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["oxc-parser", [\
+      ["npm:0.152.0", {\
+        "packageLocation": "./.yarn/cache/oxc-parser-npm-0.152.0-00ed6cfe7d-ae5b6f634f.zip/node_modules/oxc-parser/",\
+        "packageDependencies": [\
+          ["oxc-parser", "npm:0.152.0"],\
+          ["@oxc-parser/binding-android-arm-eabi", "npm:0.152.0"],\
+          ["@oxc-parser/binding-android-arm64", "npm:0.152.0"],\
+          ["@oxc-parser/binding-darwin-arm64", "npm:0.152.0"],\
+          ["@oxc-parser/binding-darwin-x64", "npm:0.152.0"],\
+          ["@oxc-parser/binding-freebsd-x64", "npm:0.152.0"],\
+          ["@oxc-parser/binding-linux-arm-gnueabihf", "npm:0.152.0"],\
+          ["@oxc-parser/binding-linux-arm-musleabihf", "npm:0.152.0"],\
+          ["@oxc-parser/binding-linux-arm64-gnu", "npm:0.152.0"],\
+          ["@oxc-parser/binding-linux-arm64-musl", "npm:0.152.0"],\
+          ["@oxc-parser/binding-linux-ppc64-gnu", "npm:0.152.0"],\
+          ["@oxc-parser/binding-linux-riscv64-gnu", "npm:0.152.0"],\
+          ["@oxc-parser/binding-linux-riscv64-musl", "npm:0.152.0"],\
+          ["@oxc-parser/binding-linux-s390x-gnu", "npm:0.152.0"],\
+          ["@oxc-parser/binding-linux-x64-gnu", "npm:0.152.0"],\
+          ["@oxc-parser/binding-linux-x64-musl", "npm:0.152.0"],\
+          ["@oxc-parser/binding-openharmony-arm64", "npm:0.152.0"],\
+          ["@oxc-parser/binding-win32-arm64-msvc", "npm:0.152.0"],\
+          ["@oxc-parser/binding-win32-ia32-msvc", "npm:0.152.0"],\
+          ["@oxc-parser/binding-win32-x64-msvc", "npm:0.152.0"],\
+          ["@oxc-project/types", "npm:0.152.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["p-cancelable", [\
       ["npm:2.1.1", {\
         "packageLocation": "./.yarn/cache/p-cancelable-npm-2.1.1-9388305f02-7f1b64db17.zip/node_modules/p-cancelable/",\
@@ -17796,6 +17811,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/path-scurry-npm-2.0.2-f10aa6a77e-2b4257422b.zip/node_modules/path-scurry/",\
         "packageDependencies": [\
           ["path-scurry", "npm:2.0.2"],\
+          ["lru-cache", "npm:11.1.0"],\
+          ["minipass", "npm:7.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:3.0.0", {\
+        "packageLocation": "./.yarn/cache/path-scurry-npm-3.0.0-f3b9fa0e0d-2b70c2ddf6.zip/node_modules/path-scurry/",\
+        "packageDependencies": [\
+          ["path-scurry", "npm:3.0.0"],\
           ["lru-cache", "npm:11.1.0"],\
           ["minipass", "npm:7.1.2"]\
         ],\
@@ -19031,17 +19055,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["require-in-the-middle", [\
-      ["npm:8.0.1", {\
-        "packageLocation": "./.yarn/cache/require-in-the-middle-npm-8.0.1-096af9b870-4ce98c6814.zip/node_modules/require-in-the-middle/",\
-        "packageDependencies": [\
-          ["require-in-the-middle", "npm:8.0.1"],\
-          ["debug", "virtual:3d605855b6d3d7eafd6eb5da331a216b7cc7ce7f73ae41f045460c895430bc3047336a53df4f4b3df05785b1b909917bd50bab97736ed695443f6fb65c923513#npm:4.4.3"],\
-          ["module-details-from-path", "npm:1.0.4"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["require-main-filename", [\
       ["npm:2.0.0", {\
         "packageLocation": "./.yarn/cache/require-main-filename-npm-2.0.0-03eef65c84-8604a570c0.zip/node_modules/require-main-filename/",\
@@ -19459,15 +19472,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["semifies", [\
-      ["npm:1.0.0", {\
-        "packageLocation": "./.yarn/cache/semifies-npm-1.0.0-dc0233739a-b267881448.zip/node_modules/semifies/",\
-        "packageDependencies": [\
-          ["semifies", "npm:1.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["semver", [\
       ["npm:5.7.2", {\
         "packageLocation": "./.yarn/cache/semver-npm-5.7.2-938ee91eaa-fca14418a1.zip/node_modules/semver/",\
@@ -19532,6 +19536,15 @@ const RAW_RUNTIME_STATE =
           ["on-finished", "npm:2.4.1"],\
           ["range-parser", "npm:1.2.1"],\
           ["statuses", "npm:2.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sentry", [\
+      ["npm:0.45.0", {\
+        "packageLocation": "./.yarn/unplugged/sentry-npm-0.45.0-8493be1e66/node_modules/sentry/",\
+        "packageDependencies": [\
+          ["sentry", "npm:0.45.0"]\
         ],\
         "linkType": "HARD"\
       }]\
