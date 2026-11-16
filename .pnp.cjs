@@ -98,7 +98,7 @@ const RAW_RUNTIME_STATE =
           ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.1.1"],\
           ["babel-plugin-relay", "npm:21.0.1"],\
           ["buffer", "npm:6.0.3"],\
-          ["bufferutil", "npm:4.1.0"],\
+          ["bufferutil", "npm:4.2.0"],\
           ["cargo-cp-artifact", "npm:0.1.9"],\
           ["classnames", "npm:2.5.1"],\
           ["color-convert", "npm:3.1.3"],\
@@ -9942,10 +9942,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["bufferutil", [\
-      ["npm:4.1.0", {\
-        "packageLocation": "./.yarn/unplugged/bufferutil-npm-4.1.0-d5f7bae814/node_modules/bufferutil/",\
+      ["npm:4.2.0", {\
+        "packageLocation": "./.yarn/unplugged/bufferutil-npm-4.2.0-c8e64d432f/node_modules/bufferutil/",\
         "packageDependencies": [\
-          ["bufferutil", "npm:4.1.0"],\
+          ["bufferutil", "npm:4.2.0"],\
           ["node-gyp", "npm:11.0.0"],\
           ["node-gyp-build", "npm:4.8.4"]\
         ],\
@@ -15584,7 +15584,7 @@ const RAW_RUNTIME_STATE =
           ["babel-loader", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:10.1.1"],\
           ["babel-plugin-relay", "npm:21.0.1"],\
           ["buffer", "npm:6.0.3"],\
-          ["bufferutil", "npm:4.1.0"],\
+          ["bufferutil", "npm:4.2.0"],\
           ["cargo-cp-artifact", "npm:0.1.9"],\
           ["classnames", "npm:2.5.1"],\
           ["color-convert", "npm:3.1.3"],\
@@ -21944,7 +21944,7 @@ const RAW_RUNTIME_STATE =
           ["ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:8.21.3"],\
           ["@types/bufferutil", null],\
           ["@types/utf-8-validate", null],\
-          ["bufferutil", "npm:4.1.0"],\
+          ["bufferutil", "npm:4.2.0"],\
           ["utf-8-validate", "npm:6.0.6"]\
         ],\
         "packagePeers": [\
