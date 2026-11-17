@@ -3616,6 +3616,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@opentelemetry/core@npm:3.1.1":
+  version: 3.1.1
+  resolution: "@opentelemetry/core@npm:3.1.1"
+  dependencies:
+    "@opentelemetry/semantic-conventions": "npm:^1.29.0"
+  peerDependencies:
+    "@opentelemetry/api": ">=1.10.0 <1.11.0"
+  checksum: 10/ec3b7509e8cce68e753186366d9f2855c7bf528ae9ba0123ba4635fa23f93d480fcac9d751d15c1b13b2ef0d098a86b88dcbf1f41ce611e2943d9777ed64a158
+  languageName: node
+  linkType: hard
+
 "@opentelemetry/instrumentation@npm:^0.220.0":
   version: 0.220.0
   resolution: "@opentelemetry/instrumentation@npm:0.220.0"
@@ -12532,7 +12543,7 @@ __metadata:
     "@babel/runtime": "npm:7.29.2"
     "@graphql-tools/schema": "npm:10.1.0"
     "@opentelemetry/api": "npm:1.9.1"
-    "@opentelemetry/core": "npm:2.10.0"
+    "@opentelemetry/core": "npm:3.1.1"
     "@opentelemetry/sdk-trace-base": "npm:2.10.0"
     "@parcel/config-default": "npm:2.16.4"
     "@parcel/core": "npm:2.16.4"
