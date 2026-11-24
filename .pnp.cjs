@@ -117,7 +117,7 @@ const RAW_RUNTIME_STATE =
           ["gl-vec2", "npm:1.3.0"],\
           ["glob", "npm:13.0.6"],\
           ["graphql", "npm:17.0.2"],\
-          ["graphql-subscriptions", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.0.0"],\
+          ["graphql-subscriptions", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.1.0"],\
           ["graphql-ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.2.1"],\
           ["hls.js", "npm:1.7.1"],\
           ["husky", "npm:9.1.7"],\
@@ -13468,17 +13468,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["graphql-subscriptions", [\
-      ["npm:3.0.0", {\
-        "packageLocation": "./.yarn/cache/graphql-subscriptions-npm-3.0.0-9dcab80927-9dbee94d1f.zip/node_modules/graphql-subscriptions/",\
+      ["npm:3.1.0", {\
+        "packageLocation": "./.yarn/cache/graphql-subscriptions-npm-3.1.0-a6538ff491-adebf429ee.zip/node_modules/graphql-subscriptions/",\
         "packageDependencies": [\
-          ["graphql-subscriptions", "npm:3.0.0"]\
+          ["graphql-subscriptions", "npm:3.1.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/graphql-subscriptions-virtual-b95327a0a6/0/cache/graphql-subscriptions-npm-3.0.0-9dcab80927-9dbee94d1f.zip/node_modules/graphql-subscriptions/",\
+      ["virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/graphql-subscriptions-virtual-16f25c9bd3/0/cache/graphql-subscriptions-npm-3.1.0-a6538ff491-adebf429ee.zip/node_modules/graphql-subscriptions/",\
         "packageDependencies": [\
-          ["graphql-subscriptions", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.0.0"],\
+          ["graphql-subscriptions", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.1.0"],\
           ["@types/graphql", null],\
           ["graphql", "npm:17.0.2"]\
         ],\
@@ -15603,7 +15603,7 @@ const RAW_RUNTIME_STATE =
           ["gl-vec2", "npm:1.3.0"],\
           ["glob", "npm:13.0.6"],\
           ["graphql", "npm:17.0.2"],\
-          ["graphql-subscriptions", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.0.0"],\
+          ["graphql-subscriptions", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:3.1.0"],\
           ["graphql-ws", "virtual:1cb46121cac5c3b5fcafbbc2f2be3dbc61042f1d39014468aceb7329098980d765a877a7dd0cc051cfbceff2442aaf5c8fca8d7fe23fd2660746643d17e013bc#npm:6.2.1"],\
           ["hls.js", "npm:1.7.1"],\
           ["husky", "npm:9.1.7"],\

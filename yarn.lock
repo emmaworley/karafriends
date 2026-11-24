@@ -10651,12 +10651,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql-subscriptions@npm:3.0.0":
-  version: 3.0.0
-  resolution: "graphql-subscriptions@npm:3.0.0"
+"graphql-subscriptions@npm:3.1.0":
+  version: 3.1.0
+  resolution: "graphql-subscriptions@npm:3.1.0"
   peerDependencies:
-    graphql: ^15.7.2 || ^16.0.0
-  checksum: 10/9dbee94d1f8a8742631e6deba33fed4a688b893bb5e287c346b5d01a237b80f96eb4ed2576a3b44c608e553cfd1f2cb400f88b0ffc882cb4effaa4db789f1ce0
+    graphql: ^15.7.2 || ^16.0.0 || ^17.0.0
+  checksum: 10/adebf429ee91ef00f430769a11a1b5a0219fb6f628da69e34d2819a1727eff0da3ef42b84f6b5f0ddc6aada69e658847c8c60be039aee1da24ec2559e2c3034f
   languageName: node
   linkType: hard
 
@@ -12610,7 +12610,7 @@ __metadata:
     gl-vec2: "npm:1.3.0"
     glob: "npm:13.0.6"
     graphql: "npm:17.0.2"
-    graphql-subscriptions: "npm:3.0.0"
+    graphql-subscriptions: "npm:3.1.0"
     graphql-ws: "npm:6.2.1"
     hls.js: "npm:1.7.1"
     husky: "npm:9.1.7"
